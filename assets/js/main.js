@@ -516,7 +516,7 @@
     });
     // -- ./ 6. -- //
 
-    // 1. -----
+    // 7. -----
     noUiSlider.create(wpp_7_b_1, {
         start: [50, 70],
         connect: true,
@@ -555,6 +555,239 @@
     // -- ./ 7. -- //
 
     // --- ./ WPP Benchmarks --- //
+
+
+
+
+    // --- WVA Benchmarks --- //
+    // 1. -----
+    noUiSlider.create(wva_1_b_1, {
+        start: [50, 70],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+
+    noUiSlider.create(wva_1_b_2, {
+        start: [18, 60],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+
+    noUiSlider.create(wva_1_b_3, {
+        start: [30, 90],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+
+    noUiSlider.create(wva_1_b_4, {
+        start: [15, 45],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+    // -- ./ 1. -- //
+
+    // 2. -----
+    noUiSlider.create(wva_2_b_1, {
+        start: [50, 70],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+
+    noUiSlider.create(wva_2_b_2, {
+        start: [18, 60],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+
+    noUiSlider.create(wva_2_b_3, {
+        start: [30, 90],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+
+    noUiSlider.create(wva_2_b_4, {
+        start: [15, 45],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+    // -- ./ 2. -- //
+
+    // 3. -----
+    noUiSlider.create(wva_3_b_1, {
+        start: [50, 70],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+
+    noUiSlider.create(wva_3_b_2, {
+        start: [18, 60],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+
+    noUiSlider.create(wva_3_b_3, {
+        start: [30, 90],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+
+    noUiSlider.create(wva_3_b_4, {
+        start: [15, 45],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+    // -- ./ 3. -- //
+
+    // 1. -----
+    noUiSlider.create(wva_4_b_1, {
+        start: [50, 70],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+
+    noUiSlider.create(wva_4_b_2, {
+        start: [18, 60],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+
+    noUiSlider.create(wva_4_b_3, {
+        start: [30, 90],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+
+    noUiSlider.create(wva_4_b_4, {
+        start: [15, 45],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+    // -- ./ 4. -- //
+
+    // 5. -----
+    noUiSlider.create(wva_5_b_1, {
+        start: [50, 70],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+
+    noUiSlider.create(wva_5_b_2, {
+        start: [18, 60],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+
+    noUiSlider.create(wva_5_b_3, {
+        start: [30, 90],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+
+    noUiSlider.create(wva_5_b_4, {
+        start: [15, 45],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+    // -- ./ 5. -- //
+
+    // 6. -----
+    noUiSlider.create(wva_6_b_1, {
+        start: [50, 70],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+
+    noUiSlider.create(wva_6_b_2, {
+        start: [18, 60],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+
+    noUiSlider.create(wva_6_b_3, {
+        start: [30, 90],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+
+    noUiSlider.create(wva_6_b_4, {
+        start: [15, 45],
+        connect: true,
+        range: {
+            'min': 1,
+            'max': 99
+        }
+    });
+    // -- ./ 6. -- //
+    // --- ./ WVA Benchmarks --- //
 
 
     // Disable idicators
@@ -623,6 +856,33 @@
         },
     }
 
+    var wva_seq_names = {
+        wva_exteme_0: {
+            0: 'Resistant',
+            1: 'Accommodating'
+        },
+        wva_exteme_1: {
+            0: 'Anxious',
+            1: 'Calm'
+        },
+        wva_exteme_2: {
+            0: 'Impatient',
+            1: 'Patient'
+        },
+        wva_exteme_3: {
+            0: 'Distractable',
+            1: 'Focused'
+        },
+        wva_exteme_4: {
+            0: 'Impulsive',
+            1: 'Cautious'
+        },
+        wva_exteme_5: {
+            0: 'Thrill-Seeking',
+            1: 'Apprehensive'
+        },
+    }
+
 
     // ----------- FUNCTIONS --------------- //
 
@@ -630,7 +890,7 @@
     function generate_idicators(params, type){
         for(var i = 0; i < params.length; i++){
             var slider_id = document.getElementById(type + '_' + i);
-            console.log(slider_id);
+
             noUiSlider.create(slider_id, {
                 start: [params[i]],
                 connect: true,
@@ -649,10 +909,10 @@
     function get_extremes(seq_array, seq_names, type){
         var new_array = [];
         seq_array.forEach(function(v,i){
-            //console.log(i);
+            //
             var seq_obj,
                 seq_type = type  + '_exteme_' + i;
-console.log(seq_type);
+
             if(v <= 50){
                 seq_obj = seq_names[ seq_type ][0]
             }else{
@@ -666,19 +926,15 @@ console.log(seq_type);
                 }
             );
         });
-        console.log(new_array);
 
         // sort object-array descending
         new_array.sort(compare);
-        console.log(new_array);
 
         // get first 3 (biggest) elements of sorted (desc) array
         var extremes =  Array.prototype.slice.call(new_array, 0, 3);
-        console.log(extremes);
 
         // append in element
         extremes.forEach(function(v){
-            console.log(v.extreme_title);
             $('.extremes_' + type).append('<span class="extreme_scores">' + v.extreme_title + '</span>')
         });
 
@@ -689,8 +945,8 @@ console.log(seq_type);
     function sortObject(obj) {
         return Object.keys(obj).sort().reduce(function (result, key) {
             result[key] = obj[key];
-            console.log(result[key]);
-            console.log(key);
+
+
             return result;
         }, {});
     }
@@ -758,14 +1014,24 @@ console.log(seq_type);
             sq_param = query.wc1,
             sq_prepared = prepare_param(sq_param),
             arr_length = sq_prepared.length - 1;
-            console.log(sq_param);
-            console.log(arr_length);
+
+
             sq_prepared.move_array_element(arr_length, 1);
-            console.log(sq_prepared);
+
 
         generate_idicators(sq_prepared, 'wpp');
 
         get_extremes(sq_prepared, wpp_seq_names, 'wpp');
+    }
+
+    function generate_wva_report(sq_seq_names){
+        var query = getQueryParams(document.location.search),
+            sq_param = query.wva1,
+            sq_prepared = prepare_param(sq_param);
+
+        generate_idicators(sq_prepared, 'wva');
+
+        get_extremes(sq_prepared, wva_seq_names, 'wva');
     }
 
 
@@ -774,6 +1040,7 @@ console.log(seq_type);
     // Let's play
     generate_sq_report(sq_seq_names);
     generate_wpp_report(sq_seq_names);
+    generate_wva_report(wva_seq_names);
 
 
 
