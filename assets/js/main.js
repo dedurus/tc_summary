@@ -8,7 +8,15 @@
             '50': [50],
             '75': [75],
             'max': [100]
-        }
+        },
+        wpp_sliders = {
+            'min': [0],
+            '20': [20],
+            '40': [40],
+            '60': [60],
+            '80': [80],
+            'max': [100]
+        };
 
 
     // SQ dom elements
@@ -888,6 +896,12 @@
 
     // idicator generation
     function generate_idicators(params, type){
+        var pips;
+        if(type === 'wpp'){
+            pips = wpp_sliders;
+        }else{
+            pips = sq_sliders;
+        }
         for(var i = 0; i < params.length; i++){
             var slider_id = document.getElementById(type + '_' + i);
 
@@ -899,7 +913,7 @@
                         mode: 'range',
                         density: 1
                 },
-                range: sq_sliders
+                range: pips
             });
         }
     }

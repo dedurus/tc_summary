@@ -249,7 +249,7 @@ body {
   display: inline-block;
 }
 .width20p{
-  width: 19%;
+  width: 19.5%;
 }
 
 
@@ -925,7 +925,10 @@ span.wva_mini_box{background-color: #E36C09;}
     color: #333;
     padding: 5px;
 }
-
+.referred{
+  font-size: 14px;
+  font-weight: normal;
+}
 
 
 /* ---- RESPONSIVE -- */
