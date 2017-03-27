@@ -858,28 +858,28 @@
 
     var wva_seq_names = {
         wva_exteme_0: {
-            0: 'Resistant',
-            1: 'Accommodating'
+            0: 'Low Integrity',
+            1: 'High Integrity'
         },
         wva_exteme_1: {
-            0: 'Anxious',
-            1: 'Calm'
+            0: 'Low Responsibility',
+            1: 'High Responsibility'
         },
         wva_exteme_2: {
-            0: 'Impatient',
-            1: 'Patient'
+            0: 'Low Coachability',
+            1: 'High Coachability'
         },
         wva_exteme_3: {
-            0: 'Distractable',
-            1: 'Focused'
+            0: 'Low Positivity',
+            1: 'High Positive Attitude'
         },
         wva_exteme_4: {
-            0: 'Impulsive',
-            1: 'Cautious'
+            0: 'Low Aggression Control',
+            1: 'High Aggression Control'
         },
         wva_exteme_5: {
-            0: 'Thrill-Seeking',
-            1: 'Apprehensive'
+            0: 'Low Communication',
+            1: 'High Open Communication'
         },
     }
 
@@ -960,7 +960,7 @@
       return 0;
     }
 
-    // get quesry param
+    // get query param
     function getQueryParams(qs) {
         qs = qs.split('+').join(' ');
 
@@ -1000,48 +1000,73 @@
 
 
     function generate_sq_report(sq_seq_names){
-        var query = getQueryParams(document.location.search),
-            sq_param = query.sq1,
-            sq_prepared = prepare_param(sq_param);
+        var query = getQueryParams(document.location.search);
 
-        generate_idicators(sq_prepared, 'sq');
+        if(query.sq1){
+            var sq_prepared = prepare_param(query.sq1);
 
-        get_extremes(sq_prepared, sq_seq_names, 'sq');
+            generate_idicators(sq_prepared, 'sq');
+
+            get_extremes(sq_prepared, sq_seq_names, 'sq');
+        }else{
+            $('#sq_wrapper').hide();
+        }
     }
 
     function generate_wpp_report(sq_seq_names){
-        var query = getQueryParams(document.location.search),
-            sq_param = query.wc1,
-            sq_prepared = prepare_param(sq_param),
-            arr_length = sq_prepared.length - 1;
+        var query = getQueryParams(document.location.search);
 
-
+        if(query.wc1){
+            var sq_prepared = prepare_param(query.wc1),
+                arr_length = sq_prepared.length - 1;
+            // restructure the array for this dimension only (last element becomes second)
             sq_prepared.move_array_element(arr_length, 1);
 
+            generate_idicators(sq_prepared, 'wpp');
 
-        generate_idicators(sq_prepared, 'wpp');
-
-        get_extremes(sq_prepared, wpp_seq_names, 'wpp');
+            get_extremes(sq_prepared, wpp_seq_names, 'wpp');
+        }else{
+            console.log('no query');
+            $('#wpp_wrapper').hide();
+        }
     }
 
     function generate_wva_report(sq_seq_names){
-        var query = getQueryParams(document.location.search),
-            sq_param = query.wva1,
-            sq_prepared = prepare_param(sq_param);
+        var query = getQueryParams(document.location.search);
 
-        generate_idicators(sq_prepared, 'wva');
+        if(query.wva1){
+            var sq_prepared = prepare_param(query.wva1);
 
-        get_extremes(sq_prepared, wva_seq_names, 'wva');
+            generate_idicators(sq_prepared, 'wva');
+
+            get_extremes(sq_prepared, wva_seq_names, 'wva');
+        }else{
+            $('#wva_wrapper').hide();
+        }
     }
 
+    function add_name(){
+        var query = getQueryParams(document.location.search);
+        if(query.First && query.Last){
+            $('.persons_name').html(query.First + ' ' + query.Last);
+        }
+    }
 
-
+    // NOT USED YET
+    function valid_query(){
+        var query = getQueryParams(document.location.search),
+            valid = query.valid;
+        console.log(valid);
+    }
 
     // Let's play
     generate_sq_report(sq_seq_names);
     generate_wpp_report(sq_seq_names);
     generate_wva_report(wva_seq_names);
+    add_name();
 
+    // test only (not used yet)
+    //valid_query();
 
 
 
