@@ -61,7 +61,7 @@
                     <div class="col-xs-12 p10 grey text-center">
                         <h4 class="persons_name whiteCo">SUMMARY REPORT</h4>
                     </div>
-                    <div class="col-xs-12 referred grey p5 text-center">Referred By: - </div>
+                   <div class="col-xs-12 referred grey p5 text-center"></div>
                 </div> <!-- ./sm-3 -->
 
             </div><!-- ./row -->
@@ -102,9 +102,9 @@
                     </div>
 
                     <div class="col-xs-12 col-md-2 darkGrey benchmark_label_2 text-center whiteCo">
-                        <div class="col-xs-12 whiteCo font12Tablet">SQ/DSQ Score</div>
+                        <div class="col-xs-12 whiteCo font12Tablet">Average Score</div>
                         <div class="col-xs-12 mT5">
-                            <span class="full_score">??</span>
+                            <span id="sq_score" class="full_score">??</span>
                         </div>
                     </div>
                 </div><!-- ./row -->
@@ -171,8 +171,8 @@
                                 </div>
                             </div>
                             <div class="col-md-2 hidden-xs hidden-sm">
-                                <h4 class="figure_titles">Accommodating</h4>
-                                <p class="text-muted font12 hidden-xs">
+                                <h4 class="figure_titles text-right">Accommodating</h4>
+                                <p class="text-muted font12 hidden-xs text-right">
                                     Follows rules
                                     and processes
                                     without questioning.
@@ -257,7 +257,7 @@
                                     <div class="col-xs-3 text-right"></div>
                                 </div>
                             </div>
-                            <div class="col-md-2 hidden-xs hidden-sm">
+                            <div class="col-md-2 hidden-xs hidden-sm text-right">
                                 <h4 class="figure_titles">Calm</h4>
                                 <p class="text-muted font12 hidden-xs">
                                     Even-tempered,
@@ -341,7 +341,7 @@
                                         <div class="col-xs-3 text-right"></div>
                                     </div>
                                 </div>
-                                <div class="col-md-2 hidden-xs hidden-sm">
+                                <div class="col-md-2 hidden-xs hidden-sm text-right">
                                     <h4 class="figure_titles">Patient</h4>
                                     <p class="text-muted font12 hidden-xs">
                                         Not easily
@@ -426,7 +426,7 @@
                                         <div class="col-xs-3 text-right"></div>
                                     </div>
                                 </div>
-                                <div class="col-md-2 hidden-xs hidden-sm">
+                                <div class="col-md-2 hidden-xs hidden-sm text-right">
                                     <h4 class="figure_titles">Focused</h4>
                                     <p class="text-muted font12 hidden-xs">
                                         Less likely to seek
@@ -512,7 +512,7 @@
                                         <div class="col-xs-3 text-right"></div>
                                     </div>
                                 </div>
-                                <div class="col-md-2 hidden-xs hidden-sm">
+                                <div class="col-md-2 hidden-xs hidden-sm text-right">
                                     <h4 class="figure_titles">Cautious</h4>
                                     <p class="text-muted font12 hidden-xs">
                                         Tends to carefully
@@ -595,7 +595,7 @@
                                         <div class="col-xs-3 text-right"></div>
                                     </div>
                                 </div>
-                                <div class="col-md-2 hidden-xs hidden-sm">
+                                <div class="col-md-2 hidden-xs hidden-sm text-right">
                                     <h4 class="figure_titles">Apprehensive</h4>
                                     <p class="text-muted font12 hidden-xs">
                                         Tends to avoid or be
@@ -639,9 +639,8 @@
                     </div>
 
                     <div class="col-xs-12 col-md-2 darkGrey benchmark_label_2 text-center whiteCo">
-                        <div class="col-xs-12 whiteCo font12Tablet">WPP Score</div>
-                        <div class="col-xs-12 mT5">
-                            <span class="full_score">??</span>
+                        <div class="col-xs-12 mT5 hidden-sm hidden-xs">
+                            <img class="img-responsive center-block" src="assets/img/wpp_small.png">
                         </div>
                     </div>
                 </div><!-- ./row -->
@@ -717,7 +716,7 @@
 
                             </div>
                         </div>
-                        <div class="col-md-2 hidden-xs hidden-sm">
+                        <div class="col-md-2 hidden-xs hidden-sm text-right">
                             <h4 class="figure_titles">Dominant</h4>
                             <p class="text-muted font12 hidden-xs">
                                 Driven to lead
@@ -810,7 +809,7 @@
                                 <div class="width20p in_block"></div>
                             </div>
                         </div>
-                        <div class="col-md-2 hidden-xs hidden-sm">
+                        <div class="col-md-2 hidden-xs hidden-sm text-right">
                             <h4 class="figure_titles">Achievement-Focused</h4>
                             <p class="text-muted font12 hidden-xs">
                                 Motivated to reach
@@ -902,7 +901,7 @@
                                 <div class="width20p in_block"></div>
                             </div>
                         </div>
-                        <div class="col-md-2 hidden-xs hidden-sm">
+                        <div class="col-md-2 hidden-xs hidden-sm text-right">
                             <h4 class="figure_titles">Calm</h4>
                             <p class="text-muted font12 hidden-xs">
                                 Even-tempered, calm
@@ -995,7 +994,7 @@
                                 <div class="width20p in_block"></div>
                             </div>
                         </div>
-                        <div class="col-md-2 hidden-xs hidden-sm">
+                        <div class="col-md-2 hidden-xs hidden-sm text-right">
                             <h4 class="figure_titles">Outgoing</h4>
                             <p class="text-muted font12 hidden-xs">
                                 Comfortable with
@@ -1088,7 +1087,7 @@
                                 <div class="width20p in_block"></div>
                             </div>
                         </div>
-                        <div class="col-md-2 hidden-xs hidden-sm">
+                        <div class="col-md-2 hidden-xs hidden-sm text-right">
                             <h4 class="figure_titles">Empathetic</h4>
                             <p class="text-muted font12 hidden-xs">
                                 Sensitive to the
@@ -1178,7 +1177,7 @@
                                 <div class="width20p in_block"></div>
                             </div>
                         </div>
-                        <div class="col-md-2 hidden-xs hidden-sm">
+                        <div class="col-md-2 hidden-xs hidden-sm text-right">
                             <h4 class="figure_titles">Regimented</h4>
                             <p class="text-muted font12 hidden-xs">
                                 Rule abiding and
@@ -1268,7 +1267,7 @@
                                 <div class="width20p in_block"></div>
                             </div>
                         </div>
-                        <div class="col-md-2 hidden-xs hidden-sm">
+                        <div class="col-md-2 hidden-xs hidden-sm text-right">
                             <h4 class="figure_titles">Open-minded</h4>
                             <p class="text-muted font12 hidden-xs">
                                 Imaginative, open
@@ -1313,9 +1312,8 @@
                     </div>
 
                     <div class="col-xs-12 col-md-2 darkGrey benchmark_label_2 text-center whiteCo">
-                        <div class="col-xs-12 whiteCo font12Tablet">WVA Score</div>
-                        <div class="col-xs-12 mT5">
-                            <span class="full_score">??</span>
+                        <div class="col-xs-12 mT5 hidden-sm hidden-xs">
+                            <img class="img-responsive center-block" src="assets/img/wva_small.png">
                         </div>
                     </div>
                 </div><!-- ./row -->
@@ -1384,7 +1382,7 @@
                                 <div class="col-xs-3 text-right"></div>
                             </div>
                         </div>
-                        <div class="col-md-2 hidden-xs hidden-sm">
+                        <div class="col-md-2 hidden-xs hidden-sm text-right">
                             <h4 class="figure_titles">High Integrity</h4>
                             <p class="text-muted font12 hidden-xs">
                                 Respectful of rules and
@@ -1474,7 +1472,7 @@
                                 <div class="col-xs-3 text-right"></div>
                             </div>
                         </div>
-                        <div class="col-md-2 hidden-xs hidden-sm">
+                        <div class="col-md-2 hidden-xs hidden-sm text-right">
                             <h4 class="figure_titles">High Responsibility</h4>
                             <p class="text-muted font12 hidden-xs">
                                 Takes responsibilities
@@ -1560,7 +1558,7 @@
                                 <div class="col-xs-3 text-right"></div>
                             </div>
                         </div>
-                        <div class="col-md-2 hidden-xs hidden-sm">
+                        <div class="col-md-2 hidden-xs hidden-sm text-right">
                             <h4 class="figure_titles">High Coachability</h4>
                             <p class="text-muted font12 hidden-xs">
                                 Responds positively to
@@ -1649,7 +1647,7 @@
                                 <div class="col-xs-3 text-right"></div>
                             </div>
                         </div>
-                        <div class="col-md-2 hidden-xs hidden-sm">
+                        <div class="col-md-2 hidden-xs hidden-sm text-right">
                             <h4 class="figure_titles">High Positive Attitude</h4>
                             <p class="text-muted font12 hidden-xs">
                                 Controls negative feelings
@@ -1736,7 +1734,7 @@
                                 <div class="col-xs-3 text-right"></div>
                             </div>
                         </div>
-                        <div class="col-md-2 hidden-xs hidden-sm">
+                        <div class="col-md-2 hidden-xs hidden-sm text-right">
                             <h4 class="figure_titles">High Aggression Control</h4>
                             <p class="text-muted font12 hidden-xs">
                                 Avoids engaging in
@@ -1821,7 +1819,7 @@
                                 <div class="col-xs-3 text-right"></div>
                             </div>
                         </div>
-                        <div class="col-md-2 hidden-xs hidden-sm">
+                        <div class="col-md-2 hidden-xs hidden-sm text-right">
                             <h4 class="figure_titles">High Open Communication</h4>
                             <p class="text-muted font12 hidden-xs">
                                 Open, communicative,
@@ -1851,7 +1849,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <p class="font12 pT25">Disclaimer: Results should always be considered in the context of all available information about a person; do not use this as the sole factor for making employment-related decisions.</p>
+                    <p class="font12 pT25 text-muted text-center">Disclaimer: Results should always be considered in the context of all available information about a person; do not use this as the sole factor for making employment-related decisions.</p>
                 </div>
             </div>
         </div>

@@ -62,7 +62,7 @@
 
     // 1.
     noUiSlider.create(sq_1_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -71,7 +71,7 @@
     });
 
     noUiSlider.create(sq_1_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -80,7 +80,7 @@
     });
 
     noUiSlider.create(sq_1_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -89,7 +89,7 @@
     });
 
     noUiSlider.create(sq_1_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -100,7 +100,7 @@
 
     // 2. -----
     noUiSlider.create(sq_2_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -109,7 +109,7 @@
     });
 
     noUiSlider.create(sq_2_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -118,7 +118,7 @@
     });
 
     noUiSlider.create(sq_2_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -127,7 +127,7 @@
     });
 
     noUiSlider.create(sq_2_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -139,7 +139,7 @@
 
     // 3. -----
     noUiSlider.create(sq_3_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -148,7 +148,7 @@
     });
 
     noUiSlider.create(sq_3_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -157,7 +157,7 @@
     });
 
     noUiSlider.create(sq_3_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -166,7 +166,7 @@
     });
 
     noUiSlider.create(sq_3_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -178,7 +178,7 @@
 
     // 4. -----
     noUiSlider.create(sq_4_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -187,7 +187,7 @@
     });
 
     noUiSlider.create(sq_4_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -196,7 +196,7 @@
     });
 
     noUiSlider.create(sq_4_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -205,7 +205,7 @@
     });
 
     noUiSlider.create(sq_4_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -217,7 +217,7 @@
 
     // 5. -----
     noUiSlider.create(sq_5_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -226,7 +226,7 @@
     });
 
     noUiSlider.create(sq_5_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -235,7 +235,7 @@
     });
 
     noUiSlider.create(sq_5_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -244,7 +244,7 @@
     });
 
     noUiSlider.create(sq_5_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -256,7 +256,7 @@
 
     // 6. -----
     noUiSlider.create(sq_6_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -265,7 +265,7 @@
     });
 
     noUiSlider.create(sq_6_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -274,7 +274,7 @@
     });
 
     noUiSlider.create(sq_6_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -283,7 +283,7 @@
     });
 
     noUiSlider.create(sq_6_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -298,7 +298,7 @@
     // --- WPP Benchmarks --- //
     // 1. -----
     noUiSlider.create(wpp_1_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -307,7 +307,7 @@
     });
 
     noUiSlider.create(wpp_1_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -316,7 +316,7 @@
     });
 
     noUiSlider.create(wpp_1_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -325,7 +325,7 @@
     });
 
     noUiSlider.create(wpp_1_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -336,7 +336,7 @@
 
     // 2. -----
     noUiSlider.create(wpp_2_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -345,7 +345,7 @@
     });
 
     noUiSlider.create(wpp_2_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -354,7 +354,7 @@
     });
 
     noUiSlider.create(wpp_2_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -363,7 +363,7 @@
     });
 
     noUiSlider.create(wpp_2_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -374,7 +374,7 @@
 
     // 3. -----
     noUiSlider.create(wpp_3_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -383,7 +383,7 @@
     });
 
     noUiSlider.create(wpp_3_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -392,7 +392,7 @@
     });
 
     noUiSlider.create(wpp_3_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -401,7 +401,7 @@
     });
 
     noUiSlider.create(wpp_3_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -412,7 +412,7 @@
 
     // 1. -----
     noUiSlider.create(wpp_4_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -421,7 +421,7 @@
     });
 
     noUiSlider.create(wpp_4_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -430,7 +430,7 @@
     });
 
     noUiSlider.create(wpp_4_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -439,7 +439,7 @@
     });
 
     noUiSlider.create(wpp_4_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -450,7 +450,7 @@
 
     // 5. -----
     noUiSlider.create(wpp_5_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -459,7 +459,7 @@
     });
 
     noUiSlider.create(wpp_5_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -468,7 +468,7 @@
     });
 
     noUiSlider.create(wpp_5_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -477,7 +477,7 @@
     });
 
     noUiSlider.create(wpp_5_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -488,7 +488,7 @@
 
     // 6. -----
     noUiSlider.create(wpp_6_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -497,7 +497,7 @@
     });
 
     noUiSlider.create(wpp_6_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -506,7 +506,7 @@
     });
 
     noUiSlider.create(wpp_6_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -515,7 +515,7 @@
     });
 
     noUiSlider.create(wpp_6_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -526,7 +526,7 @@
 
     // 7. -----
     noUiSlider.create(wpp_7_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -535,7 +535,7 @@
     });
 
     noUiSlider.create(wpp_7_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -544,7 +544,7 @@
     });
 
     noUiSlider.create(wpp_7_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -553,7 +553,7 @@
     });
 
     noUiSlider.create(wpp_7_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -570,7 +570,7 @@
     // --- WVA Benchmarks --- //
     // 1. -----
     noUiSlider.create(wva_1_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -579,7 +579,7 @@
     });
 
     noUiSlider.create(wva_1_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -588,7 +588,7 @@
     });
 
     noUiSlider.create(wva_1_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -597,7 +597,7 @@
     });
 
     noUiSlider.create(wva_1_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -608,7 +608,7 @@
 
     // 2. -----
     noUiSlider.create(wva_2_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -617,7 +617,7 @@
     });
 
     noUiSlider.create(wva_2_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -626,7 +626,7 @@
     });
 
     noUiSlider.create(wva_2_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -635,7 +635,7 @@
     });
 
     noUiSlider.create(wva_2_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -646,7 +646,7 @@
 
     // 3. -----
     noUiSlider.create(wva_3_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -655,7 +655,7 @@
     });
 
     noUiSlider.create(wva_3_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -664,7 +664,7 @@
     });
 
     noUiSlider.create(wva_3_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -673,7 +673,7 @@
     });
 
     noUiSlider.create(wva_3_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -684,7 +684,7 @@
 
     // 1. -----
     noUiSlider.create(wva_4_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -693,7 +693,7 @@
     });
 
     noUiSlider.create(wva_4_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -702,7 +702,7 @@
     });
 
     noUiSlider.create(wva_4_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -711,7 +711,7 @@
     });
 
     noUiSlider.create(wva_4_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -722,7 +722,7 @@
 
     // 5. -----
     noUiSlider.create(wva_5_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -731,7 +731,7 @@
     });
 
     noUiSlider.create(wva_5_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -740,7 +740,7 @@
     });
 
     noUiSlider.create(wva_5_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -749,7 +749,7 @@
     });
 
     noUiSlider.create(wva_5_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -760,7 +760,7 @@
 
     // 6. -----
     noUiSlider.create(wva_6_b_1, {
-        start: [50, 70],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -769,7 +769,7 @@
     });
 
     noUiSlider.create(wva_6_b_2, {
-        start: [18, 60],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -778,7 +778,7 @@
     });
 
     noUiSlider.create(wva_6_b_3, {
-        start: [30, 90],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -787,7 +787,7 @@
     });
 
     noUiSlider.create(wva_6_b_4, {
-        start: [15, 45],
+        start: [0, 0],
         connect: true,
         range: {
             'min': 1,
@@ -1018,7 +1018,6 @@
 
         if(query.sq1){
             var sq_prepared = prepare_param(query.sq1);
-
             generate_idicators(sq_prepared, 'sq');
 
             get_extremes(sq_prepared, sq_seq_names, 'sq');
@@ -1066,6 +1065,59 @@
         }
     }
 
+    function sq_average(){
+         var query = getQueryParams(document.location.search),
+            sq_prepared = prepare_param(query.sq1),
+            render_avg = '',
+            print_avg;
+
+        if(query.sq1){
+            //var sampleArray = [1, 2, 3, 4, 5];
+            render_avg = sq_prepared.reduce(function(previousValue, currentValue){
+                return  parseInt(currentValue) +  parseInt(previousValue);
+            });
+            //console.log(render_avg/6);
+            print_avg = Math.round(render_avg/6);
+            //print_avg = (render_avg/6).toFixed(1);
+        }else{
+            print_avg = '-';
+        }
+        //console.log(print_avg);
+        $('#sq_score').html(print_avg);
+    }
+
+    // ----- Bechmark Bars ------ //
+    function prepare_benchmark(sequence, benchmark, current_index){
+        var sub = sequence.substring(1),
+            group_1 = sub.match(/.{1,4}/g),
+            seq_array = [],
+            i = 1;
+
+            if(group_1){
+                group_1.forEach(function(el){
+                    var el_2 = el.match(/.{1,2}/g);
+                    seq_array.push([el_2[0], el_2[1]]);
+                });
+            }
+            console.log(seq_array);
+
+            $.each(seq_array, function(index, val){
+               /*var current_index = 1 + index;
+               console.log(current_index);*/
+               console.log(benchmark + '_' + i + '_b_' + current_index);
+                var current_slider = document.getElementById(benchmark + '_' + i + '_b_' + current_index);
+                current_slider.noUiSlider.set(val);
+                i++;
+            });
+    }
+    // Tests
+    prepare_benchmark('S015001502575257569996799', 'sq', 1);
+    prepare_benchmark('S015001502575257569996799', 'sq', 2);
+    prepare_benchmark('W5087638307427199012947868299', 'wpp', 3);
+    prepare_benchmark('V629925615599699101607199', 'wva', 4);
+
+
+
     // NOT USED YET
     function valid_query(){
         var query = getQueryParams(document.location.search),
@@ -1074,6 +1126,7 @@
     }
 
     // Let's play
+    sq_average();
     generate_sq_report(sq_seq_names);
     generate_wpp_report(sq_seq_names);
     generate_wva_report(wva_seq_names);

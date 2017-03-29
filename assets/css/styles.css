@@ -249,8 +249,16 @@ body {
   display: inline-block;
 }
 .width20p{
-  width: 19.5%;
+  width: 19.4%;
 }
+.slider_areas div.width20p{
+  border-right: 0;
+  border-left: 3px solid #fff;
+}
+.slider_areas div.width20p:first-child{
+  border-left: 0;
+}
+
 
 
 h1{
@@ -712,6 +720,9 @@ a:hover i{
 }
 .slider_areas div{
     border-right: 5px solid #fff;
+    /* -webkit-box-shadow: inset 5px 0px 0px 0px rgba(255,255,255,1);
+    -moz-box-shadow: inset 5px 0px 0px 0px rgba(255,255,255,1);
+    box-shadow: inset 5px 0px 0px 0px rgba(255,255,255,1); */
     height: 100%;
 }
 .slider_areas div:last-child{
