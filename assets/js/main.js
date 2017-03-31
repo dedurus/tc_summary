@@ -306,12 +306,12 @@
 
     function sq_average(){
          var query = getQueryParams(document.location.search),
-            sq_prepared = prepare_param(query.sq1),
             render_avg = '',
             print_avg;
 
         if(query.sq1){
             //var sampleArray = [1, 2, 3, 4, 5];
+            var sq_prepared = prepare_param(query.sq1);
             render_avg = sq_prepared.reduce(function(previousValue, currentValue){
                 return  parseInt(currentValue) +  parseInt(previousValue);
             });
@@ -508,11 +508,11 @@ console.log(title);
 
 
 
-    /*sq_average();
+    sq_average();
     generate_sq_report(sq_seq_names);
     generate_wpp_report(sq_seq_names);
     generate_wva_report(wva_seq_names);
-    add_name();*/
+    add_name();
 
     // test only (not used yet)
     //valid_query();
