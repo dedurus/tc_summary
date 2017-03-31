@@ -371,8 +371,12 @@
     var checked_obj = {},
         checked_array = [];
 
+    // disable lib btn
+    $('.use_lib').prop('disabled', true);
+
     // fill `checked_obj` with lib values or remove them if deselected
     $('#presets_form').on('change', function(evt) {
+    $('.use_lib').prop('disabled', false);
        var checked_item = $(evt.target),
             checked_id = evt.target.id,
             title = checked_item.data('title'),
@@ -399,6 +403,11 @@
             $('input[name="presets"]').not(':checked').prop('disabled', true);
         }else{
             $('input[name="presets"]').prop('disabled', false);
+        }
+
+        // disable lib button
+        if($('input[name="presets"]:checked').length == 0){
+            $('.use_lib').prop('disabled', true);
         }
     });
 
@@ -510,6 +519,12 @@
             $('#seq_modal').modal();
         }, 500);
     });
+
+    // hide modal on link click
+    $('#no_libs').on('click', function(e){
+        e.preventDefault();
+        $('#seq_modal').modal('hide');
+    })
 
 
 
