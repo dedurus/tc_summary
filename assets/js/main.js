@@ -354,6 +354,13 @@
                     seq_array.push([el_2[0], el_2[1]]);
                 });
             }
+
+            // move last array element to second position for WPP sequence
+            if(dimension == 'wpp'){
+                var arr_length = seq_array.length - 1;
+                // restructure the array for this dimension only (last element becomes second)
+                seq_array.move_array_element(arr_length, 1);
+            }
             $.each(seq_array, function(index, val){
                 var current_slider = document.getElementById(dimension + '_' + index + '_' + dimension_index);
                 current_slider.noUiSlider.set(val);
@@ -374,7 +381,6 @@
             data_wva = checked_item.data('wva');
 
 
-console.log(title);
         if(checked_item.prop('checked')==true){
             checked_obj[checked_id] = {
                     'title': title,

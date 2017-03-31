@@ -953,6 +953,12 @@ span.mini_box_3{background-color: #E36C09;}
   padding: 10px;
   background-color: #ccc;
 }
+a#no_libs{
+  color: #333;
+}
+a#no_libs:hover{
+  color: #707070;
+}
 
 /* ---- RESPONSIVE -- */
 @media screen and (max-width: 480px){
