@@ -595,7 +595,7 @@ span.button_text{
   background-color: #fff;
   border: 1px solid #aaa;
 }
-.radio-list-left input[type="radio"]{
+.radio-list-left input[type="checkbox"]{
   opacity: 0;
   float: left;
   width: 1px;
@@ -605,7 +605,7 @@ dl.radio-list-left dd label:hover{
     cursor: pointer;
     background-color: #ededed;
 }
-.radio-list-left input[type="radio"] + label{
+.radio-list-left input[type="checkbox"] + label{
   position: relative;
   margin: 0;
   display: block;
@@ -615,29 +615,29 @@ dl.radio-list-left dd label:hover{
   background: #fff;
   border-bottom: 1px solid #eee;
 }
-.radio-list-left input[type="radio"] + label:before{
+.radio-list-left input[type="checkbox"] + label:before{
   content: "";
   position: absolute;
   top: 50%;
   background: #ddd;
   border: 1px solid #aaa;
 }
-.radio-list-left input[type="radio"]:checked + label{
+.radio-list-left input[type="checkbox"]:checked + label{
   color: #2ea34e;
   background-color: rgba(0,148,255,0.2);
 }
-.radio-list-left input[type="radio"]:checked + label:before{
+.radio-list-left input[type="checkbox"]:checked + label:before{
   background: #3dc863;
   border-color: #2ea44e;
 }
-.radio-list-left input[type="radio"]:disabled + label{
+.radio-list-left input[type="checkbox"]:disabled + label{
   color: #ccc;
 }
-.radio-list-left input[type="radio"]:disabled + label:before{
+.radio-list-left input[type="checkbox"]:disabled + label:before{
   background: rgba(204, 204, 204, 0.5);
   border: 2px dotted #ccc;
 }
-.radio-list-left input[type="radio"]:focus + label{
+.radio-list-left input[type="checkbox"]:focus + label{
   box-shadow: inset 0 0 3px #eee;
 }
 dl {
@@ -651,11 +651,11 @@ dl dt {
 dl dd {
   margin: 0;
 }
-.radio-list-left input[type="radio"] + label {
+.radio-list-left input[type="checkbox"] + label {
   padding-left: 50px;
   text-align: left;
 }
-.radio-list-left input[type="radio"] + label:before {
+.radio-list-left input[type="checkbox"] + label:before {
   height: 20px;
   width: 20px;
   margin-top: -11px;
@@ -893,16 +893,21 @@ a:hover i{
 .benchmark_slider.wva_benchmark .noUi-connect{
     background-color: #E36C09;
 }
-
+.mini_box_wrapper{
+  display: inline;
+  margin-left: 15px;
+  margin-right: 15px;
+}
 span.mini_box{
     width: 10px;
     height: 10px;
     display: inline-block;
+    margin-right: 5px;
 }
-span.sq_mini_box{background-color: #067e55;}
-span.dsq_mini_box{background-color: #AD1F2B;}
-span.wpp_mini_box{background-color: #3A7BBD;}
-span.wva_mini_box{background-color: #E36C09;}
+span.mini_box_0{background-color: #067e55;}
+span.mini_box_1{background-color: #AD1F2B;}
+span.mini_box_2{background-color: #3A7BBD;}
+span.mini_box_3{background-color: #E36C09;}
 .benchmark_label{
     font-size: 18px;
     font-weight: bold;
@@ -940,7 +945,14 @@ span.wva_mini_box{background-color: #E36C09;}
   font-size: 14px;
   font-weight: normal;
 }
-
+.sq_checked_lib{
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  padding: 10px;
+  background-color: #ccc;
+}
 
 /* ---- RESPONSIVE -- */
 @media screen and (max-width: 480px){

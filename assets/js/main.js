@@ -19,783 +19,6 @@
         };
 
 
-    // SQ dom elements
-    var
-    //slider_1 = document.getElementById('sq_1'),
-            sq_1_b_1 = document.getElementById('sq_1_b_1'),
-            sq_1_b_2 = document.getElementById('sq_1_b_2'),
-            sq_1_b_3 = document.getElementById('sq_1_b_3'),
-            sq_1_b_4 = document.getElementById('sq_1_b_4'),
-
-    //slider_2 = document.getElementById('sq_2'),
-            sq_2_b_1 = document.getElementById('sq_2_b_1'),
-            sq_2_b_2 = document.getElementById('sq_2_b_2'),
-            sq_2_b_3 = document.getElementById('sq_2_b_3'),
-            sq_2_b_4 = document.getElementById('sq_2_b_4'),
-
-    //slider_3 = document.getElementById('sq_3'),
-            sq_3_b_1 = document.getElementById('sq_3_b_1'),
-            sq_3_b_2 = document.getElementById('sq_3_b_2'),
-            sq_3_b_3 = document.getElementById('sq_3_b_3'),
-            sq_3_b_4 = document.getElementById('sq_3_b_4'),
-
-   // slider_4 = document.getElementById('sq_4'),
-            sq_4_b_1 = document.getElementById('sq_4_b_1'),
-            sq_4_b_2 = document.getElementById('sq_4_b_2'),
-            sq_4_b_3 = document.getElementById('sq_4_b_3'),
-            sq_4_b_4 = document.getElementById('sq_4_b_4'),
-
-    //slider_5 = document.getElementById('sq_5'),
-            sq_5_b_1 = document.getElementById('sq_5_b_1'),
-            sq_5_b_2 = document.getElementById('sq_5_b_2'),
-            sq_5_b_3 = document.getElementById('sq_5_b_3'),
-            sq_5_b_4 = document.getElementById('sq_5_b_4'),
-
-    //slider_6 = document.getElementById('sq_6'),
-            sq_6_b_1 = document.getElementById('sq_6_b_1'),
-            sq_6_b_2 = document.getElementById('sq_6_b_2'),
-            sq_6_b_3 = document.getElementById('sq_6_b_3'),
-            sq_6_b_4 = document.getElementById('sq_6_b_4')
-    ;
-
-    // SQ Sliders
-
-    // 1.
-    noUiSlider.create(sq_1_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(sq_1_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(sq_1_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(sq_1_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // ./ -- 1. --- //
-
-    // 2. -----
-    noUiSlider.create(sq_2_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(sq_2_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(sq_2_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(sq_2_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // -- ./ 2. -- //
-
-
-    // 3. -----
-    noUiSlider.create(sq_3_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(sq_3_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(sq_3_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(sq_3_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // -- ./ 3. -- //
-
-
-    // 4. -----
-    noUiSlider.create(sq_4_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(sq_4_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(sq_4_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(sq_4_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // -- ./ 4. -- //
-
-
-    // 5. -----
-    noUiSlider.create(sq_5_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(sq_5_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(sq_5_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(sq_5_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // -- ./ 5. -- //
-
-
-    // 6. -----
-    noUiSlider.create(sq_6_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(sq_6_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(sq_6_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(sq_6_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // -- ./ 6. -- //
-
-    // --- ./ SQ Benchmarks --- //
-
-
-    // --- WPP Benchmarks --- //
-    // 1. -----
-    noUiSlider.create(wpp_1_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_1_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_1_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_1_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // -- ./ 1. -- //
-
-    // 2. -----
-    noUiSlider.create(wpp_2_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_2_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_2_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_2_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // -- ./ 2. -- //
-
-    // 3. -----
-    noUiSlider.create(wpp_3_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_3_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_3_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_3_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // -- ./ 3. -- //
-
-    // 1. -----
-    noUiSlider.create(wpp_4_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_4_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_4_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_4_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // -- ./ 4. -- //
-
-    // 5. -----
-    noUiSlider.create(wpp_5_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_5_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_5_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_5_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // -- ./ 5. -- //
-
-    // 6. -----
-    noUiSlider.create(wpp_6_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_6_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_6_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_6_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // -- ./ 6. -- //
-
-    // 7. -----
-    noUiSlider.create(wpp_7_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_7_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_7_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wpp_7_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // -- ./ 7. -- //
-
-    // --- ./ WPP Benchmarks --- //
-
-
-
-
-    // --- WVA Benchmarks --- //
-    // 1. -----
-    noUiSlider.create(wva_1_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wva_1_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wva_1_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wva_1_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // -- ./ 1. -- //
-
-    // 2. -----
-    noUiSlider.create(wva_2_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wva_2_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wva_2_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wva_2_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // -- ./ 2. -- //
-
-    // 3. -----
-    noUiSlider.create(wva_3_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wva_3_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wva_3_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wva_3_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // -- ./ 3. -- //
-
-    // 1. -----
-    noUiSlider.create(wva_4_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wva_4_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wva_4_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wva_4_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // -- ./ 4. -- //
-
-    // 5. -----
-    noUiSlider.create(wva_5_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wva_5_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wva_5_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wva_5_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // -- ./ 5. -- //
-
-    // 6. -----
-    noUiSlider.create(wva_6_b_1, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wva_6_b_2, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wva_6_b_3, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-
-    noUiSlider.create(wva_6_b_4, {
-        start: [0, 0],
-        connect: true,
-        range: {
-            'min': 1,
-            'max': 99
-        }
-    });
-    // -- ./ 6. -- //
-    // --- ./ WVA Benchmarks --- //
 
 
     // Disable idicators
@@ -997,6 +220,22 @@
             return group;
     }
 
+    // eliminate duplicates in array
+    function eliminateDuplicates(arr) {
+      var i,
+          len=arr.length,
+          out=[],
+          obj={};
+
+      for (i=0;i<len;i++) {
+        obj[arr[i]]=0;
+      }
+      for (i in obj) {
+        out.push(i);
+      }
+      return out;
+    }
+
     // move array elements through indexes
     Array.prototype.move_array_element = function(old_index, new_index) {
         if (new_index >= this.length) {
@@ -1039,7 +278,7 @@
 
             get_extremes(sq_prepared, wpp_seq_names, 'wpp');
         }else{
-            console.log('no query');
+
             $('#wpp_wrapper').hide();
         }
     }
@@ -1076,18 +315,34 @@
             render_avg = sq_prepared.reduce(function(previousValue, currentValue){
                 return  parseInt(currentValue) +  parseInt(previousValue);
             });
-            //console.log(render_avg/6);
+            //
             print_avg = Math.round(render_avg/6);
             //print_avg = (render_avg/6).toFixed(1);
         }else{
             print_avg = '-';
         }
-        //console.log(print_avg);
+        //
         $('#sq_score').html(print_avg);
     }
 
     // ----- Bechmark Bars ------ //
-    function prepare_benchmark(sequence, benchmark, current_index){
+    // Default benchmarks
+    $('.benchmark_slider').each(function(index, value){
+        noUiSlider.create(value, {
+            start: [0,0],
+            connect: true,
+            range: {
+                'min': 1,
+                'max': 99
+            }
+        });
+    });
+
+
+    // ----------------------------
+    // -- libs checkboxes/sequences
+    // ----------------------------
+    function draw_benchmark(sequence, dimension, dimension_index){
         var sub = sequence.substring(1),
             group_1 = sub.match(/.{1,4}/g),
             seq_array = [],
@@ -1099,22 +354,112 @@
                     seq_array.push([el_2[0], el_2[1]]);
                 });
             }
-            console.log(seq_array);
-
             $.each(seq_array, function(index, val){
-               /*var current_index = 1 + index;
-               console.log(current_index);*/
-               console.log(benchmark + '_' + i + '_b_' + current_index);
-                var current_slider = document.getElementById(benchmark + '_' + i + '_b_' + current_index);
+                var current_slider = document.getElementById(dimension + '_' + index + '_' + dimension_index);
                 current_slider.noUiSlider.set(val);
-                i++;
             });
     }
+
+    // keeps all selected becnhmark libraries
+    var checked_obj = {},
+        checked_array = [];
+
+    // fill `checked_obj` with lib values or remove them if deselected
+    $('#presets_form').on('change', function(evt) {
+       var checked_item = $(evt.target),
+            checked_id = evt.target.id,
+            title = checked_item.data('title'),
+            data_sq = checked_item.data('sq'),
+            data_wpp = checked_item.data('wpp'),
+            data_wva = checked_item.data('wva');
+
+
+console.log(title);
+        if(checked_item.prop('checked')==true){
+            checked_obj[checked_id] = {
+                    'title': title,
+                    'data_sq': data_sq,
+                    'data_wpp': data_wpp,
+                    'data_wva': data_wva
+            };
+            $('#sq_seq_preview').append('<span id="' + checked_id + checked_id  + '" class="sq_checked_lib">' + title + '</span>');
+        }else{
+            $('#' + checked_id + checked_id).remove();
+            delete checked_obj[checked_id];
+        }
+
+        // prevent more than 4 checked libs
+        if($('input[name="presets"]:checked').length >= 4){
+            $('input[name="presets"]').not(':checked').prop('disabled', true);
+        }else{
+            $('input[name="presets"]').prop('disabled', false);
+        }
+    });
+
+    // prepared library object
+    var lib_object_prepared = {};
+
+    function split_lib_seq(lib_seq){
+        var count = 0,
+            seq_elements = [];
+        //console.log(lib_seq);
+
+        for (var key in lib_seq) {
+            if (lib_seq.hasOwnProperty(key)) {
+                ++count;
+                console.log(lib_seq[key].checked_data);
+                console.log(lib_seq[key].title);
+                //seq_elements = lib_seq[key].checked_data.split('_');
+                seq_elements.push({
+                    'title': lib_seq[key].title,
+                    'seq_data': lib_seq[key].checked_data.split('_')
+                });
+            }
+        }
+        /*console.log(seq_elements);
+        console.log(count);*/
+        console.log(seq_elements);
+        //return seq_elements;
+    }
+
+
+    function prepare_lib_seq(lib_seq){
+       var titles = [],
+            i = 0;
+       console.log(checked_obj);
+       for(var key in checked_obj){
+            titles.push(checked_obj[key].title);
+            var seq_data = checked_obj[key];
+
+            console.log(key);
+            console.log(seq_data);
+
+
+
+           draw_benchmark(seq_data.data_sq, 'sq', i);
+           draw_benchmark(seq_data.data_wpp, 'wpp', i);
+           draw_benchmark(seq_data.data_wva, 'wva', i);
+           i++;
+       }
+
+       // insert lib titles
+        titles.forEach(function(ind, val){
+            console.log(val);
+           $('#lib_titles').append('<div class="mini_box_wrapper"><span class="mini_box mini_box_' + val + '"></span>' + ind + '</div>' )
+       });
+
+    }
+
+    $('#presets_form').on('submit', function(e){
+        e.preventDefault();
+        prepare_lib_seq(checked_obj);
+        $('#seq_modal').modal('hide');
+    })
     // Tests
-    prepare_benchmark('S015001502575257569996799', 'sq', 1);
-    prepare_benchmark('S015001502575257569996799', 'sq', 2);
-    prepare_benchmark('W5087638307427199012947868299', 'wpp', 3);
-    prepare_benchmark('V629925615599699101607199', 'wva', 4);
+    //draw_benchmark('S015001502575257569996799', 'sq', 0);
+    //draw_benchmark('S015001502575257569996799', 'wpp', 0);
+    //prepare_benchmark('W508763830742719901294786', 'sq', 'wpp');
+    //prepare_benchmark('V629925615599699101607199', 'sq', 'wva');
 
 
 
@@ -1122,15 +467,52 @@
     function valid_query(){
         var query = getQueryParams(document.location.search),
             valid = query.valid;
-        console.log(valid);
+
     }
 
     // Let's play
-    sq_average();
+
+    $('.elements').slimScroll({
+        //width: '300px',
+        alwaysVisible: true,
+    });
+    // load json libs
+    $.getJSON( "assets/json/codes.json", function( data ) {
+     var html = '';
+      //var items = '';
+      $.each( data, function( key, val ) {
+        var codes = val.sq_code + '_' + val.wpp_code + '_' + val.wva_code;
+        var sq_badge = val.sq_code ? '<span class="badge sq_badge">SQ</span>' : '<span class="badge sq_badge opacity03">SQ</span>',
+            wpp_badge = val.wpp_code ? '<span class="badge wpp_badge">WPP</span>' : '<span class="badge wpp_badge opacity03">WPP</span>',
+            wva_badge = val.wva_code ? '<span class="badge wva_badge">WVA</span>' : '<span class="badge wva_badge opacity03">WVA</span>';
+        if(val.sq_code){
+           sq_badge = '<span class="badge sq_badge">SQ</span>';
+        }
+        html += '<dd class="preset_dd"><input type="checkbox" class="lib_checkbox" name="presets" id="pq' + key + '_' + key + '" value="' + codes + '"  data-title="' +  val.job_title + '" data-sq="' + val.sq_code + '" data-wpp="' + val.wpp_code + '" data-wva="' + val.wva_code + '" data-job="' + val.job_title + '">';
+        html += '<label for="pq' + key + '_' + key + '">' +  val.job_title;
+        html += '<div class="pull-right lib_badges">' + sq_badge + wpp_badge + wva_badge + '</div>';
+
+        html += '</label></dd>';
+      });
+
+        $('.radio-list-left').append(html);
+    });
+
+    // show modal on arrival
+    $(window).on('load', function(){
+        setTimeout(function(){
+            $('#seq_modal').modal();
+        }, 500);
+    });
+
+
+
+
+    /*sq_average();
     generate_sq_report(sq_seq_names);
     generate_wpp_report(sq_seq_names);
     generate_wva_report(wva_seq_names);
-    add_name();
+    add_name();*/
 
     // test only (not used yet)
     //valid_query();
