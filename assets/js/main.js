@@ -368,8 +368,7 @@
     }
 
     // keeps all selected becnhmark libraries
-    var checked_obj = {},
-        checked_array = [];
+    var checked_obj = {};
 
     // disable lib btn
     $('.use_lib').prop('disabled', true);
@@ -422,19 +421,13 @@
         for (var key in lib_seq) {
             if (lib_seq.hasOwnProperty(key)) {
                 ++count;
-                console.log(lib_seq[key].checked_data);
-                console.log(lib_seq[key].title);
-                //seq_elements = lib_seq[key].checked_data.split('_');
+
                 seq_elements.push({
                     'title': lib_seq[key].title,
                     'seq_data': lib_seq[key].checked_data.split('_')
                 });
             }
         }
-        /*console.log(seq_elements);
-        console.log(count);*/
-        console.log(seq_elements);
-        //return seq_elements;
     }
 
 
@@ -445,11 +438,6 @@
        for(var key in checked_obj){
             titles.push(checked_obj[key].title);
             var seq_data = checked_obj[key];
-
-            console.log(key);
-            console.log(seq_data);
-
-
 
            draw_benchmark(seq_data.data_sq, 'sq', i);
            draw_benchmark(seq_data.data_wpp, 'wpp', i);
@@ -528,7 +516,7 @@
 
 
 
-
+    // Let's play
     sq_average();
     generate_sq_report(sq_seq_names);
     generate_wpp_report(sq_seq_names);
@@ -541,6 +529,29 @@
     // current year
     var current_year = new Date().getFullYear();
     $('#current_year').html(current_year);
+
+
+    // set date from URL param
+    function set_date(){
+        var query = getQueryParams(document.location.search),
+            date_num = query.date,
+            today,
+            year, day, month, divided, divided_2;
+
+        if(date_num == '' || date_num == undefined){
+            var today = new Date().toDateString();
+        }else{
+            divided = date_num.match(/.{1,4}/g);
+            year = divided[1];
+            divided_2 = divided[0].match(/.{1,2}/g);
+            month = divided_2[0];
+            day = divided_2[1];
+            today = new Date(year, month, day).toDateString();
+        }
+        $('#date').html(today);
+    }
+
+    set_date();
 
 })();
 
