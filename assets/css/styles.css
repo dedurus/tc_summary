@@ -819,10 +819,7 @@ a:hover i{
     border-width: 10px;
     margin-left: -10px;
 }
-/* Bootstrap tooltips */
-.tooltip{
-  z-index: 20000;
-}
+
 
 /* Handle stripes;
  */

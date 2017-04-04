@@ -374,8 +374,9 @@
                 var current_slider = document.getElementById(dimension + '_' + index + '_' + dimension_index);
                 current_slider.noUiSlider.set(val);
                 $('#' + dimension + '_' + index + '_' + dimension_index).find('.noUi-connect').tooltip({
+                    'container': 'body',
                     'title': title,
-                    'placement': 'auto left'
+                    'placement': 'auto'
                 });
             });
     }
