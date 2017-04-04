@@ -117,7 +117,7 @@
 
     // ----------- FUNCTIONS --------------- //
 
-    // idicator generation
+    // indicator generation
     function generate_idicators(params, type){
         var pips;
         if(type === 'wpp'){
@@ -137,6 +137,15 @@
                         density: 1
                 },
                 range: pips
+            });
+
+            //$('#' + type + '_' + i).find('.noUi-tooltip').tooltip({
+            $('#' + type + '_' + i).find('.noUi-tooltip').popover({
+                //'title': params[i],
+                'content': params[i],
+                'placement': 'auto',
+                'trigger': 'hover',
+                'template':     '<div class="popover" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
             });
         }
     }
@@ -342,7 +351,7 @@
     // ----------------------------
     // -- libs checkboxes/sequences
     // ----------------------------
-    function draw_benchmark(sequence, dimension, dimension_index){
+    function draw_benchmark(sequence, dimension, dimension_index, title){
         var sub = sequence.substring(1),
             group_1 = sub.match(/.{1,4}/g),
             seq_array = [],
@@ -364,6 +373,10 @@
             $.each(seq_array, function(index, val){
                 var current_slider = document.getElementById(dimension + '_' + index + '_' + dimension_index);
                 current_slider.noUiSlider.set(val);
+                $('#' + dimension + '_' + index + '_' + dimension_index).find('.noUi-connect').tooltip({
+                    'title': title,
+                    'placement': 'auto left'
+                });
             });
     }
 
@@ -416,7 +429,7 @@
     function split_lib_seq(lib_seq){
         var count = 0,
             seq_elements = [];
-        //console.log(lib_seq);
+        //
 
         for (var key in lib_seq) {
             if (lib_seq.hasOwnProperty(key)) {
@@ -434,20 +447,21 @@
     function prepare_lib_seq(lib_seq){
        var titles = [],
             i = 0;
-       console.log(checked_obj);
+
        for(var key in checked_obj){
             titles.push(checked_obj[key].title);
             var seq_data = checked_obj[key];
 
-           draw_benchmark(seq_data.data_sq, 'sq', i);
-           draw_benchmark(seq_data.data_wpp, 'wpp', i);
-           draw_benchmark(seq_data.data_wva, 'wva', i);
+
+           draw_benchmark(seq_data.data_sq, 'sq', i, checked_obj[key].title);
+           draw_benchmark(seq_data.data_wpp, 'wpp', i, checked_obj[key].title);
+           draw_benchmark(seq_data.data_wva, 'wva', i, checked_obj[key].title);
            i++;
        }
 
        // insert lib titles
         titles.forEach(function(ind, val){
-            console.log(val);
+
            $('#lib_titles').append('<div class="mini_box_wrapper"><span class="mini_box mini_box_' + val + '"></span>' + ind + '</div>' )
        });
 
