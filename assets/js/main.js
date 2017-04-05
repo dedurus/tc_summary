@@ -405,7 +405,7 @@
                     'data_wpp': data_wpp,
                     'data_wva': data_wva
             };
-            $('#sq_seq_preview').append('<span id="' + checked_id + checked_id  + '" class="sq_checked_lib">' + title + '</span>');
+            $('#sq_seq_preview').append('<div id="' + checked_id +  checked_id  + '" class="sq_checked_lib">' + title + '<a href="#" id="' +  checked_id + '-' + checked_id + '" class="remove_checked_lib close" aria-label="Close"><span aria-hidden="true">&times;</span></a></div>');
         }else{
             $('#' + checked_id + checked_id).remove();
             delete checked_obj[checked_id];
@@ -423,6 +423,18 @@
             $('.use_lib').prop('disabled', true);
         }
     });
+
+    // remove checked libs on `X` button
+    $(document).on('click', '.remove_checked_lib', function(){
+        var clicked = $(this).attr('id');
+        var splitted = clicked.split('-');
+        $('#' + splitted[0]).attr('checked', false);
+        $('#' + splitted[0] + splitted[0]).remove();
+        $('input[name="presets"]').prop('disabled', false);
+
+    });
+
+
 
     // prepared library object
     var lib_object_prepared = {};

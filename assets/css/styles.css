@@ -501,13 +501,13 @@ input#wpp_hidden, input#sq_hidden, input#wva_hidden{
     display:table;
     height: 100%;
     width: 100%;
-    pointer-events:none; /* This makes sure that we can still click outside of the modal to close it */
+    /* pointer-events:none; */ /* This makes sure that we can still click outside of the modal to close it */
 }
 .vertical-align-center {
     /* To center vertically */
     display: table-cell;
     vertical-align: middle;
-    pointer-events:none;
+    /* pointer-events:none; */
 }
 .modal-content {
     /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
@@ -515,7 +515,7 @@ input#wpp_hidden, input#sq_hidden, input#wva_hidden{
     height:inherit;
     /* To center horizontally */
     margin: 0 auto;
-    pointer-events: all;
+   /*  pointer-events: all; */
 }
 h4.modal-title{
   font-family: "Bold", sans-serif;
@@ -946,6 +946,10 @@ span.mini_box_3{background-color: #E36C09;}
 .referred{
   font-size: 14px;
   font-weight: normal;
+  background-color: #333;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 0;
 }
 .sq_checked_lib{
   display: block;
