@@ -27,6 +27,12 @@
         v.setAttribute('disabled', true);
     });
 
+    // disable benchamarks
+    var bench_class = document.getElementsByClassName('benchmark_slider');
+    Array.prototype.forEach.call(bench_class, function(v){
+        v.setAttribute('disabled', true);
+    });
+
 
     // ----------- Objects/Properties --------------- //
     var sq_seq_names = {
@@ -131,22 +137,24 @@
             noUiSlider.create(slider_id, {
                 start: [params[i]],
                 connect: true,
-                tooltips: [wNumb({ decimals: 0 })],
+                tooltips: false,
+                //tooltips: [wNumb({ decimals: 0 })],
+                /*
                 pips: {
                         mode: 'range',
                         density: 1
-                },
+                },*/
                 range: pips
             });
 
             //$('#' + type + '_' + i).find('.noUi-tooltip').tooltip({
-            $('#' + type + '_' + i).find('.noUi-tooltip').popover({
+            /*$('#' + type + '_' + i).find('.noUi-tooltip').popover({
                 //'title': params[i],
                 'content': params[i],
                 'placement': 'auto',
                 'trigger': 'hover',
                 'template':     '<div class="popover" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
-            });
+            });*/
         }
     }
 
@@ -376,7 +384,7 @@
                 $('#' + dimension + '_' + index + '_' + dimension_index).find('.noUi-connect').tooltip({
                     'container': 'body',
                     'title': title,
-                    'placement': 'auto'
+                    'placement': 'left auto'
                 });
             });
     }
@@ -409,9 +417,10 @@
         }else{
             $('#' + checked_id + checked_id).remove();
             delete checked_obj[checked_id];
+            console.log(checked_id);
         }
 
-        // prevent more than 4 checked libs
+        // prevent more than 4 comparison checked libs
         if($('input[name="presets"]:checked').length >= 4){
             $('input[name="presets"]').not(':checked').prop('disabled', true);
         }else{
@@ -425,12 +434,23 @@
     });
 
     // remove checked libs on `X` button
-    $(document).on('click', '.remove_checked_lib', function(){
+    $(document).on('click', '.remove_checked_lib', function(e){
+        e.preventDefault();
         var clicked = $(this).attr('id');
         var splitted = clicked.split('-');
         $('#' + splitted[0]).attr('checked', false);
         $('#' + splitted[0] + splitted[0]).remove();
-        $('input[name="presets"]').prop('disabled', false);
+       /* console.log(splitted[0]);
+        console.log(checked_obj);*/
+        delete checked_obj[splitted[0]];
+        /*console.log(checked_obj);
+        console.log(Object.getOwnPropertyNames(checked_obj).length);*/
+        // prevent more than 4 checked libs
+        if (Object.getOwnPropertyNames(checked_obj).length >= 4){
+            $('input[name="presets"]').not(':checked').prop('disabled', true);
+        }else{
+            $('input[name="presets"]').prop('disabled', false);
+        }
 
     });
 
