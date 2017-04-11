@@ -14,7 +14,6 @@
        <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
        <link rel="stylesheet" type="text/css" href="assets/css/nouislider.min.css">
        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-       <!-- <link rel="stylesheet" type="text/css" href="assets/css/summary_styles.css"> -->
 
     </head>
     <body>
@@ -112,11 +111,9 @@
 
              <!-- //// SQ sliders //// -->
 
+                <!-- /// 1. /// -->
                 <div class="container shadow pLRMob30 mT10 greenBorderL">
-
-                    <!-- /// 1. /// -->
                     <div class="slider_wrapper">
-
 
                         <div class="row hidden-md hidden-lg font12">
                             <div class="col-xs-6 pLR0">
@@ -182,21 +179,76 @@
 
 
                     </div><!-- ./slider_wrapper -->
-                    <div class="row pTB10 lightGrey">
-                        <div class="col-xs-6">
-                            <a href="#"><i class="fa fa-address-card"></i></a>
-                            <a href="#"><i class="fa fa-envelope"></i></a>
-                            <a href="#"><i class="fa fa-file-pdf-o"></i></a>
-                        </div>
-                        <div class="col-xs-6 text-right">
-                            <a href="#"><i class="fa fa-gears"></i></a>
+                    <div class="row pTB0 lightGrey">
+                        <div class="col-md-12">
+                            <div class="nav navbar-nav navbar-centered">
+
+                                    <a class="reports_generator" href="#" id="report_sq1_0" data-report="sq1_0">
+                                        <i class="fa fa-line-chart"></i>
+                                    Report
+                                    </a>
+                                <a href="#"><i class="fa fa-exclamation-triangle"></i>Services</a>
+                                <a href="#"><i class="fa fa-user"></i>About</a>
+                            </div>
                         </div>
                     </div>
-                    </div><!-- ./container -->
+
+                    <!-- slider report -->
+                    <div class="row pTB10 pLR30 slide_reports mT10" id="slide_report_sq1_0">
+                        <p class="lead">
+                            <span class="employee_name"></span> scored in the
+                            <span class="range_sq1_0"></span>
+                            of
+                            <span class="dimension_title_sq1_0"></span>
+                        </p>
+                        <!-- <p class="text-muted">
+                            This area measures rule-following and openness to new ideas, re-training and coaching. People who score in the
+                            <span class="sq1_0"></span>
+                            have an average level of openness to re-training, new ideas, coaching and generally accept existing rules and processes.
+                        </p> -->
+
+                        <div class="col-md-4">
+                            <div class="panel panel-success">
+                                <div class="panel-heading"><i class="fa fa-check-square"></i> Positive aspects of how <span class="employee_name"></span> scored:</div>
+                              <div class="panel-body">
+                                <ul class="positive_sq1_0">
+
+                                </ul>
+                              </div>
+                              <div class="panel-footer"></div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="panel panel-danger">
+                                <div class="panel-heading"><i class="fa fa-exclamation-triangle"></i> Safety risks and tips for managing <span class="employee_name"></span>:</div>
+                              <div class="panel-body">
+                                <ul class="management_sq1_0">
+
+                                </ul>
+                              </div>
+                              <div class="panel-footer"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="panel panel-warning">
+                                <div class="panel-heading"><i class="fa fa-question-circle"></i> Suggested Interview Questions to probe "Fit":</div>
+                              <div class="panel-body">
+                                <ul class="management_sq1_0">
+
+                                </ul>
+                              </div>
+                              <div class="panel-footer"></div>
+                            </div>
+                        </div>
+                    </div><!-- ./ slider_report -->
+                </div><!-- ./container -->
 
 
 
-                    <!-- /// 2. /// -->
+                    <!-- /// 1. /// -->
 
 
                 <!-- /// 2. /// -->
@@ -270,15 +322,38 @@
 
                     </div><!-- ./slider_wrapper -->
                     <div class="row pTB10 lightGrey">
-                        <div class="col-xs-6">
-                            <a href="#"><i class="fa fa-address-card"></i></a>
+                        <div class="col-xs-12">
+                            <a class="reports_generator" href="#" id="report_sq1_1" data-report="sq1_1">
+                                <i class="fa fa-address-card"></i>
+                            </a>
                             <a href="#"><i class="fa fa-envelope"></i></a>
                             <a href="#"><i class="fa fa-file-pdf-o"></i></a>
-                        </div>
-                        <div class="col-xs-6 text-right">
+
                             <a href="#"><i class="fa fa-gears"></i></a>
                         </div>
                     </div>
+
+                    <!-- slider report -->
+                    <div class="row pTB10 pLR30 slide_reports mT10" id="slide_report_sq1_1">
+                        <p class="lead">
+                            <span class="employee_name"></span> scored in the
+                            <span class="range_sq1_1"></span>
+                            of
+                            <span class="dimension_title_sq1_1"></span>
+                        </p>
+                        <!-- <p class="text-muted">
+                            This area measures rule-following and openness to new ideas, re-training and coaching. People who score in the
+                            <span class="range_sq1_1"></span>
+                            have an average level of openness to re-training, new ideas, coaching and generally accept existing rules and processes.
+                        </p> -->
+
+                        <div class="col-md-4">
+                            <p class="bg-success">Positive aspects of how <span class="employee_name"></span> scored:</p>
+                            <ul class="positive_sq1_1">
+
+                            </ul>
+                        </div>
+                    </div><!-- ./ slider_report -->
                     </div><!-- ./container -->
 
 
@@ -1971,6 +2046,10 @@
         <script src="assets/js/jquery.slimscroll.min.js"></script>
         <script type="text/javascript" src="assets/js/nouislider.js"></script>
         <script type="text/javascript" src="assets/js/wNumb.js"></script>
+
+
+        <script type="text/javascript" src="assets/json/sq_keyed_lexicon.js"></script>
+        <script type="text/javascript" src="assets/json/sq_keyed_safety.js"></script>
         <script src="assets/js/main.js"></script>
         <!-- <script src="assets/js/main.js"></script> -->
 

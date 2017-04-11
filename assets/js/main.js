@@ -200,7 +200,6 @@
         return Object.keys(obj).sort().reduce(function (result, key) {
             result[key] = obj[key];
 
-
             return result;
         }, {});
     }
@@ -265,7 +264,7 @@
         return this; // for testing purposes
     };
 
-    // ./ Helpers
+    //--- ./ Helpers --- //
 
 
 
@@ -314,11 +313,18 @@
         }
     }
 
-    function add_name(){
-        var query = getQueryParams(document.location.search);
+    function get_name(){
+        var query = getQueryParams(document.location.search),
+            employee_name;
         if(query.First && query.Last){
-            $('.persons_name').html(query.First + ' ' + query.Last);
+            employee_name = query.First + ' ' + query.Last
         }
+
+        return employee_name;
+    }
+
+    function add_name(){
+        $('.persons_name').html(get_name());
     }
 
     function sq_average(){
@@ -417,7 +423,7 @@
         }else{
             $('#' + checked_id + checked_id).remove();
             delete checked_obj[checked_id];
-            console.log(checked_id);
+
         }
 
         // prevent more than 4 comparison checked libs
@@ -440,11 +446,9 @@
         var splitted = clicked.split('-');
         $('#' + splitted[0]).attr('checked', false);
         $('#' + splitted[0] + splitted[0]).remove();
-       /* console.log(splitted[0]);
-        console.log(checked_obj);*/
+
         delete checked_obj[splitted[0]];
-        /*console.log(checked_obj);
-        console.log(Object.getOwnPropertyNames(checked_obj).length);*/
+
         // prevent more than 4 checked libs
         if (Object.getOwnPropertyNames(checked_obj).length >= 4){
             $('input[name="presets"]').not(':checked').prop('disabled', true);
@@ -456,13 +460,12 @@
 
 
 
-    // prepared library object
+    // prepared library object (???)
     var lib_object_prepared = {};
 
     function split_lib_seq(lib_seq){
         var count = 0,
             seq_elements = [];
-        //
 
         for (var key in lib_seq) {
             if (lib_seq.hasOwnProperty(key)) {
@@ -485,7 +488,6 @@
             titles.push(checked_obj[key].title);
             var seq_data = checked_obj[key];
 
-
            draw_benchmark(seq_data.data_sq, 'sq', i, checked_obj[key].title);
            draw_benchmark(seq_data.data_wpp, 'wpp', i, checked_obj[key].title);
            draw_benchmark(seq_data.data_wva, 'wva', i, checked_obj[key].title);
@@ -494,7 +496,6 @@
 
        // insert lib titles
         titles.forEach(function(ind, val){
-
            $('#lib_titles').append('<div class="mini_box_wrapper"><span class="mini_box mini_box_' + val + '"></span>' + ind + '</div>' )
        });
 
@@ -520,8 +521,7 @@
 
     }
 
-    // Let's play
-
+    // ***** MODAL ****** //
     $('.elements').slimScroll({
         //width: '300px',
         alwaysVisible: true,
@@ -559,24 +559,14 @@
     $('#no_libs').on('click', function(e){
         e.preventDefault();
         $('#seq_modal').modal('hide');
-    })
+    });
+    // ***** ./ MODAL ****** //
 
 
-
-    // Let's play
-    sq_average();
-    generate_sq_report(sq_seq_names);
-    generate_wpp_report(sq_seq_names);
-    generate_wva_report(wva_seq_names);
-    add_name();
-
-    // test only (not used yet)
-    //valid_query();
 
     // current year
     var current_year = new Date().getFullYear();
     $('#current_year').html(current_year);
-
 
     // set date from URL param
     function set_date(){
@@ -598,7 +588,160 @@
         $('#date').html(today);
     }
 
+
+    // ******* SUMMARY REPORTS ******* //
+    function generate_dimension_summary(query_id){
+        var dim_score = get_dimension_score(query_id),
+            range_calc = calculate_range_score((+dim_score[0]), dim_score[1]);
+
+        return get_dimension_score(query_id); // LOL, testing
+    }
+
+    /**
+    * Get individual dimension score base on button id (e.g. `#sq1_5`)
+    * return - array [individual_score, benchmark_type]
+    */
+    function get_dimension_score(query_id){
+        var query = getQueryParams(document.location.search),
+            id_ready = query_id.split('_'),
+            params = prepare_param(query[id_ready[0]]),
+            dimension_score = params[id_ready[1]];
+
+        return [dimension_score, id_ready[0]];
+    }
+
+    // calculate range score (Left/Mid/Right/....)
+    function calculate_range_score(score, benchmark_type){
+        var return_val;
+
+        // check `sq1` and `wva1` types
+        if(benchmark_type == 'sq1' || benchmark_type == 'wva1'){
+            if(score <= 25){
+                return_val = 'Left Side';
+            }else if(score >= 25 && score <= 75 ){
+                return_val = 'Mid Range';
+            }else if(score > 75){
+                return_val = 'Right Side';
+            }else{ // default
+                return_val = 'Mid Range';
+            }
+        }else if(benchmark_type == 'wc1'){ // WPP benchmark type
+            switch(true){
+                case (score <= 20):
+                    return_val = 'Left Side';
+                    break;
+                case (score > 20 && score <= 40):
+                    return_val = 'Mid Left';
+                    break;
+                case (score > 40 && score <= 60):
+                    return_val = 'Mid Range';
+                    break;
+                case (score > 60 && score <= 80):
+                    return_val = 'Mid Right';
+                    break;
+                case (score > 80):
+                    return_val = 'Right Side';
+                    break;
+                default:
+                    return_val = 'Mid Range';
+                    break;
+            }
+        }
+
+        return return_val;
+    }
+
+    // *** Loading JSON files manually, since no database yet *** //
+    /*var sq_positive;
+     $.ajax({
+           type: "GET",
+           url: "assets/json/sq_keyed_lexicon.json",
+           dataType: "json",
+           success: function(response){
+                sq_positive = response;
+           }
+        });*/
+
+     /*$.ajax({
+           'async': false,
+           url: "assets/json/sq_keyed_safety.json",
+           dataType: "json",
+           success: function(response_safety){
+                sq_safety = response_safety;
+                console.log(response_safety);
+           }
+        });*/
+
+
+
+    // *** ./ Loading JSON files manually //
+
+
+
+    // testing
+
+    $('.reports_generator').on('click', function(e){
+        e.preventDefault();
+       /* $('.slide_reports').toggleClass('collapse_report').promise().done(function() {
+            if( $('#footer_btn_icon').hasClass('glyphicon-chevron-down') ) {
+                $('#footer_btn_icon').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+            }else{
+                $('#footer_btn_icon').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+            }
+        });*/
+
+        var report_id = $(this).attr('data-report');
+
+        // check if the data is fetched through assigned CSS class
+        if (!$(this).hasClass("fetched")) {
+            // no class `fetched` on the link, so add it and prepare data
+            $(this).addClass("fetched");
+            var dim_sum = generate_dimension_summary(report_id),
+                dim_response = sq_positive[report_id], // `sq_positive` is global var holding JSON since to no database yet,
+                dim_safety = sq_safety[report_id],
+                dim_range = calculate_range_score((+dim_sum[0]), dim_sum[1]),
+                dimension_title = dim_response.title,
+                positive = dim_response[dim_sum[0]],
+                pos_html = $.parseHTML(positive),
+                //safe_html = $.parseHTML(positive),
+                employee_name = get_name();
+
+            $('.employee_name').html(employee_name);
+            $('.dimension_title_' + report_id).html(dimension_title);
+            $('.range_' + report_id).html(dim_range);
+
+            $('.positive_' + report_id).html(pos_html);
+            $('.management_' + report_id).html(dim_safety[dim_sum[0]]);
+
+        }
+        // toggle
+        $('#slide_report_' + report_id ).slideToggle();
+
+    });
+
+
+
+
+    // ./ testing
+
+    // ******* ./ SUMMARY REPORTS ******* //
+
+
+
+
+
+
+
+    // Let's play init
+    sq_average();
+    generate_sq_report(sq_seq_names);
+    generate_wpp_report(sq_seq_names);
+    generate_wva_report(wva_seq_names);
+    add_name();
     set_date();
+
+    // test only (not used yet)
+    //valid_query();
 
 })();
 
