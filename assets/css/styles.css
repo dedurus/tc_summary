@@ -155,7 +155,9 @@ body {
 .mT10 {
     margin-top: 10px;
 }
-
+.mB0{
+  margin-bottom: 0;
+}
 .mT20 {
     margin-top: 20px;
 }
@@ -315,7 +317,9 @@ body {
 .opacity05 {
     opacity: 0.5;
 }
-
+.font_normal{
+  font-weight: normal;
+}
 .font12 {
     font-size: 12px;
     line-height: 12px;
@@ -1186,7 +1190,8 @@ span.mini_box_3 {
     /* background: #067e55; */
     color: #fff;
     height: 80px;
-    padding: 30px 10px;
+    /* padding: 5px; */
+    text-align: center;
     /*padding: 2px;
     margin-top: 10px;*/
 }
@@ -1220,9 +1225,9 @@ span.mini_box_3 {
 .referred {
     font-size: 14px;
     font-weight: normal;
-    background-color: #aaa;
+    /* background-color: #9e9e9e; */
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     margin-top: 0;
 }
 
@@ -1476,6 +1481,18 @@ a#no_libs:hover {
     padding-left: 20px;
 }
 
+h4.figure_titles{
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.benchmark_label .figure_titles{
+  /* padding: 10px;
+  text-align: center; */
+  margin-bottom: 5px;
+}
+p.text-muted.font12{
+  margin-bottom: 0;
+}
 
 .nav .navbar-centered > div > a {
     display: inline-block;
@@ -1632,6 +1649,10 @@ ol.tilted-list > li:before {
 .material-switch{
   margin: 20px 0;
 }
+.benchmark_label .material-switch{
+  margin: 5px auto;
+  text-align: center;
+}
 .material-switch > label::before {
     background: rgb(0, 0, 0);
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -1671,4 +1692,56 @@ ol.tilted-list > li:before {
 }
 a.comparison_libs i{
   color: #fff;
+}
+
+.slideThree {
+  width: 80px;
+  height: 26px;
+  background: #333;
+  margin: 5px auto;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+.slideThree:after {
+  content: 'OFF';
+  color: #000;
+  position: absolute;
+  right: 10px;
+  z-index: 0;
+  font: 12px/26px Arial, sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15);
+}
+.slideThree:before {
+  content: 'ON';
+  color: #27ae60;
+  position: absolute;
+  left: 10px;
+  z-index: 0;
+  font: 12px/26px Arial, sans-serif;
+  font-weight: bold;
+}
+.slideThree label {
+  display: block;
+  width: 34px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  z-index: 1;
+  background: #fcfff4;
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  border-radius: 50px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.slideThree input[type=checkbox] {
+  visibility: hidden;
+}
+.slideThree input[type=checkbox]:checked + label {
+  left: 43px;
 }

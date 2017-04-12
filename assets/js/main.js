@@ -673,6 +673,10 @@
 
         var report_id = $(this).attr('data-report');
 
+        if($('#checkbox_sq_all').is(':checked')){
+            $('#checkbox_sq_all').prop('checked', false);
+        }
+
         // check if the data is fetched through assigned CSS class
         if (!$(this).hasClass("fetched")) {
             // no class `fetched` on the link, so add it and prepare data
@@ -703,19 +707,18 @@
         $('#slide_report_' + report_id ).slideToggle();
         // checkbox
 
-        /*$( "input[type='checkbox']" ).prop( "checked", function( i, val ) {
-          return !val;
-        });*/
-
         var checkbox_toggle = $('input[id="checkbox_' + report_id + '"]');
 
-            checkbox_toggle.prop('checked', !checkbox_toggle[0].checked);
-
+        checkbox_toggle.prop('checked', !checkbox_toggle[0].checked);
     });
 
 
    $('input[class="reports_generator_checkbox"]').on('change', function(){
         var report_id = $(this).attr('data-report');
+
+        if(!$(this).is(':checked')){
+            $('#checkbox_sq_all').prop('disabled', false).prop('checked', false);
+        }
 
         // check if the data is fetched through assigned CSS class
         if (!$(this).hasClass("fetched")) {
@@ -745,10 +748,63 @@
 
         // toggle
         $('#slide_report_' + report_id ).slideToggle();
-   })
+   });
+
+   // Toggle all SQ/DSQ reports
+   $('#checkbox_sq_all').on('change', function(){
+        var check_all = $(this),
+            checks = $('.reports_generator_checkbox');
+            //checked_status = $('#checkbox_sq_all').is(':checked') ? true : false; // if `checkbox_sq_all` is checked, disable other sq checkboxes
 
 
-    // ./ testing
+            //$(this).addClass('opened_report');
+            if(check_all.is(':checked')){
+                $('.slide_reports').slideUp().slideDown();
+                checks.prop('checked', true);
+            }else{
+                checks.prop('checked', false);
+                $('.slide_reports').slideUp();
+            }
+            console.log(check_all.is(':checked'));
+
+        $.each(checks, function(ind, val){
+            //$(this).toggleClass('sq_all_open');
+            //$(this).prop('disabled', checked_status);
+            var report_id = $(this).attr('data-report');
+
+
+            // check if the data is fetched through assigned CSS class
+            if (!$(this).hasClass("fetched")) {
+                // no class `fetched` on the link, so add it and prepare data
+                $(this).addClass("fetched");
+                var dim_sum = generate_dimension_summary(report_id),
+                    dim_response = sq_positive[report_id], // `sq_positive` is global var holding JSON since to no database yet,
+                    dim_safety = sq_safety[report_id],
+                    dim_question_1 = sq_questions_1[report_id],
+                    dim_question_2 = sq_questions_2[report_id],
+                    dim_range = calculate_range_score((+dim_sum[0]), dim_sum[1]),
+                    dimension_title = dim_response.title,
+                    positive = dim_response[dim_sum[0]],
+                    pos_html = $.parseHTML(positive),
+                    questions = '<li>' + dim_question_1[dim_sum[0]] + '</li><li>' + dim_question_2[dim_sum[0]] + '</li>',
+                    employee_name = get_name();
+
+                $('.employee_name').html(employee_name);
+                $('.dimension_title_' + report_id).html(dimension_title);
+                $('.range_' + report_id).html(dim_range);
+
+                $('.positive_' + report_id).html(pos_html);
+                $('.management_' + report_id).html(dim_safety[dim_sum[0]]);
+                $('.questions_' + report_id).html(questions);
+
+
+
+            }
+
+        });
+   });
+
+
 
     // ******* ./ SUMMARY REPORTS ******* //
 
