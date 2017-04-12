@@ -411,7 +411,7 @@ var sq_safety = {
     "99": "<li>May not be comfortable with a lot of change in tasks</li><li>May prefer to follow a routine or set process</li><li>May not be comfortable having to multi-task rather than focus</li>",
     "100": "<li>May not be comfortable with a lot of change in tasks</li><li>May prefer to follow a routine or set process</li><li>May not be comfortable having to multi-task rather than focus</li>",
   },
-  "sq1_4s": {
+  "sq1_4": {
     "title": "Impulsive vs. Cautiou</li>",
     "1": "<li>May be overconfident in own abilities</li><li>May need to be reminded to think through possible negative consequences of actions</li><li>May underestimate the risks of not following standard procedures</li>",
     "2": "<li>May be overconfident in own abilities</li><li>May need to be reminded to think through possible negative consequences of actions</li><li>May underestimate the risks of not following standard procedures</li>",

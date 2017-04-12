@@ -264,6 +264,8 @@
         return this; // for testing purposes
     };
 
+
+
     //--- ./ Helpers --- //
 
 
@@ -387,11 +389,11 @@
             $.each(seq_array, function(index, val){
                 var current_slider = document.getElementById(dimension + '_' + index + '_' + dimension_index);
                 current_slider.noUiSlider.set(val);
-                $('#' + dimension + '_' + index + '_' + dimension_index).find('.noUi-connect').tooltip({
+               /* $('#' + dimension + '_' + index + '_' + dimension_index).find('.noUi-connect').tooltip({
                     'container': 'body',
                     'title': title,
                     'placement': 'left auto'
-                });
+                });*/
             });
     }
 
@@ -496,21 +498,31 @@
 
        // insert lib titles
         titles.forEach(function(ind, val){
-           $('#lib_titles').append('<div class="mini_box_wrapper"><span class="mini_box mini_box_' + val + '"></span>' + ind + '</div>' )
+           $('.lib_titles').append('<div class="mini_box_wrapper"><span class="mini_box mini_box_' + val + '"></span>' + ind + '</div>' )
        });
-
     }
+
 
     $('#presets_form').on('submit', function(e){
         e.preventDefault();
+
+        // reset current benchmarks
+        $('.lib_titles').html('');
+        $('.benchmark_slider').each(function(index, value){
+            var cid = document.getElementById(this.id);
+            cid.noUiSlider.set([0,0]);
+        });
+
         prepare_lib_seq(checked_obj);
+        console.log(checked_obj);
         $('#seq_modal').modal('hide');
+    });
+
+    $('.comparison_libs').on('click', function(e){
+        e.preventDefault();
+        $('#seq_modal').modal('show');
     })
-    // Tests
-    //draw_benchmark('S015001502575257569996799', 'sq', 0);
-    //draw_benchmark('S015001502575257569996799', 'wpp', 0);
-    //prepare_benchmark('W508763830742719901294786', 'sq', 'wpp');
-    //prepare_benchmark('V629925615599699101607199', 'sq', 'wva');
+
 
 
 
@@ -651,44 +663,13 @@
         return return_val;
     }
 
-    // *** Loading JSON files manually, since no database yet *** //
-    /*var sq_positive;
-     $.ajax({
-           type: "GET",
-           url: "assets/json/sq_keyed_lexicon.json",
-           dataType: "json",
-           success: function(response){
-                sq_positive = response;
-           }
-        });*/
 
-     /*$.ajax({
-           'async': false,
-           url: "assets/json/sq_keyed_safety.json",
-           dataType: "json",
-           success: function(response_safety){
-                sq_safety = response_safety;
-                console.log(response_safety);
-           }
-        });*/
-
-
-
-    // *** ./ Loading JSON files manually //
 
 
 
     // testing
-
     $('.reports_generator').on('click', function(e){
         e.preventDefault();
-       /* $('.slide_reports').toggleClass('collapse_report').promise().done(function() {
-            if( $('#footer_btn_icon').hasClass('glyphicon-chevron-down') ) {
-                $('#footer_btn_icon').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
-            }else{
-                $('#footer_btn_icon').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
-            }
-        });*/
 
         var report_id = $(this).attr('data-report');
 
@@ -699,11 +680,13 @@
             var dim_sum = generate_dimension_summary(report_id),
                 dim_response = sq_positive[report_id], // `sq_positive` is global var holding JSON since to no database yet,
                 dim_safety = sq_safety[report_id],
+                dim_question_1 = sq_questions_1[report_id],
+                dim_question_2 = sq_questions_2[report_id],
                 dim_range = calculate_range_score((+dim_sum[0]), dim_sum[1]),
                 dimension_title = dim_response.title,
                 positive = dim_response[dim_sum[0]],
                 pos_html = $.parseHTML(positive),
-                //safe_html = $.parseHTML(positive),
+                questions = '<li>' + dim_question_1[dim_sum[0]] + '</li><li>' + dim_question_2[dim_sum[0]] + '</li>',
                 employee_name = get_name();
 
             $('.employee_name').html(employee_name);
@@ -712,14 +695,57 @@
 
             $('.positive_' + report_id).html(pos_html);
             $('.management_' + report_id).html(dim_safety[dim_sum[0]]);
+            $('.questions_' + report_id).html(questions);
 
         }
+
         // toggle
         $('#slide_report_' + report_id ).slideToggle();
+        // checkbox
+
+        /*$( "input[type='checkbox']" ).prop( "checked", function( i, val ) {
+          return !val;
+        });*/
+
+        var checkbox_toggle = $('input[id="checkbox_' + report_id + '"]');
+
+            checkbox_toggle.prop('checked', !checkbox_toggle[0].checked);
 
     });
 
 
+   $('input[class="reports_generator_checkbox"]').on('change', function(){
+        var report_id = $(this).attr('data-report');
+
+        // check if the data is fetched through assigned CSS class
+        if (!$(this).hasClass("fetched")) {
+            // no class `fetched` on the link, so add it and prepare data
+            $(this).addClass("fetched");
+            var dim_sum = generate_dimension_summary(report_id),
+                dim_response = sq_positive[report_id], // `sq_positive` is global var holding JSON since to no database yet,
+                dim_safety = sq_safety[report_id],
+                dim_question_1 = sq_questions_1[report_id],
+                dim_question_2 = sq_questions_2[report_id],
+                dim_range = calculate_range_score((+dim_sum[0]), dim_sum[1]),
+                dimension_title = dim_response.title,
+                positive = dim_response[dim_sum[0]],
+                pos_html = $.parseHTML(positive),
+                questions = '<li>' + dim_question_1[dim_sum[0]] + '</li><li>' + dim_question_2[dim_sum[0]] + '</li>',
+                employee_name = get_name();
+
+            $('.employee_name').html(employee_name);
+            $('.dimension_title_' + report_id).html(dimension_title);
+            $('.range_' + report_id).html(dim_range);
+
+            $('.positive_' + report_id).html(pos_html);
+            $('.management_' + report_id).html(dim_safety[dim_sum[0]]);
+            $('.questions_' + report_id).html(questions);
+
+        }
+
+        // toggle
+        $('#slide_report_' + report_id ).slideToggle();
+   })
 
 
     // ./ testing

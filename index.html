@@ -61,30 +61,20 @@
                         <h4 class="persons_name whiteCo">SUMMARY REPORT</h4>
                     </div>
                    <div class="col-xs-12 referred grey p5 text-center"><i class="fa fa-calendar"></i> <span id="date"></span></div>
+                   <div class="col-xs-12 grey p5"><a href="#" class="btn btn-primary btn-block comparison_libs"><i class="fa fa-sliders"></i> Comparison Libraries</a></div>
                 </div> <!-- ./sm-3 -->
 
             </div><!-- ./row -->
         </div><!-- ./container -->
 
         <div class="container mT30">
-            <div class="row text-center">
+            <!-- <div class="row text-center">
                 <div class="col-md-1"></div>
                 <div class="col-md-10"  id="lib_titles">
-                    <!-- <div class="col-xs-6 col-md-3">
-                        <span class="mini_box dsq_mini_box"></span> TItle 1
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <span class="mini_box sq_mini_box"></span> TItle 2
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <span class="mini_box wpp_mini_box"></span> TItle 3
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <span class="mini_box wva_mini_box"></span> TItle 4
-                    </div> -->
+
                 </div>
                 <div class="col-md-1"></div>
-            </div>
+            </div> -->
         </div><!-- ./contaiener -->
 
 
@@ -177,58 +167,64 @@
                             </div>
                         </div>
 
+                        <div class="row text-center">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10 lib_titles">
+
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+
 
                     </div><!-- ./slider_wrapper -->
                     <div class="row pTB0 lightGrey">
-                        <div class="col-md-12">
+                        <div class="col-xs-8 pLR0">
                             <div class="nav navbar-nav navbar-centered">
-
                                     <a class="reports_generator" href="#" id="report_sq1_0" data-report="sq1_0">
                                         <i class="fa fa-line-chart"></i>
                                     Report
                                     </a>
-                                <a href="#"><i class="fa fa-exclamation-triangle"></i>Services</a>
-                                <a href="#"><i class="fa fa-user"></i>About</a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 text-right">
+                            <div class="material-switch pull-right">
+                                <input data-report="sq1_0" class="reports_generator_checkbox" id="checkbox_sq1_0" name="checkbox_sq1_0" type="checkbox">
+                                <label for="checkbox_sq1_0" class="label-success"></label>
                             </div>
                         </div>
                     </div>
 
                     <!-- slider report -->
                     <div class="row pTB10 pLR30 slide_reports mT10" id="slide_report_sq1_0">
-                        <p class="lead">
+                        <p class="lead text-center">
                             <span class="employee_name"></span> scored in the
-                            <span class="range_sq1_0"></span>
+                            <span class="range_sq1_0 label label-info"></span>
                             of
                             <span class="dimension_title_sq1_0"></span>
                         </p>
-                        <!-- <p class="text-muted">
-                            This area measures rule-following and openness to new ideas, re-training and coaching. People who score in the
-                            <span class="sq1_0"></span>
-                            have an average level of openness to re-training, new ideas, coaching and generally accept existing rules and processes.
-                        </p> -->
-
+                    <div class="equal-panels">
                         <div class="col-md-4">
                             <div class="panel panel-success">
                                 <div class="panel-heading"><i class="fa fa-check-square"></i> Positive aspects of how <span class="employee_name"></span> scored:</div>
                               <div class="panel-body">
-                                <ul class="positive_sq1_0">
+                                <ol class="tilted-list positive_list positive_sq1_0">
 
-                                </ul>
+                                </ol>
                               </div>
-                              <div class="panel-footer"></div>
+
                             </div>
 
                         </div>
 
                         <div class="col-md-4">
                             <div class="panel panel-danger">
-                                <div class="panel-heading"><i class="fa fa-exclamation-triangle"></i> Safety risks and tips for managing <span class="employee_name"></span>:</div>
+                                <div class="panel-heading"><i class="fa fa-exclamation-triangle"></i> Safety risks and tips:</div>
                               <div class="panel-body">
-                                <ul class="management_sq1_0">
+                                <ol class="tilted-list management_list management_sq1_0">
 
-                                </ul>
+                                </ol>
                               </div>
-                              <div class="panel-footer"></div>
+
                             </div>
                         </div>
 
@@ -236,14 +232,20 @@
                             <div class="panel panel-warning">
                                 <div class="panel-heading"><i class="fa fa-question-circle"></i> Suggested Interview Questions to probe "Fit":</div>
                               <div class="panel-body">
-                                <ul class="management_sq1_0">
+                                <ol class="tilted-list questions_list questions_sq1_0">
 
-                                </ul>
+                                </ol>
                               </div>
-                              <div class="panel-footer"></div>
+
                             </div>
                         </div>
+                    </div><!-- ./ equal-panels -->
                     </div><!-- ./ slider_report -->
+
+                </div><!-- ./container -->
+
+                <div class="container">
+                    <hr class="semi_divider">
                 </div><!-- ./container -->
 
 
@@ -319,43 +321,84 @@
                             </div>
                         </div>
 
+                        <div class="row text-center">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10 lib_titles">
+
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
 
                     </div><!-- ./slider_wrapper -->
-                    <div class="row pTB10 lightGrey">
-                        <div class="col-xs-12">
-                            <a class="reports_generator" href="#" id="report_sq1_1" data-report="sq1_1">
-                                <i class="fa fa-address-card"></i>
-                            </a>
-                            <a href="#"><i class="fa fa-envelope"></i></a>
-                            <a href="#"><i class="fa fa-file-pdf-o"></i></a>
-
-                            <a href="#"><i class="fa fa-gears"></i></a>
+                    <div class="row pTB0 lightGrey">
+                        <div class="col-xs-8 pLR0">
+                            <div class="nav navbar-nav navbar-centered">
+                                    <a class="reports_generator" href="#" id="report_sq1_1" data-report="sq1_1">
+                                        <i class="fa fa-line-chart"></i>
+                                    Report
+                                    </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 text-right">
+                            <div class="material-switch pull-right">
+                                <input data-report="sq1_1" class="reports_generator_checkbox" id="checkbox_sq1_1" name="checkbox_sq1_1" type="checkbox">
+                                <label for="checkbox_sq1_1" class="label-success"></label>
+                            </div>
                         </div>
                     </div>
 
                     <!-- slider report -->
                     <div class="row pTB10 pLR30 slide_reports mT10" id="slide_report_sq1_1">
-                        <p class="lead">
+                        <p class="lead text-center text-center">
                             <span class="employee_name"></span> scored in the
-                            <span class="range_sq1_1"></span>
+                            <span class="range_sq1_1 label label-info"></span>
                             of
                             <span class="dimension_title_sq1_1"></span>
                         </p>
-                        <!-- <p class="text-muted">
-                            This area measures rule-following and openness to new ideas, re-training and coaching. People who score in the
-                            <span class="range_sq1_1"></span>
-                            have an average level of openness to re-training, new ideas, coaching and generally accept existing rules and processes.
-                        </p> -->
+                    <div class="equal-panels">
+                        <div class="col-md-4">
+                            <div class="panel panel-success">
+                                <div class="panel-heading"><i class="fa fa-check-square"></i> Positive aspects of how <span class="employee_name"></span> scored:</div>
+                              <div class="panel-body">
+                                <ol class="tilted-list positive_list positive_sq1_1">
+
+                                </ol>
+                              </div>
+
+                            </div>
+
+                        </div>
 
                         <div class="col-md-4">
-                            <p class="bg-success">Positive aspects of how <span class="employee_name"></span> scored:</p>
-                            <ul class="positive_sq1_1">
+                            <div class="panel panel-danger">
+                                <div class="panel-heading"><i class="fa fa-exclamation-triangle"></i> Safety risks and tips:</div>
+                              <div class="panel-body">
+                                <ol class="tilted-list management_list management_sq1_1">
 
-                            </ul>
+                                </ol>
+                              </div>
+
+                            </div>
                         </div>
+
+                        <div class="col-md-4">
+                            <div class="panel panel-warning">
+                                <div class="panel-heading"><i class="fa fa-question-circle"></i> Suggested Interview Questions to probe "Fit":</div>
+                              <div class="panel-body">
+                                <ol class="tilted-list questions_list questions_sq1_1">
+
+                                </ol>
+                              </div>
+
+                            </div>
+                        </div>
+                    </div><!-- ./ equal-panels -->
                     </div><!-- ./ slider_report -->
                     </div><!-- ./container -->
 
+                    <div class="container">
+                        <hr class="semi_divider">
+                    </div><!-- ./container -->
 
                     <!-- /// 3. /// -->
                     <div class="container shadow pLRMob30 mT10 greenBorderL">
@@ -364,7 +407,7 @@
 
                             <div class="row hidden-md hidden-lg font12">
                                 <div class="col-xs-6 pLR0">
-                                    <h4 class="mobileHeading">Impatient</h4>
+                                    <h4 class="mobileHeading">Reactive</h4>
                                 </div>
                                 <div class="col-xs-6 text-right pLR0">
                                     <h4 class="mobileHeading">Patient</h4>
@@ -374,7 +417,7 @@
                             <div class="row hidden-xs hidden-sm">
 
                                 <div class="col-xs-2">
-                                    <h4 class="figure_titles hidden-md hidden-lg">Impatient</h4>
+                                    <h4 class="figure_titles hidden-md hidden-lg">Reactive</h4>
                                 </div>
                                 <div class="col-xs-8">
                                     <div class="col-xs-3 font12Mob text-center hidden-xs text-muted">
@@ -395,7 +438,7 @@
                             <div class="row">
 
                                 <div class="col-md-2 hidden-xs hidden-sm">
-                                    <h4 class="figure_titles">Impatient</h4>
+                                    <h4 class="figure_titles">Reactive</h4>
                                     <p class="text-muted font12">
                                         Becomes annoyed
                                         or irritated when
@@ -426,21 +469,86 @@
                                 </div>
                             </div>
 
+                            <div class="row text-center">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10 lib_titles">
+
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
 
                         </div><!-- ./slider_wrapper -->
-                        <div class="row pTB10 lightGrey">
-                            <div class="col-xs-6">
-                                <a href="#"><i class="fa fa-address-card"></i></a>
-                                <a href="#"><i class="fa fa-envelope"></i></a>
-                                <a href="#"><i class="fa fa-file-pdf-o"></i></a>
+
+                        <div class="row pTB0 lightGrey">
+                            <div class="col-xs-8 pLR0">
+                                <div class="nav navbar-nav navbar-centered">
+                                        <a class="reports_generator" href="#" id="report_sq1_2" data-report="sq1_2">
+                                            <i class="fa fa-line-chart"></i>
+                                        Report
+                                        </a>
+                                </div>
                             </div>
-                            <div class="col-xs-6 text-right">
-                                <a href="#"><i class="fa fa-gears"></i></a>
+                            <div class="col-xs-4 text-right">
+                                <div class="material-switch pull-right">
+                                    <input data-report="sq1_2" class="reports_generator_checkbox" id="checkbox_sq1_2" name="checkbox_sq1_1" type="checkbox">
+                                    <label for="checkbox_sq1_2" class="label-success"></label>
+                                </div>
                             </div>
                         </div>
-                        </div><!-- ./container -->
 
+                        <!-- slider report -->
+                        <div class="row pTB10 pLR30 slide_reports mT10" id="slide_report_sq1_2">
+                            <p class="lead text-center">
+                                <span class="employee_name"></span> scored in the
+                                <span class="range_sq1_2 label label-info"></span>
+                                of
+                                <span class="dimension_title_sq1_2"></span>
+                            </p>
 
+                        <div class="equal-panels">
+                            <div class="col-md-4">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading"><i class="fa fa-check-square"></i> Positive aspects of how <span class="employee_name"></span> scored:</div>
+                                  <div class="panel-body">
+                                    <ol class="tilted-list positive_list positive_sq1_2">
+
+                                    </ol>
+                                  </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading"><i class="fa fa-exclamation-triangle"></i> Safety risks and tips:</div>
+                                  <div class="panel-body">
+                                    <ol class="tilted-list management_list management_sq1_2">
+
+                                    </ol>
+                                  </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="panel panel-warning">
+                                    <div class="panel-heading"><i class="fa fa-question-circle"></i> Suggested Interview Questions to probe "Fit":</div>
+                                  <div class="panel-body">
+                                    <ol class="tilted-list questions_list questions_sq1_2">
+
+                                    </ol>
+                                  </div>
+
+                                </div>
+                            </div>
+                        </div><!-- ./ equal-panels -->
+                        </div><!-- ./ slider_report -->
+                    </div><!-- ./container -->
+
+                    <div class="container">
+                        <hr class="semi_divider">
+                    </div><!-- ./container -->
 
                     <!-- /// 4. /// -->
                     <div class="container shadow pLRMob30 mT10 greenBorderL">
@@ -449,7 +557,7 @@
 
                             <div class="row hidden-md hidden-lg font12">
                                 <div class="col-xs-6 pLR0">
-                                    <h4 class="mobileHeading">Distractable</h4>
+                                    <h4 class="mobileHeading">Distractible</h4>
                                 </div>
                                 <div class="col-xs-6 text-right pLR0">
                                     <h4 class="mobileHeading">Focused</h4>
@@ -459,7 +567,7 @@
                             <div class="row hidden-xs hidden-sm">
 
                                 <div class="col-xs-2">
-                                    <h4 class="figure_titles hidden-md hidden-lg">Distractable</h4>
+                                    <h4 class="figure_titles hidden-md hidden-lg">Distractible</h4>
                                 </div>
                                 <div class="col-xs-8">
                                     <div class="col-xs-3 font12Mob text-center hidden-xs text-muted">
@@ -480,7 +588,7 @@
                             <div class="row">
 
                                 <div class="col-md-2 hidden-xs hidden-sm">
-                                    <h4 class="figure_titles">Distractable</h4>
+                                    <h4 class="figure_titles">Distractible</h4>
                                     <p class="text-muted font12">
                                         Seeks stimulation
                                         and variety. May
@@ -511,22 +619,87 @@
                                 </div>
                             </div>
 
+                            <div class="row text-center">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10 lib_titles">
+
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
 
                         </div><!-- ./slider_wrapper -->
-                        <div class="row pTB10 lightGrey">
-                            <div class="col-xs-6">
-                                <a href="#"><i class="fa fa-address-card"></i></a>
-                                <a href="#"><i class="fa fa-envelope"></i></a>
-                                <a href="#"><i class="fa fa-file-pdf-o"></i></a>
+
+                        <div class="row pTB0 lightGrey">
+                            <div class="col-xs-8 pLR0">
+                                <div class="nav navbar-nav navbar-centered">
+                                        <a class="reports_generator" href="#" id="report_sq1_3" data-report="sq1_3">
+                                            <i class="fa fa-line-chart"></i>
+                                        Report
+                                        </a>
+                                </div>
                             </div>
-                            <div class="col-xs-6 text-right">
-                                <a href="#"><i class="fa fa-gears"></i></a>
+                            <div class="col-xs-4 text-right">
+                                <div class="material-switch pull-right">
+                                    <input data-report="sq1_3" class="reports_generator_checkbox" id="checkbox_sq1_3" name="checkbox_sq1_3" type="checkbox">
+                                    <label for="checkbox_sq1_3" class="label-success"></label>
+                                </div>
                             </div>
                         </div>
-                        </div><!-- ./container -->
+
+                        <!-- slider report -->
+                        <div class="row pTB10 pLR30 slide_reports mT10" id="slide_report_sq1_3">
+                            <p class="lead text-center">
+                                <span class="employee_name"></span> scored in the
+                                <span class="range_sq1_3 label label-info"></span>
+                                of
+                                <span class="dimension_title_sq1_3"></span>
+                            </p>
+
+                        <div class="equal-panels">
+                            <div class="col-md-4">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading"><i class="fa fa-check-square"></i> Positive aspects of how <span class="employee_name"></span> scored:</div>
+                                  <div class="panel-body">
+                                    <ol class="tilted-list positive_list positive_sq1_3">
+
+                                    </ol>
+                                  </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading"><i class="fa fa-exclamation-triangle"></i> Safety risks and tips:</div>
+                                  <div class="panel-body">
+                                    <ol class="tilted-list management_list management_sq1_3">
+
+                                    </ol>
+                                  </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="panel panel-warning">
+                                    <div class="panel-heading"><i class="fa fa-question-circle"></i> Suggested Interview Questions to probe "Fit":</div>
+                                  <div class="panel-body">
+                                    <ol class="tilted-list questions_list questions_sq1_3">
+
+                                    </ol>
+                                  </div>
+
+                                </div>
+                            </div>
+                        </div><!-- ./ equal-panels -->
+                        </div><!-- ./ slider_report -->
+                    </div><!-- ./container -->
 
 
-
+                    <div class="container">
+                        <hr class="semi_divider">
+                    </div><!-- ./container -->
 
                     <!-- /// 5. /// -->
                     <div class="container shadow pLRMob30 mT10 greenBorderL">
@@ -597,18 +770,85 @@
                                 </div>
                             </div>
 
+                            <div class="row text-center">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10 lib_titles">
+
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
 
                         </div><!-- ./slider_wrapper -->
-                        <div class="row pTB10 lightGrey">
-                            <div class="col-xs-6">
-                                <a href="#"><i class="fa fa-address-card"></i></a>
-                                <a href="#"><i class="fa fa-envelope"></i></a>
-                                <a href="#"><i class="fa fa-file-pdf-o"></i></a>
+
+                        <div class="row pTB0 lightGrey">
+                            <div class="col-xs-8 pLR0">
+                                <div class="nav navbar-nav navbar-centered">
+                                        <a class="reports_generator" href="#" id="report_sq1_4" data-report="sq1_4">
+                                            <i class="fa fa-line-chart"></i>
+                                        Report
+                                        </a>
+                                </div>
                             </div>
-                            <div class="col-xs-6 text-right">
-                                <a href="#"><i class="fa fa-gears"></i></a>
+                            <div class="col-xs-4 text-right">
+                                <div class="material-switch pull-right">
+                                    <input data-report="sq1_4" class="reports_generator_checkbox" id="checkbox_sq1_4" name="checkbox_sq1_4" type="checkbox">
+                                    <label for="checkbox_sq1_4" class="label-success"></label>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- slider report -->
+                        <div class="row pTB10 pLR30 slide_reports mT10" id="slide_report_sq1_4">
+                            <p class="lead text-center">
+                                <span class="employee_name"></span> scored in the
+                                <span class="range_sq1_4 label label-info"></span>
+                                of
+                                <span class="dimension_title_sq1_4"></span>
+                            </p>
+
+                        <div class="equal-panels">
+                            <div class="col-md-4">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading"><i class="fa fa-check-square"></i> Positive aspects of how <span class="employee_name"></span> scored:</div>
+                                  <div class="panel-body">
+                                    <ol class="tilted-list positive_list positive_sq1_4">
+
+                                    </ol>
+                                  </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading"><i class="fa fa-exclamation-triangle"></i> Safety risks and tips:</div>
+                                  <div class="panel-body">
+                                    <ol class="tilted-list management_list management_sq1_4">
+
+                                    </ol>
+                                  </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="panel panel-warning">
+                                    <div class="panel-heading"><i class="fa fa-question-circle"></i> Suggested Interview Questions to probe "Fit":</div>
+                                  <div class="panel-body">
+                                    <ol class="tilted-list questions_list questions_sq1_4">
+
+                                    </ol>
+                                  </div>
+
+                                </div>
+                            </div>
+                        </div><!-- ./ equal-panels -->
+                        </div><!-- ./ slider_report -->
+                    </div><!-- ./container -->
+
+                    <div class="container">
+                        <hr class="semi_divider">
                     </div><!-- ./container -->
 
                     <!-- /// 6. /// -->
@@ -680,18 +920,81 @@
                                 </div>
                             </div>
 
+                            <div class="row text-center">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10 lib_titles">
+
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
 
                         </div><!-- ./slider_wrapper -->
-                        <div class="row pTB10 lightGrey">
-                            <div class="col-xs-6">
-                                <a href="#"><i class="fa fa-address-card"></i></a>
-                                <a href="#"><i class="fa fa-envelope"></i></a>
-                                <a href="#"><i class="fa fa-file-pdf-o"></i></a>
+
+                        <div class="row pTB0 lightGrey">
+                            <div class="col-xs-8 pLR0">
+                                <div class="nav navbar-nav navbar-centered">
+                                        <a class="reports_generator" href="#" id="report_sq1_5" data-report="sq1_5">
+                                            <i class="fa fa-line-chart"></i>
+                                        Report
+                                        </a>
+                                </div>
                             </div>
-                            <div class="col-xs-6 text-right">
-                                <a href="#"><i class="fa fa-gears"></i></a>
+                            <div class="col-xs-4 text-right">
+                                <div class="material-switch pull-right">
+                                    <input data-report="sq1_5" class="reports_generator_checkbox" id="checkbox_sq1_5" name="checkbox_sq1_5" type="checkbox">
+                                    <label for="checkbox_sq1_5" class="label-success"></label>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- slider report -->
+                        <div class="row pTB10 pLR30 slide_reports mT10" id="slide_report_sq1_5">
+                            <p class="lead text-center">
+                                <span class="employee_name"></span> scored in the
+                                <span class="range_sq1_5 label label-info"></span>
+                                of
+                                <span class="dimension_title_sq1_5"></span>
+                            </p>
+
+                        <div class="equal-panels">
+                            <div class="col-md-4">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading"><i class="fa fa-check-square"></i> Positive aspects of how <span class="employee_name"></span> scored:</div>
+                                  <div class="panel-body">
+                                    <ol class="tilted-list positive_list positive_sq1_5">
+
+                                    </ol>
+                                  </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading"><i class="fa fa-exclamation-triangle"></i> Safety risks and tips:</div>
+                                  <div class="panel-body">
+                                    <ol class="tilted-list management_list management_sq1_5">
+
+                                    </ol>
+                                  </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="panel panel-warning">
+                                    <div class="panel-heading"><i class="fa fa-question-circle"></i> Suggested Interview Questions to probe "Fit":</div>
+                                  <div class="panel-body">
+                                    <ol class="tilted-list questions_list questions_sq1_5">
+
+                                    </ol>
+                                  </div>
+
+                                </div>
+                            </div>
+                        </div><!-- ./ equal-panels -->
+                        </div><!-- ./ slider_report -->
                     </div><!-- ./container -->
 
         </div><!-- ./sq_wrapper -->
@@ -715,7 +1018,7 @@
 
                     <div class="col-xs-12 col-md-2 darkGrey benchmark_label_2 text-center whiteCo">
                         <div class="col-xs-12 mT5 hidden-sm hidden-xs">
-                            <img class="img-responsive center-block" src="assets/img/wpp_small.png">
+                            <img class="img-responsive center-block" src="assets/img/wpp_small.png" alt="WPP">
                         </div>
                     </div>
                 </div><!-- ./row -->
@@ -800,6 +1103,13 @@
                         </div>
                     </div>
 
+                    <div class="row text-center">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 lib_titles">
+
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
 
                 </div><!-- ./slider_wrapper -->
                 <div class="row pTB10 lightGrey">
@@ -894,6 +1204,13 @@
                         </div>
                     </div>
 
+                    <div class="row text-center">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 lib_titles">
+
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
 
                 </div><!-- ./slider_wrapper -->
                 <div class="row pTB10 lightGrey">
@@ -986,6 +1303,13 @@
                         </div>
                     </div>
 
+                    <div class="row text-center">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 lib_titles">
+
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
 
                 </div><!-- ./slider_wrapper -->
                 <div class="row pTB10 lightGrey">
@@ -1079,6 +1403,13 @@
                         </div>
                     </div>
 
+                    <div class="row text-center">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 lib_titles">
+
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
 
                 </div><!-- ./slider_wrapper -->
                 <div class="row pTB10 lightGrey">
@@ -1172,6 +1503,13 @@
                         </div>
                     </div>
 
+                    <div class="row text-center">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 lib_titles">
+
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
 
                 </div><!-- ./slider_wrapper -->
                 <div class="row pTB10 lightGrey">
@@ -1261,6 +1599,13 @@
                         </div>
                     </div>
 
+                    <div class="row text-center">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 lib_titles">
+
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
 
                 </div><!-- ./slider_wrapper -->
                 <div class="row pTB10 lightGrey">
@@ -1352,6 +1697,13 @@
                         </div>
                     </div>
 
+                    <div class="row text-center">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 lib_titles">
+
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
 
                 </div><!-- ./slider_wrapper -->
                 <div class="row pTB10 lightGrey">
@@ -1388,7 +1740,7 @@
 
                     <div class="col-xs-12 col-md-2 darkGrey benchmark_label_2 text-center whiteCo">
                         <div class="col-xs-12 mT5 hidden-sm hidden-xs">
-                            <img class="img-responsive center-block" src="assets/img/wva_small.png">
+                            <img class="img-responsive center-block" src="assets/img/wva_small.png" alt="WVA">
                         </div>
                     </div>
                 </div><!-- ./row -->
@@ -1468,6 +1820,13 @@
                         </div>
                     </div>
 
+                    <div class="row text-center">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 lib_titles">
+
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
 
                 </div><!-- ./slider_wrapper -->
                 <div class="row pTB10 lightGrey">
@@ -1558,6 +1917,13 @@
                         </div>
                     </div>
 
+                    <div class="row text-center">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 lib_titles">
+
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
 
                 </div><!-- ./slider_wrapper -->
                 <div class="row pTB10 lightGrey">
@@ -1645,6 +2011,13 @@
                         </div>
                     </div>
 
+                    <div class="row text-center">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 lib_titles">
+
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
 
                 </div><!-- ./slider_wrapper -->
                 <div class="row pTB10 lightGrey">
@@ -1733,6 +2106,13 @@
                         </div>
                     </div>
 
+                    <div class="row text-center">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 lib_titles">
+
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
 
                 </div><!-- ./slider_wrapper -->
                 <div class="row pTB10 lightGrey">
@@ -1820,6 +2200,13 @@
                         </div>
                     </div>
 
+                    <div class="row text-center">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 lib_titles">
+
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
 
                 </div><!-- ./slider_wrapper -->
                 <div class="row pTB10 lightGrey">
@@ -1905,6 +2292,13 @@
                         </div>
                     </div>
 
+                    <div class="row text-center">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 lib_titles">
+
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
 
                 </div><!-- ./slider_wrapper -->
                 <div class="row pTB10 lightGrey">
@@ -1952,7 +2346,7 @@
 
                     <div class="first modal_steps fade in active">
 
-                        <h4 class="modal-title" data-step="3">Comparison Libraries <i class="fa fa-book"></i></h4>
+                        <h4 class="modal-title" data-step="3">Comparison Libraries <i class="fa fa-sliders"></i></h4>
                         <div class="row">
                             <form id="presets_form">
                             <div class="col-md-6">
@@ -1976,23 +2370,6 @@
                                   </div>
                                 </div>
 
-                                <!-- <div class="media">
-                                  <div class="media-left media-middle">
-                                      <img class="media-object" src="assets/img/wpp.png" alt="...">
-                                  </div>
-                                  <div class="media-body blueCo">
-                                    <span class="wpp_checked_lib"></span>
-                                  </div>
-                                </div>
-
-                                <div class="media">
-                                  <div class="media-left media-middle">
-                                      <img class="media-object" src="assets/img/wva.png" alt="...">
-                                  </div>
-                                  <div class="media-body orangeCo">
-                                    <span class="wva_checked_lib"></span>
-                                  </div>
-                                </div> -->
 
                             </div>
 
@@ -2047,11 +2424,14 @@
         <script type="text/javascript" src="assets/js/nouislider.js"></script>
         <script type="text/javascript" src="assets/js/wNumb.js"></script>
 
-
+        <!-- JSON -->
         <script type="text/javascript" src="assets/json/sq_keyed_lexicon.js"></script>
         <script type="text/javascript" src="assets/json/sq_keyed_safety.js"></script>
+        <script type="text/javascript" src="assets/json/sq_keyed_questions_1.js"></script>
+        <script type="text/javascript" src="assets/json/sq_keyed_questions_2.js"></script>
+
+
         <script src="assets/js/main.js"></script>
-        <!-- <script src="assets/js/main.js"></script> -->
 
     </body>
 </html>
