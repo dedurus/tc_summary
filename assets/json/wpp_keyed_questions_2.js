@@ -102,7 +102,7 @@ var wpp_questions_2 = {
     "99": "The ability to inspire and motivate others is an important skill in any position. Tell me about a time when you influenced others you worked with or managed to improve their performance. How did you help them and what were the results?",
     "100": "The ability to inspire and motivate others is an important skill in any position. Tell me about a time when you influenced others you worked with or managed to improve their performance. How did you help them and what were the results?"
   },
-  "wc1_1": {
+  "wc1_6": {
     "title": "Achievement",
     "1": "Tell me about a job you had that you felt was very demanding. Describe the situation and how you felt about it at the time.",
     "2": "Tell me about a job you had that you felt was very demanding. Describe the situation and how you felt about it at the time.",
@@ -205,7 +205,7 @@ var wpp_questions_2 = {
     "99": "Tell me about a time when you really had to push yourself to achieve a difficult goal. What was the goal and how did you reach it?",
     "100": "Tell me about a time when you really had to push yourself to achieve a difficult goal. What was the goal and how did you reach it?"
   },
-  "wc1_2": {
+  "wc1_1": {
     "title": "Emotional",
     "1": "Stress can often decrease our job effectiveness.  Tell me about a particularly stressful situation that could have affected your performance at work if you had let it.  How did you cope with the stress?",
     "2": "Stress can often decrease our job effectiveness.  Tell me about a particularly stressful situation that could have affected your performance at work if you had let it.  How did you cope with the stress?",
@@ -308,7 +308,7 @@ var wpp_questions_2 = {
     "99": "Tell me about a time when you were particularly overwhelmed with your responsibilities at work.  What strategies did you use to deal with this pressure?",
     "100": "Tell me about a time when you were particularly overwhelmed with your responsibilities at work.  What strategies did you use to deal with this pressure?"
   },
-  "wc1_3": {
+  "wc1_2": {
     "title": "Social",
     "1": "Give me an example of a time when you were in a situation where communicating with someone was challenging. What was the situation and how did you handle it?",
     "2": "Give me an example of a time when you were in a situation where communicating with someone was challenging. What was the situation and how did you handle it?",
@@ -411,7 +411,7 @@ var wpp_questions_2 = {
     "99": "Tell me about a time when you decided to work on a task independently when you would have rather involved others. What was the situation and what was the result?",
     "100": "Tell me about a time when you decided to work on a task independently when you would have rather involved others. What was the situation and what was the result?"
   },
- "wc1_4": {
+ "wc1_3": {
    "title": "Interpersonal",
     "1": "Sometimes customers or co-workers make unreasonable requests.  Describe a time when someone made an especially unreasonable request to you.  How did you handle this situation?",
     "2": "Sometimes customers or co-workers make unreasonable requests.  Describe a time when someone made an especially unreasonable request to you.  How did you handle this situation?",
@@ -514,7 +514,7 @@ var wpp_questions_2 = {
     "99": "Tell me about a time when you had to deal with someone who was angry or upset with you. What was the situation and how did you handle it?",
     "100": "Tell me about a time when you had to deal with someone who was angry or upset with you. What was the situation and how did you handle it?"
   },
-  "wc1_5": {
+  "wc1_4": {
     "title": "Task",
     "1": "Give me an example of a time when you had to be detail-focused in order to complete a task successfully. What did you do and what were the results?",
     "2": "Give me an example of a time when you had to be detail-focused in order to complete a task successfully. What did you do and what were the results?",
@@ -617,7 +617,7 @@ var wpp_questions_2 = {
     "99": "Give me an example of a time when you had to plan and organize something complex. What was the situation and what was the result?",
     "100": "Give me an example of a time when you had to plan and organize something complex. What was the situation and what was the result?"
   },
-  "wc1_6": {
+  "wc1_5": {
     "title": "Conceptual",
     "1": "Have you recently pursued any opportunities to improve your skills? How did you learn about these opportunities? What actions did you take to pursue them?",
     "2": "Have you recently pursued any opportunities to improve your skills? How did you learn about these opportunities? What actions did you take to pursue them?",

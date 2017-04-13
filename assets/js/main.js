@@ -911,7 +911,7 @@
                 pos_html = $.parseHTML(positive),
                 questions = '<li>' + dim_question_1[dim_sum[0]] + '</li><li>' + dim_question_2[dim_sum[0]] + '</li>',
                 employee_name = get_name();
-console.log(dim_sum);
+
             $('.employee_name').html(employee_name);
             $('.dimension_title_' + report_id).html(dimension_title);
             $('.range_' + report_id).html(dim_range);

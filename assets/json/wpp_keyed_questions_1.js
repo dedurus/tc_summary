@@ -102,7 +102,7 @@ var wpp_questions_1 = {
     "99": "Tell me about a time when you disagreed with a decision that your manager made. What was the situation, how did you handle it and what was the result?",
     "100": "Tell me about a time when you disagreed with a decision that your manager made. What was the situation, how did you handle it and what was the result?"
   },
-  "wc1_1": {
+  "wc1_6": {
     "title": "Achievement",
     "1": "Give me an example of a time when you had to put in extra effort at work to complete a task or project. What was the situation, what did you do and what was the result?",
     "2": "Give me an example of a time when you had to put in extra effort at work to complete a task or project. What was the situation, what did you do and what was the result?",
@@ -205,7 +205,7 @@ var wpp_questions_1 = {
     "99": "Tell me about a time when you felt that you weren’t challenged enough in your job. What was the situation and\nhow did you handle it?",
     "100": "Tell me about a time when you felt that you weren’t challenged enough in your job. What was the situation and\nhow did you handle it?"
   },
-  "wc1_2": {
+  "wc1_1": {
     "title": "Emotional",
     "1": "Tell me about a time when you were particularly overwhelmed with your responsibilities at work.  What strategies did you use to deal with this pressure?",
     "2": "Tell me about a time when you were particularly overwhelmed with your responsibilities at work.  What strategies did you use to deal with this pressure?",
@@ -308,7 +308,7 @@ var wpp_questions_1 = {
     "99": "Give me an example of a situation where you recognized that you had to take urgent action. What was the situation and what did you do?",
     "100": "Give me an example of a situation where you recognized that you had to take urgent action. What was the situation and what did you do?"
   },
-  "wc1_3": {
+  "wc1_2": {
     "title": "Social",
     "1": "Tell me about a recent time when you had to initiate contact and build a relationship with a new person or group. Describe the situation and your actions in detail.",
     "2": "Tell me about a recent time when you had to initiate contact and build a relationship with a new person or group. Describe the situation and your actions in detail.",
@@ -411,7 +411,7 @@ var wpp_questions_1 = {
     "99": "Give me an example of a time when you were in a situation where communicating with someone was challenging. What was the situation and how did you handle it?",
     "100": "Give me an example of a time when you were in a situation where communicating with someone was challenging. What was the situation and how did you handle it?"
   },
- "wc1_4": {
+ "wc1_3": {
    "title": "Interpersonal",
     "1": "Tell me about a time when you needed to make someone feel comfortable and at ease. How did you approach the situation?",
     "2": "Tell me about a time when you needed to make someone feel comfortable and at ease. How did you approach the situation?",
@@ -514,7 +514,7 @@ var wpp_questions_1 = {
     "99": "Sometimes customers or co-workers make unreasonable requests.  Describe a time when someone made an especially unreasonable request to you.  How did you handle this situation?",
     "100": "Sometimes customers or co-workers make unreasonable requests.  Describe a time when someone made an especially unreasonable request to you.  How did you handle this situation?"
   },
-  "wc1_5": {
+  "wc1_4": {
     "title": "Task",
     "1": "Tell me about a situation when you were required to closely follow process or routine but you felt that following it might actually hold you back. How did you handle the situation?",
     "2": "Tell me about a situation when you were required to closely follow process or routine but you felt that following it might actually hold you back. How did you handle the situation?",
@@ -617,7 +617,7 @@ var wpp_questions_1 = {
     "99": "Give me an example when you weren't satisfied with the quality of your work but you didn't have the time or resources to complete it properly. Describe the situation in detail.",
     "100": "Give me an example when you weren't satisfied with the quality of your work but you didn't have the time or resources to complete it properly. Describe the situation in detail."
   },
-  "wc1_6": {
+  "wc1_5": {
     "title": "Conceptual",
     "1": "Tell me about a time when you had to adapt to a drastic or rapid change at work. What was the change and what did you do to adapt to it?",
     "2": "Tell me about a time when you had to adapt to a drastic or rapid change at work. What was the change and what did you do to adapt to it?",

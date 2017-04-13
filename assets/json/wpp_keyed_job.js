@@ -102,7 +102,7 @@ var wpp_jobfit = {
     "99": "<li>Provides the ability to take charge and lead</li><li>Has the responsibility of managing a team or managing important projects/initiatives</li><li>Involves decision making responsibilities</li><li>Provides adequate freedom and resources to accomplish tasks quickly</li>",
     "100": "<li>Provides the ability to take charge and lead</li><li>Has the responsibility of managing a team or managing important projects/initiatives</li><li>Involves decision making responsibilities</li><li>Provides adequate freedom and resources to accomplish tasks quickly</li>"
   },
-  "wc1_1": {
+  "wc1_6": {
     "title": "Achievement",
     "1": "<li>Has modest expectations for job performance</li><li>Has goals that are fairly easily reached</li><li>Doesn't involve working under pressure to achieve difficult objectives</li><li>Doesn't require continuous self-improvement</li>",
     "2": "<li>Has modest expectations for job performance</li><li>Has goals that are fairly easily reached</li><li>Doesn't involve working under pressure to achieve difficult objectives</li><li>Doesn't require continuous self-improvement</li>",
@@ -205,7 +205,7 @@ var wpp_jobfit = {
     "99": "<li>Provides rewards for self-motivation and hard work</li><li>Requires consistently meeting high standards</li><li>Involves struggling to reach challenging goals</li><li>Provides recognition for delivering high quality results</li>",
     "100": "<li>Provides rewards for self-motivation and hard work</li><li>Requires consistently meeting high standards</li><li>Involves struggling to reach challenging goals</li><li>Provides recognition for delivering high quality results</li>"
   },
-  "wc1_2": {
+  "wc1_1": {
     "title": "Emotional",
     "1": "<li>Requires being proactive to be successful</li><li>Allows for being open with emotions and opinions</li><li>Has a mix of high and low stress tasks</li><li>Gives a balanced workload</li>",
     "2": "<li>Requires being proactive to be successful</li><li>Allows for being open with emotions and opinions</li><li>Has a mix of high and low stress tasks</li><li>Gives a balanced workload</li>",
@@ -308,7 +308,7 @@ var wpp_jobfit = {
     "99": "<li>Requires being persistent</li><li>Requires a high level of stress tolerance</li><li>Involves work where it helps to stay calm and collected</li><li>Is demanding and challenging</li>",
     "100": "<li>Requires being persistent</li><li>Requires a high level of stress tolerance</li><li>Involves work where it helps to stay calm and collected</li><li>Is demanding and challenging</li>"
   },
-  "wc1_3": {
+  "wc1_2": {
     "title": "Social",
     "1": "<li>Focuses on completing tasks</li><li>Doesn’t have a main focus on communicating</li><li>Doesn't primarily involve interacting with unfamiliar people</li><li>Involves completing independent work</li>",
     "2": "<li>Focuses on completing tasks</li><li>Doesn’t have a main focus on communicating</li><li>Doesn't primarily involve interacting with unfamiliar people</li><li>Involves completing independent work</li>",
@@ -411,7 +411,7 @@ var wpp_jobfit = {
     "99": "<li>Has a focus on communicating and building relationships</li><li>Requires initiating contact with unfamiliar people</li><li>Involves limited independent work</li><li>Involves collaboration with others</li>",
     "100": "<li>Has a focus on communicating and building relationships</li><li>Requires initiating contact with unfamiliar people</li><li>Involves limited independent work</li><li>Involves collaboration with others</li>"
   },
- "wc1_4": {
+ "wc1_3": {
    "title": "Interpersonal",
     "1": "<li>Allows being direct and forthright </li><li>Requires assertiveness</li><li>Allows an opportunity to provide constructive criticism</li><li>Focuses on both concrete issues and people issues</li>",
     "2": "<li>Allows being direct and forthright </li><li>Requires assertiveness</li><li>Allows an opportunity to provide constructive criticism</li><li>Focuses on both concrete issues and people issues</li>",
@@ -514,7 +514,7 @@ var wpp_jobfit = {
     "99": "<li>Doesn’t involve being exposed to a lot of negative feelings and conflict</li><li>Involves helping others </li><li>Requires being empathetic and sensitive to the needs of others</li><li>Has an emphasis on collaboration and teamwork</li>",
     "100": "<li>Doesn’t involve being exposed to a lot of negative feelings and conflict</li><li>Involves helping others </li><li>Requires being empathetic and sensitive to the needs of others</li><li>Has an emphasis on collaboration and teamwork</li>"
   },
-  "wc1_5": {
+  "wc1_4": {
     "title": "Task",
     "1": "<li>Has a mix of detailed and 'big picture' work</li><li>Has an element of variety and unpredictability</li><li>Doesn't primarily focus on performing repetitive tasks</li><li>Has some flexibility in how tasks are completed</li>",
     "2": "<li>Has a mix of detailed and 'big picture' work</li><li>Has an element of variety and unpredictability</li><li>Doesn't primarily focus on performing repetitive tasks</li><li>Has some flexibility in how tasks are completed</li>",
@@ -617,7 +617,7 @@ var wpp_jobfit = {
     "99": "<li>Has a focus on planning and organizing</li><li>Requires getting details right</li><li>Has expectations and objectives that are clear </li><li>Has consistent goals and measures of success</li>",
     "100": "<li>Has a focus on planning and organizing</li><li>Requires getting details right</li><li>Has expectations and objectives that are clear </li><li>Has consistent goals and measures of success</li>"
   },
-  "wc1_6": {
+  "wc1_5": {
     "title": "Conceptual",
     "1": "<li>Involves following established processes and making quick decisions</li><li>Focuses on applying practical solutions to problems</li><li>Involves building upon others' ideas</li><li>Doesn’t require a lot of creativity or innovation</li>",
     "2": "<li>Involves following established processes and making quick decisions</li><li>Focuses on applying practical solutions to problems</li><li>Involves building upon others' ideas</li><li>Doesn’t require a lot of creativity or innovation</li>",

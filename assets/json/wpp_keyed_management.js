@@ -102,7 +102,7 @@ var wpp_management = {
     "99": "<li>Would benefit from ongoing coaching on leadership skills</li><li> Can be given the authority to lead important projects/initiatives</li><li> Will likely prefer to decide how and when tasks are completed</li><li>  Will not prefer to be managed or monitored closely</li>",
     "100": "<li>Would benefit from ongoing coaching on leadership skills</li><li> Can be given the authority to lead important projects/initiatives</li><li> Will likely prefer to decide how and when tasks are completed</li><li>  Will not prefer to be managed or monitored closely</li>"
   },
-  "wc1_1": {
+  "wc1_6": {
     "title": "Achievement",
     "1": "<li>Would respond well to being recognized for good work</li><li> Would benefit from learning clear standards for work quality</li><li> Would respond best to realistic, reachable goals</li><li> Would be motivated by group collaboration</li>",
     "2": "<li>Would respond well to being recognized for good work</li><li> Would benefit from learning clear standards for work quality</li><li> Would respond best to realistic, reachable goals</li><li> Would be motivated by group collaboration</li>",
@@ -205,7 +205,7 @@ var wpp_management = {
     "99": "<li>Would respond well to being recognized for reaching objectives</li><li> Would prefer to have challenging goals rather than easy ones</li><li> May be too self-critical if goals aren't met</li><li> Would respond well to being encouraged to exceed expectations</li>",
     "100": "<li>Would respond well to being recognized for reaching objectives</li><li> Would prefer to have challenging goals rather than easy ones</li><li> May be too self-critical if goals aren't met</li><li> Would respond well to being encouraged to exceed expectations</li>"
   },
-  "wc1_2": {
+  "wc1_1": {
     "title": "Emotional",
     "1": "<li>Should be given ambitious but reachable goals and targets</li><li> Should be monitored to make sure that stress levels are not too high</li><li> Would benefit from positive feedback</li><li> Would likely be open to hearing suggestions for performance improvement</li>",
     "2": "<li>Should be given ambitious but reachable goals and targets</li><li> Should be monitored to make sure that stress levels are not too high</li><li> Would benefit from positive feedback</li><li> Would likely be open to hearing suggestions for performance improvement</li>",
@@ -308,7 +308,7 @@ var wpp_management = {
     "99": "<li>May need prompting to react immediately to complex issues</li><li> May not openly show enthusiasm and appreciation</li><li> Will likely not appreciate others over-reacting to minor issues or threats</li><li> May not display a sense of urgency</li>",
     "100": "<li>May need prompting to react immediately to complex issues</li><li> May not openly show enthusiasm and appreciation</li><li> Will likely not appreciate others over-reacting to minor issues or threats</li><li> May not display a sense of urgency</li>"
   },
-  "wc1_3": {
+  "wc1_2": {
     "title": "Social",
     "1": "<li>Should be encouraged to share thoughts and ideas</li><li> May not highlight or seek attention for work well done</li><li> May need to feel comfortable before communicating openly</li><li> Should have independent work as a significant job component</li>",
     "2": "<li>Should be encouraged to share thoughts and ideas</li><li> May not highlight or seek attention for work well done</li><li> May need to feel comfortable before communicating openly</li><li> Should have independent work as a significant job component</li>",
@@ -411,7 +411,7 @@ var wpp_management = {
     "99": "<li>Will likely share thoughts and ideas openly</li><li> May not always think ideas through before sharing them</li><li> Should be given the opportunity to interact with new people</li><li> Should focus on work interacting with others rather than working independently</li>",
     "100": "<li>Will likely share thoughts and ideas openly</li><li> May not always think ideas through before sharing them</li><li> Should be given the opportunity to interact with new people</li><li> Should focus on work interacting with others rather than working independently</li>"
   },
- "wc1_4": {
+ "wc1_3": {
    "title": "Interpersonal",
     "1": "<li>Should be encouraged to provide frank opinions and constructive criticism</li><li> Will not shy away from interpersonal conflict </li><li> Can handle negative information</li><li> Not likely to take criticism personally</li>",
     "2": "<li>Should be encouraged to provide frank opinions and constructive criticism</li><li> Will not shy away from interpersonal conflict </li><li> Can handle negative information</li><li> Not likely to take criticism personally</li>",
@@ -514,7 +514,7 @@ var wpp_management = {
     "99": "<li>Should be openly recognized and appreciated for work well done</li><li> Will likely need to feel that helping others is a primary goal</li><li> Should be given opportunities to collaborate with others</li><li> Would perform best in a supportive team environment</li>",
     "100": "<li>Should be openly recognized and appreciated for work well done</li><li> Will likely need to feel that helping others is a primary goal</li><li> Should be given opportunities to collaborate with others</li><li> Would perform best in a supportive team environment</li>"
   },
-  "wc1_5": {
+  "wc1_4": {
     "title": "Task",
     "1": "<li>Should be given clear goals but be allowed to decide how to reach them</li><li> Should be given a mix of 'big picture' and detailed tasks</li><li> Will easily see 'the big picture'</li><li> Would be comfortable with constant change</li>",
     "2": "<li>Should be given clear goals but be allowed to decide how to reach them</li><li> Should be given a mix of 'big picture' and detailed tasks</li><li> Will easily see 'the big picture'</li><li> Would be comfortable with constant change</li>",
@@ -617,7 +617,7 @@ var wpp_management = {
     "99": "<li>Does not require close supervision</li><li> Will be highly organized and detail-oriented</li><li> Should be given clearly defined responsibilities, goals and targets</li><li> May need extra time to adapt to changes in goals or processes</li>",
     "100": "<li>Does not require close supervision</li><li> Will be highly organized and detail-oriented</li><li> Should be given clearly defined responsibilities, goals and targets</li><li> May need extra time to adapt to changes in goals or processes</li>"
   },
-  "wc1_6": {
+  "wc1_5": {
     "title": "Conceptual",
     "1": "<li>Can be counted on to adhere to guidelines and policies</li><li> May need extra time to adapt to change</li><li> Will benefit from knowing the reasons for change</li><li> May need reassurance when required to take risks</li>",
     "2": "<li>Can be counted on to adhere to guidelines and policies</li><li> May need extra time to adapt to change</li><li> Will benefit from knowing the reasons for change</li><li> May need reassurance when required to take risks</li>",

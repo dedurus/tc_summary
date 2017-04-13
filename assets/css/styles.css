@@ -46,6 +46,9 @@ body {
 .pT0 {
     padding-top: 0;
 }
+.pT5{
+  padding-top: 5px;
+}
 
 .pB0 {
     padding-bottom: 0;
@@ -1158,7 +1161,7 @@ a:hover i {
 }
 
 .mini_box_wrapper {
-    display: inline;
+    display: inline-block;
     margin-left: 15px;
     margin-right: 15px;
     font-size: 12px;
@@ -1641,6 +1644,10 @@ ol.tilted-list > li:before {
 .lead{
   margin-top: 20px;
   margin-bottom: 0px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  padding: 10px 0;
 }
 
 .lead span:not(.label){

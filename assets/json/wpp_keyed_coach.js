@@ -102,7 +102,7 @@ var wpp_coach = {
     "99": "<li>Would be most comfortable when leading others or in a position of importance</li><li>Would be most satisfied when having decision making authority</li>",
     "100": "<li>Would be most comfortable when leading others or in a position of importance</li><li>Would be most satisfied when having decision making authority</li>"
   },
-  "wc1_1": {
+  "wc1_6": {
     "title": "Achievement",
     "1": "<li>May find it challenging at times to maintain a high level of performance</li><li>May need encouragement with goals that are challenging</li>",
     "2": "<li>May find it challenging at times to maintain a high level of performance</li><li>May need encouragement with goals that are challenging</li>",
@@ -205,7 +205,7 @@ var wpp_coach = {
     "99": "<li>May need to be challenged and fully utilized to be engaged in work</li><li>May become frustrated when personal goals or expectations are not met</li>",
     "100": "<li>May need to be challenged and fully utilized to be engaged in work</li><li>May become frustrated when personal goals or expectations are not met</li>"
   },
-  "wc1_2": {
+  "wc1_1": {
     "title": "Emotional",
     "1": "<li>May become upset or discouraged when things do not go well</li><li>May be tense or self-critical</li>",
     "2": "<li>May become upset or discouraged when things do not go well</li><li>May be tense or self-critical</li>",
@@ -308,7 +308,7 @@ var wpp_coach = {
     "99": "<li>Others may mistake calmness for being aloof</li><li>May prefer to analyze situations before acting</li>",
     "100": "<li>Others may mistake calmness for being aloof</li><li>May prefer to analyze situations before acting</li>"
   },
-  "wc1_3": {
+  "wc1_2": {
     "title": "Social",
     "1": "<li>May not openly voice ideas and opinions</li><li>May not seek recognition for performance</li>",
     "2": "<li>May not openly voice ideas and opinions</li><li>May not seek recognition for performance</li>",
@@ -411,7 +411,7 @@ var wpp_coach = {
     "99": "<li>Will likely perform better with more group involvement</li><li>Will likely prefer collaboration to completing tasks independently</li>",
     "100": "<li>Will likely perform better with more group involvement</li><li>Will likely prefer collaboration to completing tasks independently</li>"
   },
- "wc1_4": {
+ "wc1_3": {
    "title": "Interpersonal",
     "1": "<li>May focus on completing tasks more than people issues</li><li>May be seen as too forthright by highly sensitive people</li>",
     "2": "<li>May focus on completing tasks more than people issues</li><li>May be seen as too forthright by highly sensitive people</li>",
@@ -514,7 +514,7 @@ var wpp_coach = {
     "99": "<li>May put others' concerns ahead of one's own</li><li>May be uncomfortable in situations with interpersonal conflict or tension</li>",
     "100": "<li>May put others' concerns ahead of one's own</li><li>May be uncomfortable in situations with interpersonal conflict or tension</li>"
   },
-  "wc1_5": {
+  "wc1_4": {
     "title": "Task",
     "1": "<li>May prefer to focus on 'big-picture' issues</li><li>Will likely follow the most efficient route to achieving objectives</li>",
     "2": "<li>May prefer to focus on 'big-picture' issues</li><li>Will likely follow the most efficient route to achieving objectives</li>",
@@ -617,7 +617,7 @@ var wpp_coach = {
     "99": "<li>At times, may prefer to focus on the details rather than on the \"big picture\" </li><li>May respond to stressful or unusual situations by planning and organizing</li>",
     "100": "<li>At times, may prefer to focus on the details rather than on the \"big picture\" </li><li>May respond to stressful or unusual situations by planning and organizing</li>"
   },
-  "wc1_6": {
+  "wc1_5": {
     "title": "Conceptual",
     "1": "<li>Will likely prefer to stick to established approaches to completing tasks</li><li>May need time to adapt to rapid or drastic change</li>",
     "2": "<li>Will likely prefer to stick to established approaches to completing tasks</li><li>May need time to adapt to rapid or drastic change</li>",

@@ -102,7 +102,7 @@ var wpp_positive = {
     "99": "<li>Confident and self-motivated</li><li>Sets and reaches difficult goals</li><li>Enjoys leading others </li><li>Assertive and driven</li>",
     "100": "<li>Confident and self-motivated</li><li>Sets and reaches difficult goals</li><li>Enjoys leading others </li><li>Assertive and driven</li>"
   },
-  "wc1_1": {
+  "wc1_6": {
     "title": "Achievement",
     "1": "<li>Undemanding </li><li>Flexible with goals and plans</li><li>Has modest expectations</li><li>Generally satisfied with how things are</li>",
     "2": "<li>Undemanding </li><li>Flexible with goals and plans</li><li>Has modest expectations</li><li>Generally satisfied with how things are</li>",
@@ -205,7 +205,7 @@ var wpp_positive = {
     "99": "<li>Self-motivated to reach high goals</li><li>Has high standards and expectations of themselves and others</li><li>Focused on completing tasks and reaching objectives</li><li>Enjoys difficult challenges</li>",
     "100": "<li>Self-motivated to reach high goals</li><li>Has high standards and expectations of themselves and others</li><li>Focused on completing tasks and reaching objectives</li><li>Enjoys difficult challenges</li>"
   },
-  "wc1_2": {
+  "wc1_1": {
     "title": "Emotional",
     "1": "<li>Shows a sense of urgency</li><li>Self-aware</li><li>Reactive to stress and pressure</li><li>Takes tasks seriously</li>",
     "2": "<li>Shows a sense of urgency</li><li>Self-aware</li><li>Reactive to stress and pressure</li><li>Takes tasks seriously</li>",
@@ -308,7 +308,7 @@ var wpp_positive = {
     "99": "<li>Even-keeled and calm</li><li>Stress tolerant</li><li>Non-reactive to typical work pressure</li><li>Able to persist and stay optimistic</li>",
     "100": "<li>Even-keeled and calm</li><li>Stress tolerant</li><li>Non-reactive to typical work pressure</li><li>Able to persist and stay optimistic</li>"
   },
-  "wc1_3": {
+  "wc1_2": {
     "title": "Social",
     "1": "<li>Prefers completing tasks to socializing</li><li>Able to focus and work independently</li><li>Has good listening skills</li><li>Doesn't seek attention</li>",
     "2": "<li>Prefers completing tasks to socializing</li><li>Able to focus and work independently</li><li>Has good listening skills</li><li>Doesn't seek attention</li>",
@@ -411,7 +411,7 @@ var wpp_positive = {
     "99": "<li>Is naturally outgoing, open and communicative</li><li>Can quickly build relationships with coworkers and customers</li><li>Comfortable being the center of attention</li><li>Will initiate social interaction</li>",
     "100": "<li>Is naturally outgoing, open and communicative</li><li>Can quickly build relationships with coworkers and customers</li><li>Comfortable being the center of attention</li><li>Will initiate social interaction</li>"
   },
-  "wc1_4": {
+  "wc1_3": {
     "title": "Interpersonal",
     "1": "<li>Will likely be a straightforward and frank communicator</li><li>Focused on completing tasks</li><li>Comfortable voicing unpopular opinions</li><li>Comfortable handling interpersonal tension</li>",
     "2": "<li>Will likely be a straightforward and frank communicator</li><li>Focused on completing tasks</li><li>Comfortable voicing unpopular opinions</li><li>Comfortable handling interpersonal tension</li>",
@@ -514,7 +514,7 @@ var wpp_positive = {
     "99": "<li>Helpful and considerate</li><li>Avoids conflict</li><li>Empathetic and understanding</li><li>Focused on cooperation and team efforts</li>",
     "100": "<li>Helpful and considerate</li><li>Avoids conflict</li><li>Empathetic and understanding</li><li>Focused on cooperation and team efforts</li>"
   },
-  "wc1_5": {
+  "wc1_4": {
     "title": "Task",
     "1": "<li>Not bound by rules or tradition</li><li>Easily grasps the 'big picture'</li><li>Able to improvise</li><li>Able to quickly adapt to new processes</li>",
     "2": "<li>Not bound by rules or tradition</li><li>Easily grasps the 'big picture'</li><li>Able to improvise</li><li>Able to quickly adapt to new processes</li>",
@@ -617,7 +617,7 @@ var wpp_positive = {
     "99": "<li>Process and detail-oriented</li><li>Prefers order and structure</li><li>Conscientious and dependable</li><li>Mindful of planning and preparation requirements</li>",
     "100": "<li>Process and detail-oriented</li><li>Prefers order and structure</li><li>Conscientious and dependable</li><li>Mindful of planning and preparation requirements</li>"
   },
-  "wc1_6": {
+  "wc1_5": {
     "title": "Conceptual",
     "1": "<li>Would follow a practical and realistic approach</li><li>Will adhere to using proven methods</li><li>Able to stay focused while doing repetitive tasks</li><li>Comfortable focusing on details</li>",
     "2": "<li>Would follow a practical and realistic approach</li><li>Will adhere to using proven methods</li><li>Able to stay focused while doing repetitive tasks</li><li>Comfortable focusing on details</li>",
