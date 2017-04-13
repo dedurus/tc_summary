@@ -83,13 +83,8 @@
                 <div class="row mT10">
                     <div class="col-xs-12 col-md-2 greenBg benchmark_label pLR0">
                         <div class="figure_titles darkGrey">SQ/DSQ RESULTS</div>
-                            <!-- <div class="material-switch">
-                               <input class="" id="checkbox_sq_all" name="checkbox_sq_all" type="checkbox">
-                               <label for="checkbox_sq_all" class="label-warning"></label>
-                                                       </div> -->
-                        <p class="font12 pB0 mB0 font_normal">SQ/DSQ Reports</p>
                         <div class="slideThree">
-                              <input type="checkbox" value="None" id="checkbox_sq_all" name="checkbox_sq_all" />
+                              <input type="checkbox" value="None" id="checkbox_sq_all" name="checkbox_sq_all" checked />
                               <label for="checkbox_sq_all"></label>
                         </div>
                     </div>
@@ -110,6 +105,8 @@
             </div><!-- ./container -->
 
              <!-- //// SQ sliders //// -->
+
+             <div id="all_sq_dimensions">
 
                 <!-- /// 1. /// -->
                 <div class="container shadow pLRMob30 mT10 greenBorderL">
@@ -213,7 +210,7 @@
                             of
                             <span class="dimension_title_sq1_0"></span>
                         </p>
-                    <div class="equal-panels">
+                    <div class="row equal-panels">
                         <div class="col-md-4">
                             <div class="panel panel-success">
                                 <div class="panel-heading"><i class="fa fa-check-square"></i> Positive aspects of how <span class="employee_name"></span> scored:</div>
@@ -258,10 +255,7 @@
                 <div class="container">
                     <hr class="semi_divider">
                 </div><!-- ./container -->
-
-
-
-                    <!-- /// 1. /// -->
+                <!-- /// 1. /// -->
 
 
                 <!-- /// 2. /// -->
@@ -367,7 +361,7 @@
                             of
                             <span class="dimension_title_sq1_1"></span>
                         </p>
-                    <div class="equal-panels">
+                    <div class="row equal-panels">
                         <div class="col-md-4">
                             <div class="panel panel-success">
                                 <div class="panel-heading"><i class="fa fa-check-square"></i> Positive aspects of how <span class="employee_name"></span> scored:</div>
@@ -518,7 +512,7 @@
                                 <span class="dimension_title_sq1_2"></span>
                             </p>
 
-                        <div class="equal-panels">
+                        <div class="row equal-panels">
                             <div class="col-md-4">
                                 <div class="panel panel-success">
                                     <div class="panel-heading"><i class="fa fa-check-square"></i> Positive aspects of how <span class="employee_name"></span> scored:</div>
@@ -669,7 +663,7 @@
                                 <span class="dimension_title_sq1_3"></span>
                             </p>
 
-                        <div class="equal-panels">
+                        <div class="row equal-panels">
                             <div class="col-md-4">
                                 <div class="panel panel-success">
                                     <div class="panel-heading"><i class="fa fa-check-square"></i> Positive aspects of how <span class="employee_name"></span> scored:</div>
@@ -821,7 +815,7 @@
                                 <span class="dimension_title_sq1_4"></span>
                             </p>
 
-                        <div class="equal-panels">
+                        <div class="row equal-panels">
                             <div class="col-md-4">
                                 <div class="panel panel-success">
                                     <div class="panel-heading"><i class="fa fa-check-square"></i> Positive aspects of how <span class="employee_name"></span> scored:</div>
@@ -972,7 +966,7 @@
                                 <span class="dimension_title_sq1_5"></span>
                             </p>
 
-                        <div class="equal-panels">
+                        <div class="row equal-panels">
                             <div class="col-md-4">
                                 <div class="panel panel-success">
                                     <div class="panel-heading"><i class="fa fa-check-square"></i> Positive aspects of how <span class="employee_name"></span> scored:</div>
@@ -1013,7 +1007,9 @@
                         </div><!-- ./ slider_report -->
                     </div><!-- ./container -->
 
-        </div><!-- ./sq_wrapper -->
+                </div><!-- ./sq_wrapper -->
+
+            </div><!-- ./all_sq_dimensions -->
 
 
 
@@ -1023,8 +1019,13 @@
 
                 <hr class="divider">
 
-                    <div class="col-xs-12 col-md-2 blueBg benchmark_label">
-                        <span class="figure_titles">WPP RESULTS</span>
+                    <div class="col-xs-12 col-md-2 blueBg benchmark_label pLR0">
+                        <div class="figure_titles darkGrey">WPP RESULTS</div>
+
+                        <div class="slideThree blueCheck">
+                              <input type="checkbox" value="None" id="checkbox_wpp_all" name="checkbox_wpp_all" checked />
+                              <label for="checkbox_wpp_all"></label>
+                        </div>
                     </div>
 
                     <div class="col-xs-12 col-md-8 blueBg2 benchmark_label_2  text-center">
@@ -1041,10 +1042,10 @@
             </div><!-- ./container -->
 
             <!-- //// WPP sliders //// -->
-
+            <div id="all_wpp_dimensions">
+                <!-- /// 1. /// -->
             <div class="container shadow pLRMob30 mT10 blueBorderL">
 
-                <!-- /// 1. /// -->
                 <div class="slider_wrapper">
 
 
@@ -1128,21 +1129,99 @@
                     </div>
 
                 </div><!-- ./slider_wrapper -->
-                <div class="row pTB10 lightGrey">
-                    <div class="col-xs-6">
-                        <a href="#"><i class="fa fa-address-card"></i></a>
-                        <a href="#"><i class="fa fa-envelope"></i></a>
-                        <a href="#"><i class="fa fa-file-pdf-o"></i></a>
+
+                <div class="row pTB0 lightGrey">
+                    <div class="col-xs-4">
+                        <div class="material-switch">
+                            <input data-report="wc1_0" class="reports_generator_checkbox_wpp" id="checkbox_wc1_0" name="checkbox_wc1_0" type="checkbox">
+                            <label for="checkbox_wc1_0" class="label-primary"></label>
+                        </div>
                     </div>
-                    <div class="col-xs-6 text-right">
-                        <a href="#"><i class="fa fa-gears"></i></a>
+                    <div class="col-xs-8 pLR0">
+                        <div class="nav navbar-nav navbar-centered pull-right">
+                                <a class="reports_generator_wc1" href="#" id="report_wc1_0" data-report="wc1_0">
+                                    <i class="fa fa-line-chart"></i>
+                                Report
+                                </a>
+                        </div>
                     </div>
                 </div>
-                </div><!-- ./container -->
 
+                <!-- slider report -->
+                <div class="row pTB10 pLR30 slide_reports_wc1 mT10" id="slide_report_wc1_0">
+                    <p class="lead text-center">
+                        <span class="employee_name"></span> scored in the
+                        <span class="range_wc1_0 label label-info"></span>
+                        of
+                        <span class="dimension_title_wc1_0"></span>
+                    </p>
 
+                <div class="row equal-panels">
+                    <div class="col-md-6">
+                        <div class="panel panel-success">
+                            <div class="panel-heading"><i class="fa fa-check-square"></i> Positive aspects of how <span class="employee_name"></span> scored:</div>
+                          <div class="panel-body">
+                            <ol class="tilted-list positive_list positive_wc1_0">
 
-                <!-- /// 2. /// -->
+                            </ol>
+                          </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="panel panel-info">
+                            <div class="panel-heading"><i class="fa fa-users"></i> Coaching/developmental areas:</div>
+                          <div class="panel-body">
+                            <ol class="tilted-list coach_list coach_wc1_0">
+
+                            </ol>
+                          </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row equal-panels">
+                        <div class="col-md-6">
+                            <div class="panel panel-danger">
+                                <div class="panel-heading"><i class="fa fa-exclamation-circle"></i> Job-Fit Considerations:</div>
+                              <div class="panel-body">
+                                <ol class="tilted-list management_list jobfit_wc1_0">
+
+                                </ol>
+                              </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-warning">
+                                <div class="panel-heading dangerBg"><i class="fa fa-exclamation-triangle"></i> Management considerations:</div>
+                              <div class="panel-body">
+                                <ol class="tilted-list management_list management_wc1_0">
+
+                                </ol>
+                              </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="panel panel-warning">
+                                <div class="panel-heading"><i class="fa fa-question-circle"></i> Suggested Interview Questions to probe "Fit":</div>
+                              <div class="panel-body">
+                                <ol class="tilted-list questions_list questions_wc1_0">
+
+                                </ol>
+                              </div>
+
+                            </div>
+                        </div>
+                    </div><!-- ./ equal-panels -->
+                </div><!-- ./ slider_report -->
+            </div><!-- ./container -->
+                <!-- /// 1. /// -->
 
 
             <!-- /// 2. /// -->
@@ -1733,7 +1812,7 @@
                     </div>
                 </div>
             </div><!-- ./container -->
-
+        </div><!-- ./all_wpp_dimensions -->
         </div><!-- ./wpp_wrapper -->
 
 
@@ -1745,8 +1824,13 @@
 
                 <hr class="divider">
 
-                    <div class="col-xs-12 col-md-2 orangeBg benchmark_label">
-                        <span class="figure_titles">WVA RESULTS</span>
+                    <div class="col-xs-12 col-md-2 orangeBg benchmark_label pLR0">
+                        <div class="figure_titles darkGrey">WVA RESULTS</div>
+
+                        <div class="slideThree orangeCheck">
+                              <input type="checkbox" value="None" id="checkbox_wva_all" name="checkbox_wva_all" checked />
+                              <label for="checkbox_wva_all"></label>
+                        </div>
                     </div>
 
                     <div class="col-xs-12 col-md-8 orangeBg2 benchmark_label_2  text-center">
@@ -1763,7 +1847,7 @@
             </div><!-- ./container -->
 
             <!-- //// WVA sliders //// -->
-
+        <div id="all_wva_dimensions">
             <div class="container shadow pLRMob30 mT10 orangeBorderL">
 
                 <!-- /// 1. /// -->
@@ -1849,13 +1933,13 @@
                 <div class="row pTB0 lightGrey">
                     <div class="col-xs-4">
                         <div class="material-switch">
-                            <input data-report="sq2_0" class="reports_generator_checkbox_wva" id="checkbox_sq2_0" name="checkbox_sq2_0" type="checkbox">
-                            <label for="checkbox_sq2_0" class="label-warning"></label>
+                            <input data-report="wva1_0" class="reports_generator_checkbox_wva" id="checkbox_wva1_0" name="checkbox_wva1_0" type="checkbox">
+                            <label for="checkbox_wva1_0" class="label-warning"></label>
                         </div>
                     </div>
                     <div class="col-xs-8 pLR0">
                         <div class="nav navbar-nav navbar-centered pull-right">
-                                <a class="reports_generator_wva" href="#" id="report_sq2_0" data-report="sq2_0">
+                                <a class="reports_generator_wva" href="#" id="report_wva1_0" data-report="wva1_0">
                                     <i class="fa fa-line-chart"></i>
                                 Report
                                 </a>
@@ -1864,45 +1948,22 @@
                 </div>
 
                 <!-- slider report -->
-                <div class="row pTB10 pLR30 slide_reports mT10" id="slide_report_sq2_0">
+                <div class="row pTB10 pLR30 slide_reports_wva mT10" id="slide_report_wva1_0">
                     <p class="lead text-center">
                         <span class="employee_name"></span> scored in the
-                        <span class="range_sq2_0 label label-info"></span>
+                        <span class="range_wva1_0 label label-info"></span>
                         of
-                        <span class="dimension_title_sq2_0"></span>
+                        <span class="dimension_title_wva1_0"></span>
                     </p>
 
-                <div class="equal-panels">
-                    <div class="col-md-4">
-                        <div class="panel panel-success">
-                            <div class="panel-heading"><i class="fa fa-check-square"></i> Positive aspects of how <span class="employee_name"></span> scored:</div>
-                          <div class="panel-body">
-                            <ol class="tilted-list positive_list positive_sq2_0">
+                <div class="row equal-panels">
 
-                            </ol>
-                          </div>
 
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="panel panel-danger">
-                            <div class="panel-heading"><i class="fa fa-exclamation-triangle"></i> Safety risks and tips:</div>
-                          <div class="panel-body">
-                            <ol class="tilted-list management_list management_sq2_0">
-
-                            </ol>
-                          </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
+                    <div class="col-md-6 col-md-offset-3">
                         <div class="panel panel-warning">
                             <div class="panel-heading"><i class="fa fa-question-circle"></i> Suggested Interview Questions to probe "Fit":</div>
                           <div class="panel-body">
-                            <ol class="tilted-list questions_list questions_sq2_0">
+                            <ol class="tilted-list questions_list questions_wva1_0">
 
                             </ol>
                           </div>
@@ -1913,11 +1974,11 @@
                 </div><!-- ./ slider_report -->
 
             </div><!-- ./container -->
+            <!-- /// 1. /// -->
 
-
-
-                <!-- /// 2. /// -->
-
+            <div class="container">
+                <hr class="semi_divider">
+            </div><!-- ./container -->
 
             <!-- /// 2. /// -->
             <div class="container shadow pLRMob30 mT10 orangeBorderL">
@@ -1999,18 +2060,54 @@
                     </div>
 
                 </div><!-- ./slider_wrapper -->
-                <div class="row pTB10 lightGrey">
-                    <div class="col-xs-6">
-                        <a href="#"><i class="fa fa-address-card"></i></a>
-                        <a href="#"><i class="fa fa-envelope"></i></a>
-                        <a href="#"><i class="fa fa-file-pdf-o"></i></a>
+
+                <div class="row pTB0 lightGrey">
+                    <div class="col-xs-4">
+                        <div class="material-switch">
+                            <input data-report="wva1_1" class="reports_generator_checkbox_wva" id="checkbox_wva1_1" name="checkbox_wva1_1" type="checkbox">
+                            <label for="checkbox_wva1_1" class="label-warning"></label>
+                        </div>
                     </div>
-                    <div class="col-xs-6 text-right">
-                        <a href="#"><i class="fa fa-gears"></i></a>
+                    <div class="col-xs-8 pLR0">
+                        <div class="nav navbar-nav navbar-centered pull-right">
+                                <a class="reports_generator_wva" href="#" id="report_wva1_1" data-report="wva1_1">
+                                    <i class="fa fa-line-chart"></i>
+                                Report
+                                </a>
+                        </div>
                     </div>
                 </div>
+
+                <!-- slider report -->
+                <div class="row pTB10 pLR30 slide_reports_wva mT10" id="slide_report_wva1_1">
+                    <p class="lead text-center">
+                        <span class="employee_name"></span> scored in the
+                        <span class="range_wva1_1 label label-info"></span>
+                        of
+                        <span class="dimension_title_wva1_1"></span>
+                    </p>
+
+                <div class="row equal-panels">
+
+
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="panel panel-warning">
+                            <div class="panel-heading"><i class="fa fa-question-circle"></i> Suggested Interview Questions to probe "Fit":</div>
+                          <div class="panel-body">
+                            <ol class="tilted-list questions_list questions_wva1_1">
+
+                            </ol>
+                          </div>
+
+                        </div>
+                    </div>
+                </div><!-- ./ equal-panels -->
+                </div><!-- ./ slider_report -->
             </div><!-- ./container -->
 
+            <div class="container">
+                <hr class="semi_divider">
+            </div><!-- ./container -->
 
             <!-- /// 3. /// -->
             <div class="container shadow pLRMob30 mT10 orangeBorderL">
@@ -2093,19 +2190,54 @@
                     </div>
 
                 </div><!-- ./slider_wrapper -->
-                <div class="row pTB10 lightGrey">
-                    <div class="col-xs-6">
-                        <a href="#"><i class="fa fa-address-card"></i></a>
-                        <a href="#"><i class="fa fa-envelope"></i></a>
-                        <a href="#"><i class="fa fa-file-pdf-o"></i></a>
+
+                <div class="row pTB0 lightGrey">
+                    <div class="col-xs-4">
+                        <div class="material-switch">
+                            <input data-report="wva1_2" class="reports_generator_checkbox_wva" id="checkbox_wva1_2" name="checkbox_wva1_2" type="checkbox">
+                            <label for="checkbox_wva1_2" class="label-warning"></label>
+                        </div>
                     </div>
-                    <div class="col-xs-6 text-right">
-                        <a href="#"><i class="fa fa-gears"></i></a>
+                    <div class="col-xs-8 pLR0">
+                        <div class="nav navbar-nav navbar-centered pull-right">
+                                <a class="reports_generator_wva" href="#" id="report_wva1_2" data-report="wva1_2">
+                                    <i class="fa fa-line-chart"></i>
+                                Report
+                                </a>
+                        </div>
                     </div>
                 </div>
-                </div><!-- ./container -->
+
+                <!-- slider report -->
+                <div class="row pTB10 pLR30 slide_reports_wva mT10" id="slide_report_wva1_2">
+                    <p class="lead text-center">
+                        <span class="employee_name"></span> scored in the
+                        <span class="range_wva1_2 label label-info"></span>
+                        of
+                        <span class="dimension_title_wva1_2"></span>
+                    </p>
+
+                <div class="row equal-panels">
 
 
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="panel panel-warning">
+                            <div class="panel-heading"><i class="fa fa-question-circle"></i> Suggested Interview Questions to probe "Fit":</div>
+                          <div class="panel-body">
+                            <ol class="tilted-list questions_list questions_wva1_2">
+
+                            </ol>
+                          </div>
+
+                        </div>
+                    </div>
+                </div><!-- ./ equal-panels -->
+                </div><!-- ./ slider_report -->
+            </div><!-- ./container -->
+
+            <div class="container">
+                <hr class="semi_divider">
+            </div><!-- ./container -->
 
             <!-- /// 4. /// -->
             <div class="container shadow pLRMob30 mT10 orangeBorderL">
@@ -2188,19 +2320,54 @@
                     </div>
 
                 </div><!-- ./slider_wrapper -->
-                <div class="row pTB10 lightGrey">
-                    <div class="col-xs-6">
-                        <a href="#"><i class="fa fa-address-card"></i></a>
-                        <a href="#"><i class="fa fa-envelope"></i></a>
-                        <a href="#"><i class="fa fa-file-pdf-o"></i></a>
+
+                <div class="row pTB0 lightGrey">
+                    <div class="col-xs-4">
+                        <div class="material-switch">
+                            <input data-report="wva1_3" class="reports_generator_checkbox_wva" id="checkbox_wva1_3" name="checkbox_wva1_3" type="checkbox">
+                            <label for="checkbox_wva1_3" class="label-warning"></label>
+                        </div>
                     </div>
-                    <div class="col-xs-6 text-right">
-                        <a href="#"><i class="fa fa-gears"></i></a>
+                    <div class="col-xs-8 pLR0">
+                        <div class="nav navbar-nav navbar-centered pull-right">
+                                <a class="reports_generator_wva" href="#" id="report_wva1_3" data-report="wva1_3">
+                                    <i class="fa fa-line-chart"></i>
+                                Report
+                                </a>
+                        </div>
                     </div>
                 </div>
-                </div><!-- ./container -->
+
+                <!-- slider report -->
+                <div class="row pTB10 pLR30 slide_reports_wva mT10" id="slide_report_wva1_3">
+                    <p class="lead text-center">
+                        <span class="employee_name"></span> scored in the
+                        <span class="range_wva1_3 label label-info"></span>
+                        of
+                        <span class="dimension_title_wva1_3"></span>
+                    </p>
+
+                <div class="row equal-panels">
 
 
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="panel panel-warning">
+                            <div class="panel-heading"><i class="fa fa-question-circle"></i> Suggested Interview Questions to probe "Fit":</div>
+                          <div class="panel-body">
+                            <ol class="tilted-list questions_list questions_wva1_3">
+
+                            </ol>
+                          </div>
+
+                        </div>
+                    </div>
+                </div><!-- ./ equal-panels -->
+                </div><!-- ./ slider_report -->
+            </div><!-- ./container -->
+
+            <div class="container">
+                <hr class="semi_divider">
+            </div><!-- ./container -->
 
             <!-- /// 5. /// -->
             <div class="container shadow pLRMob30 mT10 orangeBorderL">
@@ -2282,16 +2449,53 @@
                     </div>
 
                 </div><!-- ./slider_wrapper -->
-                <div class="row pTB10 lightGrey">
-                    <div class="col-xs-6">
-                        <a href="#"><i class="fa fa-address-card"></i></a>
-                        <a href="#"><i class="fa fa-envelope"></i></a>
-                        <a href="#"><i class="fa fa-file-pdf-o"></i></a>
+
+                <div class="row pTB0 lightGrey">
+                    <div class="col-xs-4">
+                        <div class="material-switch">
+                            <input data-report="wva1_4" class="reports_generator_checkbox_wva" id="checkbox_wva1_4" name="checkbox_wva1_4" type="checkbox">
+                            <label for="checkbox_wva1_4" class="label-warning"></label>
+                        </div>
                     </div>
-                    <div class="col-xs-6 text-right">
-                        <a href="#"><i class="fa fa-gears"></i></a>
+                    <div class="col-xs-8 pLR0">
+                        <div class="nav navbar-nav navbar-centered pull-right">
+                                <a class="reports_generator_wva" href="#" id="report_wva1_4" data-report="wva1_4">
+                                    <i class="fa fa-line-chart"></i>
+                                Report
+                                </a>
+                        </div>
                     </div>
                 </div>
+
+                <!-- slider report -->
+                <div class="row pTB10 pLR30 slide_reports_wva mT10" id="slide_report_wva1_4">
+                    <p class="lead text-center">
+                        <span class="employee_name"></span> scored in the
+                        <span class="range_wva1_4 label label-info"></span>
+                        of
+                        <span class="dimension_title_wva1_4"></span>
+                    </p>
+
+                <div class="row equal-panels">
+
+
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="panel panel-warning">
+                            <div class="panel-heading"><i class="fa fa-question-circle"></i> Suggested Interview Questions to probe "Fit":</div>
+                          <div class="panel-body">
+                            <ol class="tilted-list questions_list questions_wva1_4">
+
+                            </ol>
+                          </div>
+
+                        </div>
+                    </div>
+                </div><!-- ./ equal-panels -->
+                </div><!-- ./ slider_report -->
+            </div><!-- ./container -->
+
+            <div class="container">
+                <hr class="semi_divider">
             </div><!-- ./container -->
 
             <!-- /// 6. /// -->
@@ -2374,17 +2578,52 @@
                     </div>
 
                 </div><!-- ./slider_wrapper -->
-                <div class="row pTB10 lightGrey">
-                    <div class="col-xs-6">
-                        <a href="#"><i class="fa fa-address-card"></i></a>
-                        <a href="#"><i class="fa fa-envelope"></i></a>
-                        <a href="#"><i class="fa fa-file-pdf-o"></i></a>
+
+                <div class="row pTB0 lightGrey">
+                    <div class="col-xs-4">
+                        <div class="material-switch">
+                            <input data-report="wva1_5" class="reports_generator_checkbox_wva" id="checkbox_wva1_5" name="checkbox_wva1_5" type="checkbox">
+                            <label for="checkbox_wva1_5" class="label-warning"></label>
+                        </div>
                     </div>
-                    <div class="col-xs-6 text-right">
-                        <a href="#"><i class="fa fa-gears"></i></a>
+                    <div class="col-xs-8 pLR0">
+                        <div class="nav navbar-nav navbar-centered pull-right">
+                                <a class="reports_generator_wva" href="#" id="report_wva1_5" data-report="wva1_5">
+                                    <i class="fa fa-line-chart"></i>
+                                Report
+                                </a>
+                        </div>
                     </div>
                 </div>
+
+                <!-- slider report -->
+                <div class="row pTB10 pLR30 slide_reports_wva mT10" id="slide_report_wva1_5">
+                    <p class="lead text-center">
+                        <span class="employee_name"></span> scored in the
+                        <span class="range_wva1_5 label label-info"></span>
+                        of
+                        <span class="dimension_title_wva1_5"></span>
+                    </p>
+
+                <div class="row equal-panels">
+
+
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="panel panel-warning">
+                            <div class="panel-heading"><i class="fa fa-question-circle"></i> Suggested Interview Questions to probe "Fit":</div>
+                          <div class="panel-body">
+                            <ol class="tilted-list questions_list questions_wva1_5">
+
+                            </ol>
+                          </div>
+
+                        </div>
+                    </div>
+                </div><!-- ./ equal-panels -->
+                </div><!-- ./ slider_report -->
             </div><!-- ./container -->
+
+            </div><!-- ./ all_wva_dimensions -->
         </div><!-- ./wva_wrapper -->
 
 
@@ -2502,6 +2741,16 @@
         <script type="text/javascript" src="assets/json/sq_keyed_safety.js"></script>
         <script type="text/javascript" src="assets/json/sq_keyed_questions_1.js"></script>
         <script type="text/javascript" src="assets/json/sq_keyed_questions_2.js"></script>
+
+        <script type="text/javascript" src="assets/json/wpp_keyed_positive.js"></script>
+        <script type="text/javascript" src="assets/json/wpp_keyed_coach.js"></script>
+        <script type="text/javascript" src="assets/json/wpp_keyed_job.js"></script>
+        <script type="text/javascript" src="assets/json/wpp_keyed_management.js"></script>
+        <script type="text/javascript" src="assets/json/wpp_keyed_questions_1.js"></script>
+        <script type="text/javascript" src="assets/json/wpp_keyed_questions_2.js"></script>
+
+        <script type="text/javascript" src="assets/json/wva_keyed_questions_1.js"></script>
+        <script type="text/javascript" src="assets/json/wva_keyed_questions_2.js"></script>
 
 
         <script src="assets/js/main.js"></script>

@@ -1,5 +1,5 @@
-var sq_questions_1 = {
-  "sq1_0": {
+var wva_questions_1 = {
+  "wva1_0": {
     "title": "Integrity",
     "1": "Sometimes there are rules in place that don't make sense. Give me an example of a time when you encountered this in a work situation.",
     "2": "Sometimes there are rules in place that don't make sense. Give me an example of a time when you encountered this in a work situation.",
@@ -102,7 +102,7 @@ var sq_questions_1 = {
     "99": "Sometimes we need to 'bend the rules' in order to get things done. Give me an example of a time when you needed to do this.",
     "100": "Sometimes we need to 'bend the rules' in order to get things done. Give me an example of a time when you needed to do this."
   },
-  "sq1_1": {
+  "wva1_1": {
     "title": "Responsibility",
     "1": "Sometimes we’re expected to do more than what is possible. Give me an example of a time when this happened to you and how you handled it.",
     "2": "Sometimes we’re expected to do more than what is possible. Give me an example of a time when this happened to you and how you handled it.",
@@ -205,7 +205,7 @@ var sq_questions_1 = {
     "99": "Tell me about a time when you demonstrated that you are a dependable worker. Describe the situation and what you did.",
     "100": "Tell me about a time when you demonstrated that you are a dependable worker. Describe the situation and what you did."
   },
-  "sq1_2": {
+  "wva1_2": {
     "title": "Coachability",
     "1": "Give me an example of a time when someone gave you feedback on what you needed to improve. What was the feedback and what did you do?",
     "2": "Give me an example of a time when someone gave you feedback on what you needed to improve. What was the feedback and what did you do?",
@@ -308,7 +308,7 @@ var sq_questions_1 = {
     "99": "Give me an example of a time when you changed a behavior or stopped a bad habit. What was it and what did you do to change?",
     "100": "Give me an example of a time when you changed a behavior or stopped a bad habit. What was it and what did you do to change?"
   },
-  "sq1_3": {
+  "wva1_3": {
     "title": "Positive Attitude",
     "1": "We all have times when we get frustrated and upset at work. Describe a time this happened to you.",
     "2": "We all have times when we get frustrated and upset at work. Describe a time this happened to you.",
@@ -411,7 +411,7 @@ var sq_questions_1 = {
     "99": "Tell me about a time when you had a disagreement with someone at work. What was the situation, what did you do and what was the result?",
     "100": "Tell me about a time when you had a disagreement with someone at work. What was the situation, what did you do and what was the result?"
   },
-  "sq1_4": {
+  "wva1_4": {
     "title": "Aggression Control",
     "1": "Tell me about a time when someone did something bad to you but you got even with them. Describe the situation and your actions in detail.",
     "2": "Tell me about a time when someone did something bad to you but you got even with them. Describe the situation and your actions in detail.",
@@ -514,7 +514,7 @@ var sq_questions_1 = {
     "99": "Tell me about a time when someone did something bad to you but you got even with them. Describe the situation and your actions in detail.",
     "100": "Tell me about a time when someone did something bad to you but you got even with them. Describe the situation and your actions in detail."
   },
-  "sq1_5": {
+  "wva1_5": {
     "title": "Open Communication",
     "1": "Sometimes it’s best not to share too much information with co-workers or customers. Tell me about a time when you held back information because it was the right thing to do.",
     "2": "Sometimes it’s best not to share too much information with co-workers or customers. Tell me about a time when you held back information because it was the right thing to do.",

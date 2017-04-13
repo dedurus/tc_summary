@@ -627,7 +627,7 @@
         var return_val;
 
         // check `sq1` and `wva1` types
-        if(benchmark_type == 'sq1' || benchmark_type == 'wva1'){
+        if(benchmark_type == 'sq1'){
             if(score <= 25){
                 return_val = 'Left Side';
             }else if(score >= 25 && score <= 75 ){
@@ -636,6 +636,16 @@
                 return_val = 'Right Side';
             }else{ // default
                 return_val = 'Mid Range';
+            }
+        }else if(benchmark_type == 'wva1'){
+            if(score <= 25){
+                return_val = 'Low Range';
+            }else if(score >= 25 && score <= 75 ){
+                return_val = 'Average Range';
+            }else if(score > 75){
+                return_val = 'High Range';
+            }else{ // default
+                return_val = 'High Range';
             }
         }else if(benchmark_type == 'wc1'){ // WPP benchmark type
             switch(true){
@@ -667,15 +677,15 @@
 
 
 
-    // testing
+    // SQ/DSQ Summaries
     $('.reports_generator').on('click', function(e){
         e.preventDefault();
 
         var report_id = $(this).attr('data-report');
 
-        if($('#checkbox_sq_all').is(':checked')){
+        /*if($('#checkbox_sq_all').is(':checked')){
             $('#checkbox_sq_all').prop('checked', false);
-        }
+        }*/
 
         // check if the data is fetched through assigned CSS class
         if (!$(this).hasClass("fetched")) {
@@ -716,9 +726,9 @@
    $('input[class="reports_generator_checkbox"]').on('change', function(){
         var report_id = $(this).attr('data-report');
 
-        if(!$(this).is(':checked')){
+        /*if(!$(this).is(':checked')){
             $('#checkbox_sq_all').prop('disabled', false).prop('checked', false);
-        }
+        }*/
 
         // check if the data is fetched through assigned CSS class
         if (!$(this).hasClass("fetched")) {
@@ -750,14 +760,11 @@
         $('#slide_report_' + report_id ).slideToggle();
    });
 
-   // Toggle all SQ/DSQ reports
-   $('#checkbox_sq_all').on('change', function(){
+   // Toggle all SQ/DSQ reports (NOT USED!!!!!!!)
+   /*$('#checkbox_sq_all').on('change', function(){
         var check_all = $(this),
             checks = $('.reports_generator_checkbox');
-            //checked_status = $('#checkbox_sq_all').is(':checked') ? true : false; // if `checkbox_sq_all` is checked, disable other sq checkboxes
 
-
-            //$(this).addClass('opened_report');
             if(check_all.is(':checked')){
                 $('.slide_reports').slideUp().slideDown();
                 checks.prop('checked', true);
@@ -768,8 +775,7 @@
             console.log(check_all.is(':checked'));
 
         $.each(checks, function(ind, val){
-            //$(this).toggleClass('sq_all_open');
-            //$(this).prop('disabled', checked_status);
+
             var report_id = $(this).attr('data-report');
 
 
@@ -802,7 +808,234 @@
             }
 
         });
+   });*/
+
+
+   // WVA Summaries -------
+    $('.reports_generator_wva').on('click', function(e){
+        e.preventDefault();
+
+        var report_id = $(this).attr('data-report');
+
+        /*if($('#checkbox_wva_all').is(':checked')){
+            $('#checkbox_wva_all').prop('checked', false);
+        }*/
+
+        // check if the data is fetched through assigned CSS class
+        if (!$(this).hasClass("fetched")) {
+            // no class `fetched` on the link, so add it and prepare data
+            $(this).addClass("fetched");
+            var dim_sum = generate_dimension_summary(report_id),
+
+                dim_question_1 = wva_questions_1[report_id],
+                dim_question_2 = wva_questions_2[report_id],
+                dim_range = calculate_range_score((+dim_sum[0]), dim_sum[1]),
+                dimension_title = dim_question_1.title,
+
+                questions = '<li>' + dim_question_1[dim_sum[0]] + '</li><li>' + dim_question_2[dim_sum[0]] + '</li>',
+                employee_name = get_name();
+
+            $('.employee_name').html(employee_name);
+            $('.dimension_title_' + report_id).html(dimension_title);
+            $('.range_' + report_id).html(dim_range);
+
+            $('.questions_' + report_id).html(questions);
+
+        }
+
+        // toggle
+        $('#slide_report_' + report_id ).slideToggle();
+        // checkbox
+
+        var checkbox_toggle = $('input[id="checkbox_' + report_id + '"]');
+
+        checkbox_toggle.prop('checked', !checkbox_toggle[0].checked);
+    });
+
+
+   $('input[class="reports_generator_checkbox_wva"]').on('change', function(){
+        var report_id = $(this).attr('data-report');
+
+        /*if(!$(this).is(':checked')){
+            $('#checkbox_wva_all').prop('disabled', false).prop('checked', false);
+        }*/
+
+
+        // check if the data is fetched through assigned CSS class
+        if (!$(this).hasClass("fetched")) {
+            // no class `fetched` on the link, so add it and prepare data
+            $(this).addClass("fetched");
+            var dim_sum = generate_dimension_summary(report_id),
+
+                dim_question_1 = wva_questions_1[report_id],
+                dim_question_2 = wva_questions_2[report_id],
+                dim_range = calculate_range_score((+dim_sum[0]), dim_sum[1]),
+                dimension_title = dim_question_1.title,
+
+                questions = '<li>' + dim_question_1[dim_sum[0]] + '</li><li>' + dim_question_2[dim_sum[0]] + '</li>',
+                employee_name = get_name();
+
+            $('.employee_name').html(employee_name);
+            $('.dimension_title_' + report_id).html(dimension_title);
+            $('.range_' + report_id).html(dim_range);
+
+            $('.questions_' + report_id).html(questions);
+
+        }
+
+        // toggle
+        $('#slide_report_' + report_id ).slideToggle();
    });
+
+
+    // WPP Summaries
+    $('.reports_generator_wc1').on('click', function(e){
+        e.preventDefault();
+
+        var report_id = $(this).attr('data-report');
+
+        // check if the data is fetched through assigned CSS class
+        if (!$(this).hasClass("fetched")) {
+            // no class `fetched` on the link, so add it and prepare data
+            $(this).addClass("fetched");
+            var dim_sum = generate_dimension_summary(report_id),
+                dim_response = wpp_positive[report_id], // `sq_positive` is global var holding JSON since to no database yet,
+                dim_coach = wpp_coach[report_id],
+                dim_jobfit = wpp_jobfit[report_id],
+                dim_management = wpp_management[report_id],
+                dim_question_1 = wpp_questions_1[report_id],
+                dim_question_2 = wpp_questions_2[report_id],
+                dim_range = calculate_range_score((+dim_sum[0]), dim_sum[1]),
+                dimension_title = dim_response.title,
+                positive = dim_response[dim_sum[0]],
+                pos_html = $.parseHTML(positive),
+                questions = '<li>' + dim_question_1[dim_sum[0]] + '</li><li>' + dim_question_2[dim_sum[0]] + '</li>',
+                employee_name = get_name();
+
+            $('.employee_name').html(employee_name);
+            $('.dimension_title_' + report_id).html(dimension_title);
+            $('.range_' + report_id).html(dim_range);
+
+            $('.positive_' + report_id).html(pos_html);
+            $('.coach_' + report_id).html(dim_coach[dim_sum[0]]);
+            $('.jobfit_' + report_id).html(dim_jobfit[dim_sum[0]]);
+            $('.management_' + report_id).html(dim_management[dim_sum[0]]);
+            $('.questions_' + report_id).html(questions);
+
+        }
+
+        // toggle
+        $('#slide_report_' + report_id ).slideToggle();
+        // checkbox
+
+        var checkbox_toggle = $('input[id="checkbox_' + report_id + '"]');
+
+        checkbox_toggle.prop('checked', !checkbox_toggle[0].checked);
+    });
+
+
+   $('input[class="reports_generator_checkbox_wpp"]').on('change', function(){
+        var report_id = $(this).attr('data-report');
+
+
+
+        // check if the data is fetched through assigned CSS class
+        if (!$(this).hasClass("fetched")) {
+            // no class `fetched` on the link, so add it and prepare data
+            $(this).addClass("fetched");
+            var dim_sum = generate_dimension_summary(report_id),
+                dim_response = wpp_positive[report_id], // `sq_positive` is global var holding JSON since to no database yet,
+                dim_coach = wpp_coach[report_id],
+                dim_jobfit = wpp_jobfit[report_id],
+                dim_management = wpp_management[report_id],
+                dim_question_1 = wpp_questions_1[report_id],
+                dim_question_2 = wpp_questions_2[report_id],
+                dim_range = calculate_range_score((+dim_sum[0]), dim_sum[1]),
+                dimension_title = dim_response.title,
+                positive = dim_response[dim_sum[0]],
+                pos_html = $.parseHTML(positive),
+                questions = '<li>' + dim_question_1[dim_sum[0]] + '</li><li>' + dim_question_2[dim_sum[0]] + '</li>',
+                employee_name = get_name();
+
+            $('.employee_name').html(employee_name);
+            $('.dimension_title_' + report_id).html(dimension_title);
+            $('.range_' + report_id).html(dim_range);
+
+            $('.positive_' + report_id).html(pos_html);
+            $('.coach_' + report_id).html(dim_coach[dim_sum[0]]);
+            $('.jobfit_' + report_id).html(dim_jobfit[dim_sum[0]]);
+            $('.management_' + report_id).html(dim_management[dim_sum[0]]);
+            $('.questions_' + report_id).html(questions);
+
+        }
+
+        // toggle
+        $('#slide_report_' + report_id ).slideToggle();
+   });
+
+
+
+
+   // Toggle all WVA reports (NOT USED!!!!!!!!!)
+   /*$('#checkbox_wva_all').on('change', function(){
+        var check_all = $(this),
+            checks = $('.reports_generator_checkbox_wva');
+
+            if(check_all.is(':checked')){
+                $('.slide_reports_wva').slideUp().slideDown();
+                checks.prop('checked', true);
+            }else{
+                checks.prop('checked', false);
+                $('.slide_reports_wva').slideUp();
+            }
+            console.log(check_all.is(':checked'));
+
+        $.each(checks, function(ind, val){
+            //$(this).toggleClass('sq_all_open');
+            //$(this).prop('disabled', checked_status);
+            var report_id = $(this).attr('data-report');
+
+
+            // check if the data is fetched through assigned CSS class
+            if (!$(this).hasClass("fetched")) {
+                // no class `fetched` on the link, so add it and prepare data
+                $(this).addClass("fetched");
+                var dim_sum = generate_dimension_summary(report_id),
+
+                    dim_question_1 = wva_questions_1[report_id],
+                    dim_question_2 = wva_questions_2[report_id],
+                    dim_range = calculate_range_score((+dim_sum[0]), dim_sum[1]),
+                    dimension_title = dim_question_1.title,
+
+                    questions = '<li>' + dim_question_1[dim_sum[0]] + '</li><li>' + dim_question_2[dim_sum[0]] + '</li>',
+                    employee_name = get_name();
+
+                $('.employee_name').html(employee_name);
+                $('.dimension_title_' + report_id).html(dimension_title);
+                $('.range_' + report_id).html(dim_range);
+
+                $('.questions_' + report_id).html(questions);
+
+            }
+
+        });
+   });*/
+
+   // Toggle SQ/DSQ dimensions
+   $('#checkbox_sq_all').on('change', function(){
+        $('#all_sq_dimensions').slideToggle(800);
+   });
+
+   // Toggle WPP dimensions
+   $('#checkbox_wpp_all').on('change', function(){
+        $('#all_wpp_dimensions').slideToggle(800);
+   });
+
+   // Toggle WVA dimensions
+   $('#checkbox_wva_all').on('change', function(){
+        $('#all_wva_dimensions').slideToggle(800);
+   });
+
 
 
 
