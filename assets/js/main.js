@@ -911,7 +911,7 @@
                 pos_html = $.parseHTML(positive),
                 questions = '<li>' + dim_question_1[dim_sum[0]] + '</li><li>' + dim_question_2[dim_sum[0]] + '</li>',
                 employee_name = get_name();
-
+console.log(dim_sum);
             $('.employee_name').html(employee_name);
             $('.dimension_title_' + report_id).html(dimension_title);
             $('.range_' + report_id).html(dim_range);
@@ -921,7 +921,6 @@
             $('.jobfit_' + report_id).html(dim_jobfit[dim_sum[0]]);
             $('.management_' + report_id).html(dim_management[dim_sum[0]]);
             $('.questions_' + report_id).html(questions);
-
         }
 
         // toggle
@@ -936,8 +935,6 @@
 
    $('input[class="reports_generator_checkbox_wpp"]').on('change', function(){
         var report_id = $(this).attr('data-report');
-
-
 
         // check if the data is fetched through assigned CSS class
         if (!$(this).hasClass("fetched")) {
@@ -966,7 +963,6 @@
             $('.jobfit_' + report_id).html(dim_jobfit[dim_sum[0]]);
             $('.management_' + report_id).html(dim_management[dim_sum[0]]);
             $('.questions_' + report_id).html(questions);
-
         }
 
         // toggle
@@ -1040,7 +1036,6 @@
 
 
     // ******* ./ SUMMARY REPORTS ******* //
-
 
 
 
