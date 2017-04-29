@@ -692,7 +692,7 @@
             // no class `fetched` on the link, so add it and prepare data
             $(this).addClass("fetched");
             var dim_sum = generate_dimension_summary(report_id),
-                dim_response = sq_positive[report_id], // `sq_positive` is global var holding JSON since to no database yet,
+                dim_response = sq_positive[report_id],
                 dim_safety = sq_safety[report_id],
                 dim_question_1 = sq_questions_1[report_id],
                 dim_question_2 = sq_questions_2[report_id],
@@ -735,7 +735,7 @@
             // no class `fetched` on the link, so add it and prepare data
             $(this).addClass("fetched");
             var dim_sum = generate_dimension_summary(report_id),
-                dim_response = sq_positive[report_id], // `sq_positive` is global var holding JSON since to no database yet,
+                dim_response = sq_positive[report_id],
                 dim_safety = sq_safety[report_id],
                 dim_question_1 = sq_questions_1[report_id],
                 dim_question_2 = sq_questions_2[report_id],
@@ -760,55 +760,7 @@
         $('#slide_report_' + report_id ).slideToggle();
    });
 
-   // Toggle all SQ/DSQ reports (NOT USED!!!!!!!)
-   /*$('#checkbox_sq_all').on('change', function(){
-        var check_all = $(this),
-            checks = $('.reports_generator_checkbox');
 
-            if(check_all.is(':checked')){
-                $('.slide_reports').slideUp().slideDown();
-                checks.prop('checked', true);
-            }else{
-                checks.prop('checked', false);
-                $('.slide_reports').slideUp();
-            }
-            console.log(check_all.is(':checked'));
-
-        $.each(checks, function(ind, val){
-
-            var report_id = $(this).attr('data-report');
-
-
-            // check if the data is fetched through assigned CSS class
-            if (!$(this).hasClass("fetched")) {
-                // no class `fetched` on the link, so add it and prepare data
-                $(this).addClass("fetched");
-                var dim_sum = generate_dimension_summary(report_id),
-                    dim_response = sq_positive[report_id], // `sq_positive` is global var holding JSON since to no database yet,
-                    dim_safety = sq_safety[report_id],
-                    dim_question_1 = sq_questions_1[report_id],
-                    dim_question_2 = sq_questions_2[report_id],
-                    dim_range = calculate_range_score((+dim_sum[0]), dim_sum[1]),
-                    dimension_title = dim_response.title,
-                    positive = dim_response[dim_sum[0]],
-                    pos_html = $.parseHTML(positive),
-                    questions = '<li>' + dim_question_1[dim_sum[0]] + '</li><li>' + dim_question_2[dim_sum[0]] + '</li>',
-                    employee_name = get_name();
-
-                $('.employee_name').html(employee_name);
-                $('.dimension_title_' + report_id).html(dimension_title);
-                $('.range_' + report_id).html(dim_range);
-
-                $('.positive_' + report_id).html(pos_html);
-                $('.management_' + report_id).html(dim_safety[dim_sum[0]]);
-                $('.questions_' + report_id).html(questions);
-
-
-
-            }
-
-        });
-   });*/
 
 
    // WVA Summaries -------
@@ -899,7 +851,7 @@
             // no class `fetched` on the link, so add it and prepare data
             $(this).addClass("fetched");
             var dim_sum = generate_dimension_summary(report_id),
-                dim_response = wpp_positive[report_id], // `sq_positive` is global var holding JSON since to no database yet,
+                dim_response = wpp_positive[report_id], // `wpp_positive` is global var holding JSON since to no database yet,
                 dim_coach = wpp_coach[report_id],
                 dim_jobfit = wpp_jobfit[report_id],
                 dim_management = wpp_management[report_id],
@@ -941,7 +893,7 @@
             // no class `fetched` on the link, so add it and prepare data
             $(this).addClass("fetched");
             var dim_sum = generate_dimension_summary(report_id),
-                dim_response = wpp_positive[report_id], // `sq_positive` is global var holding JSON since to no database yet,
+                dim_response = wpp_positive[report_id],
                 dim_coach = wpp_coach[report_id],
                 dim_jobfit = wpp_jobfit[report_id],
                 dim_management = wpp_management[report_id],
