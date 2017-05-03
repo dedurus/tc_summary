@@ -18,9 +18,6 @@
             'max': [100]
         };
 
-
-
-
     // Disable idicators
     var indicator_class = document.getElementsByClassName('indicator');
     Array.prototype.forEach.call(indicator_class, function(v){
@@ -330,7 +327,7 @@
     }
 
     function sq_average(){
-         var query = getQueryParams(document.location.search),
+        var query = getQueryParams(document.location.search),
             render_avg = '',
             print_avg;
 
@@ -371,7 +368,8 @@
         var sub = sequence.substring(1),
             group_1 = sub.match(/.{1,4}/g),
             seq_array = [],
-            i = 1;
+            gauge_metrics = {},
+            i = 0;
 
             if(group_1){
                 group_1.forEach(function(el){
@@ -380,20 +378,18 @@
                 });
             }
 
+
             // move last array element to second position for WPP sequence
             if(dimension == 'wpp'){
                 var arr_length = seq_array.length - 1;
                 // restructure the array for this dimension only (last element becomes second)
                 seq_array.move_array_element(arr_length, 1);
             }
+
             $.each(seq_array, function(index, val){
                 var current_slider = document.getElementById(dimension + '_' + index + '_' + dimension_index);
                 current_slider.noUiSlider.set(val);
-               /* $('#' + dimension + '_' + index + '_' + dimension_index).find('.noUi-connect').tooltip({
-                    'container': 'body',
-                    'title': title,
-                    'placement': 'left auto'
-                });*/
+                i++;
             });
     }
 
@@ -405,14 +401,16 @@
 
     // fill `checked_obj` with lib values or remove them if deselected
     $('#presets_form').on('change', function(evt) {
-    $('.use_lib').prop('disabled', false);
-       var checked_item = $(evt.target),
+
+        //$('.canvas_holders').empty();
+
+        $('.use_lib').prop('disabled', false);
+        var checked_item = $(evt.target),
             checked_id = evt.target.id,
             title = checked_item.data('title'),
             data_sq = checked_item.data('sq'),
             data_wpp = checked_item.data('wpp'),
             data_wva = checked_item.data('wva');
-
 
         if(checked_item.prop('checked')==true){
             checked_obj[checked_id] = {
@@ -465,6 +463,7 @@
     // prepared library object (???)
     var lib_object_prepared = {};
 
+
     function split_lib_seq(lib_seq){
         var count = 0,
             seq_elements = [];
@@ -490,9 +489,17 @@
             titles.push(checked_obj[key].title);
             var seq_data = checked_obj[key];
 
+           // Draw Benchmarks
            draw_benchmark(seq_data.data_sq, 'sq', i, checked_obj[key].title);
            draw_benchmark(seq_data.data_wpp, 'wpp', i, checked_obj[key].title);
            draw_benchmark(seq_data.data_wva, 'wva', i, checked_obj[key].title);
+
+           // DRAW Position Fit GAUGES ----
+           console.log(seq_data.data_sq);
+           gauge_render(seq_data.data_sq, 'sq1', checked_obj[key].title, i);
+           gauge_render_wpp(seq_data.data_wpp, checked_obj[key].title, i);
+           gauge_render(seq_data.data_wva, 'wva1', checked_obj[key].title, i);
+
            i++;
        }
 
@@ -505,7 +512,7 @@
 
     $('#presets_form').on('submit', function(e){
         e.preventDefault();
-
+        $('.canvas_holders').empty();
         // reset current benchmarks
         $('.lib_titles').html('');
         $('.benchmark_slider').each(function(index, value){
@@ -513,15 +520,19 @@
             cid.noUiSlider.set([0,0]);
         });
 
+        // RESET Position Fit Gauges
+        // .......
+
+
         prepare_lib_seq(checked_obj);
-        console.log(checked_obj);
+        // console.log(checked_obj);
         $('#seq_modal').modal('hide');
     });
 
     $('.comparison_libs').on('click', function(e){
         e.preventDefault();
         $('#seq_modal').modal('show');
-    })
+    });
 
 
 
@@ -936,7 +947,7 @@
                 checks.prop('checked', false);
                 $('.slide_reports_wva').slideUp();
             }
-            console.log(check_all.is(':checked'));
+            // console.log(check_all.is(':checked'));
 
         $.each(checks, function(ind, val){
             //$(this).toggleClass('sq_all_open');
@@ -984,10 +995,324 @@
         $('#all_wva_dimensions').slideToggle(800);
    });
 
-
-
-
     // ******* ./ SUMMARY REPORTS ******* //
+
+
+    // ******* Gauges ******* //
+
+
+    /*
+    * Render gauges (SQ/WVA)
+    * sequence (mixed object)
+    */
+    function gauge_render(sequence, product, bench_title, canvas_index){
+        var sub = sequence.substring(1),
+            group_1 = sub.match(/.{1,4}/g),
+            seq_array = [],
+            scores = 0,
+            query = getQueryParams(document.location.search),
+            final_score = 0,
+            i = 0;
+
+
+        //get indicator position(s) from URL param
+        var sq_prepared = prepare_param(query[product]);
+        console.log(sq_prepared);
+
+        if(group_1){
+            group_1.forEach(function(el){
+                var el_2 = el.match(/.{1,2}/g);
+                seq_array.push([el_2[0], el_2[1]]);
+            });
+        }
+        //console.log(seq_array);
+        seq_array.forEach(function(val){
+            // sum of scores
+            scores += indicator_towards_benchmark( sq_prepared[i], [(+val[0]), (+val[1])] );
+            //console.log('Scores', scores);
+            i++;
+        })
+
+        // average of scores
+        final_score = (scores / 6).toFixed();
+        console.log('Final Score:',final_score);
+
+        // render
+        gauage_drawing(product, canvas_index, bench_title, final_score);
+
+    }
+
+    /*
+    * Render gauges (WPP)
+    */
+    function gauge_render_wpp(sequence, bench_title, canvas_index){
+        var sub = sequence.substring(1),
+            group_1 = sub.match(/.{1,4}/g),
+            seq_array = [],
+            scores = 0,
+            query = getQueryParams(document.location.search),
+            final_score = 0,
+            i = 0;
+            console.log('Sequence', sequence);
+            console.log('Seq substring', sub);
+            console.log('Bench title', bench_title);
+            console.log('Canvas Index', canvas_index);
+
+        //get indicator position(s) from URL param
+        var sq_prepared = prepare_param(query['wc1']);
+        console.log(sq_prepared);
+
+        if(group_1){
+            group_1.forEach(function(el){
+                var el_2 = el.match(/.{1,2}/g);
+                seq_array.push([el_2[0], el_2[1]]);
+            });
+        }
+
+        var arr_length = seq_array.length - 1;
+        // restructure the array for this dimension only (last element becomes second)
+        seq_array.move_array_element(arr_length, 1);
+
+
+        // TODO: Change order of Arrays (indicator and benchmark)
+
+        //console.log(seq_array);
+        seq_array.forEach(function(val){
+            // sum of scores
+            scores += indicator_towards_benchmark( sq_prepared[i], [(+val[0]), (+val[1])] );
+            //console.log('Scores', scores);
+            i++;
+        });
+
+
+
+        // average of scores (7 dimension for WPP)
+        final_score = (scores / 7).toFixed();
+        console.log('Final Score:',final_score);
+
+        // render
+        gauage_drawing('wc1', canvas_index, bench_title, final_score);
+
+    }
+
+
+    function gauage_drawing(product, canvas_index, bench_title, final_score){
+console.log(product);
+        var canvas_id =  product + '_gauge_' + canvas_index;
+        $('#' + canvas_id + '_holder').append('<canvas class="canvas"  id="' + canvas_id + '"></canvas>')
+                                      .append('<p class="greenCo"><span class="canvas_percent" id="' + product + '_gauge_value_' + canvas_index + '"></span>%</p>')
+                                      .append(' <p class="' + product + '_canvas_title_' + canvas_index + ' bg_'+ canvas_index + ' whiteCo mB0">' + bench_title  +'</p>');
+
+
+
+        // final score is 0, meaning no benchmark sequence is set on benchmark for this product
+        if(final_score == 0){
+            $('#' + product + '_gauge_' + canvas_index).parent().parent().css('opacity', 0.65);
+            //$('#' + product + '_gauge_' + canvas_index).parent().addClass('hidden');
+        }else{
+            $('#' + product + '_gauge_' + canvas_index).parent().parent().css('opacity', 1);
+            //$('#' + product + '_gauge_' + canvas_index).parent().removeClass('hidden');
+        }
+
+        var target = document.getElementById(canvas_id); // canvas
+        var gauge_value = product + '_gauge_value_' + canvas_index;
+
+        init_gauge(canvas_id, gauge_value, canvas_index, final_score);
+
+    }
+
+    // init gauge
+    function init_gauge(gauge_id, gauge_value, canvas_index, final_score = 0){
+        var target = document.getElementById(gauge_id); // canvas
+
+        var gauge = new Gauge(target).setOptions(gauge_render_options[canvas_index]);
+
+        gauge.setTextField(document.getElementById(gauge_value));
+        gauge.maxValue = 100; // set max gauge value
+        gauge.setMinValue(0);  // Prefer setter over gauge.minValue = 0
+        gauge.animationSpeed = 32; // set animation speed (32 is default value)
+        if(final_score == 0 || final_score == ''){
+            gauge.set(0); // set actual value
+            console.log(final_score);
+        }else{
+            gauge.set(final_score); // set actual value
+        }
+    }
+
+
+    /*
+    * Calculate indicator position towards benchamrk interval
+    * return - score for indicator towards the tested benchamrk
+    */
+    function indicator_towards_benchmark(indicator_position, benchmark_interval){
+        indicator_position =  (+indicator_position);
+
+
+        var score = 100,
+            benchmark_interval_0 = benchmark_interval[0],
+            benchmark_interval_1 = benchmark_interval[1],
+            inidicator_range_pos,
+            difference;
+
+            // find benchmark's mean
+            var mean = benchmark_mean(benchmark_interval);
+
+            // find benchmark's mean position
+            var bench_mean_pos = benchmark_mean_position(mean);
+
+        // first, test if the indicator is inside bench. interval
+        if( indicator_position >= benchmark_interval_0 && indicator_position <= benchmark_interval_1 ){
+            console.log('~~~INSIDE~~~~');
+
+             // indicator is inside benchmark interval, so FULL (100) score is awarded
+             return score;
+            //score = 100;
+
+        }else{ // indicator is not inside the bench. interval, NEGATIVE score is awarded
+
+            // compare indicator position with mean position
+            if(indicator_position < mean){ // indicator is both, outside bench. interval and in a low range
+
+                // check if the mean is on the better or worse side, and give appropriate quote(_low or _high)
+                if(bench_mean_pos == 'left' || bench_mean_pos == 'mid_left'){
+                    console.log('I<M. Mean', bench_mean_pos);
+                    // indicator is on mean's "better" side, so low quote negative points awarded
+                    inidicator_range_pos = 'quote_low'; // `quote_low` is object key in `gauges_settings.js`
+
+                }else if(bench_mean_pos == 'mid_right' || bench_mean_pos == 'right'){
+
+                    // indicator is on mean's "worse" side, so higher quote negative points awarded
+                    inidicator_range_pos = 'quote_high'; // `quote_high` is object key in `gauges_settings.js`
+
+                }
+
+                // calculate difference between low end interval and indicator position, since the
+                // the indicator is in low range
+               difference = benchmark_interval_0 - indicator_position;
+
+            }else if(indicator_position > mean){
+
+                // check if the mean is on the better or worse side, and give appropriate quote(_low or _high)
+                if(bench_mean_pos == 'left' || bench_mean_pos == 'mid_left'){
+
+                    // indicator is on mean's "worse" side, so higher quote negative points awarded
+                    inidicator_range_pos = 'quote_high';
+
+                }else if(bench_mean_pos == 'mid_right' || bench_mean_pos == 'right'){
+
+                    // indicator is on mean's "better" side, so lower quote negative points awarded
+                    inidicator_range_pos = 'quote_low';
+
+                }
+
+                // calculate difference between indicator position and high end interval, since the
+                // the indicator is in high range
+                difference = indicator_position - benchmark_interval_1;
+            }
+            console.info('START DEBUG---------------');
+            console.log('I.P.', indicator_position);
+            console.log('BI 0', benchmark_interval_0);
+            console.log('BI 1', benchmark_interval_1);
+            console.log('Mean', mean);
+            console.log('Bench mean pos.', bench_mean_pos);
+            console.log('BMP', bench_mean_pos);
+            console.log('Fit Quote', fit_position[bench_mean_pos][inidicator_range_pos]);
+
+            // get fit quotient
+            var quotient = fit_position[bench_mean_pos][inidicator_range_pos];
+            console.log('Diff', difference);
+            console.log('Quot. diff', difference * quotient);
+            score = 100 - (difference * quotient);
+
+
+        }
+
+        /*console.log('Score: ', score);
+        console.info('END DEBUG---------------');*/
+        return score;
+    }
+
+    /*
+    * Calculate benchmark's position by determining it's arithmethic mean's position
+    * return (int)
+    */
+    function benchmark_mean_position(mean){
+        var position;
+        if(mean >= 0 && mean <= 24){
+            position = 'left';
+        }else if(mean >= 25 && mean <= 49){
+            position = 'mid_left';
+        }else if(mean >= 50 && mean <= 74){
+            position = 'mid_right';
+        }else if(mean >= 75 && mean <= 99){
+            position = 'right'
+        }
+
+        return position;
+    }
+
+    /*
+    * Calculate benchmark's arithmethic mean
+    *
+    */
+    function benchmark_mean(interval){
+        return (((+interval[0]) + (+interval[1])) / 2).toFixed();
+    }
+
+    // show position fit report
+    $('#sq_pos_fit_btn').on('click', function(e){
+        e.preventDefault();
+        var gauge_panel = $(this).attr('data-canvas-wrapper');
+        $(this).toggleClass('fit_active');
+        $('#' + gauge_panel).slideToggle().promise().done(function() {
+            if( $('#sq_toggle_arrow').hasClass('fa-angle-double-down') ) {
+                $('#sq_toggle_arrow').removeClass('fa-angle-double-down').addClass('fa-angle-double-up');
+            }else{
+                $('#sq_toggle_arrow').removeClass('fa-angle-double-up').addClass('fa-angle-double-down');
+            };
+        });
+    });
+
+    $('#wpp_pos_fit_btn').on('click', function(e){
+        e.preventDefault();
+        var gauge_panel = $(this).attr('data-canvas-wrapper');
+        $(this).toggleClass('fit_active');
+        $('#' + gauge_panel).slideToggle().promise().done(function() {
+            if( $('#wpp_toggle_arrow').hasClass('fa-angle-double-down') ) {
+                $('#wpp_toggle_arrow').removeClass('fa-angle-double-down').addClass('fa-angle-double-up');
+            }else{
+                $('#wpp_toggle_arrow').removeClass('fa-angle-double-up').addClass('fa-angle-double-down');
+            };
+        });
+    });
+
+    $('#wva_pos_fit_btn').on('click', function(e){
+        e.preventDefault();
+        var gauge_panel = $(this).attr('data-canvas-wrapper');
+        $(this).toggleClass('fit_active');
+        $('#' + gauge_panel).slideToggle().promise().done(function() {
+            if( $('#wva_toggle_arrow').hasClass('fa-angle-double-down') ) {
+                $('#wva_toggle_arrow').removeClass('fa-angle-double-down').addClass('fa-angle-double-up');
+            }else{
+                $('#wva_toggle_arrow').removeClass('fa-angle-double-up').addClass('fa-angle-double-down');
+            };
+        });
+    });
+
+    // show panels when modal is active (needed to render canvases)
+   /* $('#seq_modal').on('shown.bs.modal', function (e) {
+      $('.product_canvases').slideDown();
+    });*/
+
+    // hide panels when modal is hidden
+    /*$('#seq_modal').on('hidden.bs.modal', function (e) {
+        setTimeout(function(){
+          $('.product_canvases').slideUp();
+        }, 1500);
+        console.log(checked_obj);
+    });*/
+
+    // ******* ./Gauges ******* //
 
 
     // export btn
