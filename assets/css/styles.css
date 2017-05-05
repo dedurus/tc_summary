@@ -37,6 +37,9 @@ canvas {
 
 
 /* helpers */
+.double_border_top{
+    border-top: 10px double #eee;
+}
 .blocked{
     display: block;
 }
@@ -293,6 +296,9 @@ canvas {
 .whiteCo {
     color: #fff;
 }
+.whiteBg{
+    background-color: #fff;
+}
 
 .purpleCo {
     color: #3E3998;
@@ -418,6 +424,11 @@ hr.semi_divider {
     margin-top: 20px;
     margin-bottom: 10px;
     border-top-color: #ccc
+}
+hr.quater_divider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top-color: #eee
 }
 
 #sq_wrapper_btn,
@@ -1219,6 +1230,10 @@ span.mini_box_3 {
 }
 
 .benchmark_label_2 {
+    padding: 15px 10px;
+    height: 80px;
+}
+.benchmark_label_3 {
     padding: 10px;
     height: 80px;
 }
@@ -1280,6 +1295,14 @@ a#no_libs:hover {
 }
 
 /* ---- Gauges ------ */
+.product_canvases{
+    border-bottom: 1px solid #eee;
+    display: none;
+}
+/* .canvas{
+    width: 234px;
+    height: 117px;
+} */
 .canvas_percent{
     font-size: 20px;
     font-weight: bold;
@@ -1289,7 +1312,11 @@ a#no_libs:hover {
     font-size: 28px;
 }
 .canvas_wrapper{
-    margin: 10px 0;
+    margin: 0;
+}
+.canvas_holders{
+    display: inline-block;
+    max-width: 20%;
 }
 .position_fit{
     font-size: 12px;
@@ -1299,7 +1326,7 @@ a#no_libs:hover {
     cursor: pointer;
 }
 .position_fit:hover{
-    background-color: #33332C;
+    background-color: #404038;
 }
 .fit_active{
     color: #e74d3c;
@@ -1450,6 +1477,11 @@ a#no_libs:hover {
     .toggle_footer {
         display: none;
     }
+
+    .canvas_holders{
+        max-width: 45%;
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 478px) {
@@ -1484,7 +1516,7 @@ a#no_libs:hover {
         height: auto;
     }
     .position_fit{
-        max-height: 70px;
+        max-height: 80px;
     }
     .position_fit, .position_fit i{
         font-size: 16px;
@@ -1957,6 +1989,23 @@ a.comparison_libs i{
     transform:         translateY(-28px) translateZ(0);
     -webkit-transition: all .175s;
     transition:         all .175s;
+}
+
+/* EFFECTS */
+
+
+@-webkit-keyframes shadow-drop-2-tb{0%{-webkit-transform:translateZ(0);transform:translateZ(0);box-shadow:0 0 0 0 transparent,0 0 0 0 transparent}100%{-webkit-transform:translateZ(50px);transform:translateZ(50px);box-shadow:0 -12px 20px -12px rgba(0,0,0,.35),0 12px 20px -12px rgba(0,0,0,.35)}}@keyframes shadow-drop-2-tb{0%{-webkit-transform:translateZ(0);transform:translateZ(0);box-shadow:0 0 0 0 transparent,0 0 0 0 transparent}100%{-webkit-transform:translateZ(50px);transform:translateZ(50px);box-shadow:0 -12px 20px -12px rgba(0,0,0,.35),0 12px 20px -12px rgba(0,0,0,.35)}}
+@-webkit-keyframes shadow-drop-2-lr{0%{-webkit-transform:translateZ(0);transform:translateZ(0);box-shadow:0 0 0 0 transparent,0 0 0 0 transparent}100%{-webkit-transform:translateZ(50px);transform:translateZ(50px);box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35)}}@keyframes shadow-drop-2-lr{0%{-webkit-transform:translateZ(0);transform:translateZ(0);box-shadow:0 0 0 0 transparent,0 0 0 0 transparent}100%{-webkit-transform:translateZ(50px);transform:translateZ(50px);box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35)}}
+
+.shadow-drop-2-tb {
+    -webkit-animation: shadow-drop-2-tb 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -moz-animation: shadow-drop-2-tb 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: shadow-drop-2-tb 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.shadow-drop-2-lr {
+    -webkit-animation: shadow-drop-2-lr 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -moz-animation: shadow-drop-2-lr 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: shadow-drop-2-lr 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes toggleBtnAnim {

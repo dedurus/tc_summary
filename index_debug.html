@@ -68,26 +68,13 @@
         </div><!-- ./container -->
 
         <div class="container mT30">
-            <!-- OVERALL Position Fit -->
-            <div class="row pB10 product_canvases whiteBg shadow-drop-2-lr">
-                <div class="col-xs-12 text-center">
-                    <h2 class="text-center">Position Fit</h2>
-                    <hr class="quater_divider">
-
-                    <div class="row">
-                        <div class="col-md-12  canvas_wrapper pLR0 text-center">
-                            <div class="canvas_holders shadow" id="overall_gauge_0"></div>
-
-                            <div class="canvas_holders shadow" id="overall_gauge_1"></div>
-
-                            <div class="canvas_holders shadow" id="overall_gauge_2"></div>
-
-                            <div class="canvas_holders shadow" id="overall_gauge_3"></div>
-                        </div>
-                    </div>
+            <!-- <div class="row text-center">
+                <div class="col-md-1"></div>
+                <div class="col-md-10"  id="lib_titles">
 
                 </div>
-            </div>
+                <div class="col-md-1"></div>
+            </div> -->
         </div><!-- ./contaiener -->
 
 
@@ -108,9 +95,9 @@
                             <p class="extremes_sq"></p>
                     </div>
 
-                    <div class="col-xs-6 col-md-1 darkGrey text-center whiteCo position_fit" id="sq_pos_fit_btn" data-canvas-wrapper="sq_canvas_wrapper">
+                    <div class="col-xs-6 col-md-1 darkGrey text-center whiteCo position_fit fit_active" id="sq_pos_fit_btn" data-canvas-wrapper="sq_canvas_wrapper">
                         <i class="fa fa-tachometer tachometer_icon"></i> Position Fit
-                        <span class="blocked position_arrow"><i class="fa fa-angle-double-down" id="sq_toggle_arrow"></i></span>
+                        <span class="blocked position_arrow"><i class="fa fa-angle-double-up" id="sq_toggle_arrow"></i></span>
                     </div>
                     <div class="col-xs-6 col-md-1 greenBg2 benchmark_label_3 text-center whiteCo">
                         <div class="col-xs-12 whiteCo font12 pLR0">Average Score</div>
@@ -121,31 +108,34 @@
 
                 </div><!-- ./row -->
 
-                <div class="row pB10 product_canvases whiteBg shadow-drop-2-lr" id="sq_canvas_wrapper">
-                    <div class="col-xs-12 text-center">
-                        <h3 class="text-center">SQ/DSQ Position Fit</h3>
-                        <hr class="quater_divider">
-
+                <div class="row darkGrey pB10 product_canvases" id="sq_canvas_wrapper">
+                    <div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
+                        <h3 class="text-center whiteCo">SQ/DSQ Position Fit</h3>
                         <div class="row">
-                            <div class="col-md-12  canvas_wrapper pLR0 text-center">
-                                <div class="canvas_holders shadow" id="sq1_gauge_0_holder"></div>
-
-                                <div class="canvas_holders shadow" id="sq1_gauge_1_holder"></div>
-
-                                <div class="canvas_holders shadow" id="sq1_gauge_2_holder"></div>
-
-                                <div class="canvas_holders shadow" id="sq1_gauge_3_holder"></div>
+                            <div class="col-md-4 col-md-offset-4">
+                                <a href="#" class="btn btn-primary btn-block comparison_libs"><i class="fa fa-sliders"></i> Comparison Libraries</a>
                             </div>
                         </div>
 
-                            <div class="row">
-                                <div class="col-md-4 col-md-offset-4">
-                                    <hr class="quater_divider">
-                                    <a href="#" class="btn btn-primary btn-block comparison_libs"><i class="fa fa-sliders"></i> Comparison Libraries</a>
-                                </div>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6  canvas_wrapper pLR0">
+                                <div class="canvas_holders shadow" id="sq1_gauge_0_holder"></div>
                             </div>
-                            <hr>
+                            <div class="col-md-3 col-sm-6  canvas_wrapper pLR0">
+                                <div class="canvas_holders shadow" id="sq1_gauge_1_holder"></div>
 
+                            </div>
+                            <div class="col-md-3 col-sm-6  canvas_wrapper pLR0">
+                                <div class="canvas_holders shadow" id="sq1_gauge_2_holder"></div>
+
+
+                            </div>
+                            <div class="col-md-3 col-sm-6  canvas_wrapper pLR0">
+                                <div class="canvas_holders shadow" id="sq1_gauge_3_holder"></div>
+
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div><!-- ./container -->
@@ -1080,9 +1070,9 @@
                     </div>
 
 
-                    <div class="col-xs-6 col-md-1 darkGrey text-center whiteCo position_fit" id="wpp_pos_fit_btn" data-canvas-wrapper="wpp_canvas_wrapper">
+                    <div class="col-xs-6 col-md-1 darkGrey text-center whiteCo position_fit fit_active" id="wpp_pos_fit_btn" data-canvas-wrapper="wpp_canvas_wrapper">
                         <i class="fa fa-tachometer tachometer_icon"></i> Position Fit
-                        <span class="blocked position_arrow"><i class="fa fa-angle-double-down" id="wpp_toggle_arrow"></i></span>
+                        <span class="blocked position_arrow"><i class="fa fa-angle-double-up" id="wpp_toggle_arrow"></i></span>
                     </div>
 
                     <div class="col-xs-6 col-md-1 blueBg2 benchmark_label_2 text-center whiteCo">
@@ -1092,32 +1082,34 @@
                     </div>
                 </div><!-- ./row -->
 
-
-                <div class="row pB10 product_canvases whiteBg shadow-drop-2-lr" id="wpp_canvas_wrapper">
-                    <div class="col-xs-12 text-center">
-                        <h3 class="text-center">WPP Position Fit</h3>
-                        <hr class="quater_divider">
-
+                <div class="row darkGrey pB10 product_canvases" id="wpp_canvas_wrapper">
+                    <div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
+                        <h3 class="text-center whiteCo">WPP Position Fit</h3>
                         <div class="row">
-                            <div class="col-md-12  canvas_wrapper pLR0 text-center">
-                                <div class="canvas_holders shadow" id="wc1_gauge_0_holder"></div>
-
-                                <div class="canvas_holders shadow" id="wc1_gauge_1_holder"></div>
-
-                                <div class="canvas_holders shadow" id="wc1_gauge_2_holder"></div>
-
-                                <div class="canvas_holders shadow" id="wc1_gauge_3_holder"></div>
+                            <div class="col-md-4 col-md-offset-4">
+                                <a href="#" class="btn btn-primary btn-block comparison_libs"><i class="fa fa-sliders"></i> Comparison Libraries</a>
                             </div>
                         </div>
 
-                            <div class="row">
-                                <div class="col-md-4 col-md-offset-4">
-                                    <hr class="quater_divider">
-                                    <a href="#" class="btn btn-primary btn-block comparison_libs"><i class="fa fa-sliders"></i> Comparison Libraries</a>
-                                </div>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6  canvas_wrapper pLR0">
+                                <div class="canvas_holders shadow" id="wc1_gauge_0_holder"></div>
                             </div>
-                            <hr>
+                            <div class="col-md-3 col-sm-6  canvas_wrapper pLR0">
+                                <div class="canvas_holders shadow" id="wc1_gauge_1_holder"></div>
 
+                            </div>
+                            <div class="col-md-3 col-sm-6  canvas_wrapper pLR0">
+                                <div class="canvas_holders shadow" id="wc1_gauge_2_holder"></div>
+
+
+                            </div>
+                            <div class="col-md-3 col-sm-6  canvas_wrapper pLR0">
+                                <div class="canvas_holders shadow" id="wc1_gauge_3_holder"></div>
+
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div><!-- ./container -->
@@ -2406,9 +2398,9 @@
                             <p class="extremes_wva"></p>
                     </div>
 
-                    <div class="col-xs-6 col-md-1 darkGrey text-center whiteCo position_fit" id="wva_pos_fit_btn" data-canvas-wrapper="wva_canvas_wrapper">
+                    <div class="col-xs-6 col-md-1 darkGrey text-center whiteCo position_fit fit_active" id="wva_pos_fit_btn" data-canvas-wrapper="wva_canvas_wrapper">
                         <i class="fa fa-tachometer tachometer_icon"></i> Position Fit
-                        <span class="blocked position_arrow"><i class="fa fa-angle-double-down" id="wva_toggle_arrow"></i></span>
+                        <span class="blocked position_arrow"><i class="fa fa-angle-double-up" id="wva_toggle_arrow"></i></span>
                     </div>
                     <div class="col-xs-6 col-md-1 orangeBg2 benchmark_label_2 text-center whiteCo">
                         <div class="col-xs-12">
@@ -2417,32 +2409,34 @@
                     </div>
                 </div><!-- ./row -->
 
-
-                <div class="row pB10 product_canvases whiteBg shadow-drop-2-lr" id="wva_canvas_wrapper">
-                    <div class="col-xs-12 text-center">
-                        <h3 class="text-center">WVA Position Fit</h3>
-                        <hr class="quater_divider">
-
+                <div class="row darkGrey pB10 product_canvases" id="wva_canvas_wrapper">
+                    <div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
+                        <h3 class="text-center whiteCo">WVA Position Fit</h3>
                         <div class="row">
-                            <div class="col-md-12  canvas_wrapper pLR0 text-center">
-                                <div class="canvas_holders shadow" id="wva1_gauge_0_holder"></div>
-
-                                <div class="canvas_holders shadow" id="wva1_gauge_1_holder"></div>
-
-                                <div class="canvas_holders shadow" id="wva1_gauge_2_holder"></div>
-
-                                <div class="canvas_holders shadow" id="wva1_gauge_3_holder"></div>
+                            <div class="col-md-4 col-md-offset-4">
+                                <a href="#" class="btn btn-primary btn-block comparison_libs"><i class="fa fa-sliders"></i> Comparison Libraries</a>
                             </div>
                         </div>
 
-                            <div class="row">
-                                <div class="col-md-4 col-md-offset-4">
-                                    <hr class="quater_divider">
-                                    <a href="#" class="btn btn-primary btn-block comparison_libs"><i class="fa fa-sliders"></i> Comparison Libraries</a>
-                                </div>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6  canvas_wrapper pLR0">
+                                <div class="canvas_holders shadow" id="wva1_gauge_0_holder"></div>
                             </div>
-                            <hr>
+                            <div class="col-md-3 col-sm-6  canvas_wrapper pLR0">
+                                <div class="canvas_holders shadow" id="wva1_gauge_1_holder"></div>
 
+                            </div>
+                            <div class="col-md-3 col-sm-6  canvas_wrapper pLR0">
+                                <div class="canvas_holders shadow" id="wva1_gauge_2_holder"></div>
+
+
+                            </div>
+                            <div class="col-md-3 col-sm-6  canvas_wrapper pLR0">
+                                <div class="canvas_holders shadow" id="wva1_gauge_3_holder"></div>
+
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div><!-- ./container -->
@@ -3382,7 +3376,7 @@
         <script type="text/javascript" src="assets/json/wva_keyed_questions_2.js"></script>
 
 
-        <script src="assets/js/main.js"></script>
+        <script src="assets/js/main_debug.js"></script>
 
     </body>
 </html>

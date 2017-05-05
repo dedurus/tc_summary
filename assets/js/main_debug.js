@@ -225,13 +225,6 @@
         return params;
     }
 
-    // Array sum (numbers)
-    function array_sum(arr){
-        var sum = arr.reduce(function(a, b) { return a + b; }, 0);
-
-        return sum
-    }
-
     // prepare param (convert to array)
     function prepare_param(param){
         var sub = param.substring(1),
@@ -494,8 +487,7 @@
 
        for(var key in checked_obj){
             titles.push(checked_obj[key].title);
-            var seq_data = checked_obj[key],
-            gauge_sum = 0;
+            var seq_data = checked_obj[key];
 
            // Draw Benchmarks
            draw_benchmark(seq_data.data_sq, 'sq', i, checked_obj[key].title);
@@ -503,17 +495,10 @@
            draw_benchmark(seq_data.data_wva, 'wva', i, checked_obj[key].title);
 
            // DRAW Position Fit GAUGES ----
-           gauge_sum = gauge_render(seq_data.data_sq, 'sq1', checked_obj[key].title, i);
-
-           if(typeof gauge_sum == 'undefined'){
-                console.log('SQ render gauge undefined');
-                gauge_sum = 0;
-           }
-           gauge_sum += gauge_render_wpp(seq_data.data_wpp, checked_obj[key].title, i);
-           gauge_sum += gauge_render(seq_data.data_wva, 'wva1', checked_obj[key].title, i);
-
-           console.log(gauge_sum);
-
+           console.log(seq_data.data_sq);
+           //gauge_render(seq_data.data_sq, 'sq1', checked_obj[key].title, i);
+           gauge_render_wpp(seq_data.data_wpp, checked_obj[key].title, i);
+           //gauge_render(seq_data.data_wva, 'wva1', checked_obj[key].title, i);
 
            i++;
        }
@@ -540,7 +525,7 @@
 
 
         prepare_lib_seq(checked_obj);
-        // // console.log(checked_obj);
+        // console.log(checked_obj);
         $('#seq_modal').modal('hide');
     });
 
@@ -1032,46 +1017,35 @@
 
         //get indicator position(s) from URL param
         var sq_prepared = prepare_param(query[product]);
-        // // // console.log(sq_prepared);
+        console.log(sq_prepared);
 
         if(group_1){
             group_1.forEach(function(el){
                 var el_2 = el.match(/.{1,2}/g);
                 seq_array.push([el_2[0], el_2[1]]);
             });
-        }else{
-            // Sequnece doesn't exists for this benchmark->product
-            // Render 0 gauge
-            // this hould be reached only for SQ sequences!
-            return gauage_drawing(product, canvas_index, bench_title, 0, 0);
         }
-
-
-        //// // console.log(seq_array);
+        //console.log(seq_array);
         seq_array.forEach(function(val){
             // sum of scores
             scores += indicator_towards_benchmark( sq_prepared[i], [(+val[0]), (+val[1])] );
-            //// // console.log('Scores', scores);
+            //console.log('Scores', scores);
             i++;
         });
 
         // calculate final score
-        final_score = 100 - scores;
-
-        // if penalty_points sum is bigger than 100, so the `final_score` is negative
-        if(final_score < 0){
-            final_score = 0;
+        if(scores){
+            final_score = 100 - scores;
         }
+        console.log('Final score (deduction based)', final_score);
 
-        // // console.log('Final score (deduction based)', final_score);
+        // average of scores
+        // DEPRECATED
+        /*final_score = (scores / 6).toFixed();
+        console.log('Final Score:',final_score);*/
 
-        // render gauge
-        gauage_drawing(product, canvas_index, bench_title, final_score, 1);
-
-        // return for overall position fit gauge
-        console.log('Type of Final Score', typeof final_score);
-        console.log(final_score);
-        return final_score;
+        // render
+        gauage_drawing(product, canvas_index, bench_title, final_score);
 
     }
 
@@ -1086,27 +1060,20 @@
             query = getQueryParams(document.location.search),
             final_score = 0,
             i = 0;
-            // console.log('Sequence', sequence);
-            // console.log('Seq substring', sub);
-            // console.log('Bench title', bench_title);
-            // console.log('Canvas Index', canvas_index);
+            /*console.log('Sequence:', sequence);
+            console.log('Seq substring:', sub);
+            console.log('Benchmark title:', bench_title);
+            console.log('Canvas Index:', canvas_index);*/
 
         //get indicator position(s) from URL param
         var sq_prepared = prepare_param(query['wc1']);
-        // // // console.log(sq_prepared);
+        console.log(sq_prepared);
 
         if(group_1){
             group_1.forEach(function(el){
                 var el_2 = el.match(/.{1,2}/g);
                 seq_array.push([el_2[0], el_2[1]]);
             });
-        }else{
-            // Sequnece doesn't exists for this benchmark->product
-            // Render 0 gauge
-            // This shouldn't be reached since WPP sequences are always present
-            // console.log('GRUPA', group_1);
-            // console.log(gauage_drawing('wc1', canvas_index, bench_title, 0, 0));
-            return gauage_drawing('wc1', canvas_index, bench_title, 0,0);
         }
 
         var arr_length = seq_array.length - 1,
@@ -1114,77 +1081,59 @@
         // restructure the array for this dimension only (last element becomes second)
         seq_array.move_array_element(arr_length, 1);
         sq_prepared.move_array_element(sq_prepared_length, 1);
-        // // // console.log(sq_prepared);
+        console.log(sq_prepared);
 
 
 
-        //// // console.log(seq_array);
+        //console.log(seq_array);
         seq_array.forEach(function(val){
             // sum of scores
             scores += indicator_towards_benchmark( sq_prepared[i], [(+val[0]), (+val[1])] );
-            //// // console.log('Scores', scores);
+            //console.log('Scores', scores);
             i++;
         });
 
         // calculate final score
-        // console.log('WPP scores', scores);
-        final_score = 100 - scores;
-        // // console.log('Final score (deduction based)', final_score);
-
-        // if penalty_points sum is bigger than 100, so the `final_score` is negative
-        if(final_score < 0) {
-            final_score = 0;
+        if(scores){
+            final_score = 100 - scores;
         }
+        console.log('Final score (deduction based)', final_score);
 
+        // average of scores (7 dimension for WPP)
+        // DEPRECATED
+        /*final_score = (scores / 7).toFixed();
+        console.log('Final Score:',final_score);*/
 
         // render
-        gauage_drawing('wc1', canvas_index, bench_title, final_score, 1);
-
-        // return for overall position fit gauge
-        return final_score;
+        gauage_drawing('wc1', canvas_index, bench_title, final_score);
 
     }
 
-    // overall position fit object global
-    var position_fit_global = {
-        gauge_number_0: [], // first benchmark gauges
-        gauge_number_1: [], // second --- // ----
-        gauge_number_2: [],
-        gauge_number_3: [],
-    };
 
-    //
-    function gauage_drawing(product, canvas_index, bench_title, final_score, opacity){
+    function gauage_drawing(product, canvas_index, bench_title, final_score){
 
         var canvas_id =  product + '_gauge_' + canvas_index;
         $('#' + canvas_id + '_holder').append('<canvas class="canvas"  id="' + canvas_id + '"></canvas>')
-                                      .append('<p class="greenCo"><span data-final-score="' + final_score + '" class="canvas_percent gauge_number_'+ canvas_index +'" id="' + product + '_gauge_value_' + canvas_index + '"></span>%</p>')
+                                      .append('<p class="greenCo"><span class="canvas_percent" id="' + product + '_gauge_value_' + canvas_index + '"></span>%</p>')
                                       .append(' <p class="' + product + '_canvas_title_' + canvas_index + ' bg_'+ canvas_index + ' whiteCo mB0">' + bench_title  +'</p>');
 
-        // final score is 0
-        if(opacity === 0){
-            $('#' + product + '_gauge_' + canvas_index).parent().css('opacity', 0.45);
+
+
+        // final score is 0, meaning no benchmark sequence is set on benchmark for this product
+        if(final_score == 0){
+            $('#' + product + '_gauge_' + canvas_index).parent().parent().css('opacity', 0.65);
             //$('#' + product + '_gauge_' + canvas_index).parent().addClass('hidden');
         }else{
-            $('#' + product + '_gauge_' + canvas_index).parent().css('opacity', 1);
+            $('#' + product + '_gauge_' + canvas_index).parent().parent().css('opacity', 1);
             //$('#' + product + '_gauge_' + canvas_index).parent().removeClass('hidden');
         }
 
         var target = document.getElementById(canvas_id); // canvas
         var gauge_value = product + '_gauge_value_' + canvas_index;
 
-        // add value to overall position fit global
-        position_fit_global['gauge_number_'+ canvas_index].push(+final_score.toFixed());
-
-        // console.log(position_fit_global);
-        // console.log(array_sum(position_fit_global['gauge_number_'+ canvas_index]));
-        // console.log(overall_position_fit(position_fit_global['gauge_number_'+ canvas_index]));
-
         init_gauge(canvas_id, gauge_value, canvas_index, final_score);
 
     }
-
-
 
     // init gauge
     function init_gauge(gauge_id, gauge_value, canvas_index, final_score = 0){
@@ -1196,22 +1145,12 @@
         gauge.maxValue = 100; // set max gauge value
         gauge.setMinValue(0);  // Prefer setter over gauge.minValue = 0
         gauge.animationSpeed = 32; // set animation speed (32 is default value)
-
-        gauge.set(final_score); // set actual value
-    }
-
-    // draw overall gauge
-    function draw_overall_gauge(gauge_id, gauge_value, canvas_index, final_score = 0){
-        var target = document.getElementById(gauge_id); // canvas
-
-        var gauge = new Gauge(target).setOptions(gauge_render_options[canvas_index]);
-
-        gauge.setTextField(document.getElementById(gauge_value));
-        gauge.maxValue = 100; // set max gauge value
-        gauge.setMinValue(0);  // Prefer setter over gauge.minValue = 0
-        gauge.animationSpeed = 32; // set animation speed (32 is default value)
-
-        gauge.set(final_score); // set actual value
+        if(final_score == 0 || final_score == ''){
+            gauge.set(0); // set actual value
+            console.log(final_score);
+        }else{
+            gauge.set(final_score); // set actual value
+        }
     }
 
 
@@ -1241,10 +1180,17 @@
 
         // first, test if the indicator is inside bench. interval
         if( indicator_position >= benchmark_interval_0 && indicator_position <= benchmark_interval_1 ){
-            // console.log('~~~ INSIDE ~~~~');
-            // console.info('Penalty: ', penalty_points);
-            // console.log('~~~ .//////INSIDE ~~~~');
+            console.info('START DIMENSION ---------------');
+            console.log('~~~ INSIDE ~~~~');
+            console.info('Penalty: ', penalty_points);
+            console.log('~~~ .//////INSIDE ~~~~');
+            console.log('END DIMENSION ---------------');
+            console.log('-----------------------------');
 
+            // DEPRECATED !!!!
+             // indicator is inside benchmark interval, so FULL (100) score is awarded
+             //return score;
+            //score = 100;
 
         }else{ // indicator is not inside the bench. interval, NEGATIVE score is awarded
 
@@ -1253,7 +1199,7 @@
 
                 // check if the mean is on the better or worse side, and give appropriate quote(_low or _high)
                 if(bench_mean_pos == 'left' || bench_mean_pos == 'mid_left'){
-                    // console.log('I<M. Mean', bench_mean_pos);
+                    console.log('I<M. Mean', bench_mean_pos);
                     // indicator is on mean's "better" side, so low quote negative points awarded
                     inidicator_range_pos = 'quote_low'; // `quote_low` is object key in `gauges_settings.js`
 
@@ -1287,27 +1233,33 @@
                 // the indicator is in high range
                 difference = indicator_position - benchmark_interval_1;
             }
-            // console.info('START DEBUG---------------');
-            // console.log('I.P.', indicator_position);
-            // console.log('BI 0', benchmark_interval_0);
-            // console.log('BI 1', benchmark_interval_1);
-            // console.log('Mean', mean);
-            // console.log('Bench mean pos.', bench_mean_pos);
-            // console.log('BMP', bench_mean_pos);
-            // console.log('Fit Quote', fit_position[bench_mean_pos][inidicator_range_pos]);
+            console.info('START DIMENSION ---------------');
+            console.log('Indicator Position:', indicator_position);
+            console.log('Benchmark Lowest:', benchmark_interval_0);
+            console.log('Benchmark Highest:', benchmark_interval_1);
+            console.log('Benchmark Mean:', mean);
+            console.log('Bench Mean Position:', bench_mean_pos);
+            console.log('Allocated Fit Quote', fit_position[bench_mean_pos][inidicator_range_pos]);
 
             // get fit quotient
             var quotient = fit_position[bench_mean_pos][inidicator_range_pos]
                 // calculate penalty points
                 penalty_points = difference * quotient;
-            // console.log('Diff', difference);
-            // console.log('Penalty Points', difference * quotient);
+            console.log('Differece (indicator/benchmark):', difference);
+            //console.log('Penalty Points Scored for Dimension:', difference * quotient);
+
+
+
+            // Deprecated
+           /* score = 100 - (difference * quotient);
+            console.log('Dimension Score---->', score);*/
 
 
         }
 
-        // console.log('Penalty Points return: ', penalty_points);
-        // console.info('END DEBUG---------------');
+        console.log('Penalty Points Scored for Dimension: ', penalty_points);
+        console.info('END DIMENSION ---------------');
+        console.log('-----------------------------');
 
         // return penalty
         return penalty_points;
@@ -1382,17 +1334,17 @@
     });
 
     // show panels when modal is active (needed to render canvases)
-    $('#seq_modal').on('shown.bs.modal', function (e) {
+   /* $('#seq_modal').on('shown.bs.modal', function (e) {
       $('.product_canvases').slideDown();
-    });
+    });*/
 
     // hide panels when modal is hidden
-    $('#seq_modal').on('hidden.bs.modal', function (e) {
+    /*$('#seq_modal').on('hidden.bs.modal', function (e) {
         setTimeout(function(){
           $('.product_canvases').slideUp();
         }, 1500);
-        // console.log(checked_obj);
-    });
+        console.log(checked_obj);
+    });*/
 
     // ******* ./Gauges ******* //
 
