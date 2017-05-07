@@ -513,6 +513,9 @@
            gauge_sum += gauge_render(seq_data.data_wva, 'wva1', checked_obj[key].title, i);
 
            console.log(gauge_sum);
+           console.log(typeof gauge_sum);
+
+           draw_overall_gauge('overall_gauge_' + i, 'overall_gauge_value_'+ i, i, gauge_sum, checked_obj[key].title);
 
 
            i++;
@@ -527,21 +530,27 @@
 
     $('#presets_form').on('submit', function(e){
         e.preventDefault();
-        $('.canvas_holders').empty();
-        // reset current benchmarks
-        $('.lib_titles').html('');
-        $('.benchmark_slider').each(function(index, value){
-            var cid = document.getElementById(this.id);
-            cid.noUiSlider.set([0,0]);
-        });
-
-        // RESET Position Fit Gauges
-        // .......
 
 
-        prepare_lib_seq(checked_obj);
-        // // console.log(checked_obj);
-        $('#seq_modal').modal('hide');
+             // RESET Position Fit Gauges
+            $('.canvas_holders').empty();
+
+
+            // reset current benchmarks
+            $('.lib_titles').html('');
+            $('.benchmark_slider').each(function(index, value){
+                var cid = document.getElementById(this.id);
+                cid.noUiSlider.set([0,0]);
+            });
+
+            prepare_lib_seq(checked_obj);
+            console.log(checked_obj);
+       setTimeout(function(){
+            $('#all_fit_scores').empty();
+            var all_canvases = $('#temporary_canvas').detach().appendTo('#all_fit_scores');
+
+            $('#seq_modal').modal('hide');
+       }, 1500);
     });
 
     $('.comparison_libs').on('click', function(e){
@@ -1158,7 +1167,7 @@
 
         var canvas_id =  product + '_gauge_' + canvas_index;
         $('#' + canvas_id + '_holder').append('<canvas class="canvas"  id="' + canvas_id + '"></canvas>')
-                                      .append('<p class="greenCo"><span data-final-score="' + final_score + '" class="canvas_percent gauge_number_'+ canvas_index +'" id="' + product + '_gauge_value_' + canvas_index + '"></span>%</p>')
+                                      .append('<p class="orange_percent"><span data-final-score="' + final_score + '" class="canvas_percent gauge_number_'+ canvas_index +'" id="' + product + '_gauge_value_' + canvas_index + '"></span>%</p>')
                                       .append(' <p class="' + product + '_canvas_title_' + canvas_index + ' bg_'+ canvas_index + ' whiteCo mB0">' + bench_title  +'</p>');
 
         // final score is 0
@@ -1187,6 +1196,18 @@
 
 
     // init gauge
+
+    function init_new_gauge(element_id, value){
+        new SVGDial(element, {
+          ringBackgroundColor: ['#f7da40'],
+          frameBackgroundColor: 'white',
+          //frameSize: 300,
+          ringWidth: 35,
+          fontSize: 70,
+
+        }).setValue(value);
+    }
+
     function init_gauge(gauge_id, gauge_value, canvas_index, final_score = 0){
         var target = document.getElementById(gauge_id); // canvas
 
@@ -1201,8 +1222,19 @@
     }
 
     // draw overall gauge
-    function draw_overall_gauge(gauge_id, gauge_value, canvas_index, final_score = 0){
-        var target = document.getElementById(gauge_id); // canvas
+    function draw_overall_gauge(gauge_id, gauge_value, canvas_index, final_score = 0, bench_title){
+
+
+        var canvas_id =  'overall_gauge_' + canvas_index;
+        console.log(canvas_id);
+        console.log(gauge_render_options[canvas_index]);
+        $('#' + canvas_id).append('<canvas class="canvas"  id="' + canvas_id + '_canvas"></canvas>')
+                                      .append('<p class="orange_percent"><span data-final-score="' + final_score + '" class="canvas_percent overall_gauge_number_'+ canvas_index +'" id="overall_gauge_value_' + canvas_index + '"></span>%</p>')
+                                      .append(' <p class="overall_canvas_title_' + canvas_index + ' bg_'+ canvas_index + ' whiteCo mB0">' + bench_title  +'</p>');
+
+
+        var target = document.getElementById(canvas_id + '_canvas'); // canvas
+        console.log(target);
 
         var gauge = new Gauge(target).setOptions(gauge_render_options[canvas_index]);
 
@@ -1211,7 +1243,7 @@
         gauge.setMinValue(0);  // Prefer setter over gauge.minValue = 0
         gauge.animationSpeed = 32; // set animation speed (32 is default value)
 
-        gauge.set(final_score); // set actual value
+        gauge.set(final_score / 3); // set actual value
     }
 
 
@@ -1389,10 +1421,25 @@
     // hide panels when modal is hidden
     $('#seq_modal').on('hidden.bs.modal', function (e) {
         setTimeout(function(){
+            // Deactivate tabs
+            $('.tab-pane').removeClass('active');
           $('.product_canvases').slideUp();
         }, 1500);
         // console.log(checked_obj);
     });
+
+    //Tabs
+   // $('.tab-pane').addClass('active');
+
+    // Accordion
+    /*$('.collapse.in').prev('.panel-heading').addClass('active');
+      $('#accordion, #bs-collapse')
+        .on('show.bs.collapse', function(a) {
+          $(a.target).prev('.panel-heading').addClass('active');
+        })
+        .on('hide.bs.collapse', function(a) {
+          $(a.target).prev('.panel-heading').removeClass('active');
+        });*/
 
     // ******* ./Gauges ******* //
 
