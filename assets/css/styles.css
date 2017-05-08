@@ -40,6 +40,11 @@ canvas {
 .double_border_top{
     border-top: 10px double #eee;
 }
+.col-centered{
+    float: none;
+    margin: 0 auto;
+    display: inline;
+}
 .blocked{
     display: block;
 }
@@ -509,7 +514,16 @@ p.squences span {
 
 
 /* overrides */
+.nav-tabs > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
 
+.nav-tabs {
+    text-align:center;
+}
 .btn {
     border-radius: 0;
 }
@@ -1313,6 +1327,11 @@ a#no_libs:hover {
       top: 0;
       left: 0;
 }
+.fit_titles{
+    font-size: 16px;
+    color: #fff;
+    padding: 5px 2px;
+}
 .product_canvases{
     border-bottom: 1px solid #eee;
     display: none;
@@ -1337,7 +1356,9 @@ a#no_libs:hover {
 }
 .canvas_holders{
     display: inline-block;
-    max-width: 20%;
+    margin-left: 5px;
+    /* padding: 10px; */
+   /*  max-width: 20%; */
 }
 .position_fit{
     font-size: 12px;
@@ -1500,7 +1521,7 @@ a#no_libs:hover {
     }
 
     .canvas_holders{
-        max-width: 45%;
+        /* max-width: 45%; */
         margin-bottom: 10px;
     }
 }
@@ -2023,7 +2044,7 @@ a.comparison_libs i{
     -moz-animation: shadow-drop-2-tb 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: shadow-drop-2-tb 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-.shadow-drop-2-lr {
+.shadow-drop-2-lr:hover {
     -webkit-animation: shadow-drop-2-lr 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     -moz-animation: shadow-drop-2-lr 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: shadow-drop-2-lr 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -2068,7 +2089,7 @@ a.comparison_libs i{
 
 
 /* Accordion */
-.panel {
+/* .panel {
   border-width: 0 0 1px 0;
   border-style: solid;
   border-color: #fff;
@@ -2125,7 +2146,7 @@ a.comparison_libs i{
 .panel:last-child .panel-heading.active {
   border-radius: 0;
   transition: border-radius linear 0s;
-}
+} */
 /* #bs-collapse icon scale option */
 
 .panel-heading a:before {
@@ -2181,7 +2202,7 @@ a.comparison_libs i{
 /* Material Tabs */
 .nav-tabs { border-bottom: 2px solid #DDD; }
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
-    .nav-tabs > li > a { border: none; color: #666; }
+    .nav-tabs > li > a { border: none; color: #666; font-size: 18px; font-weight: bold;}
         .nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none; color: #4285F4 !important; background: transparent; }
         .nav-tabs > li > a::after { content: ""; background: #4285F4; height: 2px; position: absolute; width: 100%; left: 0px; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }
     .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }

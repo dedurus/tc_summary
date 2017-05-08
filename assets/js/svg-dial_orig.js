@@ -62,7 +62,7 @@
     this.el = el;
     this.options = defaults(options || {}, {
       disabled: false,
-      frameSize: 260,
+      frameSize: 200,
       ringWidth: 50,
       frameBackgroundColor: 'white',
       ringBackgroundColor: '#888',
@@ -96,10 +96,10 @@
       this.c = this.buildCanvas();
       this.dial = this.buildDial();
 
-      /*var onChange = function(sx, sy, ax, ay, e) {
+      var onChange = function(sx, sy, ax, ay, e) {
         this.updateDial(this.getAngle(ax, ay));
         this.executeCallback('onChange', [this.percentage]);
-      };*/
+      };
       var onStart = function(x, y, e) {
         this.centerCoordinates = this.calculateDialCenterCoordinates();
         this.updateDial(this.getAngle(x, y));
@@ -110,8 +110,8 @@
       };
 
       this.moveKnob(this.convertPercentageToAngle(0));
-     // this.innerCircle.drag(onChange, onStart, onEnd, this, this, this);
-      //this.outerCircle.drag(onChange, onStart, onEnd, this, this, this);
+      this.innerCircle.drag(onChange, onStart, onEnd, this, this, this);
+      this.outerCircle.drag(onChange, onStart, onEnd, this, this, this);
 
       this.executeCallback('onReady');
     },
@@ -122,8 +122,7 @@
 
     buildCanvas: function() {
       var el;
-      var svgHtml = '<svg width="220" height="220" version="1.1" viewBox="-10 0 280 280" preserveAspectRatio="xMinYMin meet"></svg>';
-      //var svgHtml = '<svg style="width: ' + this.options.frameSize + 'px; height: ' + this.options.frameSize + 'px;" version="1.1" viewBox="0 0 320 320" preserveAspectRatio="xMinYMin meet")></svg>';
+      var svgHtml = '<svg style="width: ' + this.options.frameSize + 'px; height: ' + this.options.frameSize + 'px;"></svg>';
 
       if (this.el.jquery) {
         el = this.el[0];
@@ -144,7 +143,6 @@
     },
 
     buildOuterCircle: function() {
-
       var attributes = this.outerCircleAttributes = {
         x:      this.options.frameSize / 2,
         y:      this.options.frameSize / 2,
