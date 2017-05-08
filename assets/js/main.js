@@ -503,7 +503,7 @@
         $('#wc1_detailed_gauges').html('');
         $('#wva1_detailed_gauges').html('');
         //  ./clean previous gaguges
-        console.log(count_benchmarks);
+
         var titles = [],
             i = 0;
 
@@ -534,7 +534,7 @@
 
           // draw_overall_gauge('overall_gauge_' + i, 'overall_gauge_value_'+ i, i, gauge_sum, checked_obj[key].title);
 
-          console.log(((gauge_sum/3) / 100).toFixed(2));
+
 
 
           init_new_overall_gauge('#overall_gauge_' + i, 'benchmark_' + i, checked_obj[key].title, ((gauge_sum/3) / 100).toFixed(2),  opacity, i);
@@ -547,8 +547,8 @@
            $('.lib_titles').append('<div class="mini_box_wrapper"><span class="mini_box mini_box_' + val + '"></span>' + ind + '</div>' )
        });
 
-        console.log(count_benchmarks);
-         console.log($.inArray( 1, count_benchmarks['sq1_count'] ) != -1);
+
+
 
         $('#detailed_fit_menu').html('');
         if($.inArray( 1, count_benchmarks['sq1_count'] ) != -1){
@@ -560,6 +560,8 @@
         if($.inArray( 1, count_benchmarks['wva1_count'] ) != -1){
           $('#detailed_fit_menu').append('<li role="presentation"><a href="#wva1_detailed_gauges" aria-controls="wva1_detailed_gauges" role="tab" data-toggle="tab">WVA</a></li>');
         }
+
+
     }
 
 
@@ -579,6 +581,13 @@
             });
 
             prepare_lib_seq(checked_obj);
+
+            // check if there are selectede benchmarks
+            if( (count_benchmarks['sq1_count'].length == 0) && (count_benchmarks['wc1_count'].length == 0) && (count_benchmarks['wva1_count'].length == 0) ){
+                $('#overall_wrapper').slideUp();
+            }else{
+                $('#overall_wrapper').slideDown();
+            }
 
        /*setTimeout(function(){
             $('#all_fit_scores').empty();
@@ -1197,9 +1206,9 @@
 
     //
     function gauage_drawing(product, canvas_index, bench_title, final_score, opacity){
-console.log(product);
+
         var canvas_id =  product + '_gauge_' + canvas_index;
-        console.log('#' + product + '_gauge_' + canvas_index);
+
 
        /* $('#' + canvas_id + '_holder').append('<canvas class="canvas"  id="' + canvas_id + '"></canvas>')
                                       .append('<p class="orange_percent"><span data-final-score="' + final_score + '" class="canvas_percent gauge_number_'+ canvas_index +'" id="' + product + '_gauge_value_' + canvas_index + '"></span>%</p>')
@@ -1214,13 +1223,13 @@ $('#' + product + '_gauge_' + canvas_index + '_holder').css('width', '600px');
            // $('#' + product + '_gauge_' + canvas_index).parent().css('opacity', 0.45);
             //$('#' + product + '_gauge_' + canvas_index).parent().addClass('hidden');
             count_benchmarks[product + '_count'].push(0);
-            console.log('Opacity 1:', opacity);
+            //
         }else{
             $('#' + product + '_gauge_' + canvas_index + '_holder').css('opacity', 1);
             count_benchmarks[product + '_count'].push(1);
             //$('#' + product + '_gauge_' + canvas_index).parent().css('opacity', 1);
             //$('#' + product + '_gauge_' + canvas_index).parent().removeClass('hidden');
-            console.log('Opacity 2:', opacity);
+            //
         }
 
         var target = document.getElementById(canvas_id); // canvas
@@ -1230,7 +1239,7 @@ $('#' + product + '_gauge_' + canvas_index + '_holder').css('width', '600px');
         //position_fit_global['gauge_number_'+ canvas_index].push(+final_score.toFixed());
 
         //init_gauge(canvas_id, gauge_value, canvas_index, final_score);
-        console.log('Count ' + product, count_benchmarks[product + '_count']);
+
 
         $('#' + product + '_detailed_gauges').append('<div class="canvas_holders shadow pT25" id="' + canvas_id + '_holder"></div>')
 
@@ -1254,7 +1263,7 @@ $('#' + product + '_gauge_' + canvas_index + '_holder').css('width', '600px');
           ringBackgroundColor: [benchmarkcolors[benchmark_color]],
           frameBackgroundColor: 'white',
           frameSize: 260,
-          ringWidth: 35,
+          ringWidth: 40,
           fontSize: 70,
 
         }).setValue(value);
