@@ -524,7 +524,7 @@
            if(typeof gauge_sum == 'undefined'){
 
                 gauge_sum = 0;
-                opacity = 0.45;
+                opacity = 0;
            }
            gauge_sum += gauge_render_wpp(seq_data.data_wpp, checked_obj[key].title, i);
            gauge_sum += gauge_render(seq_data.data_wva, 'wva1', checked_obj[key].title, i);
@@ -1210,14 +1210,17 @@ console.log(product);
         // final score is 0
         if(opacity === 0){
             $('#' + product + '_gauge_' + canvas_index + '_holder').css('opacity', 0.45);
+$('#' + product + '_gauge_' + canvas_index + '_holder').css('width', '600px');
            // $('#' + product + '_gauge_' + canvas_index).parent().css('opacity', 0.45);
             //$('#' + product + '_gauge_' + canvas_index).parent().addClass('hidden');
             count_benchmarks[product + '_count'].push(0);
+            console.log('Opacity 1:', opacity);
         }else{
             $('#' + product + '_gauge_' + canvas_index + '_holder').css('opacity', 1);
             count_benchmarks[product + '_count'].push(1);
             //$('#' + product + '_gauge_' + canvas_index).parent().css('opacity', 1);
             //$('#' + product + '_gauge_' + canvas_index).parent().removeClass('hidden');
+            console.log('Opacity 2:', opacity);
         }
 
         var target = document.getElementById(canvas_id); // canvas
@@ -1231,7 +1234,7 @@ console.log(product);
 
         $('#' + product + '_detailed_gauges').append('<div class="canvas_holders shadow pT25" id="' + canvas_id + '_holder"></div>')
 
-       init_new_gauge('#' + canvas_id + '_holder', 'benchmark_' + canvas_index, bench_title ,(final_score.toFixed())/100);
+       init_new_gauge('#' + canvas_id + '_holder', 'benchmark_' + canvas_index, bench_title ,(final_score.toFixed())/100, opacity);
 
     }
 
@@ -1269,6 +1272,9 @@ console.log(product);
 
         }).setValue(value);
         $(element_id).append('<p class="text-center fit_titles mB0" style="background-color:'+ benchmarkcolors[benchmark_color] + ' ;">' + title + '</p>')
+        if(opacity == 0){
+            $(element_id).css('opacity', 0.45);
+        }
     }
 
     function init_gauge(gauge_id, gauge_value, canvas_index, final_score = 0){
