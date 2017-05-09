@@ -552,18 +552,20 @@
 
         $('#detailed_fit_menu').html('');
         if($.inArray( 1, count_benchmarks['sq1_count'] ) != -1){
-          $('#detailed_fit_menu').append('<li role="presentation"><a href="#sq1_detailed_gauges" aria-controls="sq1_detailed_gauges" role="tab" data-toggle="tab">SQ/DSQ</a></li>')
+          $('#detailed_fit_menu').append('<li role="presentation"><a href="#sq1_detailed_gauges" class="sq_tab" aria-controls="sq1_detailed_gauges" role="tab" data-toggle="tab"><img src="assets/img/sq_40.png" alt=""> SQ/DSQ</a></li>')
         }
         if($.inArray( 1, count_benchmarks['wc1_count'] ) != -1){
-          $('#detailed_fit_menu').append('<li role="presentation"><a href="#wc1_detailed_gauges" aria-controls="wc1_detailed_gauges" role="tab" data-toggle="tab">WPP</a></li>');
+          $('#detailed_fit_menu').append('<li role="presentation"><a href="#wc1_detailed_gauges" class="wpp_tab" aria-controls="wc1_detailed_gauges" role="tab" data-toggle="tab"><img src="assets/img/wpp_40.png" alt=""> WPP</a></li>');
         }
         if($.inArray( 1, count_benchmarks['wva1_count'] ) != -1){
-          $('#detailed_fit_menu').append('<li role="presentation"><a href="#wva1_detailed_gauges" aria-controls="wva1_detailed_gauges" role="tab" data-toggle="tab">WVA</a></li>');
+          $('#detailed_fit_menu').append('<li role="presentation"><a href="#wva1_detailed_gauges" class="wva_tab" aria-controls="wva1_detailed_gauges" role="tab" data-toggle="tab"><img src="assets/img/wva_40.png" alt=""> WVA</a></li>');
         }
 
 
     }
 
+    // hide #overall_wrapper initially
+    $('#overall_wrapper').hide();
 
     $('#presets_form').on('submit', function(e){
         e.preventDefault();
@@ -1267,7 +1269,7 @@ $('#' + product + '_gauge_' + canvas_index + '_holder').css('width', '600px');
           fontSize: 70,
 
         }).setValue(value);
-        $(element_id).append('<p class="text-center fit_titles mB0" style="background-color:'+ benchmarkcolors[benchmark_color] + ' ;">' + title + '</p>')
+        $(element_id).append('<p class="text-center fit_titles mB0" style="border-bottom: 5px solid '+ benchmarkcolors[benchmark_color] + ' ;">' + title + '</p>')
     }
 
     function init_new_gauge(element_id, benchmark_color, title, value, opacity){
@@ -1280,7 +1282,7 @@ $('#' + product + '_gauge_' + canvas_index + '_holder').css('width', '600px');
           fontSize: 50,
 
         }).setValue(value);
-        $(element_id).append('<p class="text-center fit_titles mB0" style="background-color:'+ benchmarkcolors[benchmark_color] + ' ;">' + title + '</p>')
+        $(element_id).append('<p class="text-center fit_titles mB0" style="border-bottom: 3px solid '+ benchmarkcolors[benchmark_color] + ' ;">' + title + '</p>')
         if(opacity == 0){
             $(element_id).css('opacity', 0.45);
         }
@@ -1499,14 +1501,12 @@ $('#' + product + '_gauge_' + canvas_index + '_holder').css('width', '600px');
    // $('.tab-pane').addClass('active');
 
     // Accordion
-    /*$('.collapse.in').prev('.panel-heading').addClass('active');
-      $('#accordion, #bs-collapse')
-        .on('show.bs.collapse', function(a) {
+    $('.collapse.in').prev('.panel-heading').addClass('active');
+      $('#accordion, #accordion_product').on('show.bs.collapse', function(a) {
           $(a.target).prev('.panel-heading').addClass('active');
-        })
-        .on('hide.bs.collapse', function(a) {
+        }).on('hide.bs.collapse', function(a) {
           $(a.target).prev('.panel-heading').removeClass('active');
-        });*/
+        });
 
     // ******* ./Gauges ******* //
 

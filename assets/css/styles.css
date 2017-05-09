@@ -221,7 +221,9 @@ canvas {
 .grey {
     background: #BFBFBF;
 }
-
+.darkGreyCo{
+    color: #333;
+}
 .darkGrey {
     background: #333;
 }
@@ -355,6 +357,9 @@ canvas {
 .font_normal{
   font-weight: normal;
 }
+.font11{
+    font-size: 11px;
+}
 .font12 {
     font-size: 12px;
     line-height: 12px;
@@ -425,6 +430,11 @@ ul.benchmark {
 
 hr.divider {
     margin-top: 40px;
+    border-top-color: #ccc
+}
+hr.divider10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-top-color: #ccc
 }
 hr.semi_divider {
@@ -516,6 +526,9 @@ p.squences span {
 
 
 /* overrides */
+a:hover, a:focus{
+    text-decoration: none;
+}
 .nav-tabs > li {
     float:none;
     display:inline-block;
@@ -1333,6 +1346,7 @@ a#no_libs:hover {
     font-size: 16px;
     color: #fff;
     padding: 5px 2px;
+    color: #333;
 }
 .product_canvases{
     border-bottom: 1px solid #eee;
@@ -1358,7 +1372,8 @@ a#no_libs:hover {
 }
 .canvas_holders{
     display: inline-block;
-    margin-left: 5px;
+    margin-left: 15px;
+    margin-top: 15px;
     /* padding: 10px; */
    /*  max-width: 20%; */
 }
@@ -1525,6 +1540,7 @@ a#no_libs:hover {
     .canvas_holders{
         /* max-width: 45%; */
         margin-bottom: 10px;
+        margin-left: 0;
     }
 }
 
@@ -2185,28 +2201,35 @@ a.comparison_libs i{
   transition: all 0.5s;
 }
 /* #accordion rotate icon option */
-
-#accordion .panel-heading a:before {
+.overall_show_hide{
+    color: #000
+}
+#accordion .panel-heading a:before, #accordion_product .panel-heading a:before {
   content: "\f107";
   font-size: 24px;
   position: absolute;
   font-family: 'FontAwesome';
-  right: 5px;
+  right: 30px;
   top: 10px;
   transform: rotate(180deg);
   transition: all 0.5s;
 }
 
-#accordion .panel-heading.active a:before {
+#accordion .panel-heading.active a:before, #accordion_product .panel-heading.active a:before{
   transform: rotate(0deg);
   transition: all 0.5s;
 }
 /* Material Tabs */
 .nav-tabs { border-bottom:none; }
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
-    .nav-tabs > li > a { border: none; color: #e74c3c; font-size: 18px; font-weight: bold;}
-        .nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none; color: #e74c3c !important; background: transparent; }
-        .nav-tabs > li > a::after { content: ""; background: #e74c3c; height: 2px; position: absolute; width: 100%; left: 0px; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }
+    .nav-tabs > li > a { border: none; color: #333; font-size: 18px; font-weight: bold;}
+        .nav-tabs > li.active > a.sq_tab, .nav-tabs > li > a.sq_tab:hover { border: none; color: #067e55 !important; background: transparent; }
+        .nav-tabs > li.active > a.wpp_tab, .nav-tabs > li > a.wpp_tab:hover { border: none; color: #3a7bbd !important; background: transparent; }
+        .nav-tabs > li.active > a.wva_tab, .nav-tabs > li > a.wva_tab:hover { border: none; color: #e74c3c !important; background: transparent; }
+        .nav-tabs > li > a::after { content: ""; height: 2px; position: absolute; width: 100%; left: 0px; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }
+        .nav-tabs > li > a.sq_tab::after{  background: #067e55; }
+        .nav-tabs > li > a.wpp_tab::after{  background: #3a7bbd; }
+        .nav-tabs > li > a.wva_tab::after{  background: #e74c3c; }
     .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
 .tab-nav > li > a::after { background: #21527d none repeat scroll 0% 0%; color: #fff; }
 .tab-pane { padding: 15px 0; }
