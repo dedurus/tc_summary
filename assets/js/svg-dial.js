@@ -70,7 +70,8 @@
       fontFamily: 'impact',
       fontSize: 24,
       fontStyle: 'none',
-      fontWeight: 'none'
+      fontWeight: 'none',
+      svg_type: 1 // 1 for bigger dials or two for smaller
     });
 
     this.initialize();
@@ -122,7 +123,12 @@
 
     buildCanvas: function() {
       var el;
-      var svgHtml = '<svg width="220" height="220" version="1.1" viewBox="-10 0 280 280" preserveAspectRatio="xMinYMin meet"></svg>';
+      if(this.options.svg_type == 1){
+        var svgHtml = '<svg width="200" height="180" version="1.1" viewBox="0 0 240 240" preserveAspectRatio="xMinYMin meet"></svg>';
+      }else if(this.options.svg_type == 2){
+        var svgHtml = '<svg width="140" height="120" version="1.1" viewBox="0 0 200 200" preserveAspectRatio="xMinYMin meet"></svg>';
+      }
+
       //var svgHtml = '<svg style="width: ' + this.options.frameSize + 'px; height: ' + this.options.frameSize + 'px;" version="1.1" viewBox="0 0 320 320" preserveAspectRatio="xMinYMin meet")></svg>';
 
       if (this.el.jquery) {

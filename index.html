@@ -14,6 +14,7 @@
        <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
        <link rel="stylesheet" type="text/css" href="assets/css/nouislider.min.css">
        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+       <link rel="stylesheet" type="text/css" media="print" href="assets/css/print.css">
 
     </head>
     <body>
@@ -42,7 +43,7 @@
             <div class="row mT30 row_valign">
                 <div class="col-md-9 div_valign">
 
-                    <div class="col-xs-12 col-sm-12">
+                    <!-- <div class="col-xs-12 col-sm-12">
                         <p class="heading">Benchmarks Defined</p>
                     </div>
 
@@ -52,7 +53,7 @@
                             <li>Use the benchmarks as guidelines for evaluating a person's fit to the requirements of the job</li>
                             <li>Note the dimensions that require further insight or coaching then access the detailed results report at <a href="//reports.talentclick.com" target="_blank">reports.talentclick.com</a></li>
                         </ul>
-                    </div>
+                    </div> -->
 
                 </div> <!-- ./sm-9 -->
 
@@ -62,7 +63,7 @@
                         <hr class="divider10">
                     </div>
                    <div class="col-xs-12 referred grey p5 text-center"><i class="fa fa-calendar"></i> <span id="date"></span></div>
-                   <div class="col-xs-12 grey pLR0"><a href="#" class="btn btn-primary btn-block comparison_libs"><i class="fa fa-sliders"></i> Comparison Libraries</a></div>
+                   <div class="col-xs-12 grey pLR0"><a href="#" class="btn btn-primary btn-block comparison_libs"><i class="fa fa-sliders"></i> Benchmark Libraries</a></div>
                 </div> <!-- ./sm-3 -->
 
             </div><!-- ./row -->
@@ -80,7 +81,7 @@
                         <div class="panel-heading" role="tab" id="headingOne">
                           <h4 class="panel-title">
                             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                              <i class="fa fa-tachometer"></i> Overall Position Fit Scores
+                              <i class="fa fa-tachometer"></i> Position Fit Scores
                             </a>
                           </h4>
                         </div>
@@ -91,17 +92,16 @@
 
                                </div>
                            </div>
-                           <hr class="semi_divider">
 
-                           <div class="row mT20">
+                           <!-- <div class="row mT20">
                                <div class="col-md-12">
                                     <div class="panel-group wrap" id="accordion_product" role="tablist" aria-multiselectable="true">
                                       <div class="panel">
                                           <div class="panel-heading" role="tab" id="headingTwo">
                                                <h4 class="panel-title">
-                                                 <!-- <a role="button" data-toggle="collapse" data-parent="#accordion_product" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> -->
+                                                 <a role="button" data-toggle="collapse" data-parent="#accordion_product" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                                                    <i class="fa fa-tachometer"></i> Position Fit Scores Per Product
-                                                <!--  </a> -->
+                                                </a>
                                                </h4>
                                            </div>
                                        </div>
@@ -109,7 +109,7 @@
                                            <ul class="nav nav-tabs" id="detailed_fit_menu" role="tablist">
 
                                            </ul>
-                                           <!-- Tab panes -->
+                                           Tab panes
                                            <div class="tab-content">
                                                <div role="tabpanel" class="tab-pane fade" id="sq1_detailed_gauges">
 
@@ -127,7 +127,7 @@
                                     </div>
 
                            </div>
-                          </div>
+                                                     </div> -->
                         </div>
                       </div>
                       </div>
@@ -143,23 +143,23 @@
             <div class="container">
                 <div class="row mT10">
                     <div class="col-xs-12 col-md-2 greenBg benchmark_label pLR0">
-                        <div class="figure_titles darkGrey">SQ/DSQ RESULTS</div>
+                        <div class="figure_titles darkGrey">Safety Quotient</div>
                         <div class="slideThree">
                               <input type="checkbox" value="None" id="checkbox_sq_all" name="checkbox_sq_all" checked />
                               <label for="checkbox_sq_all"></label>
                         </div>
                     </div>
 
-                    <div class="col-xs-12 col-md-9 greenBg2 benchmark_label_2  text-center">
+                    <div class="col-xs-12 col-md-8 greenBg2 benchmark_label_2  text-center">
                             <p class=" whiteCo font12">These are the most extreme scores from the personality profile below.</p>
                             <p class="extremes_sq"></p>
                     </div>
 
-                    <!-- <div class="col-xs-6 col-md-1 darkGrey text-center whiteCo position_fit" id="sq_pos_fit_btn" data-canvas-wrapper="sq_canvas_wrapper">
+                    <div class="col-xs-6 col-md-1 darkGrey text-center whiteCo position_fit" id="sq_pos_fit_btn" data-canvas-wrapper="sq_canvas_wrapper">
                         <i class="fa fa-tachometer tachometer_icon"></i> Position Fit
                         <span class="blocked position_arrow"><i class="fa fa-angle-double-down" id="sq_toggle_arrow"></i></span>
-                    </div> -->
-                    <div class="col-xs-12 col-md-1 darkGrey benchmark_label_3 text-center whiteCo">
+                    </div>
+                    <div class="col-xs-6 col-md-1 greenBg benchmark_label_3 text-center whiteCo">
                         <div class="col-xs-12 whiteCo font11 pLR0">Average Score</div>
                         <div class="col-xs-12 pLR0 mT5 pT5">
                             <span id="sq_score" class="full_score">??</span>
@@ -168,27 +168,23 @@
 
                 </div><!-- ./row -->
 
-                <!-- <div class="row pB10 product_canvases whiteBg " id="sq_canvas_wrapper">
+                <div class="row pB10 product_canvases whiteBg " id="sq_canvas_wrapper">
                     <div class="col-xs-12 text-center">
                         <h3 class="text-center">SQ/DSQ Position Fit</h3>
                         <hr class="quater_divider">
 
                         <div class="row">
                             <div class="col-md-12  canvas_wrapper pLR0 text-center">
-                                <div class="canvas_holders shadow" id="sq1_gauge_0_holder"></div>
+                               <div id="sq1_detailed_gauges">
 
-                                <div class="canvas_holders shadow" id="sq1_gauge_1_holder"></div>
-
-                                <div class="canvas_holders shadow" id="sq1_gauge_2_holder"></div>
-
-                                <div class="canvas_holders shadow" id="sq1_gauge_3_holder"></div>
+                                </div>
                             </div>
                         </div>
 
                             <div class="row">
                                 <div class="col-md-4 col-md-offset-4">
                                     <hr class="quater_divider">
-                                    <a href="#" class="btn btn-primary btn-block comparison_libs"><i class="fa fa-sliders"></i> Comparison Libraries</a>
+                                    <a href="#" class="btn btn-primary btn-block comparison_libs"><i class="fa fa-sliders"></i> Benchmark Libraries</a>
                                 </div>
                             </div>
                             <hr>
@@ -196,7 +192,7 @@
                     </div>
 
 
-                </div> -->
+                </div>
             </div><!-- ./container -->
 
              <!-- //// SQ sliders //// -->
@@ -1115,7 +1111,7 @@
                 <hr class="divider">
 
                     <div class="col-xs-12 col-md-2 blueBg benchmark_label pLR0">
-                        <div class="figure_titles darkGrey">WPP RESULTS</div>
+                        <div class="figure_titles darkGrey">Workstyle</div>
 
                         <div class="slideThree blueCheck">
                               <input type="checkbox" value="None" id="checkbox_wpp_all" name="checkbox_wpp_all" checked />
@@ -1123,18 +1119,18 @@
                         </div>
                     </div>
 
-                    <div class="col-xs-12 col-md-9 blueBg2 benchmark_label_2  text-center">
+                    <div class="col-xs-12 col-md-8 blueBg2 benchmark_label_2  text-center">
                             <p class=" whiteCo font12">These are the most extreme scores from the personality profile below.</p>
                             <p class="extremes_wpp"></p>
                     </div>
 
 
-                   <!--  <div class="col-xs-6 col-md-1 darkGrey text-center whiteCo position_fit" id="wpp_pos_fit_btn" data-canvas-wrapper="wpp_canvas_wrapper">
+                   <div class="col-xs-6 col-md-1 darkGrey text-center whiteCo position_fit" id="wpp_pos_fit_btn" data-canvas-wrapper="wpp_canvas_wrapper">
                        <i class="fa fa-tachometer tachometer_icon"></i> Position Fit
                        <span class="blocked position_arrow"><i class="fa fa-angle-double-down" id="wpp_toggle_arrow"></i></span>
-                   </div> -->
+                   </div>
 
-                    <div class="col-xs-12 col-md-1 darkGrey benchmark_label_2 text-center whiteCo">
+                    <div class="col-xs-6 col-md-1 blueBg benchmark_label_2 text-center whiteCo">
                         <div class="col-xs-12">
                             <img class="img-responsive center-block" src="assets/img/wpp_small.png" alt="WPP">
                         </div>
@@ -1142,33 +1138,29 @@
                 </div><!-- ./row -->
 
 
-                <!-- <div class="row pB10 product_canvases whiteBg " id="wpp_canvas_wrapper">
+                <div class="row pB10 product_canvases whiteBg " id="wpp_canvas_wrapper">
                     <div class="col-xs-12 text-center">
                         <h3 class="text-center">WPP Position Fit</h3>
                         <hr class="quater_divider">
 
                         <div class="row">
                             <div class="col-md-12  canvas_wrapper pLR0 text-center">
-                               <div class="canvas_holders shadow" id="wc1_gauge_0_holder"></div>
+                               <div id="wc1_detailed_gauges">
 
-                               <div class="canvas_holders shadow" id="wc1_gauge_1_holder"></div>
-
-                               <div class="canvas_holders shadow" id="wc1_gauge_2_holder"></div>
-
-                               <div class="canvas_holders shadow" id="wc1_gauge_3_holder"></div>
+                                </div>
                             </div>
                         </div>
 
                             <div class="row">
                                 <div class="col-md-4 col-md-offset-4">
                                     <hr class="quater_divider">
-                                    <a href="#" class="btn btn-primary btn-block comparison_libs"><i class="fa fa-sliders"></i> Comparison Libraries</a>
+                                    <a href="#" class="btn btn-primary btn-block comparison_libs"><i class="fa fa-sliders"></i> Benchmark Libraries</a>
                                 </div>
                             </div>
                             <hr>
 
                     </div>
-                </div> -->
+                </div>
             </div><!-- ./container -->
 
             <!-- //// WPP sliders //// -->
@@ -1351,7 +1343,11 @@
                     </div><!-- ./ equal-panels -->
                 </div><!-- ./ slider_report -->
             </div><!-- ./container -->
-                <!-- /// 1. /// -->
+            <!-- /// 1. /// -->
+
+            <div class="container">
+                <hr class="semi_divider">
+            </div><!-- ./container -->
 
 
             <!-- /// 2. /// -->
@@ -1532,6 +1528,10 @@
                 </div><!-- ./ slider_report -->
             </div><!-- ./container -->
 
+            <div class="container">
+                <hr class="semi_divider">
+            </div><!-- ./container -->
+
 
             <!-- /// 3. /// -->
             <div class="container shadow pLRMob30 mT10 blueBorderL">
@@ -1710,6 +1710,10 @@
                         </div>
                     </div><!-- ./ equal-panels -->
                 </div><!-- ./ slider_report -->
+            </div><!-- ./container -->
+
+            <div class="container">
+                <hr class="semi_divider">
             </div><!-- ./container -->
 
 
@@ -1893,7 +1897,9 @@
                </div><!-- ./ slider_report -->
             </div><!-- ./container -->
 
-
+            <div class="container">
+                <hr class="semi_divider">
+            </div><!-- ./container -->
 
 
             <!-- /// 5. /// -->
@@ -2074,6 +2080,11 @@
                 </div><!-- ./ slider_report -->
             </div><!-- ./container -->
 
+            <div class="container">
+                <hr class="semi_divider">
+            </div><!-- ./container -->
+
+
             <!-- /// 6. /// -->
             <div class="container shadow pLRMob30 mT10 blueBorderL">
 
@@ -2249,6 +2260,10 @@
                         </div>
                     </div><!-- ./ equal-panels -->
                 </div><!-- ./ slider_report -->
+            </div><!-- ./container -->
+
+            <div class="container">
+                <hr class="semi_divider">
             </div><!-- ./container -->
 
 
@@ -2434,7 +2449,6 @@
 
 
 
-
         <div id="wva_wrapper">
             <div class="container">
                 <div class="row mT10">
@@ -2442,7 +2456,7 @@
                 <hr class="divider">
 
                     <div class="col-xs-12 col-md-2 orangeBg benchmark_label pLR0">
-                        <div class="figure_titles darkGrey">WVA RESULTS</div>
+                        <div class="figure_titles darkGrey">Work Values</div>
 
                         <div class="slideThree orangeCheck">
                               <input type="checkbox" value="None" id="checkbox_wva_all" name="checkbox_wva_all" checked />
@@ -2450,16 +2464,16 @@
                         </div>
                     </div>
 
-                    <div class="col-xs-12 col-md-9 orangeBg2 benchmark_label_2  text-center">
+                    <div class="col-xs-12 col-md-8 orangeBg2 benchmark_label_2  text-center">
                             <p class=" whiteCo font12">These are the most extreme scores from the personality profile below.</p>
                             <p class="extremes_wva"></p>
                     </div>
 
-                    <!-- <div class="col-xs-6 col-md-1 darkGrey text-center whiteCo position_fit" id="wva_pos_fit_btn" data-canvas-wrapper="wva_canvas_wrapper">
+                    <div class="col-xs-6 col-md-1 darkGrey text-center whiteCo position_fit" id="wva_pos_fit_btn" data-canvas-wrapper="wva_canvas_wrapper">
                         <i class="fa fa-tachometer tachometer_icon"></i> Position Fit
                         <span class="blocked position_arrow"><i class="fa fa-angle-double-down" id="wva_toggle_arrow"></i></span>
-                    </div> -->
-                    <div class="col-xs-12 col-md-1 darkGrey benchmark_label_2 text-center whiteCo">
+                    </div>
+                    <div class="col-xs-6 col-md-1 orangeBg benchmark_label_2 text-center whiteCo">
                         <div class="col-xs-12">
                             <img class="img-responsive center-block" src="assets/img/wva_small.png" alt="WVA">
                         </div>
@@ -2467,33 +2481,29 @@
                 </div><!-- ./row -->
 
 
-                <!-- <div class="row pB10 product_canvases whiteBg " id="wva_canvas_wrapper">
+                <div class="row pB10 product_canvases whiteBg " id="wva_canvas_wrapper">
                     <div class="col-xs-12 text-center">
                         <h3 class="text-center">WVA Position Fit</h3>
                         <hr class="quater_divider">
 
                         <div class="row">
                             <div class="col-md-12  canvas_wrapper pLR0 text-center">
-                                <div class="canvas_holders shadow" id="wva1_gauge_0_holder"></div>
+                              <div id="wva1_detailed_gauges">
 
-                                <div class="canvas_holders shadow" id="wva1_gauge_1_holder"></div>
-
-                                <div class="canvas_holders shadow" id="wva1_gauge_2_holder"></div>
-
-                                <div class="canvas_holders shadow" id="wva1_gauge_3_holder"></div>
+                               </div>
                             </div>
                         </div>
 
                             <div class="row">
                                 <div class="col-md-4 col-md-offset-4">
                                     <hr class="quater_divider">
-                                    <a href="#" class="btn btn-primary btn-block comparison_libs"><i class="fa fa-sliders"></i> Comparison Libraries</a>
+                                    <a href="#" class="btn btn-primary btn-block comparison_libs"><i class="fa fa-sliders"></i> Benchmark Libraries</a>
                                 </div>
                             </div>
                             <hr>
 
                     </div>
-                </div> -->
+                </div>
             </div><!-- ./container -->
 
             <!-- //// WVA sliders //// -->
@@ -2888,6 +2898,8 @@
             <div class="container">
                 <hr class="semi_divider">
             </div><!-- ./container -->
+
+
 
             <!-- /// 4. /// -->
             <div class="container shadow pLRMob30 mT10 orangeBorderL">
@@ -3303,7 +3315,7 @@
             <div class="modal-content ">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" data-step="3">Comparison Libraries <i class="fa fa-sliders"></i></h4>
+                <h4 class="modal-title" data-step="3">Benchmark Libraries <i class="fa fa-sliders"></i></h4>
               </div>
               <div class="modal-body ">
 

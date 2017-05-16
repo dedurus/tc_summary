@@ -1,0 +1,30 @@
+@media print {
+    /* .page_breaker{
+         page-break-before: always !important;
+    } */
+    .slider_areas{
+        background-color: #efefef !important;
+    }
+    .benchmark_slider .noUi-connect{
+        border: 1px solid #444;
+    }
+
+    .benchmark_slider.sq_benchmark .noUi-connect, span.mini_box_0 {
+        background-color: #000 !important;
+    }
+
+    .benchmark_slider.dsq_benchmark .noUi-connect, span.mini_box_1 {
+        background-color: #444 !important;
+    }
+
+    .benchmark_slider.wpp_benchmark .noUi-connect, span.mini_box_2 {
+        background-color: #aaa !important;
+    }
+
+    .benchmark_slider.wva_benchmark .noUi-connect, span.mini_box_3 {
+        background-color: #fff !important;
+    }
+    span.mini_box_3 {
+        border: 1px solid #444;
+    }
+}

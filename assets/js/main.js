@@ -488,17 +488,17 @@
     }
 
 
+    var product_divider = {
+        product_0: 3,
+        product_1: 3,
+        product_2: 3,
+        product_3: 3
+    }
+
     function prepare_lib_seq(lib_seq){
 
-        // clean previous gaguges
-        // 1. reset count of benchmarks
-        count_benchmarks = {
-            'sq1_count': [],
-            'wc1_count': [],
-            'wva1_count': []
-        }
 
-        // 2. clear gauge holders
+        // 1. clear gauge holders
         $('#sq1_detailed_gauges, #wc1_detailed_gauges, #wva1_detailed_gauges').html('');
         $('#wc1_detailed_gauges').html('');
         $('#wva1_detailed_gauges').html('');
@@ -526,18 +526,22 @@
                 gauge_sum = 0;
                 opacity = 0;
            }
+
+           if(seq_data.data_sq === ''){
+                product_divider['product_' + i] = 2;
+           }
+
+console.log('product_' + i);
+console.log(product_divider['product_' + i]);
+console.log(product_divider['product_' + i], gauge_sum);
+
            gauge_sum += gauge_render_wpp(seq_data.data_wpp, checked_obj[key].title, i);
            gauge_sum += gauge_render(seq_data.data_wva, 'wva1', checked_obj[key].title, i);
-
-
-
+console.log(product_divider['product_' + i], gauge_sum);
 
           // draw_overall_gauge('overall_gauge_' + i, 'overall_gauge_value_'+ i, i, gauge_sum, checked_obj[key].title);
 
-
-
-
-          init_new_overall_gauge('#overall_gauge_' + i, 'benchmark_' + i, checked_obj[key].title, ((gauge_sum/3) / 100).toFixed(2),  opacity, i);
+          init_new_overall_gauge('#overall_gauge_' + i, 'benchmark_' + i, checked_obj[key].title, gauge_sum,  opacity, i, product_divider['product_' + i]);
 
            i++;
        }
@@ -550,7 +554,7 @@
 
 
 
-        $('#detailed_fit_menu').html('');
+        /*$('#detailed_fit_menu').html('');
         if($.inArray( 1, count_benchmarks['sq1_count'] ) != -1){
           $('#detailed_fit_menu').append('<li role="presentation"><a href="#sq1_detailed_gauges" class="sq_tab" aria-controls="sq1_detailed_gauges" role="tab" data-toggle="tab"><img src="assets/img/sq_40.png" alt=""> SQ/DSQ</a></li>')
         }
@@ -559,7 +563,7 @@
         }
         if($.inArray( 1, count_benchmarks['wva1_count'] ) != -1){
           $('#detailed_fit_menu').append('<li role="presentation"><a href="#wva1_detailed_gauges" class="wva_tab" aria-controls="wva1_detailed_gauges" role="tab" data-toggle="tab"><img src="assets/img/wva_40.png" alt=""> WVA</a></li>');
-        }
+        }*/
 
 
     }
@@ -570,9 +574,16 @@
     $('#presets_form').on('submit', function(e){
         e.preventDefault();
 
-
              // RESET Position Fit Gauges
             $('#overall_holder').empty();
+
+            // reset product divider
+            product_divider = {
+                product_0: 3,
+                product_1: 3,
+                product_2: 3,
+                product_3: 3
+            }
 
 
             // reset current benchmarks
@@ -584,7 +595,7 @@
 
             prepare_lib_seq(checked_obj);
 
-            // check if there are selectede benchmarks
+            // check if there are selected benchmarks
             if( (count_benchmarks['sq1_count'].length == 0) && (count_benchmarks['wc1_count'].length == 0) && (count_benchmarks['wva1_count'].length == 0) ){
                 $('#overall_wrapper').slideUp();
             }else{
@@ -1203,7 +1214,15 @@
     var count_benchmarks = {
         'sq1_count': [],
         'wc1_count': [],
-        'wva1_count': []
+        'wva1_count': [],
+        //'total_count': 3
+    }
+
+    product_divider = {
+        product_1: 3,
+        product_2: 3,
+        product_3: 3,
+        product_4: 3
     }
 
     //
@@ -1229,6 +1248,7 @@ $('#' + product + '_gauge_' + canvas_index + '_holder').css('width', '600px');
         }else{
             $('#' + product + '_gauge_' + canvas_index + '_holder').css('opacity', 1);
             count_benchmarks[product + '_count'].push(1);
+            count_benchmarks.total_count -= 1;
             //$('#' + product + '_gauge_' + canvas_index).parent().css('opacity', 1);
             //$('#' + product + '_gauge_' + canvas_index).parent().removeClass('hidden');
             //
@@ -1243,48 +1263,55 @@ $('#' + product + '_gauge_' + canvas_index + '_holder').css('width', '600px');
         //init_gauge(canvas_id, gauge_value, canvas_index, final_score);
 
 
-        $('#' + product + '_detailed_gauges').append('<div class="canvas_holders shadow pT25" id="' + canvas_id + '_holder"></div>')
+        $('#' + product + '_detailed_gauges').append('<div class="canvas_holders shadow" id="' + canvas_id + '_holder"></div>')
 
-       init_new_gauge('#' + canvas_id + '_holder', 'benchmark_' + canvas_index, bench_title ,(final_score.toFixed())/100, opacity);
+       init_new_gauge('#' + canvas_id + '_holder', 'benchmark_' + canvas_index, bench_title ,(final_score.toFixed())/100, opacity, canvas_index);
 
     }
 
 
     // benchmark colors
     var benchmarkcolors = {
-        benchmark_0: '#067e55',
-        benchmark_1: '#AD1F2B',
-        benchmark_2: '#3A7BBD',
-        benchmark_3: '#E36C09'
+        benchmark_0: '#8F1D21',
+        benchmark_1: '#A17917',
+        benchmark_2: '#8E44AD',
+        benchmark_3: '#264348'
     }
 
     // init gauge
-    function init_new_overall_gauge(element_id, benchmark_color, title, value, opacity, canvas_index){
-         $('#overall_holder').append('<div class="canvas_holders shadow pLR0 pT15 pT40 shadow-drop-2-lr whiteBg" id="overall_gauge_' + canvas_index + '"></div>')
+    function init_new_overall_gauge(element_id, benchmark_color, title, value, opacity, canvas_index, divider){
+
+        var calc_value = ((value/divider) / 100).toFixed(2);
+         $('#overall_holder').append('<div class="canvas_holders shadow pLR0 shadow_center whiteBg"><p class="text-center fit_titles mB10" style="border-top: 5px solid '+ benchmarkcolors[benchmark_color] + ' ;">' + title + '</p><div  id="overall_gauge_' + canvas_index + '"></div></div>');
+         //$('#overall_holder').append('<div class="canvas_holders shadow pLR0 pT15 pT40 shadow-drop-2-lr whiteBg" id="overall_gauge_' + canvas_index + '"></div>');
+        //$(element_id).append('<p class="text-center fit_titles mB0" style="border-top: 5px solid '+ benchmarkcolors[benchmark_color] + ' ;">' + title + '</p>');
         new SVGDial(element_id, {
           ringBackgroundColor: [benchmarkcolors[benchmark_color]],
           frameBackgroundColor: 'white',
-          frameSize: 260,
-          ringWidth: 40,
-          fontSize: 70,
-
-        }).setValue(value);
-        $(element_id).append('<p class="text-center fit_titles mB0" style="border-bottom: 5px solid '+ benchmarkcolors[benchmark_color] + ' ;">' + title + '</p>')
+          frameSize: 240,
+          ringWidth: 35,
+          fontSize: 55,
+          svg_type: 1
+        }).setValue(calc_value);
     }
 
-    function init_new_gauge(element_id, benchmark_color, title, value, opacity){
+    function init_new_gauge(element_id, benchmark_color, title, value, opacity, canvas_index){
+        var svg_id = element_id + '_' + canvas_index;
 
-        new SVGDial(element_id, {
+        $(element_id).append('<p class="text-center fit_titles mB10" style="border-top: 3px solid '+ benchmarkcolors[benchmark_color] + ' ;">' + title + '</p><div id="' + svg_id.substring(1) + '"></div>');
+        new SVGDial(svg_id, {
           ringBackgroundColor: [benchmarkcolors[benchmark_color]],
           frameBackgroundColor: 'white',
-          frameSize: 260,
+          frameSize: 200,
           ringWidth: 28,
           fontSize: 50,
-
+          svg_type: 2
         }).setValue(value);
-        $(element_id).append('<p class="text-center fit_titles mB0" style="border-bottom: 3px solid '+ benchmarkcolors[benchmark_color] + ' ;">' + title + '</p>')
+
         if(opacity == 0){
             $(element_id).css('opacity', 0.45);
+        }else{
+            $(element_id).addClass('shadow_center');
         }
     }
 
