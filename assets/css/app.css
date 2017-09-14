@@ -3,7 +3,7 @@ body {
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
   font-weight: normal;
-  color: #8f9ea6;
+  color: #454b4e;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased !important;
 }
@@ -30,10 +30,18 @@ body {
 /*======================================*/
 .row_dimension{
   margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.row_dimension:last-child{
+  margin-bottom: 0;
+  padding-bottom: 15px;
 }
 .benchmarks.noUi-target{
   height: 4px;
   margin: 4px 0;
+  border: 1px solid #E6E6E6;
 }
 .benchmarks .noUi-handle{
   display: none;
@@ -42,26 +50,38 @@ body {
   cursor: initial;
 }
 .indicators,
-.benchmarks.bg_color_1, .benchmarks.bg_color_2, .benchmarks.bg_color_3, .benchmarks.bg_color_4{
+.benchmarks.bg_color_0, .benchmarks.bg_color_1, .benchmarks.bg_color_2, .benchmarks.bg_color_3{
   background-color: transparent;
-  border: none;
   box-shadow: none;
 }
+.indicators{
+  border: none;
+}
 /* purple  bg */
-.benchmarks.bg_color_1 .noUi-connect{
+.benchmarks.bg_color_0 .noUi-connect{
   background-color: #9B59B6;
 }
 /* pink  bg */
-.benchmarks.bg_color_2 .noUi-connect{
+.benchmarks.bg_color_1 .noUi-connect{
   background-color: #ec407a;
 }
 /* dark  bg */
-.benchmarks.bg_color_3 .noUi-connect{
+.benchmarks.bg_color_2 .noUi-connect{
   background-color: #34495e;
 }
 /* mint  bg */
-.benchmarks.bg_color_4 .noUi-connect{
+.benchmarks.bg_color_3 .noUi-connect{
   background-color: #1abc9c;
+}
+.dimension_title{
+  font-size: 14px;
+  font-weight: bold;
+}
+.dimension_text{
+  font-size: 11px;
+  line-height: 1;
+  color: #454b4e;
+
 }
 /* INDICATORS */
 /*======================================*/
@@ -772,9 +792,12 @@ body {
   margin-bottom: 10px;
   border-radius: 0;
   border: 1px solid #f2f2f4;
+  /*
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); */
   border-bottom: 1px solid rgba(0, 0, 0, 0.09);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+  padding: 10px 0 0 0;
 }
 
 

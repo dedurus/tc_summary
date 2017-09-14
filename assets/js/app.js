@@ -31,7 +31,7 @@
         v.setAttribute('disabled', true);
     });*/
 
-    // disable benchamarks
+    // disable benchmarks
     /*var bench_class = document.getElementsByClassName('benchmark_slider');
     Array.prototype.forEach.call(bench_class, function(v){
         v.setAttribute('disabled', true);
@@ -206,6 +206,19 @@
     });
     */
 
+    // prepare param (convert to array)
+    function indicator_string_convert(param){
+        if(param.length > 0){
+            var sub = param.substring(1),
+                group = sub.match(/.{1,2}/g);
+
+                return group;
+        }else{
+            // no URL string param
+            return false;
+        }
+    }
+
     // convert BM string to appropriate array
     function bm_string_convert(sequence){
         var sub = sequence.substring(1),
@@ -234,17 +247,19 @@
             $.each(product.dimensions, function(dim_index, dim){
                 html += '<div class="row row_dimension mLR0" id="dimension_'+ index +'">' +
                             '<div class="col-md-2">' +
-                            dim.title_0 +
+                                '<div class="dimension_title">' + dim.title_0  + '</div>' +
+                                '<div class="dimension_text">' + dim.text_0 + '</div>' +
                             '</div>' +
                             '<div class="col-md-8">' +
-                                '<div id="'+ index + '_' + dim_index + '_' + hashes[0] + '"  class="benchmarks"></div>' +
-                                '<div id="'+ index + '_' + dim_index + '_' + hashes[1] + '"  class="benchmarks"></div>' +
-                                '<div id="'+ index + '_' + dim_index + '_' + hashes[2] + '"  class="benchmarks"></div>' +
-                                '<div id="'+ index + '_' + dim_index + '_' + hashes[3] + '"  class="benchmarks"></div>' +
-                                '<div id="ind_'+ index +'_' + dim_index + '"  class="indicators"></div>' +
+                                '<div id="'+ index + '_' + dim_index + '_0"  class="benchmarks bg_color_0"></div>' +
+                                '<div id="'+ index + '_' + dim_index + '_1"  class="benchmarks bg_color_1"></div>' +
+                                '<div id="'+ index +'_' + dim_index + '"  class="indicators"></div>' +
+                                '<div id="'+ index + '_' + dim_index + '_2"  class="benchmarks bg_color_2"></div>' +
+                                '<div id="'+ index + '_' + dim_index + '_3"  class="benchmarks bg_color_3"></div>' +
                             '</div>' +
-                            '<div class="col-md-2">' +
-                            dim.title_1 +
+                            '<div class="col-md-2 text-right">' +
+                                '<div class="dimension_title">' + dim.title_1  + '</div>' +
+                                 '<div class="dimension_text">' + dim.text_1 + '</div>' +
                             '</div>' +
                         '</div>';
 
@@ -253,6 +268,35 @@
         })
 
         return html;
+    }
+
+    function draw_benchmark(sequence, dimension, dimension_index, title){
+        var sub = sequence.substring(1),
+            group_1 = sub.match(/.{1,4}/g),
+            seq_array = [],
+            gauge_metrics = {},
+            i = 0;
+
+            if(group_1){
+                group_1.forEach(function(el){
+                    var el_2 = el.match(/.{1,2}/g);
+                    seq_array.push([el_2[0], el_2[1]]);
+                });
+            }
+
+
+            // move last array element to second position for WPP sequence
+            /*if(dimension == 'wpp'){
+                var arr_length = seq_array.length - 1;
+                // restructure the array for this dimension only (last element becomes second)
+                seq_array.move_array_element(arr_length, 1);
+            }*/
+
+            $.each(seq_array, function(index, val){
+                var current_slider = document.getElementById(dimension + '_' + index + '_' + dimension_index);
+                current_slider.noUiSlider.set(val);
+                i++;
+            });
     }
 
 
@@ -280,41 +324,56 @@
 
     // selector: `product`_`dimension_index`_`hash[index]`
     // e.g "wpp_6_3f15"
-    function generate_dimension(products, benchmarks){
-        var  j = 0;
+    function generate_dimension(products, indicators, benchmarks){
 
-        $.each(products, function(index, product){
-            var bm_sequences = bm_string_convert(benchmarks[j][index]),
-                dimensions = product.dimensions;
-                console.log(benchmarks[j][index]);
-           // hashes.forEach(function (value, ind) {
+        $('#summary_view').append(generate_dimension_html(products, hashes))
 
-console.log(bm_sequences.length);
-           // $.each(dimensions, function(dim_index, dim_data){
-            $.each(bm_sequences, function(dim_index, dim_data){
-            var i = 0;
-                console.log(dim_index, dim_data);
-                var bm_id = document.getElementById(index + '_' + dim_index + '_' +  hashes[i])
-                console.log(bm_sequences[dim_index][0], bm_sequences[dim_index][1], bm_id);
-                console.log(bm_id);
-                noUiSlider.create(bm_id, {
-                    start: [bm_sequences[dim_index][0], bm_sequences[dim_index][1]],
+        // default BMs and
+        $('.benchmarks').each(function(index, value){
+               noUiSlider.create(value, {
+                   start: [0,0],
+                   connect: true,
+                   range: {
+                       'min': 1,
+                       'max': 99
+                   }
+               });
+           });
+
+        // render BMs
+        var i = 0;
+        for(var key in benchmarks){
+            $.each(benchmarks[key], function(prod_id, prod_seq){
+                draw_benchmark(prod_seq, prod_id, i, 'tralala')
+            })
+
+            i++;
+        }
+
+        // render indicators
+        for(var key in indicators){
+            var j = 0;
+            console.log(key);
+            console.log(indicators[key]);
+            var ind_array = indicator_string_convert(indicators[key])
+            console.log(ind_array);
+            ind_array.forEach(function(v, i){
+                console.log(v);
+                console.log(i);
+                var ind_id = document.getElementById(key + '_' + j)
+                console.log(key + '_' + j, ind_id);
+                noUiSlider.create(ind_id, {
+                    start: [v],
                     connect: true,
                     tooltips: false,
                     range: six_dim_sliders
                 })
-            i++;
+                j++
             })
+        }
 
-            //})
-            j++
-            console.log(j);
-        })
-
-        //$('#summary_view').append(html);
-
-        // indicator render
-        /*dim_uid_array.forEach( function(element, index) {
+        // render indicators
+       /* dim_uid_array.forEach( function(element, index) {
             var ind = document.getElementById('ind_' + element)
 
             noUiSlider.create(ind, {
@@ -325,35 +384,122 @@ console.log(bm_sequences.length);
             })
         });*/
 
+        //var  j = 0;
+
+       /* $.each(products, function(index, product){
+            var bm_sequences = bm_string_convert(benchmarks[j][index]),
+                dimensions = product.dimensions;
+
+           // hashes.forEach(function (value, ind) {
+
+
+           // $.each(dimensions, function(dim_index, dim_data){
+            $.each(bm_sequences, function(dim_index, dim_data){
+            var i = 0;
+
+                var bm_id = document.getElementById(index + '_' + dim_index + '_' +  hashes[i])
+
+
+                noUiSlider.create(bm_id, {
+                    start: [bm_sequences[dim_index][0], bm_sequences[dim_index][1]],
+                    connect: true,
+                    tooltips: false,
+                    range: six_dim_sliders
+                })
+            i++;
+            })*/
+
+            //})
+           /* j++
+
+        })*/
+
+
+        // selector: `product`_`dimension_index`_`hash[index]`
+        // e.g "wpp_6_3f15"
+
+
+        var bm_lengh = benchmarks.length;
+        /*$.each(benchmarks, function(index, sequences){
+            var bm_iterator = 0;
+
+
+
+            $.each(sequences, function(product_id, seq){
+
+
+
+                var seq_array = bm_string_convert(seq);
+
+
+                $.each(seq_array, function(seq_index, array){
+
+
+                    var bm_id = document.getElementById(product_id + '_' + seq_index + '_' + hashes[bm_iterator] + '_' + bm_iterator )
+
+
+                    if(bm_iterator === bm_lengh){
+                        return;
+                    }
+
+                    noUiSlider.create(bm_id, {
+                        start: [seq_array[seq_index][0], seq_array[seq_index][1]],
+                        connect: true,
+                        tooltips: false,
+                        range: six_dim_sliders
+                    })
+                    bm_iterator++;
+                });
+
+            })
+        })*/
+
+
+
+        //$('#summary_view').append(html);
+
+
 
 
 
     }
 
+    // test obj indicators
+    var indicators = {
+            sq: 's908070605040',
+            wpp: 'w10304050607020',
+            wva: 'v506070809010'
+        }
+
     // test BM obj
     var bms = [
         {
             sq: 'S809965998599156580992565',
-            wpp: 'W1590509940992080209955992080',
+            wpp: 'W6090509940992080209955992080',
             //wva: 'V159915991599159915991599'
         },
         {
-            sq: 'S559950992599359935992599',
+            //sq: 'S559950992599359935992599',
             wpp: 'W1590509940992080209955992080',
-            wva: 'V159915991599159915991599'
+            wva: 'V153915991599159915991579'
         },
         {
             sq: 'S559950992599359935992599',
-            wpp: 'W1590509940992080209955992080',
-            wva: 'V159915991599159915991599'
+            wpp: 'W4570509940992080209955993080',
+            wva: 'V658915991599159915991569'
+        },
+        {
+            sq: 'S152940596579359935992599',
+            wpp: 'W0570509940992080209955993080',
+            wva: 'V018915991599159915991569'
         }
     ]
 
     //render_bms(hashes, bms)
 
-    $('#summary_view').append(generate_dimension_html(products, hashes))
 
 
-    generate_dimension(products, bms)
+
+    generate_dimension(products, indicators, bms)
 
 })();
