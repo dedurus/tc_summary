@@ -237,11 +237,11 @@
                             dim.title_0 +
                             '</div>' +
                             '<div class="col-md-8">' +
-                                '<div id="'+ index +'_'+ hashes[0] +'_' + dim_index +'"  class="benchmarks"></div>' +
-                                '<div id="'+ index +'_'+ hashes[1] +'_' + dim_index +'"  class="benchmarks"></div>' +
-                                '<div id="ind_'+ hashes[0] +'"  class="indicators"></div>' +
-                                '<div id="'+ index +'_'+ hashes[2] +'_' + dim_index +'"  class="benchmarks"></div>' +
-                                '<div id="'+ index +'_'+ hashes[3] +'_' + dim_index +'"  class="benchmarks"></div>' +
+                                '<div id="'+ index + '_' + dim_index + '_' + hashes[0] + '"  class="benchmarks"></div>' +
+                                '<div id="'+ index + '_' + dim_index + '_' + hashes[1] + '"  class="benchmarks"></div>' +
+                                '<div id="'+ index + '_' + dim_index + '_' + hashes[2] + '"  class="benchmarks"></div>' +
+                                '<div id="'+ index + '_' + dim_index + '_' + hashes[3] + '"  class="benchmarks"></div>' +
+                                '<div id="ind_'+ index +'_' + dim_index + '"  class="indicators"></div>' +
                             '</div>' +
                             '<div class="col-md-2">' +
                             dim.title_1 +
@@ -278,38 +278,37 @@
 
 
 
-
+    // selector: `product`_`dimension_index`_`hash[index]`
+    // e.g "wpp_6_3f15"
     function generate_dimension(products, benchmarks){
+        var  j = 0;
 
         $.each(products, function(index, product){
+            var bm_sequences = bm_string_convert(benchmarks[j][index]),
+                dimensions = product.dimensions;
+                console.log(benchmarks[j][index]);
+           // hashes.forEach(function (value, ind) {
 
-
-
-            //
-            var bm_sequences = bm_string_convert(benchmarks[index])
-
-            var dimensions = product.dimensions;
-            /*$.each(product.dimensions, function(bm_index, sequence){
-                //sq_4b39_0
-
-                var bm_id = document.getElementById(index + '_' + hashes[bm_index] + '_' + bm_index);
-
-            })*/
-            hashes.forEach(function (value, ind) {
-
-
-                $.each(dimensions, function(dim_index, dim_data){
-
-                    var bm_id = document.getElementById(index + '_' + value + '_' + dim_index)
-                    console.log(bm_sequences[dim_index][0], bm_sequences[dim_index][1], bm_id);
-                    noUiSlider.create(bm_id, {
-                        start: [bm_sequences[dim_index][0], bm_sequences[dim_index][1]],
-                        connect: true,
-                        tooltips: false,
-                        range: six_dim_sliders
-                    })
+console.log(bm_sequences.length);
+           // $.each(dimensions, function(dim_index, dim_data){
+            $.each(bm_sequences, function(dim_index, dim_data){
+            var i = 0;
+                console.log(dim_index, dim_data);
+                var bm_id = document.getElementById(index + '_' + dim_index + '_' +  hashes[i])
+                console.log(bm_sequences[dim_index][0], bm_sequences[dim_index][1], bm_id);
+                console.log(bm_id);
+                noUiSlider.create(bm_id, {
+                    start: [bm_sequences[dim_index][0], bm_sequences[dim_index][1]],
+                    connect: true,
+                    tooltips: false,
+                    range: six_dim_sliders
                 })
+            i++;
             })
+
+            //})
+            j++
+            console.log(j);
         })
 
         //$('#summary_view').append(html);
@@ -332,11 +331,23 @@
     }
 
     // test BM obj
-    var bms = {
-        sq: 'S809965998599156580992565',
-        wpp: 'W1590509940992080209955992080',
-        //wva: 'V159915991599159915991599'
-    }
+    var bms = [
+        {
+            sq: 'S809965998599156580992565',
+            wpp: 'W1590509940992080209955992080',
+            //wva: 'V159915991599159915991599'
+        },
+        {
+            sq: 'S559950992599359935992599',
+            wpp: 'W1590509940992080209955992080',
+            wva: 'V159915991599159915991599'
+        },
+        {
+            sq: 'S559950992599359935992599',
+            wpp: 'W1590509940992080209955992080',
+            wva: 'V159915991599159915991599'
+        }
+    ]
 
     //render_bms(hashes, bms)
 
