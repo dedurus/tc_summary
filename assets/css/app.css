@@ -11,8 +11,116 @@ body {
   outline: 0;
 }
 
-/* COLORS */
+/* BACKGROUND */
 /*======================================*/
+.bg-trans {
+  background-color: transparent;
+}
+
+.bg-light {
+  background-color: #ffffff;
+}
+.bg-light, .bg-light a {
+  color: #8f9ea6;
+}
+
+.bg-gray-light {
+  background-color: #f8f9fa;
+}
+.bg-gray-light, .bg-gray-light a {
+  color: #8f9ea6;
+}
+
+.bg-gray {
+  background-color: #e9eeef;
+}
+.bg-gray, .bg-gray a {
+  color: #8f9ea6;
+}
+
+.bg-gray-dark {
+  background-color: #cbd7da;
+}
+.bg-gray-dark, .bg-gray-dark a {
+  color: #8f9ea6;
+}
+
+.bg-trans-light {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.bg-trans-light, .bg-trans-light a {
+  color: inherit;
+}
+
+.bg-trans-dark {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.bg-trans-dark, .bg-trans-dark a {
+  color: inherit;
+}
+
+.bg-primary {
+  background-color: #177bbb;
+}
+.bg-primary, .bg-primary a {
+  color: #ffffff;
+}
+
+.bg-info {
+  background-color: #1ccacc;
+}
+.bg-info, .bg-info a {
+  color: #ffffff;
+}
+
+.bg-success {
+  background-color: #71ba51;
+}
+.bg-success, .bg-success a {
+  color: #ffffff;
+}
+
+.bg-warning {
+  background-color: #efb239;
+}
+.bg-warning, .bg-warning a {
+  color: #ffffff;
+}
+
+.bg-danger {
+  background-color: #e33244;
+}
+.bg-danger, .bg-danger a {
+  color: #ffffff;
+}
+
+.bg-mint {
+  background-color: #1abc9c;
+}
+.bg-mint, .bg-mint a {
+  color: #ffffff;
+}
+
+.bg-purple {
+  background-color: #9B59B6;
+}
+.bg-purple, .bg-purple a {
+  color: #ffffff;
+}
+
+.bg-pink {
+  background-color: #ec407a;
+}
+.bg-pink, .bg-pink a {
+  color: #ffffff;
+}
+
+.bg-dark {
+  background-color: #34495e;
+}
+.bg-dark, .bg-dark a {
+  color: #ffffff;
+}
 /* purple  bg */
 .bg_color_1{
   background-color: #9B59B6;
@@ -25,7 +133,9 @@ body {
 .bg_color_3{
   background-color: #34495e;
 }
-
+.bg_gray{
+  background-color: #e9eeef;
+}
 /* BENCHMARKS */
 /*======================================*/
 .row_dimension{
@@ -53,6 +163,7 @@ body {
 .benchmarks.bg_color_0, .benchmarks.bg_color_1, .benchmarks.bg_color_2, .benchmarks.bg_color_3{
   background-color: transparent;
   box-shadow: none;
+  border: none;
 }
 .indicators{
   border: none;
@@ -358,7 +469,7 @@ body {
   position: relative;
 }
 
-/* Colors */
+/* Panel Colors */
 /*---------------------------------*/
 .panel-primary .panel-heading, .panel-primary .panel-footer, .panel-primary.panel-colorful {
   background-color: #177bbb;
@@ -799,7 +910,32 @@ body {
   background-color: #fff;
   padding: 10px 0 0 0;
 }
-
+.product_bar{
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+  padding: 0 5px 0 0;
+}
+.product_name{
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+.bm_bg{
+  border-right: 5px solid #fff;
+}
+.bm_bg:last-child{
+  border-right: none;
+}
+.extremes{
+  padding-top: 3px;
+}
+.extreme_scores{
+  font-size: 14px;
+  padding: 2px 4px;
+  font-weight: bold;
+  margin-left: 5px;
+  color: #fff;
+}
 
 
 
@@ -811,4 +947,11 @@ body {
 .mLR0{
   margin-left: 0;
   margin-right: 0;
+}
+.pTB5{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.mB5{
+  margin-bottom: 5px;
 }

@@ -52,7 +52,7 @@ var products = {
     wpp: {
         id: 'wpp',
         name: 'Workstyle',
-        color: '#1b9c6a',
+        color: '#327bbd',
         dimension_number: 7,
         dimensions: [
             {
@@ -103,7 +103,7 @@ var products = {
     wva: {
         id: 'wva',
         name: 'Work Values',
-        color: '#1b9c6a',
+        color: '#e75c24',
         dimension_number: 6,
         dimensions: [
             {
@@ -144,106 +144,5 @@ var products = {
             }
         ],
         callback: '',
-    },
-}
-    /*,
-    {
-        id: 'wpp',
-        name: 'WPP',
-        color: '',
-        dimension_number: 7,
-    },
-    {
-        id: 'wva',
-        name: 'WVA',
-        color: '',
-        dimension_number: 6,
-        callback: '',
-    }*/
-
-
-//
-var product_1_dimensions = {
-    sq_exteme_title_0: {
-        title_0: 'Resistant',
-        title_1: 'Accommodating'
-    },
-    sq_exteme_title_1: {
-        title_0: 'Anxious',
-        title_1: 'Calm'
-    },
-    sq_exteme_2: {
-        title_0: 'Impatient',
-        title_1: 'Patient'
-    },
-    sq_exteme_3: {
-        title_0: 'Distractable',
-        title_1: 'Focused'
-    },
-    sq_exteme_4: {
-        title_0: 'Impulsive',
-        title_1: 'Cautious'
-    },
-    sq_exteme_5: {
-        title_0: 'Thrill-Seeking',
-        title_1: 'Apprehensive'
-    },
-}
-
-var product_2_dimensions = {
-    wpp_exteme_title_0: {
-        title_0: 'Non-Dominant',
-        title_1: 'Dominant'
-    },
-    wpp_exteme_title_1: {
-        title_0: 'Contented',
-        title_1: 'Achievement-Focused'
-    },
-    wpp_exteme_2: {
-        title_0: 'Reactive',
-        title_1: 'Calm'
-    },
-    wpp_exteme_3: {
-        title_0: 'Reserved',
-        title_1: 'Outgoing'
-    },
-    wpp_exteme_4: {
-        title_0: 'Direct',
-        title_1: 'Empathetic'
-    },
-    wpp_exteme_5: {
-        title_0: 'Spontaneous',
-        title_1: 'Regimented'
-    },
-    wpp_exteme_6: {
-        title_0: 'Conventional',
-        title_1: 'Open-minded'
-    },
-}
-
-var product_3_dimensions = {
-    wva_exteme_title_0: {
-        title_0: 'Low Integrity',
-        title_1: 'High Integrity'
-    },
-    wva_exteme_title_1: {
-        title_0: 'Low Responsibility',
-        title_1: 'High Responsibility'
-    },
-    wva_exteme_2: {
-        title_0: 'Low Coachability',
-        title_1: 'High Coachability'
-    },
-    wva_exteme_3: {
-        title_0: 'Low Positivity',
-        title_1: 'High Positive Attitude'
-    },
-    wva_exteme_4: {
-        title_0: 'Low Aggression Control',
-        title_1: 'High Aggression Control'
-    },
-    wva_exteme_5: {
-        title_0: 'Low Communication',
-        title_1: 'High Open Communication'
     },
 }

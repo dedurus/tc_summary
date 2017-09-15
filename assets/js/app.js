@@ -18,193 +18,37 @@
             'max': [100]
         };
 
-   /* function addNodeTo ( target, className ) {
-        var div = document.createElement('div');
-        addClass(div, className);
-        target.appendChild(div);
-        return div;
-    }*/
-
-    // Disable indicators
-    /*var indicator_class = document.getElementsByClassName('indicator');
-    Array.prototype.forEach.call(indicator_class, function(v){
-        v.setAttribute('disabled', true);
-    });*/
-
-    // disable benchmarks
-    /*var bench_class = document.getElementsByClassName('benchmark_slider');
-    Array.prototype.forEach.call(bench_class, function(v){
-        v.setAttribute('disabled', true);
-    });*/
-
-
-    // ----------- Templating ----------- //
-    /*function hb_indicator(indicator_name, indicator_index, params){
-        var source   = $('#indicator').html(),
-            template = Handlebars.compile(source);
-
-        var append = {
-                    indicator_name: indicator_name,
-                    indicator_index: indicator_index
-                }
-        var html = template(append);
-        $("#indicator_placeholder").html(html)
-    }*/
-
-
-    /*Handlebars.registerHelper('indicator', function(value){
-      return value;
-    });*/
-
-
-
 
     // ----------- FUNCTIONS --------------- //
 
-    // Prepare product parameters
-    /*function prepare_param(param){
-        var sub = param.substring(1),
-            group = sub.match(/.{1,2}/g);
-
-            return group;
-    }*/
-
-    // generate unique CSS id
+    // generate unique CSS id (DEPRECATED!)
     function uniqueId() {
         return Math.floor((1 + Math.random()) * 0x10000)
           .toString(16)
           .substring(1)
-  }
+    }
 
-    /**
-    * Indicator generation
-    * id (string) - id of the product
-    * value (obj) - indicator value
-    * range - depends of type of products (six_dim_sliders/six_dim_sliders etc)
-    */
-   /* function generate_indicator(id, value, type){
-        var pips;
+    // object sorting
+    function sortObject(obj) {
+        return Object.keys(obj).sort().reduce(function (result, key) {
+            result[key] = obj[key];
 
-        // TODO: change this to be dynmic
-        if(type = 6){
-            pips = six_dim_sliders;
-        }
+            return result;
+        }, {});
+    }
 
-        $('.summary_view').append('<div id="'+ id +'_indicator" class="indicators"></div>')
-        var slider_id = document.getElementById(id + '_indicator');
-        slider_id.setAttribute('disabled', true)
-
-        noUiSlider.create(slider_id, {
-            start: [value],
-            connect: true,
-            tooltips: false,
-            range: pips
-        });
-    }*/
+    // array-object sorting
+    function compare(a,b) {
+      if (a.indicator < b.indicator)
+        return 1;
+      if (a.indicator > b.indicator)
+        return -1;
+      return 0;
+    }
+    // 4 BMs, 4 hashes
+    //var hashes = [uniqueId(), uniqueId(), uniqueId(), uniqueId()]
 
 
-    /*function bm_html(){
-        var pips = six_dim_sliders;
-        var tag_id =  uniqueId();
-            $("<div>", {id: "tag_id", "class": "a"});
-
-            var bm_id = document.getElementById(tag_id)
-
-
-            noUiSlider.create(bm_id, {
-                start: [50, 80],
-                connect: true,
-                tooltips: false,
-                range: pips
-            });
-
-        return html;
-    }*/
-
-   /* function generate_benchmark(id, range, type, index){
-
-        var  pips;
-
-        // TODO: change this to be dynmic
-        if(type = 6){
-            pips = six_dim_sliders;
-        }
-
-        $("#summary_view").append(div);
-
-        $('.summary_view').append('<div id="'+ tag_id +'" class="benchmarks bg_color_'+ index +'"></div>')
-
-        var bm_id = document.getElementById(tag_id);
-        bm_id.setAttribute('disabled', true)
-
-        noUiSlider.create(bm_id, {
-            start: range,
-            connect: true,
-            tooltips: false,
-            range: pips
-        });
-
-    }*/
-
-    /*function generate_dimension_html(){
-        var html, generated = '';
-
-        for(var i = 1; i <=1; i++){
-            if(i === 3){
-                generated += generate_indicator('sq', 70, 6);
-            }
-            generated +=generate_benchmark('sq', [60,90], 6, i);
-        }
-
-        html += '<div class="row">' +
-                    '<div class="col-md-8">' +
-                    generated +
-                   '</div>' +
-               '</div>';
-        return html;
-    }*/
-
-
-   /* function generate_product(name){
-
-        var product = products[name];
-
-
-
-        $.each(product.dimensions, function(index, value){
-
-
-        })
-    }*/
-
-    // test
-    //var param = 's908070605040';
-    //hb_indicator('sq', '0', prepare_param(param));
-    //generate_indicator('sq', 50, 6);
-    /*generate_benchmark('sq', [50,80], 6, 1);
-    generate_benchmark('sq', [50,80], 6, 2);
-    generate_benchmark('sq', [50,80], 6, 3);
-    generate_benchmark('sq', [50,80], 6, 4);*/
-
-    /*for(var i = 1; i <=4; i++){
-        if(i === 3){
-            generate_indicator('sq', 70, 6);
-        }
-        generate_benchmark('sq', [60,90], 6, i);
-    }*/
-
-    //generate_product('sq')
-
-    //generate_dimension_html();
-
-   /* var sq_0 = document.getElementById('sq_0');
-    noUiSlider.create(sq_0, {
-        start: [50],
-        connect: true,
-        tooltips: false,
-        range: six_dim_sliders
-    });
-    */
 
     // prepare param (convert to array)
     function indicator_string_convert(param){
@@ -233,31 +77,139 @@
         return seq_array;
     }
 
-    function bm_arrays_seq(string_convert, bm_uid_array){
+    // Product bar
+    function product_bar_html(product){
+        var html = '<div class="product_bar">' +
+                        '<div class="row mLR0 pLR0">' +
+                            '<div class="col-xs-2 product_name" style="background-color:'+ product.color +'">' +
+                                product.name +
+                            '</div>' +
+
+                            '<div class="col-xs-8 text-center">' +
+                                    '<div class="extremes_' + product.id + ' extremes"></div>' +
+                            '</div>' +
+
+                            '<div class="col-xs-2">' +
+                                'kokok' +
+                            '</div>' +
+                        '</div>' +
+                    '<div class="row  mLR0 pLR0">' +
+                        '<div class="col-xs-2">' +
+                        '</div>' +
+                        '<div class="col-xs-8  pLR0 text-center pLR0 bg_gray">' +
+                               ' <div class="col-xs-4 bm_bg">' +
+                                    'LEFT SIDE' +
+                                '</div>' +
+                                '<div class="col-xs-4 bm_bg">' +
+                                    'MID RANGE' +
+                                '</div>' +
+                                '<div class="col-xs-4 bm_bg">' +
+                                    'RIGHT SIDE' +
+                                '</div>' +
+                        '</div>' +
+                    '</div>' +
+                    '</div>';
+        return html;
+    }
+
+    // convert product dimensions titles to object
+    function convert_dimension_titles(product){
+        var titles = {};
+        product.dimensions.forEach(function(title, title_index){
+            var title_param = product.id + '_extreme_' + title_index
+            /*console.log(title_param);
+            console.log(title);
+            console.log(title_index);*/
+            titles[title_param] = {
+                0: title.title_0,
+                1: title.title_1
+            }
+
+        })
+        //console.log(titles);
+        return titles
+    }
+    //test
+    /*convert_dimension_titles(products.sq)
+    convert_dimension_titles(products.wpp)*/
+
+    /*sq_exteme_0: {
+        0: 'Resistant',
+        1: 'Accommodating'
+    },*/
+
+
+    // get 3 extreme dimensions of a product
+    function get_extremes(seq_array, seq_names, type){
+        var new_array = [];
+        console.log(seq_array);
+        console.log(seq_names);
+        seq_array.forEach(function(v,i){
+console.log(v);
+console.log(i);
+console.log(type  + '_exteme_' + i);
+console.log(seq_names[type  + '_extreme_' + i]);
+            var seq_obj,
+                seq_type = type  + '_extreme_' + i;
+
+                console.log(seq_type);
+                console.log(type);
+
+
+            if(v <= 50){
+                seq_obj = seq_names[ seq_type ][0]
+            }else{
+                seq_obj = seq_names[ seq_type ][1]
+            }
+            var push_obj = Math.abs(v - 50);
+            new_array.push(
+                {
+                'indicator': push_obj,
+                'extreme_title': seq_obj
+                }
+            );
+        });
+
+        // sort object-array descending
+        new_array.sort(compare);
+
+        // get first 3 (biggest) elements of sorted (desc) array
+        var extremes =  Array.prototype.slice.call(new_array, 0, 3);
+
+        // append in element
+        extremes.forEach(function(v){
+            $('.extremes_' + type).append('<span class="extreme_scores" style="background-color:'+ products[type].color +'">' + v.extreme_title + '</span>')
+            $('.extremes_' + type + '_compact').append('<li class="extreme_scores">' + v.extreme_title + '</li>')
+        });
 
     }
 
-    // 4 BMs, 4 hashes
-    var hashes = [uniqueId(), uniqueId(), uniqueId(), uniqueId()]
 
-    function generate_dimension_html( products, hashes ){
+
+
+    function generate_dimension_html( products ){
         var html = '';
         $.each(products, function(index, product){
+            html += product_bar_html(product);
             html += '<div class="product pLR0">';
             $.each(product.dimensions, function(dim_index, dim){
-                html += '<div class="row row_dimension mLR0" id="dimension_'+ index +'">' +
-                            '<div class="col-md-2">' +
+                html += '<div class="row row_dimension mLR0" id="dimension_'+ index +'_' + dim_index +'">' +
+                            '<div class="col-md-2 text-right">' +
                                 '<div class="dimension_title">' + dim.title_0  + '</div>' +
                                 '<div class="dimension_text">' + dim.text_0 + '</div>' +
                             '</div>' +
-                            '<div class="col-md-8">' +
+                            '<div class="col-md-8 bg_gray pLR0">' +
                                 '<div id="'+ index + '_' + dim_index + '_0"  class="benchmarks bg_color_0"></div>' +
                                 '<div id="'+ index + '_' + dim_index + '_1"  class="benchmarks bg_color_1"></div>' +
                                 '<div id="'+ index +'_' + dim_index + '"  class="indicators"></div>' +
                                 '<div id="'+ index + '_' + dim_index + '_2"  class="benchmarks bg_color_2"></div>' +
                                 '<div id="'+ index + '_' + dim_index + '_3"  class="benchmarks bg_color_3"></div>' +
+                                '<div class="col-xs-4 bm_bg"></div>' +
+                                '<div class="col-xs-4 bm_bg"></div>' +
+                                '<div class="col-xs-4 bm_bg"></div>' +
+
                             '</div>' +
-                            '<div class="col-md-2 text-right">' +
+                            '<div class="col-md-2 text-left">' +
                                 '<div class="dimension_title">' + dim.title_1  + '</div>' +
                                  '<div class="dimension_text">' + dim.text_1 + '</div>' +
                             '</div>' +
@@ -300,33 +252,12 @@
     }
 
 
-    function render_bms(hashes, bm_sequences){
-
-        for(var key in bm_sequences){
-
-
-            var seq_array = bm_string_convert(bm_sequences[key])
-
-
-            for(var i = 0; i < products[key].dimension_number; i++){
-                hashes.forEach(function(value, index){
-
-
-                    var bm_id = document.getElementById('bm_' + value + '_' + index)
-
-
-                })
-            }
-        }
-    }
-
 
 
     // selector: `product`_`dimension_index`_`hash[index]`
     // e.g "wpp_6_3f15"
     function generate_dimension(products, indicators, benchmarks){
-
-        $('#summary_view').append(generate_dimension_html(products, hashes))
+        $('#summary_view').append(generate_dimension_html(products))
 
         // default BMs and
         $('.benchmarks').each(function(index, value){
@@ -339,6 +270,7 @@
                    }
                });
            });
+        $('.benchmarks').attr('disabled', true);
 
         // render BMs
         var i = 0;
@@ -353,15 +285,17 @@
         // render indicators
         for(var key in indicators){
             var j = 0;
-            console.log(key);
-            console.log(indicators[key]);
             var ind_array = indicator_string_convert(indicators[key])
-            console.log(ind_array);
+            var product_names = convert_dimension_titles(products[key])
+
+            get_extremes(ind_array, product_names, key)
+
             ind_array.forEach(function(v, i){
-                console.log(v);
-                console.log(i);
+
+
                 var ind_id = document.getElementById(key + '_' + j)
-                console.log(key + '_' + j, ind_id);
+                ind_id.setAttribute('disabled', true)
+
                 noUiSlider.create(ind_id, {
                     start: [v],
                     connect: true,
@@ -371,97 +305,6 @@
                 j++
             })
         }
-
-        // render indicators
-       /* dim_uid_array.forEach( function(element, index) {
-            var ind = document.getElementById('ind_' + element)
-
-            noUiSlider.create(ind, {
-                start: [50],
-                connect: true,
-                tooltips: false,
-                range: six_dim_sliders
-            })
-        });*/
-
-        //var  j = 0;
-
-       /* $.each(products, function(index, product){
-            var bm_sequences = bm_string_convert(benchmarks[j][index]),
-                dimensions = product.dimensions;
-
-           // hashes.forEach(function (value, ind) {
-
-
-           // $.each(dimensions, function(dim_index, dim_data){
-            $.each(bm_sequences, function(dim_index, dim_data){
-            var i = 0;
-
-                var bm_id = document.getElementById(index + '_' + dim_index + '_' +  hashes[i])
-
-
-                noUiSlider.create(bm_id, {
-                    start: [bm_sequences[dim_index][0], bm_sequences[dim_index][1]],
-                    connect: true,
-                    tooltips: false,
-                    range: six_dim_sliders
-                })
-            i++;
-            })*/
-
-            //})
-           /* j++
-
-        })*/
-
-
-        // selector: `product`_`dimension_index`_`hash[index]`
-        // e.g "wpp_6_3f15"
-
-
-        var bm_lengh = benchmarks.length;
-        /*$.each(benchmarks, function(index, sequences){
-            var bm_iterator = 0;
-
-
-
-            $.each(sequences, function(product_id, seq){
-
-
-
-                var seq_array = bm_string_convert(seq);
-
-
-                $.each(seq_array, function(seq_index, array){
-
-
-                    var bm_id = document.getElementById(product_id + '_' + seq_index + '_' + hashes[bm_iterator] + '_' + bm_iterator )
-
-
-                    if(bm_iterator === bm_lengh){
-                        return;
-                    }
-
-                    noUiSlider.create(bm_id, {
-                        start: [seq_array[seq_index][0], seq_array[seq_index][1]],
-                        connect: true,
-                        tooltips: false,
-                        range: six_dim_sliders
-                    })
-                    bm_iterator++;
-                });
-
-            })
-        })*/
-
-
-
-        //$('#summary_view').append(html);
-
-
-
-
-
     }
 
     // test obj indicators
@@ -495,11 +338,7 @@
         }
     ]
 
-    //render_bms(hashes, bms)
-
-
-
-
+    // init
     generate_dimension(products, indicators, bms)
 
 })();
