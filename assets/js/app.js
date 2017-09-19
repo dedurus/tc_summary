@@ -90,7 +90,7 @@
                             '</div>' +
 
                             '<div class="col-xs-2">' +
-                                'kokok' +
+
                             '</div>' +
                         '</div>' +
                     '<div class="row  mLR0 pLR0">' +
@@ -175,16 +175,21 @@ console.log(seq_names[type  + '_extreme_' + i]);
 
         // get first 3 (biggest) elements of sorted (desc) array
         var extremes =  Array.prototype.slice.call(new_array, 0, 3);
-
+        $('.extremes_' + type).append('<i class="fa fa-info-circle has-popover" data-toggle="popover"  data-content="These are the most extreme scores from the personality"></i>');
         // append in element
         extremes.forEach(function(v){
             $('.extremes_' + type).append('<span class="extreme_scores" style="background-color:'+ products[type].color +'">' + v.extreme_title + '</span>')
-            $('.extremes_' + type + '_compact').append('<li class="extreme_scores">' + v.extreme_title + '</li>')
+            //$('.extremes_' + type + '_compact').append('<li class="extreme_scores">' + v.extreme_title + '</li>')
         });
 
     }
 
-
+    // extreme icons popover
+    $('body').popover({
+      selector: '.has-popover',
+      trigger:'hover',
+      placement: 'auto'
+    });
 
 
     function generate_dimension_html( products ){
@@ -193,12 +198,19 @@ console.log(seq_names[type  + '_extreme_' + i]);
             html += product_bar_html(product);
             html += '<div class="product pLR0">';
             $.each(product.dimensions, function(dim_index, dim){
-                html += '<div class="row row_dimension mLR0" id="dimension_'+ index +'_' + dim_index +'">' +
-                            '<div class="col-md-2 text-right">' +
+                var btn = '<div class="btn-group dimensions_buttons" role="group">' +
+                                '<button id="dimension_'+ index +'_' + dim_index +'_button" type="button" class="btn btn-icon btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-cog"></i></button>' +
+                                '<ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">' +
+                                    '<li><a href="#">Dimension Details</a></li>' +
+                                    '<li><a href="#">Full Details</a></li>' +
+                                '</ul>' +
+                            '</div>';
+                html += '<div class="row row_dimension mLR0 relative" id="dimension_'+ index +'_' + dim_index +'">' +
+                            '<div class="col-xs-2 text-right">' +
                                 '<div class="dimension_title">' + dim.title_0  + '</div>' +
-                                '<div class="dimension_text">' + dim.text_0 + '</div>' +
+                                '<div class="dimension_text hidden-xs hidden-sm">' + dim.text_0 + '</div>' +
                             '</div>' +
-                            '<div class="col-md-8 bg_gray pLR0">' +
+                            '<div class="col-xs-8 bg_gray pLR0">' +
                                 '<div id="'+ index + '_' + dim_index + '_0"  class="benchmarks bg_color_0"></div>' +
                                 '<div id="'+ index + '_' + dim_index + '_1"  class="benchmarks bg_color_1"></div>' +
                                 '<div id="'+ index +'_' + dim_index + '"  class="indicators"></div>' +
@@ -209,10 +221,11 @@ console.log(seq_names[type  + '_extreme_' + i]);
                                 '<div class="col-xs-4 bm_bg"></div>' +
 
                             '</div>' +
-                            '<div class="col-md-2 text-left">' +
+                            '<div class="col-xs-2 text-left">' +
                                 '<div class="dimension_title">' + dim.title_1  + '</div>' +
-                                 '<div class="dimension_text">' + dim.text_1 + '</div>' +
+                                 '<div class="dimension_text hidden-xs hidden-sm">' + dim.text_1 + '</div>' +
                             '</div>' +
+                                  btn +
                         '</div>';
 
             })
@@ -245,6 +258,7 @@ console.log(seq_names[type  + '_extreme_' + i]);
             }*/
 
             $.each(seq_array, function(index, val){
+                console.log(dimension + '_' + index + '_' + dimension_index);
                 var current_slider = document.getElementById(dimension + '_' + index + '_' + dimension_index);
                 current_slider.noUiSlider.set(val);
                 i++;
@@ -275,7 +289,11 @@ console.log(seq_names[type  + '_extreme_' + i]);
         // render BMs
         var i = 0;
         for(var key in benchmarks){
+            console.log(benchmarks[key]);
             $.each(benchmarks[key], function(prod_id, prod_seq){
+                console.log(prod_id);
+                console.log(prod_seq);
+                console.log('INDEX: ', i);
                 draw_benchmark(prod_seq, prod_id, i, 'tralala')
             })
 
@@ -307,11 +325,27 @@ console.log(seq_names[type  + '_extreme_' + i]);
         }
     }
 
+
+    // Benchmarks window
+    var demoSetBody = $('#demo-set-body'), demoSetBtn = $('#demo-set-btn');
+    // show on page load
+    demoSetBody.collapse('show')
+
+    $('#demo-btn-close-settings').on('click', function (e) {
+        if (demoSetBody.hasClass('in')) {
+            console.log($(this));
+            console.log(demoSetBody);
+            demoSetBody.collapse('hide')
+        }
+        //demoSetBtn.trigger('click')
+    });
+
     // test obj indicators
     var indicators = {
             sq: 's908070605040',
             wpp: 'w10304050607020',
-            wva: 'v506070809010'
+            wva: 'v506070809010',
+            dsq: 'd203040506070',
         }
 
     // test BM obj
@@ -324,21 +358,71 @@ console.log(seq_names[type  + '_extreme_' + i]);
         {
             //sq: 'S559950992599359935992599',
             wpp: 'W1590509940992080209955992080',
-            wva: 'V153915991599159915991579'
+            wva: 'V153915991599159915991579',
+            dsq: 'D153915991599159915991579'
         },
         {
             sq: 'S559950992599359935992599',
             wpp: 'W4570509940992080209955993080',
-            wva: 'V658915991599159915991569'
+            //wva: 'V658915991599159915991569',
+            dsq: 'D153915991599159915991579'
         },
         {
             sq: 'S152940596579359935992599',
             wpp: 'W0570509940992080209955993080',
-            wva: 'V018915991599159915991569'
+            wva: 'V018915991599159915991569',
+            dsq: 'D103020405060708090991545'
         }
     ]
 
     // init
     generate_dimension(products, indicators, bms)
+
+
+    // demo gauges
+    var opts = {
+            lines: 10, // The number of lines to draw
+            angle: 0, // The length of each line
+            lineWidth: 0.41, // The line thickness
+            pointer: {
+                length: 0.75, // The radius of the inner circle
+                strokeWidth: 0.035, // The rotation offset
+                color: 'rgba(0, 0, 0, 0.38)' // Fill color
+            },
+            limitMax: 'true', // If true, the pointer will not go past the end of the gauge
+            colorStart: '#ccc', // Colors
+            colorStop: '#fff', // just experiment with them
+            strokeColor: '#8d8d8d', // to see which ones work best for you
+            generateGradient: true
+        };
+
+
+        var target_1 = document.getElementById('demo-gauge-1'); // your canvas element
+        var target_2 = document.getElementById('demo-gauge-2'); // your canvas element
+        var target_3 = document.getElementById('demo-gauge-3'); // your canvas element
+        var target_4 = document.getElementById('demo-gauge-4'); // your canvas element
+        var gauge_1 = new Gauge(target_1).setOptions(opts); // create sexy gauge!
+        var gauge_2 = new Gauge(target_2).setOptions(opts); // create sexy gauge!
+        var gauge_3 = new Gauge(target_3).setOptions(opts); // create sexy gauge!
+        var gauge_4 = new Gauge(target_4).setOptions(opts); // create sexy gauge!
+        gauge_1.maxValue = 100; // set max gauge value
+        gauge_1.animationSpeed = 32; // set animation speed (32 is default value)
+        gauge_1.set(57); // set actual value
+        gauge_1.setTextField(document.getElementById("demo-gauge-text-1"));
+
+        gauge_2.maxValue = 100; // set max gauge value
+        gauge_2.animationSpeed = 32; // set animation speed (32 is default value)
+        gauge_2.set(97); // set actual value
+        gauge_2.setTextField(document.getElementById("demo-gauge-text-2"));
+
+        gauge_3.maxValue = 100; // set max gauge value
+        gauge_3.animationSpeed = 32; // set animation speed (32 is default value)
+        gauge_3.set(77); // set actual value
+        gauge_3.setTextField(document.getElementById("demo-gauge-text-3"));
+
+        gauge_4.maxValue = 100; // set max gauge value
+        gauge_4.animationSpeed = 32; // set animation speed (32 is default value)
+        gauge_4.set(37); // set actual value
+        gauge_4.setTextField(document.getElementById("demo-gauge-text-4"));
 
 })();
