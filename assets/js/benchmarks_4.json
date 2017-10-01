@@ -1,0 +1,52 @@
+[
+  {
+    "Name": "Accounting and Finance",
+    "CompanyId": -1,
+    "BenchmarkId": 5,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "",
+      "wpp": "W1580359515801065759910754099",
+      "wva": "V359935992599409925994099",
+      "dsq": "D359935992599409925994099"
+    }
+  },
+  {
+    "Name": "Administration",
+    "CompanyId": -1,
+    "BenchmarkId": 6,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "",
+      "wpp": "W6099609965994080559530854090",
+      "wva": "V359935992599409925994099"
+    }
+  },
+  {
+    "Name": "Carpenter",
+    "CompanyId": -1,
+    "BenchmarkId": 7,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S559950992599359935992599",
+      "wpp": "W1590509940992080209955993090",
+      "wva": "V259940992599259925993099"
+    }
+  },
+  {
+    "Name": "CEO",
+    "CompanyId": -1,
+    "BenchmarkId": 8,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "",
+      "wpp": "W6099157550992086106075998599",
+      "wva": "V359935992599409925994199",
+      "dsq": "D609915755099208610607599"
+    }
+  }
+]

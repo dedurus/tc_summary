@@ -8,6 +8,7 @@ var products = {
         id: 'sq',
         name: 'Safety Quotient',
         color: '#1b9c6a',
+        image: 'img/sq.png',
         dimension_number: 6,
         dimensions: [
             {
@@ -53,6 +54,7 @@ var products = {
         id: 'wpp',
         name: 'Workstyle',
         color: '#327bbd',
+        image: 'img/wpp.png',
         dimension_number: 7,
         dimensions: [
             {
@@ -104,6 +106,7 @@ var products = {
         id: 'wva',
         name: 'Work Values',
         color: '#e75c24',
+        image: 'img/wva.png',
         dimension_number: 6,
         dimensions: [
             {
@@ -149,6 +152,7 @@ var products = {
         id: 'dsq',
         name: 'Driver safety',
         color: '#e33244',
+        image: 'img/dsq.png',
         dimension_number: 6,
         dimensions: [
             {

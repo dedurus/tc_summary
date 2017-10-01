@@ -1,0 +1,1521 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"added",
+				"added_groups"
+			],
+			[
+				"form",
+				"form-control"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"char",
+				"charAt\t( pos: int ): string String"
+			],
+			[
+				"nega",
+				"negative_points"
+			],
+			[
+				"coll",
+				"collapse"
+			],
+			[
+				"demoSe",
+				"demoSetBody"
+			],
+			[
+				"userDe",
+				"userDefs"
+			],
+			[
+				"spl",
+				"split\t( separator: string, limit: int ): string String"
+			],
+			[
+				"cehck",
+				"checkbox"
+			],
+			[
+				"add_new",
+				"add_new_patron"
+			],
+			[
+				"add_pa",
+				"add_patron_data"
+			],
+			[
+				"popula",
+				"populate_add_form"
+			],
+			[
+				"conver",
+				"converted_data"
+			],
+			[
+				"conve",
+				"converted_data"
+			],
+			[
+				"navbar-fi",
+				"navbar-fixed-bottom"
+			],
+			[
+				"ii",
+				"iife\timmediately-invoked function expression"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"tit",
+				"titles"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"indica",
+				"indicators"
+			],
+			[
+				"indi",
+				"indicator_string_convert"
+			],
+			[
+				"indicatos",
+				"indicators"
+			],
+			[
+				"becha",
+				"benchmarks"
+			],
+			[
+				"produc",
+				"product_id"
+			],
+			[
+				"dim_",
+				"dim_index"
+			],
+			[
+				"bm",
+				"bm_id"
+			],
+			[
+				"generate_d",
+				"generate_dimension_html"
+			],
+			[
+				"seq",
+				"seq_array"
+			],
+			[
+				"noUI",
+				"noUiSlider.create"
+			],
+			[
+				"bm_h",
+				"bm_hash_id"
+			],
+			[
+				"product",
+				"product_bm"
+			],
+			[
+				"prod",
+				"product_bm"
+			],
+			[
+				"bmui",
+				"bm_uid_array"
+			],
+			[
+				"normali",
+				"normalized_obj"
+			],
+			[
+				"b_ui",
+				"bm_uid_array"
+			],
+			[
+				"bm_",
+				"bm_ranges"
+			],
+			[
+				"bm_uid",
+				"bm_uid_array"
+			],
+			[
+				"bm_ui",
+				"bm_uid_array"
+			],
+			[
+				"uid",
+				"uid_array"
+			],
+			[
+				"getel",
+				"getElementById\t( elementId: DOMString ): Element Document"
+			],
+			[
+				"doc",
+				"document\t: Document Window"
+			],
+			[
+				"getELe",
+				"getElementById\t( elementId: DOMString ): Element Document"
+			],
+			[
+				"created",
+				"created_el"
+			],
+			[
+				"products",
+				"products_array"
+			],
+			[
+				"setTim",
+				"setTimeout\t( handler: any, timeout?: long, arguments_..: any ): long Window"
+			],
+			[
+				"indicator",
+				"indicator_index"
+			],
+			[
+				"inli",
+				"inline"
+			],
+			[
+				"users_",
+				"users_placeholder"
+			],
+			[
+				"valu",
+				"value"
+			],
+			[
+				"uerDe",
+				"userDef"
+			],
+			[
+				"columns_",
+				"columns_vis_btns"
+			],
+			[
+				"config",
+				"cache_config"
+			],
+			[
+				"initial",
+				"initial_load"
+			],
+			[
+				"given",
+				"givenName"
+			],
+			[
+				"user",
+				"user_details"
+			],
+			[
+				"date",
+				"date_format"
+			],
+			[
+				"postC",
+				"postalCode"
+			],
+			[
+				"table",
+				"table-cell"
+			],
+			[
+				"inl",
+				"inline"
+			],
+			[
+				"box-",
+				"box-shadow"
+			],
+			[
+				"availa",
+				"available_products"
+			],
+			[
+				"avail",
+				"available_products"
+			],
+			[
+				"li",
+				"link\tTag"
+			],
+			[
+				"poin",
+				"point"
+			],
+			[
+				"settime",
+				"setTimeout\t( handler: any, timeout?: long, arguments_..: any ): long Window"
+			],
+			[
+				"border-bott",
+				"border-bottom-color"
+			],
+			[
+				"opene",
+				"opened_row"
+			],
+			[
+				"toggle",
+				"toggleClass\t( className: String ): jQuery jQuery - Attributes | Manipulation > Class Attribute | CSS"
+			],
+			[
+				"sq_ta",
+				"sq_tab_link"
+			],
+			[
+				"colla",
+				"collapsed\t: boolean Range"
+			],
+			[
+				"ren",
+				"transparent"
+			],
+			[
+				"ph",
+				"phoneMobile"
+			],
+			[
+				"patron",
+				"patron_list"
+			],
+			[
+				"sera",
+				"searchable"
+			],
+			[
+				"seacr",
+				"searchable"
+			],
+			[
+				"sear",
+				"searchable"
+			],
+			[
+				"patro",
+				"patron_list"
+			],
+			[
+				"patr",
+				"patron_list"
+			],
+			[
+				"filters",
+				"filters"
+			],
+			[
+				"search_",
+				"search_timeout"
+			],
+			[
+				"checked",
+				"checked_item"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"JSON",
+				"JSON_parse\t( json: string ): any JSON"
+			],
+			[
+				"row",
+				"rowSelection"
+			],
+			[
+				"asp",
+				"aspx"
+			],
+			[
+				"P",
+				"Products"
+			],
+			[
+				"disa",
+				"disabled"
+			],
+			[
+				"dis",
+				"disabled\t(): Boolean jQuery - Callbacks Object"
+			],
+			[
+				"searc",
+				"search_string"
+			],
+			[
+				"col-",
+				"col-md-3"
+			],
+			[
+				"preve",
+				"preventDefault\t(): void Event"
+			],
+			[
+				"Gr",
+				"GroupCodes"
+			],
+			[
+				"test_daa",
+				"test_data_2"
+			],
+			[
+				"test_d",
+				"test_data_2"
+			],
+			[
+				"input",
+				"input_from"
+			],
+			[
+				"fet",
+				"fetch_dateOptions"
+			],
+			[
+				"col",
+				"col-md-5"
+			],
+			[
+				"payment",
+				"payment_types"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"whi",
+				"whiteCo"
+			],
+			[
+				"transla",
+				"translateY"
+			],
+			[
+				"getElem",
+				"getElementById\t( elementId: DOMString ): Element Document"
+			],
+			[
+				"ques",
+				"querySelectorAll\t( selectors: DOMString ): NodeList Document"
+			],
+			[
+				"red",
+				"red_lines"
+			],
+			[
+				"getEleme",
+				"getElementsByTagName\t( localName: DOMString ): HTMLCollection Document"
+			],
+			[
+				"bench_",
+				"bench_company_id"
+			],
+			[
+				"mT",
+				"mT10"
+			],
+			[
+				"mB",
+				"mB20"
+			],
+			[
+				"JS",
+				"JSON_parse\t( json: string ): any JSON"
+			],
+			[
+				"mt",
+				"mT20"
+			],
+			[
+				"tran",
+				"transition"
+			],
+			[
+				"onSc",
+				"onscroll\t: EventHandler Window"
+			],
+			[
+				"width",
+				"width\t(): Number jQuery - CSS | Dimensions | Manipulation > Style Properties"
+			],
+			[
+				"compani",
+				"company_id"
+			],
+			[
+				"comp",
+				"comparePoint\t( node: Node, offset: unsigned long ): short Range"
+			],
+			[
+				"job",
+				"job_title_display"
+			],
+			[
+				"wva_val",
+				"wva_val_code"
+			],
+			[
+				"wpp_va",
+				"wpp_val_code"
+			],
+			[
+				"sq_va",
+				"sq_val_code"
+			],
+			[
+				"companies",
+				"companies_rendered"
+			],
+			[
+				"wva",
+				"wva_hidden"
+			],
+			[
+				"max",
+				"maxlength\tAttr"
+			],
+			[
+				"bench",
+				"bench_name"
+			],
+			[
+				"copm",
+				"company"
+			],
+			[
+				"setTi",
+				"setTimeout\t( handler: any, timeout?: long, arguments_..: any ): long Window"
+			],
+			[
+				"Comp",
+				"CompanyId"
+			],
+			[
+				"produ",
+				"product_name"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 13869,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/js/app.js",
+			"settings":
+			{
+				"buffer_size": 28160,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/oDesk/SurPass/Nifty v2.7/Nifty v2.7/demo/js/demo/ui-buttons.js",
+			"settings":
+			{
+				"buffer_size": 797,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "assets/js/benchmarks.json",
+			"settings":
+			{
+				"buffer_size": 11636,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/css/app.css",
+			"settings":
+			{
+				"buffer_size": 27710,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "pack",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"jspre",
+				"Preferences: JsPrettier Settings - Default"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Gitsa",
+				"GitSavvy: help"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: box",
+				"Snippet: box-shadow"
+			],
+			[
+				"Snippet: ",
+				"Snippet: background"
+			],
+			[
+				"PackageResourceViewer",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"col",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"form",
+				"CodeFormatter: Format Code"
+			]
+		],
+		"width": 538.0
+	},
+	"console":
+	{
+		"height": 134.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/xampp/htdocs/liz_summary_redesign",
+		"/D/xampp/htdocs/liz_summary_redesign/assets",
+		"/D/xampp/htdocs/liz_summary_redesign/assets/css",
+		"/D/xampp/htdocs/liz_summary_redesign/assets/js"
+	],
+	"file_history":
+	[
+		"/C/Users/pc/AppData/Roaming/Sublime Text 3/Packages/WakaTime/WakaTime.sublime-settings",
+		"/D/xampp/htdocs/liz_summary_redesign/assets/js/products.js",
+		"/D/Andreas/Nenad  baza",
+		"/D/Andreas/AVADA/e2therm(1)/e2therm/wp-content/uploads/fusion-styles/fusion-16.css",
+		"/D/Andreas/AVADA/e2therm(2).sql",
+		"/C/Users/pc/Desktop/UpWork Decline.txt",
+		"/D/xampp/htdocs/surpass_update/css/app_BACK_27.09_2222.css",
+		"/D/xampp/htdocs/surpass_update/js/nanoScroller.js",
+		"/D/xampp/htdocs/surpass_update/css/nanoscroller.css",
+		"/D/xampp/htdocs/surpass_update/js/app.js",
+		"/D/xampp/htdocs/babel_2/package.json",
+		"/D/oDesk/SurPass/Nifty v2.7/Nifty v2.7/demo/plugins/nestable-list/jquery.nestable.js",
+		"/C/Users/pc/Desktop/Nestable test/index.html",
+		"/D/xampp/htdocs/babel_2/.babelrc",
+		"/D/xampp/htdocs/vue-cli-webpack/package.json",
+		"/D/xampp/htdocs/babel_2/app.js",
+		"/D/xampp/htdocs/babel_2/package-lock.json",
+		"/D/xampp/htdocs/liz_summary_redesign/assets/js/benchmarks.json",
+		"/D/oDesk/SurPass/DT DL/DataTables-1.10.15/DataTables-1.10.15/extensions/Buttons/js/buttons.print.js",
+		"/D/Andreas/WP Nenad/e2therm/e2therm/wp-config.php",
+		"/D/Andreas/novazora_nenadG smenet.sql",
+		"/D/xampp/htdocs/gulp-svgstore/test/inline-svg.html",
+		"/D/xampp/htdocs/gulp-svgstore/test/src/inline-svg.html",
+		"/D/oDesk/SurPass/Nifty v2.7/Nifty v2.7/get-started/css-preprocessors/scss/nifty/_helper-classes.scss",
+		"/D/BACK/PUSTEC/db",
+		"/D/xampp/htdocs/gulp-svg-sprite/gulpfile.js",
+		"/D/xampp/htdocs/gulp-svg-sprite/out16/css/svg/sprite.css-c3249e00.svg",
+		"/C/Users/pc/AppData/Local/Temp/Rar$DIa0.341/svgxuse.js",
+		"/C/Users/pc/AppData/Local/Temp/Rar$DIa0.574/symbol-defs.svg",
+		"/C/Users/pc/AppData/Local/Temp/Rar$DIa0.505/Read Me.txt",
+		"/C/Users/pc/AppData/Local/Temp/Rar$DIa0.715/demo.js",
+		"/D/xampp/htdocs/gulp-svg-sprite/out16_32/css/sprite.css",
+		"/D/xampp/htdocs/gulp-svg-sprite/out16/css/sprite.css",
+		"/D/oDesk/SurPass/Nifty v2.7/Nifty v2.7/demo/plugins/skycons/README.txt",
+		"/D/xampp/htdocs/liz_summary_compact/index.html",
+		"/D/xampp/htdocs/liz_summary_compact/assets/json/codes.json",
+		"/D/xampp/htdocs/liz_slideres_api_imp/index.html",
+		"/D/xampp/htdocs/surpass_update/fonts/glyphicons-halflings-regular.woff",
+		"/D/xampp/htdocs/surpass_update/plugins/dropzone/dropzone.min.css",
+		"/C/Users/pc/Desktop/WhatsUp SVG Icons.svg",
+		"/D/oDesk/SurPass/Nifty v2.7/Nifty v2.7/demo/css/demo/nifty-demo.css",
+		"/D/xampp/htdocs/liz_summary_redesign/assets/js/gauge.js",
+		"/D/oDesk/SurPass/Nifty v2.7/Nifty v2.7/demo/plugins/select2/js/select2.js",
+		"/D/xampp/htdocs/surpass_update/plugins/bootstrap-validator/bootstrapValidator.js",
+		"/D/xampp/htdocs/liz_slideres_api_imp/assets/js/all.js",
+		"/D/xampp/htdocs/liz_slideres_api_imp/assets/css/ie.css",
+		"/D/xampp/htdocs/liz_slideres_api_imp/assets/css/all.css",
+		"/D/CSS/BOOTS/bootstrap-3.3.7/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css",
+		"/D/oDesk/LIZ/JABC API/ASP templates/15.09/assets/js/ie.css",
+		"/D/oDesk/LIZ/JABC API/ASP templates/15.09/ReportBenchmark.Master",
+		"/C/Users/pc/AppData/Local/Temp/Rar$DIa0.004/ie.css",
+		"/D/oDesk/LIZ/JABC API/ASP templates/15.09/assets/css/ie.css",
+		"/D/oDesk/LIZ/JABC API/ASP templates/15.09/ReportBenchmark.aspx",
+		"/D/xampp/htdocs/surpass_update/plugins/dropzone/basic.min.css",
+		"/D/CSS/BOOTS/bootstrap-3.3.7/docs/examples/sticky-footer-navbar/index.html",
+		"/D/oDesk/SurPass/Nifty v2.7/Nifty v2.7/demo/forms-file-upload.html",
+		"/D/oDesk/LIZ/JABC API/ASP templates/27.07 edit/Menu Commented/Report Page/ReportPage.Master",
+		"/D/oDesk/SurPass/dropzone.js",
+		"/D/oDesk/SurPass/dropzone-master/dropzone-master/index.js",
+		"/D/xampp/htdocs/liz_summary_redesign/assets/js/app.js",
+		"/D/xampp/htdocs/liz_summary_redesign/index.html",
+		"/D/xampp/htdocs/liz_summary_compact/assets/js/main.js",
+		"/D/xampp/htdocs/liz_summary_redesign/assets/css/app.css",
+		"/D/oDesk/LIZ/JABC API/ASP templates/27.07 edit/Menu Commented/ReportPage.Master",
+		"/D/oDesk/LIZ/JABC API/ASP templates/27.07 edit/Menu Commented/ReportBenchmark.Master",
+		"/D/oDesk/SurPass/Nifty v2.7/Nifty v2.7/demo/js/demo/nifty-demo.js",
+		"/D/oDesk/LIZ/JABC API/ASP templates/15.09/assets/js/all.js.txt",
+		"/D/xampp/htdocs/liz_summary_compact/assets/css/styles.css",
+		"/D/oDesk/SurPass/Nifty v2.7/Nifty v2.7/demo/css/nifty.css",
+		"/D/oDesk/SurPass/Nifty v2.6.1/Nifty v2.6.1/demo/plugins/dropzone/dropzone.min.js",
+		"/D/oDesk/SurPass/Nifty v2.6.1/Nifty v2.6.1/demo/plugins/dropzone/dropzone.js",
+		"/D/oDesk/LIZ/JABC API/ASP templates/27.07 edit/Menu Commented/Report Page/Report Page/assets/js/analytics.js.txt",
+		"/C/Users/pc/AppData/Roaming/Sublime Text 3/Packages/JsPrettier/JsPrettier.sublime-settings",
+		"/D/xampp/htdocs/liz_summary/assets/js/nouislider.js",
+		"/C/Users/pc/Desktop/HTML Template Tag.html",
+		"/D/oDesk/SurPass/Nifty v2.7/Nifty v2.7/demo/js/nifty.js",
+		"/D/oDesk/SurPass/Nifty v2.7/Nifty v2.7/demo/js/demo/widgets.js",
+		"/D/HAKINGGGGGGGG.txt",
+		"/D/xampp/htdocs/vue-cli/src/components/Slider.vue",
+		"/D/oDesk/SurPass/Nifty v2.7/Nifty v2.7/demo/js/demo/ui-panels.js",
+		"/D/oDesk/SurPass/Nifty v2.7/Nifty v2.7/demo/js/demo/ui-alerts.js",
+		"/D/xampp/htdocs/surpass_update/js/all.js",
+		"/D/xampp/htdocs/vue-cli/index.html",
+		"/D/xampp/htdocs/vue-cli/src/main.js",
+		"/D/xampp/htdocs/vue-cli/src/components/Benchmark.vue",
+		"/D/xampp/htdocs/vue-cli/src/App.vue",
+		"/D/xampp/htdocs/vue-cli/src/components/SliderMine.vue",
+		"/D/xampp/htdocs/vue-cli/package.json",
+		"/D/xampp/htdocs/vue-cli/config/index.js",
+		"/D/xampp/htdocs/vue-cli/build/webpack.dev.conf.js",
+		"/D/xampp/htdocs/vue-cli/dist/index.html",
+		"/D/xampp/htdocs/vue-cli/build/webpack.base.conf.js",
+		"/D/xampp/htdocs/vue-cli/dist/static/css/app.88174408fc08311ee8fa1ec69b16ae8c.css",
+		"/D/xampp/htdocs/vue-cli/node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js",
+		"/D/xampp/htdocs/vue-cli/node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js",
+		"/D/xampp/htdocs/vue-cli/src/components/Hello.vue",
+		"/D/xampp/htdocs/vue-cli/.bootstraprc",
+		"/D/xampp/htdocs/vue-cli/config/prod.env.js",
+		"/D/xampp/htdocs/vue-cli/config/dev.env.js",
+		"/D/xampp/htdocs/vue-cli/build/vue-loader.conf.js",
+		"/D/xampp/htdocs/vue-cli/node_modules/bootstrap/dist/js/npm.js",
+		"/D/xampp/htdocs/vue-cli/node_modules/bootstrap/package.json",
+		"/D/xampp/htdocs/vue-cli/node_modules/bootstrap/dist/js/bootstrap.min.js",
+		"/D/xampp/htdocs/liz_summary_compact/assets/js/nouislider.js",
+		"/D/xampp/htdocs/liz_summary_compact/assets/js/nouislider.min.js",
+		"/D/xampp/htdocs/vue-cli/src/assets/css/nouislider.min.css",
+		"/D/xampp/htdocs/vue-cli/node_modules/nouislider/package.json",
+		"/D/xampp/htdocs/vue-cli/.eslintignore",
+		"/D/xampp/htdocs/vue-cli/.eslintrc.js",
+		"/D/xampp/htdocs/surpass_update/surpass-patron.html",
+		"/D/xampp/htdocs/liz_summary_refactor/assets/js/main.js",
+		"/D/xampp/htdocs/vue-cli/.babelrc",
+		"/D/oDesk/LIZ/JABC API/ASP templates/27.07 edit/Menu Commented/assets/js/all.js",
+		"/D/xampp/htdocs/liz_summary_redesign/assets/css/nouislider.css",
+		"/D/xampp/htdocs/liz_summary_compact/Refactor/assets/css/nouislider.css",
+		"/D/xampp/htdocs/liz_summary_compact/Refactor/assets/css/noui_2.css",
+		"/D/xampp/htdocs/liz_summary_redeisgn/assets/js/index.html",
+		"/D/xampp/htdocs/liz_summary_redeisgn/assets/js/jquery.min.js",
+		"/C/Users/pc/Desktop/Cyrillics",
+		"/D/oDesk/SurPass/Nifty v2.7/Nifty v2.7/demo/plugins/dropzone/dropzone.js",
+		"/D/Torrents/Microsoft Office Professional Plus 2016 v16.0.4312.1000 (x86-x64) EN/Activators/4.Windows Loader v2.2.2/Read me.txt",
+		"/D/oDesk/SurPass/Nifty v2.7/Nifty v2.7/demo/plugins/summernote/summernote.js",
+		"/D/oDesk/SurPass/Nifty v2.7/Nifty v2.7/demo/plugins/sparkline/jquery.sparkline.js",
+		"/D/xampp/htdocs/surpass_update/plugins/masked-input/jquery.maskedinput.min.js",
+		"/D/xampp/htdocs/surpass_update/css/demo/nifty-demo-icons.css",
+		"/D/xampp/htdocs/surpass_gulp/css/app.css",
+		"/D/PAJONIR LOZ.txt",
+		"/C/Users/pc/Desktop/TC Log August"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 98.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"generate_dimension(",
+			"draw_benchmark",
+			"generate_dimension_html",
+			"draw_benchmark",
+			"450",
+			"loading",
+			"localhost/e2therm",
+			"localhost",
+			"e2therm/wp-content",
+			"e2therm",
+			"C:/wamp64/www/e2therm",
+			"e2therm",
+			"\\\\wp-content\\\\plugins\\\\",
+			"C:\\\\wamp64\\\\www\\\\e2therm",
+			"e2therm"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"engramweb.com/e2t",
+			"http://engramweb.com/e2t",
+			"/wp-content/plugins/",
+			"http://engraweb.com/e2t"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13869,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12936,
+								12936
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										12939,
+										12940
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/double_quote.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										12924,
+										12925
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Next (SL).tmTheme",
+							"git_savvy.repo_path": "D:\\xampp\\htdocs\\liz_summary_redesign",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3821.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "assets/js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 28160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								70,
+								59
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										28155,
+										28156
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										12,
+										13
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Next (SL).tmTheme",
+							"git_savvy.repo_path": "D:\\xampp\\htdocs\\liz_summary_redesign",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/oDesk/SurPass/Nifty v2.7/Nifty v2.7/demo/js/demo/ui-buttons.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 797,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								753,
+								772
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										771,
+										772
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										763,
+										764
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Next (SL).tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "assets/js/benchmarks.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11636,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								319,
+								319
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										318,
+										319
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/double_quote.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										292,
+										293
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"git_savvy.repo_path": "D:\\xampp\\htdocs\\liz_summary_redesign",
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "assets/css/app.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 27710,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Next (SL).tmTheme",
+							"git_savvy.repo_path": "D:\\xampp\\htdocs\\liz_summary_redesign",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.exec":
+	{
+		"height": 231.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Summary redesign.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 259.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

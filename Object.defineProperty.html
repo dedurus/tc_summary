@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+
+<script>
+
+    'use strict';
+
+
+    var indicators = {  // test obj indicators
+            sq: 's908070605040',
+            wpp: 'w10304050607020',
+            wva: 'v506070809010',
+            //dsq: 'd203040506070',
+        },
+        benchmarks,
+        products,
+        options = {};
+
+    Object.defineProperty(options, 'indicators', {
+        get: function() {
+            return indicators;
+        },
+        set: function(newValue) {
+            indicators = newValue;
+        },
+        enumerable: true,
+        configurable: true,
+    });
+
+    console.log(indicators)
+    console.log('[options.indicators]', options.indicators)
+    for(var key in options.indicators){
+        console.log(key, options.indicators[key]);
+    }
+
+    options.indicators.wva = 'Tralala';
+
+    setTimeout(function(){
+        indicators.sq = 'W50607080909090909090909909';
+        console.log(indicators)
+        console.log('[options.indicators]',  options.indicators);
+        for(var key in options.indicators){
+            console.log(key, options.indicators[key]);
+        }
+    }, 2500)
+
+
+
+
+</script>
+</body>
+</html>

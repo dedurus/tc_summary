@@ -7,10 +7,12 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/nouislider.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/nifty-demo-icons.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/nestable-list.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/app.css">
 
     </head>
@@ -127,7 +129,7 @@
                 <div id="demo-set-alert"></div>
                 <div class="pLR15 bord-btm clearfix bg-dark">
                     <div class="pull-right pT15">
-                        <button id="demo-btn-close-settings" class="btn btn-trans">
+                        <button id="demo-btn-close-settings" class="btn btn-trans"  data-toggle="collapse" data-target="#demo-set-body">
                             <i class="pci-cross pci-circle icon-lg"></i>
                         </button>
                     </div>
@@ -141,314 +143,111 @@
                         </div>
                     </div>
                 </div>
-                <div class="demo-set-content clearfix">
-                    <div class="col-xs-6 col-md-3">
-                        <div class="pad-all">
-                            <p class="text-bold text-uppercase">Products</p>
-                            <p class="text-semibold text-uppercase text-xs text-muted">Some text</p>
-                            <hr class="new-section-xs">
-                            <div class="mar-btm">
-                                <div class="pull-right">
-                                    <input id="demo-box-lay" class="toggle-switch" type="checkbox">
-                                    <label for="demo-box-lay"></label>
+                <form id="presets_form">
+                    <div class="mTB10 clearfix">
+                        <div class="col-xs-12 col-md-4">
+                            <div class="pad-all">
+                                <p class="text-bold text-uppercase">Products</p>
+                                <p class="text-semibold text-uppercase text-xs text-muted">
+                                    Use <span class="info-handle-btn"></span> to reorder products
+                                </p>
+                                <p class="text-semibold text-uppercase text-xs text-muted">
+                                    Use <i class="fa fa-eye eye-info"></i> to control product visibility
+                                </p>
+                                <hr class="new-section-xs">
+
+                                <div class="mar-btm">
+                                    <div class="" id="product_list">
+
+                                    </div>
                                 </div>
-                                Text 1
+
+                                <hr class="new-section-xs bord-no">
+
                             </div>
-                            <div class="mar-btm">
-                                <div class="pull-right">
-                                    <button id="demo-box-img" class="btn btn-sm btn-trans" disabled><i class="pci-hor-dots"></i></button>
+                        </div>
+                        <div class="col-lg-8 pos-rel">
+                            <div class="row">
+                                <div class="col-lg-4 bg-gray-light">
+                                    <div class="pad-all">
+                                        <p class="text-bold text-uppercase">Persons</p>
+                                        <p class="text-semibold text-uppercase text-xs text-muted">Some text</p>
+                                        <hr class="new-section-xs">
+                                        <div class="mar-btm">
+                                            <div class="pull-right">
+                                                <input id="demo-nav-fixed" class="toggle-switch" type="checkbox">
+                                                <label for="demo-nav-fixed"></label>
+                                            </div>
+                                            Option
+                                        </div>
+                                        <div class="mar-btm">
+                                            <div class="pull-right">
+                                                <input id="demo-nav-profile" class="toggle-switch" type="checkbox" checked>
+                                                <label for="demo-nav-profile"></label>
+                                            </div>
+                                            Option <small class="label label-primary">something</small>
+                                        </div>
+                                        <div class="mar-btm">
+                                            <div class="pull-right">
+                                                <input id="demo-nav-shortcut" class="toggle-switch" type="checkbox" checked>
+                                                <label for="demo-nav-shortcut"></label>
+                                            </div>
+                                            Option
+                                        </div>
+                                        <div class="mar-btm">
+                                            <div class="pull-right">
+                                                <input id="demo-nav-coll" class="toggle-switch" type="checkbox">
+                                                <label for="demo-nav-coll"></label>
+                                            </div>
+                                           Option
+                                        </div>
+
+                                        <div class="clearfix">
+                                            <div class="select pad-btm pull-right">
+                                                <select id="demo-nav-offcanvas">
+                                                    <option value="none" selected disabled="disabled">-- Select Person --</option>
+                                                    <option value="push">Person 1</option>
+                                                    <option value="slide">Person 2</option>
+                                                    <option value="reveal">Person 3</option>
+                                                </select>
+                                            </div>
+                                            Option
+                                        </div>
+                                        <hr class="new-section-xs bord-no">
+
+
+                                    </div>
                                 </div>
-                                Text 2
+                                <div class="col-lg-8">
+                                    <div id="demo-theme">
+                                        <p class="text-bold text-uppercase text-left">Benchmarks Library</p>
+                                        <small class="text-semibold text-uppercase text-xs text-muted">Select benchmarks (up to 4)</small>
+                                        <hr class="new-section-xs">
+                                        <div class="clearfix pad-top">
+                                            <div class="demo-theme-btn col-md-12 pad-ver">
+
+                                                <div id="bm_list" class="list-group">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <hr class="new-section-xs bord-no">
-                            <p class="text-semibold text-uppercase text-xs text-muted">Text 3</p>
-                            <hr class="new-section-xs">
-                            <div class="mar-btm">
-                                <div class="pull-right">
-                                    <input id="demo-anim" class="toggle-switch" type="checkbox" checked>
-                                    <label for="demo-anim"></label>
-                                </div>
-                                Some option
-                            </div>
-                            <div class="mar-btm">
-                                <div class="select pull-right">
-                                    <select id="demo-ease">
-                                        <option value="effect" selected>one</option>
-                                        <option value="easeInQuart">two</option>
-                                        <option value="easeOutQuart">three</option>
-                                        <option value="easeInBack">four</option>
-                                        <option value="easeOutBack">five</option>
 
-                                    </select>
-                                </div>
-                                Other option
-                            </div>
-
-                            <hr class="new-section-xs bord-no">
-
-                            <p class="text-semibold text-uppercase text-xs text-muted">Text 4</p>
-                            <hr class="new-section-xs">
-                            <div>
-                                <div class="pull-right">
-                                    <input id="demo-navbar-fixed" class="toggle-switch" type="checkbox">
-                                    <label for="demo-navbar-fixed"></label>
-                                </div>
-                                Option 3
-                            </div>
-
-                            <hr class="new-section-xs bord-no">
-
-                            <p class="text-semibold text-uppercase text-xs text-muted">Text 4</p>
-                            <hr class="new-section-xs">
-                            <!-- <div class="pad-btm">
-                                <div class="pull-right">
-                                    <input id="demo-footer-fixed" class="toggle-switch" type="checkbox">
-                                    <label for="demo-footer-fixed"></label>
-                                </div>
-                                Option 4
-                            </div> -->
                         </div>
                     </div>
-                    <div class="col-lg-9 pos-rel">
-                        <div class="row">
-                            <div class="col-lg-4 bg-gray-light">
-                                <div class="pad-all">
-                                    <p class="text-bold text-uppercase text-main">Persons</p>
-                                    <p class="text-semibold text-uppercase text-xs text-muted">Some text</p>
-                                    <hr class="new-section-xs">
-                                    <div class="mar-btm">
-                                        <div class="pull-right">
-                                            <input id="demo-nav-fixed" class="toggle-switch" type="checkbox">
-                                            <label for="demo-nav-fixed"></label>
-                                        </div>
-                                        Option
-                                    </div>
-                                    <div class="mar-btm">
-                                        <div class="pull-right">
-                                            <input id="demo-nav-profile" class="toggle-switch" type="checkbox" checked>
-                                            <label for="demo-nav-profile"></label>
-                                        </div>
-                                        Option <small class="label label-primary">something</small>
-                                    </div>
-                                    <div class="mar-btm">
-                                        <div class="pull-right">
-                                            <input id="demo-nav-shortcut" class="toggle-switch" type="checkbox" checked>
-                                            <label for="demo-nav-shortcut"></label>
-                                        </div>
-                                        Option
-                                    </div>
-                                    <div class="mar-btm">
-                                        <div class="pull-right">
-                                            <input id="demo-nav-coll" class="toggle-switch" type="checkbox">
-                                            <label for="demo-nav-coll"></label>
-                                        </div>
-                                       Option
-                                    </div>
-
-                                    <div class="clearfix">
-                                        <div class="select pad-btm pull-right">
-                                            <select id="demo-nav-offcanvas">
-                                                <option value="none" selected disabled="disabled">-- Select Person --</option>
-                                                <option value="push">Person 1</option>
-                                                <option value="slide">Person 2</option>
-                                                <option value="reveal">Person 3</option>
-                                            </select>
-                                        </div>
-                                        Option
-                                    </div>
-                                    <hr class="new-section-xs bord-no">
-
-                                    <p class="text-semibold text-uppercase text-xs text-muted">Text</p>
-                                    <hr class="new-section-xs">
-                                    <div class="mar-btm">
-                                        <div class="pull-right">
-                                            <input id="demo-asd-vis" class="toggle-switch" type="checkbox">
-                                            <label for="demo-asd-vis"></label>
-                                        </div>
-                                        Option
-                                    </div>
-                                    <div class="mar-btm">
-                                        <div class="pull-right">
-                                            <input id="demo-asd-fixed" class="toggle-switch" type="checkbox" checked>
-                                            <label for="demo-asd-fixed"></label>
-                                        </div>
-                                        Option
-                                    </div>
-                                    <div class="mar-btm">
-                                        <div class="pull-right">
-                                            <input id="demo-asd-float" class="toggle-switch" type="checkbox" checked>
-                                            <label for="demo-asd-float"></label>
-                                        </div>
-                                        Option <span class="label label-primary">something</span>
-                                    </div>
-                                    <div class="mar-btm">
-                                        <div class="pull-right">
-                                            <input id="demo-asd-align" class="toggle-switch" type="checkbox">
-                                            <label for="demo-asd-align"></label>
-                                        </div>
-                                        Option
-                                    </div>
-                                    <div>
-                                        <div class="pull-right">
-                                            <input id="demo-asd-themes" class="toggle-switch" type="checkbox">
-                                            <label for="demo-asd-themes"></label>
-                                        </div>
-                                        Option
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div id="demo-theme">
-                                    <p class="text-bold text-uppercase text-left">Benchmarks Library</p>
-                                    <hr class="new-section-xs">
-                                    <div class="clearfix">
-                                        <div class="col-md-6">
-                                            <div class="media v-middle">
-                                                <div class="media-left demo-single-theme">
-                                                    <a href="#" class="demo-theme demo-theme-light add-tooltip" data-theme="theme-light" data-type="full" data-title="Light"></a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <p class="text-semibold text-main mar-no text-uppercase text-sm">Benchamrks List</p>
-                                                    <small class="text-muted text-xs">Select benchmarks (up to 4)</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="media v-middle">
-                                                <div class="media-left demo-single-theme">
-                                                    <a href="javascript:void(0)" class="demo-theme demo-theme-dark add-tooltip disabled" data-title="Coming soon"></a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <p class="text-semibold text-main mar-no text-uppercase text-sm">Benchmarks info</p>
-                                                    <small class="text-muted text-xs">Benchmarks Details</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr class="new-section-xs">
-                                    <div class="clearfix pad-top text-center">
-                                        <div class="demo-theme-btn col-md-3 pad-ver">
-                                            <p class="text-semibold text-uppercase text-xs text-muted">Text</p>
-                                            <hr class="new-section-xs">
-                                            <!-- <div class="mar-btm">
-                                                <img src="img/color-schemes-a.png" class="img-responsive">
-                                            </div>
-                                            <div class="demo-justify-theme">
-                                                <a href="#" class="demo-theme demo-theme-gray add-tooltip" data-theme="theme-gray" data-type="a" data-title="(A). Gray"></a>
-                                                <a href="#" class="demo-theme demo-theme-navy add-tooltip" data-theme="theme-navy" data-type="a" data-title="(A). Navy Blue"></a>
-                                                <a href="#" class="demo-theme demo-theme-ocean add-tooltip" data-theme="theme-ocean" data-type="a" data-title="(A). Ocean"></a>
-                                            </div>
-                                            <div class="demo-justify-theme">
-                                                <a href="#" class="demo-theme demo-theme-lime add-tooltip" data-theme="theme-lime" data-type="a" data-title="(A). Lime"></a>
-                                                <a href="#" class="demo-theme demo-theme-purple add-tooltip" data-theme="theme-purple" data-type="a" data-title="(A). Purple"></a>
-                                                <a href="#" class="demo-theme demo-theme-dust add-tooltip" data-theme="theme-dust" data-type="a" data-title="(A). Dust"></a>
-                                            </div>
-                                            <div class="demo-justify-theme">
-                                                <a href="#" class="demo-theme demo-theme-mint add-tooltip" data-theme="theme-mint" data-type="a" data-title="(A). Mint"></a>
-                                                <a href="#" class="demo-theme demo-theme-yellow add-tooltip" data-theme="theme-yellow" data-type="a" data-title="(A). Yellow"></a>
-                                                <a href="#" class="demo-theme demo-theme-well-red add-tooltip" data-theme="theme-well-red" data-type="a" data-title="(A). Well Red"></a>
-                                            </div>
-                                            <div class="demo-justify-theme">
-                                                <a href="#" class="demo-theme demo-theme-coffee add-tooltip" data-theme="theme-coffee" data-type="a" data-title="(A). Coffee"></a>
-                                                <a href="#" class="demo-theme demo-theme-prickly-pear add-tooltip" data-theme="theme-prickly-pear" data-type="a" data-title="(A). Prickly pear"></a>
-                                                <a href="#" class="demo-theme demo-theme-dark add-tooltip" data-theme="theme-dark" data-type="a" data-title="(A). Dark"></a>
-                                            </div> -->
-                                        </div>
-                                        <div class="demo-theme-btn col-md-3 pad-ver">
-                                            <p class="text-semibold text-uppercase text-xs text-muted">Text</p>
-                                            <hr class="new-section-xs">
-                                            <!-- <div class="mar-btm">
-                                                <img src="img/color-schemes-b.png" class="img-responsive">
-                                            </div>
-                                            <div class="demo-justify-theme">
-                                                <a href="#" class="demo-theme demo-theme-gray add-tooltip" data-theme="theme-gray" data-type="b" data-title="(B). Gray"></a>
-                                                <a href="#" class="demo-theme demo-theme-navy add-tooltip" data-theme="theme-navy" data-type="b" data-title="(B). Navy Blue"></a>
-                                                <a href="#" class="demo-theme demo-theme-ocean add-tooltip" data-theme="theme-ocean" data-type="b" data-title="(B). Ocean"></a>
-                                            </div>
-                                            <div class="demo-justify-theme">
-                                                <a href="#" class="demo-theme demo-theme-lime add-tooltip" data-theme="theme-lime" data-type="b" data-title="(B). Lime"></a>
-                                                <a href="#" class="demo-theme demo-theme-purple add-tooltip" data-theme="theme-purple" data-type="b" data-title="(B). Purple"></a>
-                                                <a href="#" class="demo-theme demo-theme-dust add-tooltip" data-theme="theme-dust" data-type="b" data-title="(B). Dust"></a>
-                                            </div>
-                                            <div class="demo-justify-theme">
-                                                <a href="#" class="demo-theme demo-theme-mint add-tooltip" data-theme="theme-mint" data-type="b" data-title="(B). Mint"></a>
-                                                <a href="#" class="demo-theme demo-theme-yellow add-tooltip" data-theme="theme-yellow" data-type="b" data-title="(B). Yellow"></a>
-                                                <a href="#" class="demo-theme demo-theme-well-red add-tooltip" data-theme="theme-well-red" data-type="b" data-title="(B). Well red"></a>
-                                            </div>
-                                            <div class="demo-justify-theme">
-                                                <a href="#" class="demo-theme demo-theme-coffee add-tooltip" data-theme="theme-coffee" data-type="b" data-title="(B). Coofee"></a>
-                                                <a href="#" class="demo-theme demo-theme-prickly-pear add-tooltip" data-theme="theme-prickly-pear" data-type="b" data-title="(B). Prickly pear"></a>
-                                                <a href="#" class="demo-theme demo-theme-dark add-tooltip" data-theme="theme-dark" data-type="b" data-title="(B). Dark"></a>
-                                            </div> -->
-                                        </div>
-                                        <div class="demo-theme-btn col-md-3 pad-ver">
-                                            <p class="text-semibold text-uppercase text-xs text-muted">Text</p>
-                                            <hr class="new-section-xs">
-                                            <!-- <div class="mar-btm">
-                                                <img src="img/color-schemes-c.png" class="img-responsive">
-                                            </div>
-                                            <div class="demo-justify-theme">
-                                                <a href="#" class="demo-theme demo-theme-gray add-tooltip" data-theme="theme-gray" data-type="c" data-title="(C). Gray"></a>
-                                                <a href="#" class="demo-theme demo-theme-navy add-tooltip" data-theme="theme-navy" data-type="c" data-title="(C). Navy Blue"></a>
-                                                <a href="#" class="demo-theme demo-theme-ocean add-tooltip" data-theme="theme-ocean" data-type="c" data-title="(C). Ocean"></a>
-                                            </div>
-                                            <div class="demo-justify-theme">
-                                                <a href="#" class="demo-theme demo-theme-lime add-tooltip" data-theme="theme-lime" data-type="c" data-title="(C). Lime"></a>
-                                                <a href="#" class="demo-theme demo-theme-purple add-tooltip" data-theme="theme-purple" data-type="c" data-title="(C). Purple"></a>
-                                                <a href="#" class="demo-theme demo-theme-dust add-tooltip" data-theme="theme-dust" data-type="c" data-title="(C). Dust"></a>
-                                            </div>
-                                            <div class="demo-justify-theme">
-                                                <a href="#" class="demo-theme demo-theme-mint add-tooltip" data-theme="theme-mint" data-type="c" data-title="(C). Mint"></a>
-                                                <a href="#" class="demo-theme demo-theme-yellow add-tooltip" data-theme="theme-yellow" data-type="c" data-title="(C). Yellow"></a>
-                                                <a href="#" class="demo-theme demo-theme-well-red add-tooltip" data-theme="theme-well-red" data-type="c" data-title="(C). Well Red"></a>
-                                            </div>
-                                            <div class="demo-justify-theme">
-                                                <a href="#" class="demo-theme demo-theme-coffee add-tooltip" data-theme="theme-coffee" data-type="c" data-title="(C). Coffee"></a>
-                                                <a href="#" class="demo-theme demo-theme-prickly-pear add-tooltip" data-theme="theme-prickly-pear" data-type="c" data-title="(C). Prickly pear"></a>
-                                                <a href="#" class="demo-theme demo-theme-dark add-tooltip" data-theme="theme-dark" data-type="c" data-title="(C). Dark"></a>
-                                            </div> -->
-                                        </div>
-                                        <div class="demo-theme-btn col-md-3 pad-ver">
-                                            <p class="text-semibold text-uppercase text-xs text-muted">Text</p>
-                                            <hr class="new-section-xs">
-                                            <!-- <div class="mar-btm">
-                                                <img src="img/color-schemes-d.png" class="img-responsive">
-                                            </div>
-                                            <div class="demo-justify-theme">
-                                                <a href="#" class="demo-theme demo-theme-gray add-tooltip" data-theme="theme-gray" data-type="d" data-title="(D). Gray"></a>
-                                                <a href="#" class="demo-theme demo-theme-navy add-tooltip" data-theme="theme-navy" data-type="d" data-title="(D). Navy Blue"></a>
-                                                <a href="#" class="demo-theme demo-theme-ocean add-tooltip" data-theme="theme-ocean" data-type="d" data-title="(D). Ocean"></a>
-                                            </div>
-                                            <div class="demo-justify-theme">
-                                                <a href="#" class="demo-theme demo-theme-lime add-tooltip" data-theme="theme-lime" data-type="d" data-title="(D). Lime"></a>
-                                                <a href="#" class="demo-theme demo-theme-purple add-tooltip" data-theme="theme-purple" data-type="d" data-title="(D). Purple"></a>
-                                                <a href="#" class="demo-theme demo-theme-dust add-tooltip" data-theme="theme-dust" data-type="d" data-title="(D). Dust"></a>
-                                            </div>
-                                            <div class="demo-justify-theme">
-                                                <a href="#" class="demo-theme demo-theme-mint add-tooltip" data-theme="theme-mint" data-type="d" data-title="(D). Mint"></a>
-                                                <a href="#" class="demo-theme demo-theme-yellow add-tooltip" data-theme="theme-yellow" data-type="d" data-title="(D). Yellow"></a>
-                                                <a href="#" class="demo-theme demo-theme-well-red add-tooltip" data-theme="theme-well-red" data-type="d" data-title="(D). Well Red"></a>
-                                            </div>
-                                            <div class="demo-justify-theme">
-                                                <a href="#" class="demo-theme demo-theme-coffee add-tooltip" data-theme="theme-coffee" data-type="d" data-title="(D). Coffee"></a>
-                                                <a href="#" class="demo-theme demo-theme-prickly-pear add-tooltip" data-theme="theme-prickly-pear" data-type="d" data-title="(D). Prickly pear"></a>
-                                                <a href="#" class="demo-theme demo-theme-dark add-tooltip" data-theme="theme-dark" data-type="d" data-title="(D). Dark"></a>
-                                            </div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div id="" class="bg-boxed text-center mTB20">
+                        <div class="">
+                            <button type="submit" id="calculate" class="btn btn-lg btn-info use_lib" data-loading-text="Calculating..." type="button">
+                                Calculate
+                            </button>
                         </div>
-                        <!-- <div id="demo-bg-boxed" class="demo-bg-boxed">
-                            <div class="demo-bg-boxed-footer">
-                                <button id="demo-close-boxed-img" class="btn btn-primary">Close</button>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
-            </div>
-            <button id="demo-set-btn" class="btn" data-toggle="collapse" data-target="#demo-set-body"><i class="fa fa-sliders"></i></button>
+                <button id="demo-set-btn" class="btn" data-toggle="collapse" data-target="#demo-set-body"><i class="fa fa-sliders"></i></button>
+            </form>
         </div>
 
 
@@ -458,9 +257,12 @@
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/gauge.js"></script>
         <script src="assets/js/nouislider.min.js"></script>
+        <script src="assets/js/jquery.nestable.js"></script>
+        <script src="assets/js/slimscroll.js"></script>
 
         <!-- app -->
         <script src="assets/js/products.js"></script>
+        <script src="assets/js/fit_positions.js"></script>
         <script src="assets/js/app.js"></script>
 
     </body>

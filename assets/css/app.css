@@ -28,9 +28,9 @@ body {
 .bg-gray-light {
   background-color: #f8f9fa;
 }
-.bg-gray-light, .bg-gray-light a {
+/* .bg-gray-light, .bg-gray-light a {
   color: #8f9ea6;
-}
+} */
 
 .bg-gray {
   background-color: #e9eeef;
@@ -136,6 +136,10 @@ body {
 }
 .bg_gray{
   background-color: #e9eeef;
+}
+
+.minHeight50{
+  min-height: 50px;
 }
 /* BENCHMARKS */
 /*======================================*/
@@ -303,6 +307,29 @@ button, button:focus {
   color: #454b4e;
 
 }
+/* BM List */
+/*======================================*/
+#bm_list{
+  border: 2px solid #ddd;
+}
+.list-group-item{
+  padding: 15px 15px 15px 5px;
+}
+#bm_list .toggle-switch + label{
+  margin-right: 10px;
+}
+.list-group-item:first-child, .list-group-item:last-child{
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.use_lib{
+  background-color: #5bc0de;
+  color: #fff;
+  border-color: #46b8da;
+}
+.bg-boxed-footer{padding-top:10px; padding-bottom: 10px}
+.label{ border-radius: 0; font-size: 10px; font-weight: normal; margin-right: 2px; padding: 2px;}
+
 /* INDICATORS */
 /*======================================*/
 .indicators{
@@ -1224,6 +1251,19 @@ button, button:focus {
   border-bottom: 5px solid #3b4146;
 }
 
+/* Neseted products */
+#product_list .media-left, #product_list .media-body{
+  vertical-align: middle;
+  height: 35px;
+}
+.product_visibility{
+  height: auto;
+  padding: 9.5px 5px;
+}
+.product_visibility:hover{
+  background-color: #42a5f5;
+}
+
 @media (min-width: 1280px){
     .demo-set{
         background-color: #fff;
@@ -1253,9 +1293,10 @@ button, button:focus {
         padding: 7px
     }
     .demo-set-body.in{
-        max-height: 600px;
+       /*  max-height: 600px; */
         z-index: 20;
         box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
+        height: 100vh;
     }
     #demo-set-btn{
         background-color: #3b4146;
@@ -1263,8 +1304,8 @@ button, button:focus {
         border: 0;
         position: absolute;
         left: 50%;
-        margin-left: -23px;
-        margin-top: -2px;
+        margin-left: -13px;
+        /* margin-top: -2px; */
     }
 }
 
@@ -1276,6 +1317,9 @@ button, button:focus {
 }
 .text-lg {
   font-size: 1.2em;
+}
+.text-bold{
+  font-weight: 700;
 }
 .text-semibold {
   font-weight: 600;
@@ -1306,17 +1350,28 @@ button, button:focus {
   padding-left: 0;
   padding-right: 0;
 }
+.pLR10{
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .pLR15{
   padding-left: 15px;
   padding-right: 15px;
+}
+.pTB5{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.m0{
+  margin: 0;
 }
 .mLR0{
   margin-left: 0;
   margin-right: 0;
 }
-.pTB5{
-  padding-top: 5px;
-  padding-bottom: 5px;
+.mLR10{
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .mB5{
   margin-bottom: 5px;
@@ -1324,6 +1379,14 @@ button, button:focus {
 .mTB5{
   margin-top: 5px;
   margin-bottom: 5px;
+}
+.mTB10{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.mTB20{
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .relative{
   position: relative;

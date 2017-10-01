@@ -1,0 +1,519 @@
+[
+  {
+    "Name": "SQ, WVA, WPP and DSQ test",
+    "CompanyId": -1,
+    "BenchmarkId": 5,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S102030405060708090992550",
+      "wpp": "W1580359515801065759910754099",
+      "wva": "V359935992599409925994099",
+      "dsq": "D102030405060708090992550"
+    }
+  },
+  {
+    "Name": "Accounting and Finance",
+    "CompanyId": -1,
+    "BenchmarkId": 5,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "",
+      "wpp": "W1580359515801065759910754099",
+      "wva": "V359935992599409925994099"
+    }
+  },
+  {
+    "Name": "Administration",
+    "CompanyId": -1,
+    "BenchmarkId": 6,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "",
+      "wpp": "W6099609965994080559530854090",
+      "wva": "V359935992599409925994099"
+    }
+  },
+  {
+    "Name": "Carpenter",
+    "CompanyId": -1,
+    "BenchmarkId": 7,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S559950992599359935992599",
+      "wpp": "W1590509940992080209955993090",
+      "wva": "V259940992599259925993099"
+    }
+  },
+  {
+    "Name": "CEO",
+    "CompanyId": -1,
+    "BenchmarkId": 8,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "",
+      "wpp": "W6099157550992086106075998599",
+      "wva": "V359935992599409925994199"
+    }
+  },
+  {
+    "Name": "Driver - Long Haul",
+    "CompanyId": -1,
+    "BenchmarkId": 9,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S559945995099309550992575",
+      "wpp": "W3590509910752080359955992080",
+      "wva": "V259940992599259925993099"
+    }
+  },
+  {
+    "Name": "Driver - Short Haul",
+    "CompanyId": -1,
+    "BenchmarkId": 11,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S409930902585258020902070",
+      "wpp": "W3590359910751570158555992080",
+      "wva": "V259940992599259925993099"
+    }
+  },
+  {
+    "Name": "Health and Safety - Management",
+    "CompanyId": -1,
+    "BenchmarkId": 12,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S359935902080158160993590",
+      "wpp": "W5595359935953591609935953590",
+      "wva": "V359935992599409925994199"
+    }
+  },
+  {
+    "Name": "Human Resources",
+    "CompanyId": -1,
+    "BenchmarkId": 13,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "",
+      "wpp": "W2580408560995095659939933585",
+      "wva": "V409940992599359930995099"
+    }
+  },
+  {
+    "Name": "Electrician",
+    "CompanyId": -1,
+    "BenchmarkId": 14,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S559950992599359935992599",
+      "wpp": "W1590509940992080209955993090",
+      "wva": "V259940992599259925993099"
+    }
+  },
+  {
+    "Name": "Engineer",
+    "CompanyId": -1,
+    "BenchmarkId": 16,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S559950992599359935992599",
+      "wpp": "W7099156040852060609920854090",
+      "wva": "V359935992599409925994199"
+    }
+  },
+  {
+    "Name": "Foreman",
+    "CompanyId": -1,
+    "BenchmarkId": 17,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S208035852060207050994085",
+      "wpp": "W7099156040852060609920854090",
+      "wva": "V359935992599409925994199"
+    }
+  },
+  {
+    "Name": "Heavy Equipment Operator",
+    "CompanyId": -1,
+    "BenchmarkId": 18,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S409940992599359935992599",
+      "wpp": "W3590509920902080409955994099",
+      "wva": "V409950995099409945993599"
+    }
+  },
+  {
+    "Name": "Insulator",
+    "CompanyId": -1,
+    "BenchmarkId": 19,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S559950992599359935992599",
+      "wpp": "W1590509940992080209955993090",
+      "wva": "V259925992599259925992599"
+    }
+  },
+  {
+    "Name": "Ironworker",
+    "CompanyId": -1,
+    "BenchmarkId": 20,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S559950992599359935992599",
+      "wpp": "W1590509940992080209955993090",
+      "wva": "V259925992599259925992599"
+    }
+  },
+  {
+    "Name": "Labourer",
+    "CompanyId": -1,
+    "BenchmarkId": 21,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S559950992599359935991066",
+      "wpp": "W2575509914752080449925802575",
+      "wva": "V409950995099409945993599"
+    }
+  },
+  {
+    "Name": "Log Truck Driver",
+    "CompanyId": -1,
+    "BenchmarkId": 22,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S509935905099259050992075",
+      "wpp": "W3590509910752080359955992080",
+      "wva": "V259940992599259925993099"
+    }
+  },
+  {
+    "Name": "Manager - Onsite",
+    "CompanyId": -1,
+    "BenchmarkId": 23,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S156535852060206450994080",
+      "wpp": "W7099156040852060609920854090",
+      "wva": "V359935992599409925994199"
+    }
+  },
+  {
+    "Name": "Manager - Offsite",
+    "CompanyId": -1,
+    "BenchmarkId": 24,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S308535922080209030852580",
+      "wpp": "W5999157555992063609950955099",
+      "wva": "V359935992599409925994199"
+    }
+  },
+  {
+    "Name": "Marketing and Communications",
+    "CompanyId": -1,
+    "BenchmarkId": 25,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "",
+      "wpp": "W4095409060993080609550965599",
+      "wva": "V259935992599259925994099"
+    }
+  },
+  {
+    "Name": "Mechanic",
+    "CompanyId": -1,
+    "BenchmarkId": 26,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S559950992599359935992599",
+      "wpp": "W1590509940992080209955993090",
+      "wva": "V259925992599259925992599"
+    }
+  },
+  {
+    "Name": "Millwright",
+    "CompanyId": -1,
+    "BenchmarkId": 27,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S559950992599359935992599",
+      "wpp": "W1590509940992080209955994090",
+      "wva": "V259925992599259925992599"
+    }
+  },
+  {
+    "Name": "Painter",
+    "CompanyId": -1,
+    "BenchmarkId": 28,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S559950992599359935992586",
+      "wpp": "W2575509914752080449925802575",
+      "wva": "V309950994199409945993599"
+    }
+  },
+  {
+    "Name": "Pipefitter",
+    "CompanyId": -1,
+    "BenchmarkId": 29,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S559950992599359935993585",
+      "wpp": "W1590509940992080209955994090",
+      "wva": "V259940992599259925993099"
+    }
+  },
+  {
+    "Name": "Project Staff",
+    "CompanyId": -1,
+    "BenchmarkId": 30,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S559950992599359935991066",
+      "wpp": "W2575509914752080449925802575",
+      "wva": "V309950994199409945993599"
+    }
+  },
+  {
+    "Name": "Rigger",
+    "CompanyId": -1,
+    "BenchmarkId": 31,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S559950992599359935991066",
+      "wpp": "W2575509914752080449925802575",
+      "wva": "V309950994199409945993599"
+    }
+  },
+  {
+    "Name": "Sales - Industrial",
+    "CompanyId": -1,
+    "BenchmarkId": 32,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S258535922080159020852080",
+      "wpp": "W6099459060994085559955996599",
+      "wva": "V259940993599409925995099"
+    }
+  },
+  {
+    "Name": "Scaffolder",
+    "CompanyId": -1,
+    "BenchmarkId": 33,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S559950992599359935991066",
+      "wpp": "W2575509914752080449925802575",
+      "wva": "V309950994199409945993599"
+    }
+  },
+  {
+    "Name": "Superintendent - Field",
+    "CompanyId": -1,
+    "BenchmarkId": 34,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S156535852060206450994080",
+      "wpp": "W7099156040852060609920854090",
+      "wva": "V359935992599409925994199"
+    }
+  },
+  {
+    "Name": "Surveyor",
+    "CompanyId": -1,
+    "BenchmarkId": 35,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S559950992599359935992599",
+      "wpp": "W1590509940992080209955994090",
+      "wva": "V259940993599409925995099"
+    }
+  },
+  {
+    "Name": "Vice President",
+    "CompanyId": -1,
+    "BenchmarkId": 36,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "",
+      "wpp": "W6099157550992086106070997599",
+      "wva": "V359935992599409925994199"
+    }
+  },
+  {
+    "Name": "Warehouse",
+    "CompanyId": -1,
+    "BenchmarkId": 37,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S559950992599359935992586",
+      "wpp": "W2575509914752080449925802575",
+      "wva": "V309950994199409945993599"
+    }
+  },
+  {
+    "Name": "Welder",
+    "CompanyId": -1,
+    "BenchmarkId": 38,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S559950992599359935992599",
+      "wpp": "W1590509940992080209955993090",
+      "wva": "V259940993599409925995099"
+    }
+  },
+  {
+    "Name": "Retail - Sales Associate",
+    "CompanyId": -1,
+    "BenchmarkId": 39,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "",
+      "wpp": "W3070507080998099508050808099",
+      "wva": "V259940993599409925995099"
+    }
+  },
+  {
+    "Name": "Retail - Stock Room",
+    "CompanyId": -1,
+    "BenchmarkId": 40,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "",
+      "wpp": "W2040307025552550809925656085",
+      "wva": "V259940993599409925995099"
+    }
+  },
+  {
+    "Name": "Retail - Team Lead",
+    "CompanyId": -1,
+    "BenchmarkId": 41,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "",
+      "wpp": "W6080709060803060709960997090",
+      "wva": "V259940993599409925995099"
+    }
+  },
+  {
+    "Name": "Retail - Store Manager",
+    "CompanyId": -1,
+    "BenchmarkId": 42,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "",
+      "wpp": "W8099407060992560609060908099",
+      "wva": "V259940993599409925995099"
+    }
+  },
+  {
+    "Name": "Sales - Outbound",
+    "CompanyId": -1,
+    "BenchmarkId": 43,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "",
+      "wpp": "W6590459070992560659955907099",
+      "wva": "V259940993599409925995099"
+    }
+  },
+  {
+    "Name": "Sales - Account Manager",
+    "CompanyId": -1,
+    "BenchmarkId": 44,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "",
+      "wpp": "W5585359957995889569965957099",
+      "wva": "V259940993599409925995099"
+    }
+  },
+  {
+    "Name": "Sales - CSR",
+    "CompanyId": -1,
+    "BenchmarkId": 45,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "",
+      "wpp": "W3375519050996595649951793790",
+      "wva": "V259940993599409925995099"
+    }
+  },
+  {
+    "Name": "Sales - Manager",
+    "CompanyId": -1,
+    "BenchmarkId": 46,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "",
+      "wpp": "W7599699085995590388243997395",
+      "wva": "V259940993599409925995099"
+    }
+  },
+  {
+    "Name": "Safety Auditor",
+    "CompanyId": -1,
+    "BenchmarkId": 47,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S409935902075208560993590",
+      "wpp": "W5095409025903085309555954099",
+      "wva": "V609960992585459925905099"
+    }
+  },
+  {
+    "Name": "Regional Operations Manager",
+    "CompanyId": -1,
+    "BenchmarkId": 48,
+    "Description": "",
+    "IsGlobal": true,
+    "Codes": {
+      "sq": "S308535922080209030852580",
+      "wpp": "W5999157555992063609950955099",
+      "wva": "V359935992599409925994199"
+    }
+  }
+]
