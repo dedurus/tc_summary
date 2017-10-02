@@ -2,7 +2,7 @@
   {
     "Name": "SQ, WVA, WPP and DSQ test",
     "CompanyId": -1,
-    "BenchmarkId": 5,
+    "BenchmarkId": 205,
     "Description": "",
     "IsGlobal": true,
     "Codes": {

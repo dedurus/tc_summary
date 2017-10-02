@@ -3,7 +3,12 @@
 
     var display_products, // products
         selected_bms = [], // bms
-        indicators,
+        indicators = {  // test obj indicators
+            sq: 's908070605040',
+            wpp: 'w10304050607020',
+            //wva: 'v506070809010',
+            dsq: 'd203040506070',
+        },
         options = {};
 
     var updateOutput = function(e)
@@ -54,7 +59,7 @@
 
     // test
     options_control(options, 'indicators', indicators);
-    options_control(options, 'benchmarks', selected_bms);
+   // options_control(options, 'benchmarks', selected_bms);
 
 
 
@@ -498,11 +503,12 @@
                 seq_array.move_array_element(arr_length, 1);
             }*/
             if(seq_array){
+                console.log(seq_array);
                 $.each(seq_array, function(index, val){
-
+console.log(val);
 
                     var current_slider = document.getElementById(dimension + '_' + index + '_' + dimension_index);
-
+                    console.log(dimension + '_' + index + '_' + dimension_index);
                     current_slider.noUiSlider.set(val);
                     i++;
                 });
@@ -522,9 +528,7 @@
         $('#summary_view').append(generate_dimension_html(products))
 
 
-
-
-        // default BMs and
+        // default BMs
         $('.benchmarks').each(function(index, value){
 
                noUiSlider.create(value, {
@@ -538,55 +542,63 @@
            });
         $('.benchmarks').attr('disabled', true);
 
-        // render BMs
-        var i = 0;
-        for(var key in benchmarks){
+        // default indicators
+        $('.indicators').each(function(index, value){
+               noUiSlider.create(value, {
+                   start: [0,0],
+                   connect: true,
+                   range: {
+                       'min': 1,
+                       'max': 99
+                   }
+               });
+           });
+        $('.indicators').attr('disabled', true);
 
+        var prod_vis = JSON.parse(options.visibility),
+            benches = options.benchmarks;
+            console.log(benches);
+        prod_vis.forEach(function(val, i){
+            console.log(val);
+            // check product visibility
+            if(val.productVisibility === true){
+                // render BMs
+                var i = 0;
+                for(var key in benches){
 
-            if(benchmarks[key].Codes){
-            $.each(benchmarks[key].Codes, function(prod_id, prod_seq){
-            // do we  have indicator scores for this product/
+                  if(benches[key].Codes){
+                      $.each(benches[key].Codes, function(prod_id, prod_seq){
+                          // do we  have indicator scores for this product/
+                          console.log(prod_id, prod_seq, prod_id == val.product);
+                          //if(indicators[prod_id] && (prod_seq.length > 0)){
+                          if(prod_id == val.product){
+                              draw_benchmark(prod_seq, prod_id, i, 'tralala')
+                          }
+                      });
+                  }else{
+                    console.log('no bm codes');
+                  }
 
-
-
-
-                if(indicators[prod_id] && (prod_seq.length > 0)){
-
-                    draw_benchmark(prod_seq, prod_id, i, 'tralala')
-                }else{
-
+                  i++;
                 }
-            })
-            }else{
 
-            }
+                if(options.indicators[val.product] && options.indicators[val.product].length > 0){
+                    var ind_array = indicator_string_convert(options.indicators[val.product])
+                    var product_names = convert_dimension_titles(products[val.product])
 
-            i++;
-        }
+                    get_extremes(ind_array, product_names, val.product);
 
-        // render indicators
-        for(var key in indicators){
-            var j = 0;
-            var ind_array = indicator_string_convert(indicators[key])
-            var product_names = convert_dimension_titles(products[key])
+                    ind_array.forEach(function(v, ind){
+                        var ind_id = document.getElementById(val.product + '_' + ind)
+                        console.log(val.product + '_' + ind);
+                        console.log(ind_id);
+                        ind_id.setAttribute('disabled', true)
 
-            get_extremes(ind_array, product_names, key)
-
-            ind_array.forEach(function(v, i){
-
-
-                var ind_id = document.getElementById(key + '_' + j)
-                ind_id.setAttribute('disabled', true)
-
-                noUiSlider.create(ind_id, {
-                    start: [v],
-                    connect: true,
-                    tooltips: false,
-                    range: six_dim_sliders
-                })
-                j++
-            })
-        }
+                        ind_id.noUiSlider.set(v);
+                    })
+                }
+            } // prod. vis.
+        });
     }
 
 
