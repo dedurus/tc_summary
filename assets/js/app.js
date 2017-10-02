@@ -3,12 +3,63 @@
 
     var display_products, // products
         selected_bms = [], // bms
-        indicators = {  // test obj indicators
+        indicators,
+        options = {};
+
+    var updateOutput = function(e)
+    {
+        var list   = e.length ? e : $(e.target),
+            output = list.data('output');
+        if (window.JSON) {
+            display_products = window.JSON.stringify(list.nestable('serialize'));
+            // update options.visibility
+            options_control(options, 'visibility', display_products);
+        } else {
+            output.val('JSON browser support required for this application.');
+        }
+    };
+
+    // starting product visibility
+    updateOutput($('#nestable'));
+
+        var test_indicators = {  // test obj indicators
             sq: 's908070605040',
             wpp: 'w10304050607020',
             wva: 'v506070809010',
             //dsq: 'd203040506070',
         };
+
+        var bms_test = {
+            sq: 'S102030405060708090992550',
+            wpp: 'W1580359515801065759910754099',
+            wva: 'V359935992599409925994099',
+            dsq: 'D102030405060708090992550'
+        }
+
+    // `options` variable control
+    function options_control(target, property_name, source){
+        var assign = Object.defineProperty(target, property_name, {
+            get: function() {
+                return source;
+            },
+            set: function(newValue) {
+                source = newValue;
+            },
+            enumerable: true,
+            configurable: true,
+        });
+        console.log(target);
+        return assign;
+    }
+
+    // test
+    options_control(options, 'indicators', indicators);
+    options_control(options, 'benchmarks', selected_bms);
+
+
+
+
+
 
     // product list markup generation
     function generate_product_selector(products){
@@ -47,18 +98,7 @@
 
 /////
 
-    var updateOutput = function(e)
-    {
-        var list   = e.length ? e : $(e.target),
-            output = list.data('output');
-        if (window.JSON) {
-            display_products = window.JSON.stringify(list.nestable('serialize'));
 
-            console.log(display_products);
-        } else {
-            output.val('JSON browser support required for this demo.');
-        }
-    };
 
     // list products
     generate_product_selector(products);
@@ -158,6 +198,9 @@
             checked_item.closest('.list-group-item').removeClass('active');
             removeByAttr(selected_bms, 'BenchmarkId', bm_id);
         }
+
+        // update `options.benchmarks`
+         options_control(options, 'benchmarks', selected_bms);
 
         // prevent more than 4 comparison checked libs
         if($('input[name="presets"]:checked').length >= 4){
@@ -424,7 +467,7 @@
     }
 
     function draw_benchmark(sequence, dimension, dimension_index, title){
-console.log(dimension);
+
 
 
 
@@ -503,15 +546,15 @@ console.log(dimension);
             if(benchmarks[key].Codes){
             $.each(benchmarks[key].Codes, function(prod_id, prod_seq){
             // do we  have indicator scores for this product/
-            console.log(prod_id);
-            console.log(prod_seq);
+
+
 
 
                 if(indicators[prod_id] && (prod_seq.length > 0)){
-                    console.log('YAY', indicators[prod_id] && (prod_seq.length > 0));
+
                     draw_benchmark(prod_seq, prod_id, i, 'tralala')
                 }else{
-                    console.log('NOPE', indicators[prod_id] && (prod_seq.length > 0));
+
                 }
             })
             }else{
