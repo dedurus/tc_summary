@@ -307,6 +307,121 @@ button, button:focus {
   color: #454b4e;
 
 }
+
+/* MODALS */
+/*======================================*/
+.modal {
+  text-align: center;
+  z-index: 10000;
+}
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 0;
+  margin-left: -1em;
+  vertical-align: middle;
+}
+.modal.fade:not(.animated) .modal-dialog {
+  opacity: 0;
+  -webkit-transform: translateY(-150%);
+  -ms-transform: translateY(-150%);
+  transform: translateY(-150%);
+  -webkit-transition: all .5s linear .5s;
+  transition: all .5s linear .5s;
+}
+.modal.fade.in:not(.animated) .modal-dialog {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+.bootbox.modal.in:not(.fade) {
+  opacity: 1;
+  transition: opacity, 0.5s;
+}
+.bootbox.modal:not(.fade) {
+  opacity: 0;
+  -webkit-transition: opacity .5s linear .5s;
+  transition: opacity .5s linear .5s;
+}
+.modal-dialog {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  margin-top: -1%;
+  min-width: 90%;
+}
+.modal-dialog.animated {
+  -webkit-animation-duration: .7s;
+  animation-duration: .7s;
+}
+.modal-header {
+  padding: 15px;
+  position: relative;
+  border: 0;
+}
+.modal-header:after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+.modal-footer {
+  background-color: transparent;
+  color: #8f9ea6;
+  border-color: rgba(0, 0, 0, 0.03);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.modal-title {
+  font-size: 1.2em;
+  color: #4d627b;
+}
+.modal-body {
+  min-height: 90px;
+}
+.modal-body > .close, .modal-header > .close {
+  top: 50%;
+  margin-top: -.5em;
+  right: 10px;
+  left: auto;
+  position: absolute;
+  background-color: transparent !important;
+}
+.modal-body > .close {
+  top: 10px;
+  margin-top: 0 !important;
+}
+.modal-content {
+  box-shadow: none;
+  border-radius: 0;
+}
+.modal-footer {
+  padding: 10px 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.modal-backdrop.in {
+  opacity: 0.75;
+}
+
+.modal-backdrop {
+  z-index: 9999;
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    min-width: 0;
+  }
+}
+
 /* BM List */
 /*======================================*/
 #bm_list{

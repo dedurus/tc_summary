@@ -4,7 +4,7 @@
     var display_products, // products
         selected_bms = [], // bms
         indicators = {  // test obj indicators
-            sq: 's908070605040',
+            sq: 's508070605040',
             wpp: 'w10304050607020',
             //wva: 'v506070809010',
             dsq: 'd203040506070',
@@ -53,7 +53,7 @@
             enumerable: true,
             configurable: true,
         });
-        console.log(target);
+
         return assign;
     }
 
@@ -220,6 +220,79 @@
         }
     });
 
+    //-- Dimension clonning -- //
+    // Delegate click on clone link
+    $('#summary').on('click', 'ul.dropdown-menu.clone_dropdown li a', function(e){
+        e.preventDefault();
+
+
+        clone_dim(e.target.id);
+
+    });
+
+
+    // Clone dimension
+    function clone_dim(clicked_link_id){
+        var wrapper_id = clicked_link_id.split('-')[0],
+            wrapper_data = $('#' + wrapper_id).data();
+
+
+        var the_clone = $('#' + wrapper_id).clone();
+
+
+        //$('body').append(the_clone);
+        var clone_2 = renameCloneIdsAndNames( the_clone );
+
+        $('#dimension_modal .modal-body > #dim_modal_clone').html(clone_2);
+        $('#dimension_modal').modal('show');
+
+    }
+
+    // clean modal HTML on hide
+
+    $('#dimension_modal').on('hidden.bs.modal', function (e) {
+      $('#dimension_modal .modal-body > #dim_modal_clone').html('');
+    })
+
+    function renameCloneIdsAndNames( objClone ) {
+
+        if( !objClone.attr( 'data-row-id' ) ) {
+
+        }
+
+        if( objClone.attr( 'id' ) ) {
+            /*objClone.attr( 'id', objClone.attr( 'id' ).replace( /\d+$/, function( strId ) {
+
+
+                return parseInt( strId ) + 1;
+            } ) );*/
+            objClone.attr( 'id', objClone.attr( 'id' ) + '-clone' );
+        }
+
+        objClone.attr( 'data-row-id', objClone.attr( 'data-row-id' ) + '-clone' );
+        //objClone.attr( 'data-row-id', objClone.attr( 'data-row-id' ).replace( /\d+$/, function( strId ) { return parseInt( strId ) + 1; } ) );
+
+        objClone.find( '[id]' ).each( function() {
+
+            var strNewId = $( this ).attr( 'id') + '-clone';
+            //var strNewId = $( this ).attr( 'id' ).replace( /\d+$/, function( strId ) { return parseInt( strId ) + 1; } );
+
+            $( this ).attr( 'id', strNewId );
+
+            /*if( $( this ).attr( 'name' ) ) {
+                var strNewName  = $( this ).attr( 'name' ).replace( /\[\d+\]/g, function( strName ) {
+                    strName = strName.replace( /[\[\]']+/g, '' );
+                    var intNumber = parseInt( strName ) + 1;
+                    return '[' + intNumber + ']'
+                } );
+                $( this ).attr( 'name', strNewName );
+            }*/
+        });
+
+        return objClone;
+    }
+    //-- ./Dimension clonning -- //
+
     $('#presets_form').on('submit', function(e){
         e.preventDefault();
         var btn = $('#calculate').button('loading')
@@ -230,6 +303,9 @@
             btn.button('reset');
              $('#demo-set-body').collapse('hide');
          }, 3000);
+
+
+
     })
 
 
@@ -417,6 +493,7 @@
     });
 
 
+
     function generate_dimension_html( products ){
         var html = '';
 
@@ -433,13 +510,13 @@
                     html += '<div class="product pLR0">';
                     $.each(product.dimensions, function(dim_index, dim){
                         var btn = '<div class="btn-group dimensions_buttons" role="group">' +
-                                        '<button id="dimension_'+ index +'_' + dim_index +'_button" type="button" class="btn btn-icon btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-cog"></i></button>' +
-                                        '<ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">' +
-                                            '<li><a href="#">Dimension Details</a></li>' +
+                                        '<button type="button" class="btn btn-icon btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-cog"></i></button>' +
+                                        '<ul class="dropdown-menu clone_dropdown" aria-labelledby="btnGroupDrop1">' +
+                                            '<li><a id="dimension_'+ index +'_' + dim_index +'-button" href="#">Dimension Details</a></li>' +
                                             '<li><a href="#">Full Details</a></li>' +
                                         '</ul>' +
                                     '</div>';
-                        html += '<div class="row row_dimension mLR0 relative" id="dimension_'+ index +'_' + dim_index +'">' +
+                        html += '<div class="row mLR0 relative" data-row-id="product_' + dim_index +'" id="dimension_'+ index +'_' + dim_index +'">' +
                                     '<div class="col-xs-2 text-right">' +
                                         '<div class="dimension_title">' + dim.title_0  + '</div>' +
                                         '<div class="dimension_text hidden-xs hidden-sm">' + dim.text_0 + '</div>' +
@@ -459,7 +536,9 @@
                                         '<div class="dimension_title">' + dim.title_1  + '</div>' +
                                          '<div class="dimension_text hidden-xs hidden-sm">' + dim.text_1 + '</div>' +
                                     '</div>' +
-                                          btn +
+                                '</div>' +
+                                '<div class="row row_dimension mLR0 relative">' +
+                                    btn +
                                 '</div>';
 
                     })
@@ -470,6 +549,8 @@
 
         return html;
     }
+
+
 
     function draw_benchmark(sequence, dimension, dimension_index, title){
 
@@ -503,12 +584,12 @@
                 seq_array.move_array_element(arr_length, 1);
             }*/
             if(seq_array){
-                console.log(seq_array);
+
                 $.each(seq_array, function(index, val){
-console.log(val);
+
 
                     var current_slider = document.getElementById(dimension + '_' + index + '_' + dimension_index);
-                    console.log(dimension + '_' + index + '_' + dimension_index);
+
                     current_slider.noUiSlider.set(val);
                     i++;
                 });
@@ -557,46 +638,74 @@ console.log(val);
 
         var prod_vis = JSON.parse(options.visibility),
             benches = options.benchmarks;
-            console.log(benches);
+
         prod_vis.forEach(function(val, i){
-            console.log(val);
+console.log(val);
             // check product visibility
             if(val.productVisibility === true){
+                var ind_array,
+                    product_names;
+                // check if there are indicators for the product
+                if(options.indicators[val.product] && options.indicators[val.product].length > 0){
+                    ind_array = indicator_string_convert(options.indicators[val.product])
+                    product_names = convert_dimension_titles(products[val.product])
+
+                    get_extremes(ind_array, product_names, val.product);
+
+                    console.log(ind_array, options.indicators[val.product]);
+                }
                 // render BMs
                 var i = 0;
                 for(var key in benches){
 
                   if(benches[key].Codes){
                       $.each(benches[key].Codes, function(prod_id, prod_seq){
+
+                        // position fit
+                        if(ind_array){ // calculate position fit
+                            var ind_index = 0;
+                            ind_array.forEach(function(vv, ii){
+
+                                console.log(val.product, ind_array[i], prod_seq);
+                                console.log('ind array [i]', ind_array[ind_index]);
+
+                                // calculate_position_fit(product, indicator_positions, bm_seq)
+                                var pos_fit = calculate_position_fit(val.product, options.indicators[val.product], prod_seq);
+                                //var pos_fit = calculate_position_fit(val.product, ind_array[ind_index], prod_seq);
+                                console.log('Pos Fit: ', pos_fit);
+
+                                ind_index++;
+                            })
+                        }
+
+
+
+                          //
+
                           // do we  have indicator scores for this product/
-                          console.log(prod_id, prod_seq, prod_id == val.product);
                           //if(indicators[prod_id] && (prod_seq.length > 0)){
                           if(prod_id == val.product){
                               draw_benchmark(prod_seq, prod_id, i, 'tralala')
                           }
                       });
                   }else{
-                    console.log('no bm codes');
+
                   }
 
                   i++;
                 }
 
-                if(options.indicators[val.product] && options.indicators[val.product].length > 0){
-                    var ind_array = indicator_string_convert(options.indicators[val.product])
-                    var product_names = convert_dimension_titles(products[val.product])
-
-                    get_extremes(ind_array, product_names, val.product);
-
+                if(ind_array){
                     ind_array.forEach(function(v, ind){
                         var ind_id = document.getElementById(val.product + '_' + ind)
-                        console.log(val.product + '_' + ind);
-                        console.log(ind_id);
+
+
                         ind_id.setAttribute('disabled', true)
 
                         ind_id.noUiSlider.set(v);
                     })
                 }
+
             } // prod. vis.
         });
     }
@@ -662,7 +771,7 @@ console.log(val);
 
 
 
-       // calculate_position_fit('sq', (bms[0].wpp));
+
 
 
     }).fail(function(xhr){
@@ -672,7 +781,7 @@ console.log(val);
 
 
     // demo gauges
-    var opts = {
+    /*var opts = {
             lines: 10, // The number of lines to draw
             angle: 0, // The length of each line
             lineWidth: 0.41, // The line thickness
@@ -715,7 +824,7 @@ console.log(val);
         gauge_4.maxValue = 100; // set max gauge value
         gauge_4.animationSpeed = 32; // set animation speed (32 is default value)
         gauge_4.set(37); // set actual value
-        gauge_4.setTextField(document.getElementById("demo-gauge-text-4"));
+        gauge_4.setTextField(document.getElementById("demo-gauge-text-4"));*/
 
 
 
@@ -755,25 +864,27 @@ console.log(val);
         // from 100
 
         var penalty_points = 0,
-            benchmark_interval_0 = benchmark_interval[0],
-            benchmark_interval_1 = benchmark_interval[1],
+            benchmark_interval_0 = +(benchmark_interval[0]),
+            benchmark_interval_1 = +(benchmark_interval[1]),
             inidicator_range_pos,
             difference;
-
+console.info('---------------start');
             // find benchmark's mean
             var mean = benchmark_mean(benchmark_interval);
-
+console.log('MEAN', mean);
             // find benchmark's mean position
             var bench_mean_pos = benchmark_mean_position(mean);
+console.log('bench_mean_pos', bench_mean_pos);
 
         // first, test if the indicator is inside bench. interval
         if( indicator_position >= benchmark_interval_0 && indicator_position <= benchmark_interval_1 ){
+console.info('INSIDE BENCH', indicator_position);
+console.info('---------------inside end');
 
             return penalty_points;
 
-
-
         }else{ // indicator is not inside the bench. interval, NEGATIVE score is awarded
+console.info('NOT INSIDE BENCH -> NEGATIVE SCORE', indicator_position);
 
             // compare indicator position with mean position
             if(indicator_position < mean){ // indicator is both, outside bench. interval and in a low range
@@ -809,13 +920,16 @@ console.log(val);
 
 
             // get fit quotient
+            console.log(bench_mean_pos, inidicator_range_pos);
             var quotient = fit_position[bench_mean_pos][inidicator_range_pos]
                 // calculate penalty points
                 penalty_points = difference * quotient;
         }
 
-
-
+        console.log('Difference', difference);
+        console.log('quotient', quotient);
+        console.log('penalty points',penalty_points);
+console.info('---------------end');
 
         // return penalty
         return penalty_points;
@@ -823,30 +937,31 @@ console.log(val);
     }
 
 
-    // calculate posiiton fit for benchmark for product
-    function calculate_position_fit(product, bm_seq){
+    // calculate posiiton fit for benchmark for ** product **
+    function calculate_position_fit(product, indicator_positions, bm_seq){
         var seq = bm_string_convert(bm_seq),
+            ind = indicator_string_convert(indicator_positions),
             bm_seq_count = seq.length,
             negative_points = [],
             sum_negative_points;
-
-
-
-        seq.forEach(function(val, ind){
-
-
-            negative_points.push(calculate_bench_postionfit(50, val));
+console.info('Product', product);
+        seq.forEach(function(val, ind_index){
+            var ind_from_array = +(ind[ind_index]);
+            console.log(indicator_positions, val, ind_from_array, ind);
+            negative_points.push(calculate_bench_postionfit(ind_from_array, val));
         });
-
-
-
+console.log(negative_points);
         sum_negative_points = negative_points.reduce(function(sum, value) {
+            console.log('Negative points per dimension ' + product, value);
+            console.log('Sum', sum);
           return sum + value;
         }, 0);
 
-
-
+        return sum_negative_points;
     }
+
+
+
 
 
     // Polyfills
